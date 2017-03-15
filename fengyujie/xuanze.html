@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+	<div>
+		
+	<ul>
+		<li><input type="checkbox" class="about" />ajax</li>
+<br/ >
+		<li><input type="checkbox" class="about" />图形图像</li>
+<br/ >
+		<li><input type="checkbox" class="about" />Flash</li>
+<br/ >
+		<li><input type="checkbox" class="about" />高数</li>
+<br/ >
+		<li><input type="checkbox" class="about" />现代</li>
+<br/ >
+<br/ >
+<br/ >
+<br/ >
+	</ul>
+		<input type="button" id="selecte_all" value="全选"/>
+
+		<input type="button" id="selecte_no" value="全不选"/>
+
+		<input type="button" id="selecte_etr" value="反选"/>
+</div>
+<script type="text/javascript">
+	window.onload=init;
+	function init(){
+		var selecte_all=document.getElementById('selecte_all');
+		var selecte_no=document.getElementById('selecte_no');
+		var selecte_etr=document.getElementById('selecte_etr');
+		var check_list=document.getElementsByClassName('about');
+
+		selecte_all.onclick=function(){
+			for(i=0;i<check_list.length;i++){
+				check_list[i].checked=true;
+			};
+	    }
+
+		selecte_no.onclick=function(){
+			for(i=0;i<check_list.length;i++){
+				check_list[i].checked=false;
+			};
+		}
+
+		selecte_etr.onclick=function(){
+			for(i=0;i<check_list.length;i++){
+				check_list[i].checked=!check_list[i].checked;
+			};
+		}
+    }
+</script>
+</body>
+</html>

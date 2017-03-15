@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>tree_menu</title>
+<meta name="keywords" content="keywords" />
+<meta name="description" content="description" />
+<style>
+ul { padding:20; margin:0;}
+#main1,#main2 { width:180px; height:28px; line-height:28px; padding-left:5px; background:#ccc; cursor:pointer; border-bottom:1px solid #fff;}
+#child1,#child2 { width:105px; background:#eee;}
+#child1 ul li,#child2 ul li { padding-left:5px; border-bottom:1px solid #fff; line-height:200%;}
+#child1 ul li a,#child2 ul li a { color:#666;}
+</style>
+</head>
+<body>
+	<h1>tree_menu</h1> 
+<div id="main1" onClick="document.all.child1.style.display=(document.all.child1.style.display =='none')?'':'none'" > + Computer Language</div>
+<div id="child1" style="display:none">
+<ul>
+<li><a href="http://www.baidu.com"> Js</a></li>
+<li><a href="http://www.baidu.com"> Java</a></li>
+<li><a href="http://www.baidu.com"> Php</a></li>
+<li><a href="http://www.baidu.com"> C#</a></li>
+</ul>
+</div>
+<div id="main2" onClick="document.all.child2.style.display=(document.all.child2.style.display =='none')?'':'none'" > + Software Tool </div>
+<div id="child2" style="display:none">
+<ul>
+<li><a href="http://www.baidu.com"> Ps</a></li>
+<li><a href="http://www.baidu.com"> Ai</a></li>
+<li><a href="http://www.baidu.com"> Pr</a></li>
+<li><a href="http://www.baidu.com"> Flash</a> </li>
+</ul>
+</div>
+
+</body>
+</html>

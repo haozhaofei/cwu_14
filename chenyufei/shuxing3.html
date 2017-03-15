@@ -1,0 +1,94 @@
+
+<HTML>  <HEAD>   
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">  
+ <TITLE>树形菜单</TITLE> 
+<style type="text/css">  
+	body{ font-size: 12px;}  
+	h2,h3{ margin: 0;}   
+	ul{ margin: 0; padding: 0; list-style: none; }   
+	#outer_wrap li{ padding-left: 30px; line-height: 24px;}   
+	.controlSymbol{ padding: 0 5px; border: 1px solid #adff2f; cursor: pointer;}  
+    </style>  
+    
+   <SCRIPT language="JavaScript"> 
+    function show(obj_name) {  
+	 if (document.getElementById(obj_name).style.display == 'none') {
+		     document.getElementById(obj_name).style.display = 'block'; //如果触动的层如果处于隐藏状态，即显示   
+			 } else {    
+			 document.getElementById(obj_name).style.display = 'none'; //如果触动的层如果处于显示状态，即隐藏  
+			  }  
+			  }  </SCRIPT>  
+              </HEAD>   
+              
+<table width="160" border="1">
+      <tr onClick="change_view('a1')">
+        <td>●树形菜单根目录1</td>
+      </tr>
+     <tr id="a1"style="display:none">   <!-- 如果想一打开网页菜单就是展开的，此处删除none--->
+        <td>
+            <table width="143" border="0">
+                  <tr>
+                    <td width="28">&nbsp;</td>
+                    <td width="105">二级菜单1</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>二级菜单2</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>二级菜单3</td>
+                  </tr>
+            </table>
+        </td>
+  </tr>
+  
+  
+    <tr onClick="change_view('a2')">
+        <td>●树形菜单根目录2</td>
+      </tr>
+      <tr id="a2"style="display:none">
+        <td>
+            <table width="143" border="0">
+                  <tr>
+                    <td width="28">&nbsp;</td>
+                    <td width="105">二级菜单1</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>二级菜单2</td>
+                  </tr>
+                   <tr>
+                    <td>&nbsp;</td>
+                    <td>二级菜单3</td>
+                   </tr>
+            </table>
+        </td>
+  </tr>
+  
+  
+    <tr onClick="change_view('a3')">
+        <td>●树形菜单根目录3</td>
+      </tr>
+      <tr id="a3"style="display:none">
+            <td>
+            <table width="143" border="0">
+                  <tr>
+                    <td width="28">&nbsp;</td>
+                    <td width="105">二级菜单1</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>二级菜单2</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>二级菜单3</td>
+                  </tr>
+            </table>
+        </td>
+  </tr>
+ </table>
+</html>
+    
+    

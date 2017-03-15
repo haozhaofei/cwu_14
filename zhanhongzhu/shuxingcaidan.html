@@ -1,0 +1,90 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>时尚精品分类</title>  
+        <meta charset="UTF-8">  
+    </head>  
+<script type="text/javascript">
+  window.onload = function() {
+    //创建树结构
+    var tree = createTree('div_tree','white');
+    //创建树节点node1
+    var node1 = tree.createNode('First node',false,null,null,null);
+    //node1添加到树结构中
+    node1.createChildNode('First child node', false,null,null);
+    //渲染树结构
+    tree.drawTree();
+    //创建第二个树节点
+    node1 = tree.createNode('Second node',false,null,null,null);
+    node1.createChildNode('Second child node', false,null,null);
+  };
+</script>      
+
+    <body>  
+        <ul>  
+            <li class="main">  
+                <a href="#">箱包</a>  
+                <ul>  
+                    <li>  
+                        <a href="#">时尚休闲包</a>  
+                        <ul>  
+                            <li>  
+                                <a href="#">背包</a>  
+                                <ul>  
+                                    <li><a>双肩包</a></li>  
+                                    <li><a>帆布包</a></li>  
+                                    <li><a>运动包</a></li>  
+                                </ul>  
+                            </li>  
+                            <li><a>手包</a></li>  
+                            <li><a>斜挎包</a></li>  
+                        </ul>  
+                    </li>  
+                    <li>  
+                        <a href="#">旅行箱包</a>  
+                        <ul>  
+                            <li><a>旅行包</a></li>  
+                            <li><a>拉杆箱</a></li>  
+                        </ul>  
+                    </li>  
+                </ul>  
+            </li>  
+            <li class="main">  
+                <a href="#">鞋类</a>  
+                <ul>  
+                    <li>  
+                        <a href="#">女鞋</a>  
+                        <ul>  
+                            <li><a>皮鞋</a></li>  
+                            <li><a>运动鞋</a></li>  
+                            <li><a>帆布鞋</a></li>  
+                        </ul>  
+                    </li>  
+                    <li>  
+                        <a href="#">男鞋</a>  
+                    </li>  
+                </ul>  
+            </li>  
+            <li class="main">  
+                <a href="#">配饰</a>  
+                <ul>  
+                    <li>  
+                        <a href="#">头饰</a>  
+                    </li>  
+                    <li>  
+                        <a href="#">腰带</a>  
+                    </li>  
+                </ul>  
+            </li>  
+        </ul>  
+        <script>  
+            $(document).ready(function () {  
+                $(".main  a").click(  
+                        function () {  
+                            $(this).next().toggle();  
+                        }  
+                );  
+            });  
+        </script>  
+    </body>  
+</html>  

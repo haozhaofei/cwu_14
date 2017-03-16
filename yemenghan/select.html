@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>select_ymh</title>
+</head>
+<body>
+<div id="div">
+    <ul>book
+    <li>Jane Eyre<input type="checkbox" /><br /></li>
+    <li>King<input type="checkbox" /><br /></li>
+    <li>Spring<input type="checkbox" /><br /></li>
+    <li>The Kite Runner<input type="checkbox" /><br /></li>
+    </ul>
+    </div>
+    <input type="button" value="select_all" onclick="CheckAll()"/>
+    <input type="button" value="none_select" onclick="UnCheck()"/>
+    <input type="button" value="other_select" onclick="othercheck()"/>
+
+    <script type="text/javascript">
+        var CheckBox=div.getElementsByTagName('input');
+        //全选
+        function CheckAll(){
+            for(i=0;i<CheckBox.length;i++){
+                CheckBox[i].checked=true;
+            }
+        }
+        //全不选
+        function UnCheck(){
+             for(i=0;i<CheckBox.length;i++){
+                CheckBox[i].checked=false;
+            }
+        }
+        //反选
+        function othercheck(){
+            for(i=0;i<CheckBox.length;i++){
+                if(CheckBox[i].checked==true){
+                    CheckBox[i].checked=false;
+                }else{
+                    CheckBox[i].checked=true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

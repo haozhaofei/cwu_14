@@ -1,0 +1,58 @@
+<!doctype html> <html> 
+<head> 
+<meta charset="utf-8"> 
+<title>全选_全不选_反选</title>
+</head> 
+<script type="text/javascript">
+ //获取所有的多选框、获取三个按钮 
+ window.onload=init;
+function init(){
+	var selecte_all=document.getElementById('selecte_all');
+	var selecte_no=document.getElementById('selecte_no');
+	var selecte_etr=document.getElementById('selecte_etr');
+	var check_list=document.getElementsByClassName('about');
+
+//全选 
+selecte_all.onclick=function(){
+	for(i=0;i<check_list.length;i++){
+		check_list[i].checked=true;
+		};
+	}
+
+//全不选 
+selecte_no.onclick=function(){
+	for(i=0;i<check_list.length;i++){
+		check_list[i].checked=false;
+		};
+	}
+
+//反选
+selecte_etr.onclick=function(){
+	for(i=0;i<check_list.length;i++){
+		check_list[i].checked=!check_list[i].checked;
+		};
+	}
+
+ 
+} 
+
+</script> 
+
+<body>
+
+<div id="wrap">
+<input type="button" id="selecte_all" value="全选"/>
+<input type="button" id="selecte_no" value="全不选"/>
+<input type="button" id="selecte_etr" value="反选"/>
+<ul>
+<li><input type="checkbox" class="about" />英语系</li>
+<li><input type="checkbox" class="about" />艺术系</li>
+<li><input type="checkbox" class="about" />金融系</li>
+<li><input type="checkbox" class="about" />工程系</li>
+<li><input type="checkbox" class="about" />法律系</li>
+</ul>
+</div>
+
+</body> 
+</html>
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>js实现全选，反选，全不选</title>
+</head>
+<body>
+<div id="div">
+    <h1>我的爱好</h1>
+    <ul>爱吃的水果：
+    <li>苹果<input type="checkbox" /><br /></li>
+    <li>香蕉<input type="checkbox" /><br /></li>
+    <li>葡萄<input type="checkbox" /><br /></li>
+    </ul>
+    <ul>喜欢的运动：
+    <li>跑步<input type="checkbox" /><br /></li>
+    <li>跳绳<input type="checkbox" /><br /></li>
+    <li>跳远<input type="checkbox" /><br /></li>
+    </ul>
+    <ul>喜欢的歌手：
+    <li>薛之谦<input type="checkbox" /><br /></li>
+    <li>李玉刚<input type="checkbox" /><br /></li>
+    <li>庄心妍<input type="checkbox" /><br /></li>
+    </ul>
+    </div>
+    <input type="button" value="全选" onclick="CheckAll()"/>
+    <input type="button" value="全不选" onclick="UnCheck()"/>
+    <input type="button" value="反选" onclick="othercheck()"/>
+
+    <script type="text/javascript">
+        var CheckBox=div.getElementsByTagName('input');
+        //全选
+        function CheckAll(){
+            for(i=0;i<CheckBox.length;i++){
+                CheckBox[i].checked=true;
+            }
+        }
+        //全不选
+        function UnCheck(){
+             for(i=0;i<CheckBox.length;i++){
+                CheckBox[i].checked=false;
+            }
+        }
+        //反选
+        function othercheck(){
+            for(i=0;i<CheckBox.length;i++){
+                if(CheckBox[i].checked==true){
+                    CheckBox[i].checked=false;
+                }else{
+                    CheckBox[i].checked=true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

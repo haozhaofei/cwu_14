@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>selector_button</title>  
+</head>  
+<body>  
+    <h1>slector</h1>  
+    <input type="checkbox" name="items" value="java">java 
+    <input type="checkbox" name="items" value="js">js
+    <input type="checkbox" name="items" value="php">php  
+    <input type="checkbox" name="items" value="c#">c#
+    <br>  
+    <input type="button" name="checkall" id="checkall" value="全选">  
+    <input type="button" name="checkall" id="checkNo" value="全不选">  
+    <input type="button" name="checkall" id="checkReverse" value="反选">  
+    <script type="text/javascript">  
+          
+        // 全选  
+        document.getElementById('checkall').onclick=function(){       
+            var checkElements=document.getElementsByName('items');  
+            for(var i=0;i<checkElements.length;i++){  
+                var checkElement=checkElements[i];  
+                checkElement.checked="checked";  
+            }  
+        }  
+        // 全不选  
+        document.getElementById('checkNo').onclick=function(){  
+            var checkElements=document.getElementsByName('items');  
+            for(var i=0;i<checkElements.length;i++){  
+                var checkElement=checkElements[i];    
+                checkElement.checked=null;  
+            }  
+        }  
+        //反选  
+         document.getElementById('checkReverse').onclick=function(){   
+            var checkElements=document.getElementsByName('items');  
+            for(var i=0;i<checkElements.length;i++){  
+                var checkElement=checkElements[i];  
+                if (checkElement.checked) {  
+                    checkElement.checked=null;  
+                }  
+                else{  
+                    checkElement.checked="checked";  
+                }  
+               
+            }  
+        }  
+</script>  
+</body>  
+</html>  

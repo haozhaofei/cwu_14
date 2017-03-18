@@ -1,0 +1,40 @@
+
+<HTML>  <HEAD>   
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">  
+ <TITLE>树形菜单</TITLE> 
+ <STYLE type="text/css">
+  DIV {  FONT-SIZE: 13px;  COLOR: #000000;  LINE-HEIGHT: 22px; } 
+   A {  FONT-SIZE: 13px;  COLOR: #000000;  TEXT-DECORATION: none }   
+   A:hover {  FONT-SIZE: 13px;  COLOR: #999999 }  
+   </STYLE>  
+   <SCRIPT language="JavaScript"> 
+    function show(d1) {  
+	 if (document.getElementById(d1).style.display == 'none') {
+		     document.getElementById(d1).style.display = 'block'; //如果触动的层如果处于隐藏状态，即显示   
+			 } else {    
+			 document.getElementById(d1).style.display = 'none'; //如果触动的层如果处于显示状态，即隐藏  
+			  }  
+			  }  </SCRIPT>  
+              </HEAD>   
+              <BODY>    
+              <DIV HEIGHT="30">   
+               <FONT color="#CC0000"><B>
+               <IMG src="../image/fold.gif"       width="16" height="16" >树形菜单：</B>   
+                </FONT>  
+                 </DIV>   
+                 <A href="javascript:onClick=show('1') ">
+                 <IMG     src="../image/fclose.gif" width="16" height="18" border="0">文学艺术</A> 
+                 <DIV id="1" style="display: none">    
+                 <IMG src="../image/doc.gif" align="absmiddle">    努力工作    <BR>   
+                 <IMG src="../image/doc.gif" align="absmiddle">    小说散文    <BR>    
+                 <IMG src="../image/doc.gif" align="absmiddle">    诗风词韵  
+    </DIV>   
+    <DIV>          
+                 <A href="javascript: onClick=show('2') ">
+                 <IMG      src="../image/fclose.gif" width="16" height="18" border="0"  align="absmiddle">贴图专区</A>  
+                  </DIV>   <DIV id="2" style="display: none">   
+                  <IMG src="../image/doc.gif" align="absmiddle">    真我风采    
+                  <BR>    <IMG src="../image/doc.gif" align="absmiddle">    视频贴图    <BR>   
+                  <IMG src="../image/doc.gif" align="absmiddle">    行行摄摄    <BR>   
+                  <IMG src="../image/doc.gif" align="absmiddle">    Flash贴图   </DIV> 
+                  </BODY> </HTML> 

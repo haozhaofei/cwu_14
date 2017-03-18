@@ -1,0 +1,56 @@
+ function MenuItem(l, h, t)  
+{  
+    this.label = l;  
+    this.href = h;  
+    this.target = t;      
+}  
+  
+function Menu(lb)  
+{  
+    this.itemArray = new Array();  
+    this.expanded = true;  
+    this.index = -1;  
+    this.label = lb;          
+      
+    this.addItem = function(l, h, t)  
+    {  
+        var item = new MenuItem(l,h,t);  
+        this.itemArray.push(item);  
+    };                
+}  
+再定义一个MenuTree，来统一的管理各Menu，并负责生成innerHtml
+[javascript] view plain copy
+function MenuTree(container)  
+{  
+    this.menuArray = new Array();  
+    this.count = 0;  
+    this.span = container;  
+    this.target = null;  
+      
+    // 图标  
+    this.iconOpen = null;  
+    this.iconClosed = null;  
+      
+    // 选中的菜单项   
+    this.menuSelected = -1;  
+    this.menuItemSelected = -1;  
+      
+    this.setDefaultTarget = function(target)  
+    {  
+    };  
+    this.setIcon = function(urlOpen, urlClosed)  
+    {  
+    };    
+    this.addMenu = function(menu)  
+    {  
+    };  
+    this.getMenu = function(index)  
+    {  
+    };  
+    this.expandAll = function(yes)  
+    {  
+    };  
+    this.toHtml = function()  
+    {         
+    };            
+} 

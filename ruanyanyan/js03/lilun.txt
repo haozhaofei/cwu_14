@@ -1,0 +1,107 @@
+1. JavaScript中常用内置对象都有哪些？
+	Arguments 函数参数集合 
+
+	Array 数组
+	Boolean 布尔对象
+
+	Date 日期时间
+
+	Error 异常对象
+
+	Function 函数构造器
+
+	Math 数学对象
+	Number 数值对象
+
+	Object 基础对象
+
+	RegExp 正则表达式对象
+
+	String 字符串对象
+2. 如何创建一个数组对象方式有几种。
+1 工厂模式
+function createPerson(name,age,job){
+    var o = {};
+    o.name = name;
+    o.age = age;
+    o.job = job;
+    o.sayName = function(){
+          alert(this.name);
+};
+      return o;
+}
+   var tanya = createPerson("tanya","30","female");
+   tanya.sayName(); 
+2 构造函数模式
+function createPerson(name,age,job){
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.sayName = function(){
+          alert(this.name);
+};
+}
+   var tanya =new createPerson("tanya","30","female");
+   tanya.sayName(); 
+3 原型模式
+function createPerson(){
+}
+ 
+    createPerson.prototype.name = "tanya";
+    createPerson.prototype.age = "30";
+    createPerson.prototype.job = "female";
+    createPerson.prototype.sayName = function(){
+          alert(this.name);
+};
+   var tanya =new createPerson();
+   tanya.sayName(); 
+4 组合使用构造函数模式和原型模式
+function createPerson(name,age,job){
+    this.name = name;
+    this.age = age;
+    this.job = job;
+} 
+createPerson.prototype.sayName = function(){
+          alert(this.name);
+};
+   var tanya =new createPerson("tanya","30","female");
+   tanya.sayName(); 
+5 寄生构造函数模式
+function createPerson(name,age,job){
+    var o = {};
+    o.name = name;
+    o.age = age;
+    o.job = job;
+    o.sayName = function(){
+          alert(this.name);
+};
+      return o;
+}
+   var tanya =new createPerson("tanya","30","female");
+   tanya.sayName();
+
+6 稳妥构造函数模式
+function createPerson(name, age, job) {
+    var o = new Object();
+  
+    // private members
+    var nameUC = name.toUpperCase();
+ 
+    // public members
+    o.sayName = function() {
+        alert(name);
+    };
+    o.sayNameUC = function() {
+        alert(nameUC);
+    };
+ 
+    return o;
+}
+ 
+var person = Person("Nicholas", 32, "software Engineer");
+ 
+person.sayName(); // "Nicholas"
+person.sayNameUC(); // "NICHOLAS"
+ 
+alert(person.name);  // undefined
+alert(person.nameUC);  // undefined

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+	<h4 onclick="doShow(1)">AAAAAAAA</h4>
+	<ul id="u1" style="display:none;">
+		<li>aaaaaaaa</li>
+		<li>aaaaaaaa</li>
+		<li>aaaaaaaa</li>
+	</ul>
+
+	<h4 onclick="doShow(2)">BBBBBBB</h4>
+	<ul id="u2" style="display:none;">
+		<li>bbbbbbbbbb</li>
+		<li>bbbbbbbbbb</li>
+		<li>bbbbbbbbbb</li>
+	</ul>
+
+	<h4 onclick="doShow(3)">CCCCCCCC</h4>
+	<ul id="u3" style="display:none;">
+		<li>cccccccccc</li>
+		<li>cccccccccc</li>
+		<li>cccccccccc</li>
+	</ul>
+</body>
+</html>
+<script>
+	function doShow(i){
+		var ul = document.getElementById("u"+i);
+		if(ul.style.display == "none"){
+			ul.style.display = "block";
+		}else{
+			ul.style.display = "none";
+		}
+	}
+</script>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="did" style="font-size:40px;"></div>
+</body>
+</html>
+<script>
+    
+
+    setInterval(function(){
+        var oDid = document.getElementById('did');
+        var date = new Date();
+        var y = date.getFullYear();
+        var m = date.getMonth()+1;
+        var d = date.getDate();
+        var h = date.getHours();
+        var i = date.getMinutes();
+        var s = date.getSeconds(); 
+
+        var res = y+"-"+m+"-"+d+" "+h+":"+i+":"+s;
+
+
+        oDid.innerHTML = res;
+    },1000);
+
+    	var date = new Date();
+       
+        var h = date.getHours();
+     if(h>6 && h<=9){
+                   document.write("good morning!");
+                }else if(h>9 && h<=12){
+                     document.write("good forenoon!");
+                }else if(h>12 && h<=18){
+                    document.write(="good noon!");
+                }else if(h>18 && h<21){
+                     document.write("good evening!");
+                }else if(h>21 && h<=24){
+                     document.write("time to sleep!");
+                }else if(h>0 && h<=6){
+                     document.write("go to sleep now!");
+                }
+              
+
+</script>
+
+               

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script language="JavaScript">
+function Caculate()
+{
+    var a=parseInt(document.f1.t1.value);
+    var b=parseInt(document.f1.t2.value);
+    var s;
+    for(var i=0;i<4;i++)
+    {
+        if(document.f1.r[i].checked==true)
+        {
+            if(i==0)
+            {
+                s=a+b;
+                String(s);
+            }
+            else if(i==1)
+            {
+                s=a-b;
+                String(s);
+            }
+            else if(i==2)
+            {
+                s=a*b;
+                String(s);
+            }
+            else
+            {
+                if(b==0)
+                {
+                    s="被除数不能为0，请重新输入";
+                }
+                else
+                {
+                    s=a/b;
+                    String(s);
+                }
+            }
+        }
+         
+    }
+    document.f1.t3.value=s;
+}
+</script>
+</head>
+<body>
+<form method="get" name="f1">
+请输入第一个操作数:<input type=text name="t1" size=12 maxlength=6><p>
+请输入第一个操作数:<input type=text name="t2" size=12 maxlength=6><p>
+请选择操作
+<input type=radio name="r" value="0">+
+ <input type=radio name="r" value="1" checked>-
+ <input type=radio name="r" value="2">*
+ <input type=radio name="r" value="3">/<p>
+    <input type=button name="b1" value="=" onclick="Caculate()"><p>
+结果是:<input type=text name="t3" size=12 maxlength=12 ><p>
+</form>
+</body></html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>js实现实时问候</title>
+    </head>
+    <body>
+        <div id="did" style="height:30px;width:800px;background:#f60;font-size:19px;text-align:center;line-height:30px;margin:40px;"></div>
+    </body>
+</html>
+<script type="text/javascript">
+    var date=new Date();
+    var hh=date.getHours();
+    var oDid= document.getElementById("did");
+
+    if(hh>=6&&hh<9){
+        oDid.innerHTML="早上好，美好的一天开始啦！";
+    }else if (hh>=9&&hh<11){
+         oDid.innerHTML="上午好，该起床上班啦！";
+    }else if (hh>=11&&hh<14){
+         oDid.innerHTML="中午好，工作饿了么，该去吃饭啦！";
+    }else if (hh>=14&&hh<19){
+         oDid.innerHTML="下午好，工作累了么，出去散散步吧！";
+    }else if (hh>=19&&hh<24){
+         oDid.innerHTML="晚上好，工作了一天，要好好休息一下！";
+    }else if (hh>=0&&hh<6){
+         oDid.innerHTML="夜猫子，不睡觉干嘛呢！";
+    }
+    //alert(hh);
+
+</script>

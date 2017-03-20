@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>显示中文的星期几</title>
+    </head>
+    <body>
+        <div id ="week" style="height:30px;width:300px;background:#FF77FF;font-size:19px;text-align:center;line-height:30px;margin:40px;"></div>
+    </body>
+</html>
+<script type="text/javascript">
+    var week=document.getElementById("week");
+    var d=new Date();
+    var weekday=new Array(7);
+    weekday[0]="星期日";
+    weekday[1]="星期一";
+    weekday[2]="星期二";
+    weekday[3]="星期三";
+    weekday[4]="星期四";
+    weekday[5]="星期五";
+    weekday[6]="星期六";
+    week.innerHTML="今天是"+weekday[d.getDay()];
+
+
+</script>

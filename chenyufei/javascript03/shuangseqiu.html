@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+#blue{
+        width:30px;
+        height:30px;
+        background:#00F;
+        color:#fff;
+		border-radius: 30px;
+        font-size:20px;
+        text-align:center;
+        line-height:30px;
+        font-weight:bold;        
+}
+#red{
+        width:240px;
+        height:30px;
+}
+#red li{
+        list-style:none;
+        float:left;
+        width:30px;
+        height:30px;
+        margin-right:10px;
+		border-radius: 30px;
+        background:#F00;
+        color:#fff;
+        font-size:20px;
+        text-align:center;
+        line-height:30px;
+        font-weight:bold;
+}
+</style>
+<script>
+function qiu(){
+        //创建蓝色球，数组
+        var blue=new Array("01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16");
+        var num=Math.floor(Math.random()*15);//产生0到15之间的随机数字,//数组中的下标随机改变，就相当于抽奖
+        document.getElementById('blue').innerHTML=blue[num];
+        
+        //创建红色球，数组
+        var red=new Array("01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31");
+        
+        for(i=1;i<=6;i++){
+                var red_num=Math.floor(Math.random()*red.length);
+                document.getElementById('r'+i).innerHTML=red[red_num];        
+        }
+}
+function xuan(){
+        window.location='双色球.html';        
+}
+</script>
+</head>
+
+<body onload="qiu()">
+<form id="form1" name="form1" method="post" action="">
+  <table width="700" border="1" align="center" cellpadding="10">
+    <tr>
+      <td colspan="2"><div align="center">双色球彩票抽奖</div></td>
+    </tr>
+    <tr>
+      <td width="160">红色球</td>
+      <td width="488">
+                <ul id="red">
+                        <li id="r1"></li>
+                        <li id="r2"></li>            
+                        <li id="r3"></li>
+                        <li id="r4"></li>            
+                        <li id="r5"></li>
+                        <li id="r6"></li>            
+               </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>蓝色球</td>
+      <td><div id="blue"></div></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="button" name="button" id="button" value="重选" onclick="xuan();" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>javascript中innerHTML的运用</title>
+        
+   </head>
+<body>
+<h3>javascript实例显示中文的星期几</h3>
+<div id="hid" style="height:30px;width:300px;background:#f60;font-size:19px;text-align:center;line-height:30px" >
+</div>
+<script type="text/javascript">
+    //创建一个日期对象
+    var dd= new Date();
+    var st =document.getElementById("hid");
+    var ss =dd.getDay();//获取一周中的第几天
+    //打印测试
+//alert(ss);
+    if(ss==0){
+        st.innerHTML="今天是白色星期日";
+    }else if(ss==1){
+        st.innerHTML="今天是黄色星期一";
+    }else if(ss==2){
+        st.innerHTML="今天是红色星期二";
+    }else if(ss==3){
+        st.innerHTML="今天是蓝色星期三";
+    }else if(ss==4){
+        st.innerHTML="今天是绿色星期四";
+    }else if(ss ==5){
+        st.innerHTML="今天是金色星期五";
+    }else if(ss==6){
+        st.innerHTML="今天是茶色星期六";
+    }
+    </script>
+</body>
+</html>

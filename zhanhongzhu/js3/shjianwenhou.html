@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>javascript实例</title>
+       
+   </head>
+<body>
+<h3>javascript实例之实现实时问候</h3>
+<div id="hid" style="height:30px;width:300px;background:#f60;font-size:19px;text-align:center;line-height:30px" >
+</div>
+<script type="text/javascript">
+    //创建一个日期对象
+    var dd= new Date();
+    var st =document.getElementById("hid");
+    var hour =dd.getHours();//获取当前时
+    //alert(hour);
+    if(hour>0 && hour<=6){
+        st.innerHTML="还没休息啊，夜猫子，该休息了";
+    }else if(hour>6 && hour<=9){
+        st.innerHTML="早上好";
+    }else if(hour>9 && hour<=11){
+        st.innerHTML="上午好";
+    }else if(hour>11 && hour<=13){
+        st.innerHTML="中午好";
+    }else if(hour>13 && hour<=18){
+        st.innerHTML="下午好";
+    }else if(hour>18 && hour<=24){
+        st.innerHTML="晚上好";
+    }
+    </script>
+</body>
+</html>

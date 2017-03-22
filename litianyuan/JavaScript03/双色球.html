@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+</head>
+<body>
+	<div id="did" style="font-size:50px;"></div> 
+</body>
+</html>
+<script>
+	var num = new Array();
+	function red(){
+		var i = Math.round(Math.random()*100000)%31;
+		return i;
+	}
+	function blue(){
+		var i = Math.round(Math.random()*100000)%16;
+		return i;
+	}
+	num.push(red(),red(),red(),red(),red(),red(),blue());
+	var oDid = document.getElementById('did');
+	oDid.innerHTML = num;
+</script>

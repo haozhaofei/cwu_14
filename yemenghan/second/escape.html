@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh</title>
+</head>
+<body>
+<script>
+// 编译 反编译
+//目的是为了保证数据的完整性 
+	var url = "http://www.baidu.com/a/b.php";
+	document.write("原生"+url+"<br>");
+	document.write("编译"+escape(url)+"<br>");   //加一些乱码使得保证数据不易丢失
+	document.write("反编译"+unescape(url)+"<br>");
+
+</script>
+
+
+</body>
+</html>

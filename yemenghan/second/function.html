@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh</title>
+</head>
+<body>
+<script>
+/*
+函数的三种表示形式
+//1.第一种
+function hello(){
+	return("hello");
+}	
+document.write(hello());
+*/
+// //第二种用Function()构造函数来定义函数
+// var add = new Function("a","b","return a+b;");
+// alert(add(1,2));
+
+//第三种：表达式中定义函数
+var add = function(a,b){
+	return a + b;
+}
+alert(add(10,21));
+</script>	
+
+
+
+</body>
+</html>

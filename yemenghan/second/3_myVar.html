@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh</title>
+</head>
+<body>
+<script>
+// 在JavaScript中也可以自定义构造函数，通过调用自定义的构造函数也可以创建自定义对象。
+
+// 调用自定义构造函数的方法与调用函数内置的构造函数的方法一样，也是使用new运算符。
+ function pen(name,color,price)
+  {
+	  // 对象的name属性
+	  this.name=name;
+	  // 对象的color属性
+	  this.color=color;
+	  // 对象的price属性
+	  this.price=price;
+  }
+  // 定义一个对象
+  var pen1=new pen("铅笔","红色",20);
+  document.write("笔1的名称为："+pen1.name+"<br />");
+  document.write("笔1的颜色为："+pen1.color+"<br />");
+  document.write("笔1的价格为："+pen1.price+"<br /><br />");
+  // 定义一个对象
+  var pen2=new pen("钢笔","蓝色",30);
+  document.write("笔2的名称为："+pen2.name+"<br />");
+  document.write("笔2的颜色为："+pen2.color+"<br />");
+  document.write("笔2的价格为："+pen2.price);
+
+</script>
+
+
+</body>
+</html>

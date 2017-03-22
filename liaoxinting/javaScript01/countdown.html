@@ -1,0 +1,21 @@
+<input type="button" id="btn" value="点击倒数" />
+<script type="text/javascript">
+var wait=10;
+function time(o) {
+  if (wait == 0) {
+   o.removeAttribute("disabled");   
+   o.value="点击倒数";
+   wait = 10;
+  } else { 
+ 
+   o.setAttribute("disabled", true);
+   o.value="重新开始(" + wait + ")";
+   wait--;
+   setTimeout(function() {
+    time(o)
+   },
+   1000)
+  }
+ }
+document.getElementById("btn").onclick=function(){time(this);}
+</script>

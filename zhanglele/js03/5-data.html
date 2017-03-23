@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date时间对象-课上练习</title>
+</head>
+<body>
+	<div id="box" style="font-size:50px;color:green"></div>
+</body>
+</html>
+<script>
+	setInterval(function(){
+		var obox = document.getElementById('box');
+		var oDate = new Date();
+		var y = oDate.getFullYear();
+		var m = oDate.getMonth()+1;//因为是从0-11计算，所以getMonth()方法后面需要+1
+		var d = oDate.getDate();
+		var hh = oDate.getHours();
+		var mm = oDate.getMinutes();
+		var ss = oDate.getSeconds();
+		//((mm<10)?"0"+mm:mm)  表示，如果现在的分钟数是小于10的，就在分钟数前加上一个“0”，ss同理
+		var res = "现在是 "+y+"年"+m+"月"+d+"日     "+hh+":"+((mm<10)?"0"+mm:mm)+":"+((ss<10)?"0"+ss:ss) ;
+		obox.innerHTML = res; 
+
+	},1000)
+	
+</script>

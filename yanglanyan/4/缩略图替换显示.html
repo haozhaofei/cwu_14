@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<script language="javascript" type="text/javascript">
+function showclick(va){
+ if(va!="" || va!=null){
+  document.getElementById("div_1").innerHTML="<img src="+va+" width=\"400px\">";
+ }
+}
+</script>
+
+</head>
+
+<body>
+<center>
+<div id="div_1"><img src="images/1.jpg" width="400px"></div>
+<div><table>
+<tr><td><img src="images/1.jpg" onClick="showclick(this.src)" width="98px"></td>
+<td><img src="images/2.jpg" onClick="showclick(this.src)" width="98px"></td>
+<td><img src="images/3.jpg" onClick="showclick(this.src)" width="98px"></td>
+<td><img src="images/4.jpg" onClick="showclick(this.src)" width="98px"></td></tr>
+</table></div>
+</center>
+</body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Move</title>
+</head>
+<style>
+	div{width:50px;height:50px;text-align:center;line-height:45px;position:absolute;top:200px;left:200px;background-color:#fc0;}
+</style>
+<body>
+	<div id="did"></div>
+</body>
+</html>
+<script>
+	var i = document.getElementById('did');
+	var x = 200;
+	var y = 200;
+	document.onkeydown=function(event){
+            var e = event || window.event;
+			if (e && e.keyCode == 37 && x > 0) //moving left
+			{
+				x -= 10;
+				i.style.left = x +"px";
+			}
+			else if (e && e.keyCode == 38 && y > 0) //moving top
+			{
+				y -= 10;
+				i.style.top = y +"px";
+			}
+			else if (e && e.keyCode == 39) //moving right
+			{
+				x += 10;
+				i.style.left = x +"px";
+			}
+			else if (e && e.keyCode == 40) //moving down
+			{
+				y += 10;
+				i.style.top = y +"px";
+			}
+		}
+</script>

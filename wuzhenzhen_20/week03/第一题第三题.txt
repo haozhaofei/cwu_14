@@ -1,0 +1,56 @@
+	一、理论作业：
+	   1. JavaScript中常用内置对象都有哪些？
+
+JavaScript 字符串(String)对象
+JavaScript Date（日期）对象
+JavaScript Array（数组）对象
+JavaScript Boolean（逻辑）对象
+JavaScript Math（算数）对象
+JavaScript RegExp 对象
+JavaScript Global 对象
+
+	   2. 如何创建一个数组对象方式有几种。
+
+<html>
+<body>
+
+<script type="text/javascript">
+var mycars = new Array()
+mycars[0] = "Saab"
+mycars[1] = "Volvo"
+mycars[2] = "BMW"
+
+for (i=0;i<mycars.length;i++)
+{
+document.write(mycars[i] + "<br />")
+}
+</script>
+
+</body>
+</html>
+
+	三、预习作业：
+	   1. JavaScript中常用事件都有哪些？
+
+ (1)单击事件:onclick。用户单击鼠标按键时产生的事件，同时。nclick指定的事件处理程序或代码将被调用执行.
+    (2)改变事件:onchange。当text或textarea元素内的字符值改变或select表格选项状态改变时发生该事件。
+    (3)选中事件:onselect。当text或textarea对象中的文字被选中时会引发该事件。如:
+<ipnut type="text" value="默认信息”onselect=alert(”您选中T文本框中的文字”)>
+    (4)获得焦点事件:onfocus。用户单击text或textarea以及select对象，即光标落在文本框或选择框时会产生该事件。如:
+    <select name= "zhengjian" onfocus=alert(”我成为焦点”)>
+    (5)失去焦点事件:onblur.失去焦点事件正好与获得焦点事件相对，当text或textarea以及select对象不再拥有焦点而退出后台时，引发该事件。
+    (6)载人文件事件:onload,’当页面文件载人时产生该事件。onload的一个作用就是在首次载人一个页面文件时检测cookie的值，并用一个变量为其赋值，使它可以被源代码使用，本事件是window的事件，但是在HTML中指定事件处理程序时，一般把它写在<body>标记中。如:
+    <body onload=alert(”正在加载页面，请等待一”)>
+    (7)卸载文件事件:onunload。与载人文件事件。nload正好相反，当Web页面退出时引发的事件，并可更新。ookie的状态。如:
+    <body onunload=confirm(”你确定要离开本页?”)>
+    (8)鼠标镇盖事件:onmouseover, onmouseover是当鼠标位于元素上方时所引发的事件。如:
+    <input type= "boutton" value=”按钮”onmouseover= "window. status=‘请您注意下面的状态栏·;return true">
+    (9)鼠标离开事件:onmouseout, onmouseout是当鼠标离开元素时引发的事件。如果和鼠标覆盖事件同时使用，可以创建动态按钮的效果。
+    (10)一般事件。
+   ondbclick:鼠标双击事件。
+   onkeypress:当键盘上的某个键被按下并且释放时触发的事件，要求页面内必须有激活的对象。
+    onkeydown:当键盘上某个键被按下时触发的事件，要求页面内必须有激活的对象。
+    onkeyup:当键盘上某个键被放开时触发的事件，要求页面内必须有激活的对象。
+    (11)页面相关事件。
+    onabort:图片在下载时被用户中断时触发的事件。
+    onbeforeunload:当前页面的内容将要被改变时触发的事件。

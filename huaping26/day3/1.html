@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style >
+	ul li{list-style-type: none;}
+	</style>
+</head>
+<body>
+	<h4 onclick ="doShow(1)">personal management</h4>
+	<ul id ="u1" style = "display:none;">
+		<li>wage and treatment</li>
+		<li>working days</li>
+		<li>achievement</li>
+
+	</ul>
+
+	<h4 onclick = "doShow(2)">personal workspace</h4>
+	<ul id = "u2" style ="display:none;">
+		<li>shopping</li>
+		<li>study</li>
+		<li>roller skating</li>
+	</ul>
+
+</body>
+</html>
+<script>	
+	function doShow(i){
+		var ul = document.getElementById("u"+i);
+		if(ul.style.display == "none"){
+			ul.style.display = "block";
+
+		}else{
+			ul.style.display = "none";
+		}
+	}
+
+
+</script>

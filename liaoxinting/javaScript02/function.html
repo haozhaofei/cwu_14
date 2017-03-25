@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>function</title>
+<script language="javascript" type="text/javascript">
+   function MyClass(id,name) 
+   {
+            this.id = id;
+            this.name = name ;
+
+    }
+     MyClass.prototype.getId = function ()
+     {
+        return this.id;
+     }
+     MyClass.prototype.setId = function (id)
+     {
+        this.id = id;
+     }
+     MyClass.prototype.getName = function ()
+     {
+        return this.name;
+     }
+     MyClass.prototype.setName = function (name)
+     {
+        this.name = name ;
+     }
+     var my = new MyClass(123,"自定义构造函数创建对象");
+    document.write(my.getId());
+    document.write(my.getName());
+    my.setId(345);
+    document.write(my.getId());
+</script>
+</head>
+<body>
+    <p id = "my"></P>
+</body>
+</html>

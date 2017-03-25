@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+ 		ul li { list-style-type:none;}
+		div {width:100px;height:100px;border:3px solid red;border-radius:40%;}
+	</style>
+
+
+</head>
+<body>
+	<center>
+		<button onclick = "show(1)">bigger</button>
+		<button onclick = "show(2)">smaller</button>
+		<button onclick = "show(3)">hidden</button>
+		<button onclick = "show(4)">display</button>
+		<div id = "di"></div>
+	</center>
+</body>
+</html>
+<<script>
+	var oDi = document.getElementById('di');
+	var width = 100;
+	var height = 100;
+	var border = 3;
+	function show(m){
+		if(m == 1){
+			width += 20;
+			height += 20;
+			border += 2;
+			oDi.style.width = width + "px";
+			oDi.style.height = height + "px";
+			oDi.style.border = border + "px solid #eeff";
+
+
+		}else if(m == 2){
+			width -= 20;
+			height -= 20;
+			border -= 2;
+			oDi.style.width = width + "px";
+			oDi.style.height = height + "px";
+			oDi.style.border = border + "px solid yellow";
+		}else if(m == 3){
+			oDi.style.display = "none";
+
+		}else if(m == 4){
+			oDi.style.display = "block";
+		}
+	}
+</script>

@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{list-style-type: none;}
+		div{width:100px;height: 100px;border:1px solid #4EFEB3;border-radius: 80%;}
+	</style>
+</head>
+<body bgcolor="#CAFFFF">
+	<center>
+		<button onclick="show(1)">变大</button>
+		<button onclick="show(2)">变小</button>
+		<button onclick="show(3)">隐藏</button>
+		<button onclick="show(4)">显示</button>
+		<div id="did"></div>
+	</center>
+</body>
+</html>
+<script>
+	var oDid = document.getElementById('did');
+	var width=100;
+	var height=100;
+	var border = 1;
+	function show(m){
+		if(m == 1){
+			width+=20;
+			height+=20;
+			border+=2;
+			oDid.style.width = width+"px";
+			oDid.style.height = height+"px";
+			oDid.style.border = border+"px solid #6FB7B7";
+		}else if(m == 2){
+			width-=20;
+			height-=20;
+			oDid.style.width = width+"px";
+			oDid.style.height = height+"px";
+		}else if(m == 3){
+			oDid.style.display = "none";
+		}else if(m == 4){
+			oDid.style.display = "block";
+		}
+	}
+	
+</script>

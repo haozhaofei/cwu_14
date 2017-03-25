@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>你好!</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var date = new Date();
+	var hour = date.getHours();
+	function hello(h){
+		if (h>=0 && h<=12) {
+			document.write("早安!");
+		}else if(h>=1 && h<18){
+			document.write("午安!");
+		}else if (h>=18 && h<=23) {
+			document.write("晚安!");
+		}
+	}
+	hello(hour);
+</script>

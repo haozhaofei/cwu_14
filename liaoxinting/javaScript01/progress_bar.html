@@ -1,0 +1,42 @@
+<html> 
+<head> 
+<title>progress_bar</title> 
+<style type="text/css">  
+.container{  
+   width:350px;  
+   border:1px solid #B0C4DE;  
+   height:15px;  
+ }
+#bar{  
+   background:#6495ED;  
+   float:left; 
+   height:100%;  
+   text-align:center;  
+   line-height:150%; 
+ }  
+</style>  
+<script type="text/javascript">  
+  function run(){  
+        var bar = document.getElementById("bar"); 
+        var total = document.getElementById("total"); 
+    bar.style.width=parseInt(bar.style.width) + 1 + "%";  
+    total.innerHTML = bar.style.width; 
+    if(bar.style.width == "100%"){  
+      window.clearTimeout(timeout); 
+      return; 
+    } 
+    var timeout=window.setTimeout("run()",100); 
+  } 
+    window.onload = function(){  
+       run(); 
+    }  
+</script> 
+  
+</head> 
+<body> 
+  <div class="container"> 
+   <div id="bar" style="width:0%;"></div>  
+  </div>  
+  <span id="total"></span> 
+</body> 
+</html>

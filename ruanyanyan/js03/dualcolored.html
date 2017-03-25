@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双色球</title>
+
+</head>
+<style type="text/css">
+	#redball{
+		width: 50px;
+		height: 50px;
+		background: red;
+		text-align: center;
+		border-radius: 25px;
+
+	}
+	#blueball{
+		width: 50px;
+		height: 50px;
+		background: blue;
+		text-align: center;
+		border-radius: 25px;
+	}
+</style>
+<body>
+	<div id="redball"></div>
+	<p id="red">红球:</p>
+	<div id="blueball"></div>
+	<p id="blue">蓝球:</p>
+	<input type="button" value="祝你好运" onclick="red();blue()"/>
+</body>
+</html>
+<script type="text/javascript">
+	function red(){
+		var a=new Array(); //定义数组存放红球
+		for(var i=0;i<6;i++){ 
+		a[i]=parseInt(Math.random()*31+1); //产生随机数
+	for(j=0;j<i;j++){ 
+			if(a[j]==a[i]){ 
+				i--; 
+				break; 
+			} 
+		} 
+	} 
+
+ 		a.sort(mySort); //对数组排序
+	document.getElementById("red").innerText="红球:"+a; //输出红球的数组
+} 
+	function mySort(a,b){ 
+		return (a-b); 
+}
+	
+
+	function blue() 
+{ 
+
+ var b=parseInt(Math.random()*16+1); //产生随机数
+document.getElementById("blue").innerText="蓝球:"+b; //输出蓝球
+}
+</script>

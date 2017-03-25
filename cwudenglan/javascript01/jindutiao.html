@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>进度条</title>
+        <style type="text/css">
+            #bg{
+                margin:100px;width:450px;border:1px solid #aaa;height:40px;padding:2px; 
+            }
+            #yy{
+                width:0px;background-color:red;height:40px;
+            }
+
+        </style> 
+        <!-- style="width:450px;margin:100px;border:1px solid #aaa; height:25px;"
+        style="width:0px;height:25px;background-color:yellow;" -->
+    </head>
+    <body>
+    <div id="bg">
+        <div id="yy" ></div>
+        <br />
+        <button onclick="doStart()">开始</button>
+        </div>
+    <script type="text/javascript">
+    function doStart(){
+     var n =0;
+    var jindu = setInterval(function(){
+        n++;
+        document.getElementById("yy").style.width=n+"%";
+         if(n==100){
+        clearInterval(jindu);
+    }
+    },100)
+   
+}
+</script>
+    </body>
+</html>

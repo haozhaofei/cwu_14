@@ -1,0 +1,28 @@
+﻿一、
+
+ 1.JavaScript 是一种客户端脚本语言（脚本语言是一种轻量级的编程语言）。
+ JavaScript 通常被直接嵌入 HTML 页面。
+ JavaScript 是一种解释性语言（就是说，代码执行不进行预编译）。 
+ 
+ 2.有3种 使用<script></script>标签 在html标签的事件中，超级链接里 外部导入方式
+
+ 3.undefined 类型 
+   null 类型（对象）
+   boolean 类型
+   number 类型
+   string 类型
+   object引用类型
+
+ 4.Number（）、parseInt() 和parseFloat（）
+
+ 5.isNaN()
+
+ 6.1. 一元运算符
+   2. 逻辑运算符
+   3. 乘性运算符
+   4. 加性运算符
+   5. 关系运算符
+   6. 等性运算符
+   7. 条件运算符
+   8. 赋值运算符
+   9 逗号运算符 

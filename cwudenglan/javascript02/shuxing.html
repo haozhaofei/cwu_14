@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js实现树形菜单</title>
+    <style type="text/css">
+    #div{
+        margin:50px;
+    }
+    #u1{
+        display:none;
+    }
+    #u2{
+        display:none;
+    }
+     #u3{
+        display:none;
+    }
+     #u4{
+        display:none;
+    }
+    </style>
+</head>
+<body>
+    <div id="div">
+    <h4 onclick="show(1)">书</h4>
+            <ul id="u1">
+                <li>教科书</li>
+                <li>漫画书</li>
+                <li>故事书</li>
+                <li onclick="show(2)">小说
+                    <ul id="u2">
+                        <li>言情</li>
+                        <li>科幻</li>
+                        <li>都市</li>
+                        <li>宫廷</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4 onclick="show(3)">鞋</h4>
+            <ul id="u3">
+                <li>高跟鞋</li>
+                <li>平底鞋</li>
+                <li>粗跟鞋</li>
+                <li>坡跟鞋</li>
+            </ul>  
+       <h4 onclick="show(4)">衣服</h4>
+            <ul id="u4">
+                <li>连衣裙</li>
+                <li>衬衫</li>
+                <li>外套</li>
+                <li>风衣</li>
+            </ul> 
+            </div> 
+
+</body>
+</html>
+<script type="text/javascript">
+        
+        function show(i){
+            var ul=document.getElementById("u"+i);
+            if(ul.style.display=="none"){
+                ul.style.display="block";
+            }else{
+                ul.style.display="none";
+            }
+        }
+ </script>

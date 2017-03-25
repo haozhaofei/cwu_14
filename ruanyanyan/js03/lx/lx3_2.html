@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>aaaa</li>
+		<li>bbbb</li>
+		<li>cccc</li>
+	</ul>
+</body>
+</html>
+<script>
+	
+		/*var test = "var a = {name:'zhangsan',age:22}";
+		//eval可以把字符串当做脚本执行
+		var a = "var name = 100;";
+		eval(a);
+		alert(name);
+		//eval(test);
+		eval(test);
+		console.log(a.name);*/
+	
+
+
+		//for in 会遍历出许多我们不想要的 length item namedItem
+		var ul = document.getElementsByTagName('li');
+		for(k in ul){
+			document.write(k+"<br>");
+		}
+
+
+		//推荐使用for循环做遍历
+		for(var i=0;i<ul.length;i++){
+			document.write(ul[i].innerHTML+"<br>");
+		}
+
+</script>

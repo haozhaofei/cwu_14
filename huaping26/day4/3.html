@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>邮寄出现</title>
+	<style>
+	ul,li{margin:0;padding:0;}
+	ul{width:100px;border:0.5px soid #ccc;position:relative;top:20px;left:300px;display:none;}
+	ul li{height:20px;width:100px;margin-top: 10px;background:#ddeecc;text-align:center;list-style-type:none;line-height:30px;}
+	li:hover{background:#ffddee;}
+	</style>
+</head>
+<body>
+	<ul id = "uid">
+		<li>cope</li>
+		<li>cut</li>
+		<li>stick</li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+<script>
+	
+	window.document.oncontextmenu = function(ent){
+		var event = ent || window.event;
+		var x = event.clientX;
+		var y = event.clientY;
+		var oUid = document.getElementById("uid");
+		oUid.style.left = x + "px";
+		oUid.style.top = y + "px";
+		oUid.style.display = "block";
+
+		return false;
+	}
+	
+</script>

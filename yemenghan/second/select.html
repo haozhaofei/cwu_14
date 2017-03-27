@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>select_ymh</title>
+    <title>js实现全选，反选，全不选</title>
 </head>
 <body>
 <div id="div">
+    <h1>ymh</h1>
     <ul>book
     <li>Jane Eyre<input type="checkbox" /><br /></li>
     <li>King<input type="checkbox" /><br /></li>
     <li>Spring<input type="checkbox" /><br /></li>
-    <li>The Kite Runner<input type="checkbox" /><br /></li>
     </ul>
     </div>
-    <input type="button" value="select_all" onclick="CheckAll()"/>
-    <input type="button" value="none_select" onclick="UnCheck()"/>
-    <input type="button" value="other_select" onclick="othercheck()"/>
+    <input type="button" value="全选" onclick="CheckAll()"/>
+    <input type="button" value="全不选" onclick="UnCheck()"/>
+    <input type="button" value="反选" onclick="othercheck()"/>
 
     <script type="text/javascript">
         var CheckBox=div.getElementsByTagName('input');

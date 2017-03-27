@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击出现下拉菜单</title>
+	<style>
+		/*去掉li前面的小黑点*/
+		ul li{list-style-type: none;}
+	</style>
+</head>
+<body>
+	<!-- onclick后面添加一个函数 -->
+	<h4 onclick="doShow(1)">人员管理</h4>
+	<ul id="u1" style="display:none">
+		<li>工资待遇</li>
+		<li>出勤天数</li>
+		<li>提成业绩</li>
+	</ul>
+
+	<h4 onclick="doShow(2)">企业文化</h4>
+	<ul id="u2" style="display:none">
+		<li>创办年份</li>
+		<li>企业文化</li>
+	</ul>
+
+	<h4 onclick="doShow(3)">招募</h4>
+	<ul id="u3" style="display:none">
+		<li>前台</li>
+		<li>讲师</li>
+		<li>工程师</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	function doShow(i){
+		var ul = document.getElementById("u"+i);
+		if(ul.style.display == "none"){
+			ul.style.display = "block";
+		}else{
+			ul.style.display = "none";
+		}
+	}
+</script>
+

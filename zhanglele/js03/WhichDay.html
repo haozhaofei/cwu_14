@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date时间对象-显示星期几</title>
+</head>
+<body>
+	<div id="box" style="font-size:50px;color:green"></div>
+</body>
+</html>
+<script>
+	/*总结出现的问题：
+	1-switch语句忘记加break；
+	2-出现两个相同变量，出现错误；
+	3-变量范围！函数里的变量为局部变量，不能作为全局变量在函数范围外使用！*/
+			var obox = document.getElementById('box');
+			var oDate = new Date();
+			var day = oDate.getDay();
+			switch(day){
+				case 1:obox.innerHTML = "今天是周一";break;
+				case 2:obox.innerHTML = "今天是周二";break;
+				case 3:obox.innerHTML = "今天是周三";break;
+				case 4:obox.innerHTML = "今天是周四";break;
+				case 5:obox.innerHTML = "今天是周五";break;
+				case 6:obox.innerHTML = "今天是周六";break;
+				case 0:obox.innerHTML = "今天是周日";break;
+			}
+	
+	
+</script>

@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{list-style-type: none;}
+	</style>
+</head>
+<body bgcolor="#CAFFFF">
+	<h4 onclick="doShow(1)">情感</h4>
+	<ul id="u1" style="display:none;">
+		<li>爱情</li>
+		<li>友情</li>
+		<li>亲情</li>
+	</ul>
+
+	<h4 onclick="doShow(2)">生活</h4>
+	<ul id="u2" style="display:none;">
+		<li>学习</li>
+		<li>娱乐</li>
+		<li>饮食</li>
+	</ul>
+
+	<h4 onclick="doShow(3)">理想</h4>
+	<ul id="u3" style="display:none;">
+		<li>工资</li>
+		<li>未来</li>
+	</ul>
+</body>
+</html>
+<script>
+	function doShow(i){
+		var ul = document.getElementById("u"+i);
+		if(ul.style.display == "none"){
+			ul.style.display = "block";
+		}else{
+			ul.style.display = "none";
+		}
+	}
+</script>

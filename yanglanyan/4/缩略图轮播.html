@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#box{
+		width:500px;
+		height: 300px;
+		margin:  50px auto 0;
+		position: relative;
+	}
+	#box img{
+		width:500px;
+		height: 300px;
+	}
+	a{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top:0;
+		bottom: 0;
+		margin: auto 0;
+		font-size: 60px;
+		text-decoration: none;
+		color:white;
+		opacity: 0.9;
+		font-weight: bold;
+		line-height: 60px;
+		text-align: center;
+	}
+	a:hover{
+		opacity:1;
+	}
+	#prev{
+		left: 20px;
+	}
+	#next{
+		right: 20px;
+	}
+	#list{
+		
+		text-align: center;
+		margin: -40px 0 0 ;
+		padding: 0;
+	}
+	#list li{
+		width:30px;
+		height: 30px;
+		border-radius: 50%;
+		list-style: none;
+		background: #55F500;
+		display: inline-block;
+		margin: 0 5px;
+		position: relative;
+	}
+	#list li:hover{
+		cursor: pointer;
+	}
+	#list .active{
+		background: red;
+	}
+	#list li div{
+		width:100px;
+		height: 100px;
+		position: absolute;
+		top:-112px;
+		left:-35px;
+		display: none;
+		background: white;
+	}
+	#list li div img{
+		width: 80px;
+		height: 80px;
+		margin: 10px;
+	}
+	#list li div span{
+		width:0px;
+		height: 0px;
+		border: 7px solid transparent;
+		border-top-color: red; 
+		position: relative;
+		bottom: -3px;
+	}
+	#list li:hover div{
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="images/1.jpg" alt="" id="img">
+		<a href="javascript:;" id="prev"><</a>
+		<a href="javascript:;" id="next">></a>
+		<ul id="list"></ul>
+	</div>
+	<script type="text/javascript">
+		var prev = document.getElementById('prev');
+		var next = document.getElementById('next');
+		var img = document.getElementById('img');
+		var list =document.getElementById('list');
+		var lis = list.getElementsByTagName('li');
+
+		var arr = ['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg'];
+		var num = 0;
+
+		for(var i = 0;i < arr.length;i++){
+			list.innerHTML += '<li><div><img src="'+arr[i]+'"/><span></span></div></li>';
+		}
+		lis[0].className = 'active';
+
+		for(var i = 0;i < lis.length;i++){
+			lis[i].index = i;
+			lis[i].onclick = function(){
+				for(var i = 0;i < lis.length;i++){
+					lis[i].className = '';
+				}
+					this.className = 'active';
+				img.src = arr[this.index];
+				num = this.index;
+			}
+		}
+		next.onclick = function(){
+			num++;
+			if(num >= arr.length){
+				num = 0;
+			}
+			
+			fn();
+			
+		}
+		prev.onclick = function(){
+			num--;
+			if(num < 0){
+				num = arr.length - 1;
+			}
+			fn();
+		}
+		function fn(){
+			img.src = arr[num];
+			for(var i = 0;i < lis.length;i++){
+				lis[i].className = '';
+			}
+			lis[num].className = 'active';
+		}
+	</script>
+</body>
+</html>

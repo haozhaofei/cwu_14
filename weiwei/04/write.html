@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>write</title>
+</head>
+<style>
+	p{font-size: 20px;}
+	div{text-align: center;}
+</style>
+<body>
+	<div>
+	<button onclick="show(1)">加粗</button>  
+	<button onclick="show(2)">下划线</button>
+	<button onclick="show(3)">倾斜</button>
+	<button onclick="show(4)">变大</button>
+	<button onclick="show(5)">变小</button>
+	<p id="pid">lalalalalala</p>
+	</div>
+	
+</body>
+</html>
+
+<script>
+	var s = 20;
+	function show(i){
+
+		var t = document.getElementById('pid');
+		if (i == 1){
+			t.style.fontWeight = "Bold";
+		}
+		else if (i == 2) {
+			t.style.textDecoration = "underline";
+		}
+		else if (i == 3) {
+			t.style.fontStyle = "Italic";
+		}
+		else if (i == 4) {
+			s += 10;
+			t.style.fontSize = s+"px";
+		}
+		else if (i == 5) {
+			s -= 10;
+			t.style.fontSize = s+"px";
+
+		}
+	}
+	
+</script>

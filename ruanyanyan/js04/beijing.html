@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击按钮出现背景图</title>
+</head>
+ <style type="text/css">
+ 
+   </style>
+
+<body>
+	<input type="button" value="第一个背景图" onclick="change(1)" />
+    <input type="button" value="第二个背景图" onclick="change(2)" />
+    <input type="button" value="第三个背景图" onclick="change(3)" />
+	<div id="div1" style="height:340px; width:600px; background:#7FFF00"></div>
+
+    
+
+</body>
+</html>
+<script type="text/javascript">
+	function change(num){
+		document.getElementById("div1").style.backgroundImage="url(images/"+num+".jpg)";
+	
+	}
+</script>

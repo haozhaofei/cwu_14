@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>缩略图</title>
+<style>
+#big{  width:500px; height:300px;margin-bottom:50px};
+</style>
+</head>
+
+<body>
+	<div  id="big"  >
+		<img  src="img/1.jpg"  width="500px" height="300px" id="bigImag"/>
+	</div>
+	
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="img/1.jpg"  width="90px" height="70px" onmouseover="f0();"/>
+	</div>
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="img/2.jpg"  width="90px" height="70px" onmouseover="f1();"/>
+	</div>
+	<div  style="width:90px; height:70px; float:left; margin-left:10px">
+	 	<img  src="img/3.jpg"  width="90px" height="70px" onmouseover="f2();"/>
+	</div>
+	<div  style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="img/4.jpg"  width="90px" height="70px" onmouseover="f3();"/>
+	</div>
+</body>
+</html>
+<script>
+	function f0(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/1.jpg";
+	}
+	function f1(){	
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/2.jpg";
+	
+	}
+	function f2(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/3.jpg";
+	}
+	function f3(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="img/4.jpg";
+	}
+</script>

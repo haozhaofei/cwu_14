@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>鼠标右击</title>
+</head>
+
+<style>
+	ul,li{padding: 0px;margin: 0px;}
+	ul{width:100px;border: 1px solid #ccc;position:relative;display: none;}
+	ul li{height: 30px;background: #ccc;margin-top: 5px;width: 100px;text-align: center;list-style-type: none;line-height: 30px;}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul id="uid">
+		<img src="img/c.jpg" width=100px;height=100px;/>
+
+	</ul>
+</body>
+</html>
+
+<script>
+	//鼠标右键事件
+	window.document.oncontextmenu=function(ent){
+		//兼容 IE FF GOOGLE
+		var event = ent || window.event;
+		//获取坐标X,Y
+		var x = event.clientX;
+		var y = event.clientY;
+		//获取uid元素
+		var oUid = document.getElementById('uid');
+		oUid.style.left = x+"px";
+		oUid.style.top = y+"px";
+		oUid.style.display = "block";
+		return false;
+	}
+</script>

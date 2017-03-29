@@ -1,0 +1,21 @@
+一、理论作业：
+	   1. JavaScript中常用内置对象都有哪些？
+              : * Array（数组）
+		
+		常用属性：length--获取长度。
+		
+                * Boolean  布尔值包装类对象
+		方法：toSource() 	返回该对象的源代码。 
+			toString() 	把逻辑值转换为字符串，并返回结果。
+			valueOf() 	返回 Boolean 对象的原始值。
+   		* Date
+  		* Math  对象用于执行数学任务。方法是静态的。
+   		* Number
+		toString();
+		toFixed 把数字转换为字符串，结果的小数点后有指定位数的数字。 		
+   	        * String 子串处理对象
+  		* Global
+		
+		
+	   2. 如何创建一个数组对象方式有几种。
+              1、只创建js数组 2、直接初始化  3、创建js数组同时规定数组的大小

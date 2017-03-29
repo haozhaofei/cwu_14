@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh_点击按钮出现图片</title>
+</head>
+<!-- 点击消失可以，点击出现不行？ -->
+<style type="text/css">
+	button{background:green; height:50px; width: 100px; }
+	img{height: 200px; width: 320px; display:block;}
+</style>
+
+<body>
+    <div id = "uid">
+		<img src="images/background.jpg" id="m1" alt="">
+	</div>
+
+	<button onclick="mychange()">click</button>
+</body>
+</html>
+
+<script>
+	var cg = document.getElementsByTagName('button');
+	var ouid = document.getElementById('uid');
+	function mychange(){
+		ouid.style.display = "none";	
+	}
+</script>

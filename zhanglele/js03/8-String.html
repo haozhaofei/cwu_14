@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组对象</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+	 var str = new String("ZhangSanFeng");
+	 //第4个到后面三个
+	 document.write(str.substr(3,3)+"<br>");
+	 //第四个到第五个
+	 document.write(str.substring(3,5)+"<br>");
+	 //转换成大写字母
+	 document.write(str.toLowerCase()+"<br>");
+	 //转换成大写字母
+	 document.write(str.toUpperCase()+"<br>");
+	 //第四位的字母
+	 document.write(str.charAt(3)+"<br>");
+	 //字体变成加粗体
+	 document.write(str.bold()+"<br>");
+	 //San是从第几位开始的
+	 document.write(str.indexOf("San")+"<br>");
+	 //有a的地方切割(替换成"，"")
+	 document.write(str.split("a")+"<br>");  //返回的是一个数组对象
+	 //将SanFeng 替换成JunBao
+	 document.write(str.replace("SanFeng","JunBao")+"<br>");
+	 //将字符串显示为下标
+	 document.write(str.sub()+"<br>");
+	 
+</script>

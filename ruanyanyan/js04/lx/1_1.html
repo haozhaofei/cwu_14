@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双击换色</title>
+</head>
+<style type="text/css">
+	ul,li{
+		margin: 0px;
+		padding: 0px;
+		height: 20px;
+	}
+	ul li{
+		margin-top: 10px;
+		height: 20px;
+		background: #ccc;
+	}
+	li:hover{
+		background: #fc0;
+	}
+</style>
+<body>
+	<ul >
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+
+	</ul>
+</body>
+</html>
+<script type="text/javascript">
+var list= document.getElementsByTagName('li');
+	for (var i = 0;i<list.length; i++) {
+		list[i].ondblclick = function(){
+			this.style.background = "#f0c";
+		}
+	};
+</script>

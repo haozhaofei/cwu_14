@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>演示for...in循环遍历</title>
+</head>
+<body>
+	<ul>
+		<li>aaa</li>
+		<li>bbb</li>
+		<li>ccc</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	// for..in循环遍历会输出所有属性,包括length,item,namedItem
+	//通过TagName获取li的元素集合
+	var ul = document.getElementsByTagName('li');
+	for(m in ul){
+		document.write(m+"<br>");
+	}
+	document.write("<br><br>");
+	
+	// 推荐使用for循环做遍历
+	for (var i = 0; i < ul.length; i++) {
+		document.write(ul[i].innerHTML + "<br>");
+	}
+</script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>rljchoose</title>
+</head>
+
+<body bgcolor="#FFCCFF">
+<h3 align="center">小朋友们，你们喜欢吃什么水果呢？</h3>
+        <div id="div" align="center">
+
+            桔子<input type="checkbox" /><br /><br />
+
+            苹果<input type="checkbox" /><br /><br />
+
+            香蕉<input type="checkbox" /><br /><br />
+            
+            芒果<input type="checkbox" /><br /><br />
+
+            葡萄<input type="checkbox" /><br /><br />
+
+            西瓜<input type="checkbox" /><br /><br />
+
+        </div>
+        <div align="center"/>
+        <input type="button" value=" 全 选 " onclick="CheckAll()" />
+
+        <input type="button" value=" 不 选 " onclick="UnCheck()" />
+
+        <input type="button" value=" 反 选 " onclick="othercheck()" />
+		</div>
+
+        <script>
+
+            var CheckBox=div.getElementsByTagName('input');
+
+             
+
+            //全选
+
+            function CheckAll(){
+
+                for(i=0;i<CheckBox.length;i++){CheckBox[i].checked=true;};
+
+            };
+
+             
+
+            //不选
+
+            function UnCheck(){
+
+                for(i=0;i<CheckBox.length;i++){CheckBox[i].checked=false;};
+
+                };
+
+             
+
+            //反选
+
+            function othercheck(){
+
+                for(i=0;i<CheckBox.length;i++){
+
+                    if(CheckBox[i].checked==true){ CheckBox[i].checked=false;}
+
+                    else{ CheckBox[i].checked=true}
+
+                }
+
+            };
+
+        </script>
+
+    </body>
+</html>

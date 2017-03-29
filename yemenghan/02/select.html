@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>js实现全选，反选，全不选</title>
+</head>
+<body>
+<div id="div">
+    <h1>ymh</h1>
+    <ul>book
+    <li>Jane Eyre<input type="checkbox" /><br /></li>
+    <li>King<input type="checkbox" /><br /></li>
+    <li>Spring<input type="checkbox" /><br /></li>
+    </ul>
+    </div>
+    <input type="button" value="全选" onclick="CheckAll()"/>
+    <input type="button" value="全不选" onclick="UnCheck()"/>
+    <input type="button" value="反选" onclick="othercheck()"/>
+
+    <script type="text/javascript">
+        var CheckBox=div.getElementsByTagName('input');
+        //全选
+        function CheckAll(){
+            for(i=0;i<CheckBox.length;i++){
+                CheckBox[i].checked=true;
+            }
+        }
+        //全不选
+        function UnCheck(){
+             for(i=0;i<CheckBox.length;i++){
+                CheckBox[i].checked=false;
+            }
+        }
+        //反选
+        function othercheck(){
+            for(i=0;i<CheckBox.length;i++){
+                if(CheckBox[i].checked==true){
+                    CheckBox[i].checked=false;
+                }else{
+                    CheckBox[i].checked=true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

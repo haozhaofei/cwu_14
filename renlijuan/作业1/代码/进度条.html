@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body bgcolor="#FFCC99">
+</body>
+</html>
+<table align="left" width="70%">
+  <tr><td><div id="load_text"> <span id="load_percent" class="load_percent">0</span></div></td></tr>
+  <tr><td>
+    <div  id="load_progress" style="background-color:#6666ff;width:00%;height:18px"></div><BR>
+    <div  id="progress1" style="color:#6666ff;font-family:Arial;font-weight:bold;height:18px">|</div><BR>
+  </td></tr>
+</table>
+<style>
+  .load_percent{
+     font-family:宋体;
+     font-style:oblique;
+     font-weight:bold;
+     color:#6666FF;
+  }
+</style>
+<script language="JavaScript">
+  var already = 0;
+  function display(max){
+     already++;
+     var dispObj = document.all.load_progress;
+     dispObj.style.width = 100.0*already/max+"%";
+     document.all.load_percent.innerHTML = 100.0*already/max+"%";
+     dispObj.innerHTML = "<span style='color:#FFFFFF;font-family:宋体;font-style:oblique'>"+100.0*already/max+"%</span>";
+     document.all.progress1.innerHTML += "|";
+     var timer = window.setTimeout("display("+max+")",200);
+     if (already >= max){
+        window.clearTimeout(timer);
+     }
+  }
+
+  display(50);
+</script>

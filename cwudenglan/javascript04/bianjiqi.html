@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>简单编辑器</title>
+        <style>
+            #btn{
+                text-align: center;
+                margin-top:20px;
+            }
+            #btn button{
+                height:40px;
+            }
+            #today{
+                margin-top:5px;
+                width:300px;
+                height:300px;
+                border:1px solid #ccc;
+                background: red;
+                text-align: center;
+                color:white;
+                font-size:20px;
+            }
+
+        </style>
+    </head>
+    <body>
+    <div id="btn">
+        <button onclick="show(1)">加粗</button>
+        <button onclick="show(2)">下滑线</button>
+        <button onclick="show(3)">倾斜</button>
+        <button onclick="show(4)">字体变大</button>
+        <button onclick="show(5)">字体变小</button>
+    </div>
+    <center>
+    <div id="today">今天天气真好，我们出去玩吧!但是去哪里玩呢？去看樱花吧，听说玉渊潭的樱花开了，但是下雨了，不会落了满地么？</div>
+    </center>
+   
+    <script type="text/javascript">
+    function show(i){
+        var today=document.getElementById('today');
+        if(i==1){
+            today.style.fontWeight="bold";
+        }else if(i==2){
+            today.style.textDecoration="underline";
+        }else if(i==3){
+            today.style.fontStyle="oblique ";
+        }else if(i==4){
+            today.style.fontSize="150%";
+        }else if(i==5){
+            today.style.fontSize="50%";
+        }
+
+
+    }
+    
+   
+
+</script>
+ </body>
+</html>

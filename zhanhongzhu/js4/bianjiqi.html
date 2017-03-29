@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html>
+      <head>
+      <title> Editor </title>
+          <link href="index.css" rel="stylesheet">
+          <script type="text/javascript" src="index.js"></script>
+      </head>
+      <body>
+          <div id="toolbar">
+             <span>Size:</span>
+             <select id="size">
+                 <option value="4">Small</option>
+                 <option value="5">Normal</option>
+                 <option value="6">Big</option>
+                 <option value="7">Large</option>
+             </select>
+             
+ 
+             <span><strong>B</strong></span>
+             <input type="checkbox" id="bold">
+             
+ 
+             <span><i>I</i></span>
+             <input type="checkbox" id="italic">
+             
+ 
+            <span style="text-decoration:underline">U</span>
+             <input type="checkbox" id="underline">
+         </div>
+         <div>
+             <input type="button" value="Submit" id="submit">
+             <input type="button" value="Edit" id="edit">
+         </div>
+         <div id="editor" class="editable"></div>  
+     </body>
+ </html>

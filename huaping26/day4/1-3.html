@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="fun(this)">butt1</button>
+	<button id = "dod">butt2</button>
+</body>
+</html>
+<<script>
+	function fun(){
+		this.style.color = "blue";
+		alert("i am a active event");
+
+	}
+	document.getElementById("dod").onclick =function(){
+		this.style.color = "red";
+		alert("ia am a passive event");
+	}
+</script>

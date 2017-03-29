@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date时间对象-实时问候</title>
+</head>
+<body>
+	<div id="box" style="font-size:50px;color:green"></div>
+</body>
+</html>
+<script>
+		setInterval(function(){
+			var obox = document.getElementById('box');
+			var oDate = new Date();
+			var y = oDate.getFullYear();
+			var m = oDate.getMonth()+1;//因为是从0-11计算，所以getMonth()方法后面需要+1
+			var d = oDate.getDate();
+			var hh = oDate.getHours();
+			var mm = oDate.getMinutes();
+			var ss = oDate.getSeconds();
+			//((mm<10)?"0"+mm:mm)  表示，如果现在的分钟数是小于10的，就在分钟数前加上一个“0”，ss同理
+			var res = "现在是 "+y+"年"+m+"月"+d+"日     "+hh+":"+((mm<10)?"0"+mm:mm)+":"+((ss<10)?"0"+ss:ss) ;
+			//obox.innerHTML = res; 
+			//document.write(res);//每秒根据get到的内容不同变换结果，60秒就写60次！！！
+			if(hh>=6&&hh<12){
+				obox.innerHTML = "早上好,今天要有个好心情哦~"+res;
+			}else if(hh>=12&&hh<14){
+				obox.innerHTML = "中午好，是不是有点饿呢，要记得吃午餐哦~"+res;
+			}else if(hh>=14&&hh<17){
+				obox.innerHTML = "下午好，调整心情，迎接新的挑战！"+res;
+			}else if(hh>=17&&hh<23){
+				obox.innerHTML = "晚上好！"+res;
+			}else if(hh>23&&hh<6){
+				obox.innerHTML = "夜深了，早点休息哦！"+res;
+			}
+		},1000)
+	
+	
+</script>

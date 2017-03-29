@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>点击一个按钮在浏览器出一张背景图</title>
+</head>
+<script language=javascript type=text/javascript>
+function Bg()
+{
+  document.body.style.backgroundImage="url(images/0.jpg)";
+  document.body.style.backgroundRepeat="no-repeat";
+  document.body.style.backgroundPosition=" top";
+  document.body.style.backgroundSize="80%";
+}
+
+
+</script>
+</head>
+<body>
+<center>
+<form  method="post">
+<input type=button id="btn" onclick="Bg()" value="点击显示背景图">
+</form>
+</center>
+</body>
+</html>

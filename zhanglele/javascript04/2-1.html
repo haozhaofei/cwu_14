@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移动双击单击触发事件</title>
+	<style>
+		ul,li{margin:0px;padding: 0px;}
+		ul li{height: 25px;width: auto;margin-top: 4px;text-align: center;list-style-type: none;background: #ccc}
+		li:hover{background: #fc0;}
+	</style>
+</head>
+<body>
+
+	<ul>
+		<li>@-@</li>
+		<li>$-$</li>
+		<li>%-%</li>
+		<li>^-^</li>
+		<li>*-*</li>
+	</ul>
+</body>
+</html>
+<script>//单击onclick()和ondblclick()都是小写，没有大写，不按命名法来！= =
+	// 获取li集合，命名为list
+	var list = document.getElementsByTagName("li");
+	// 从li的第一个循环到最后一个添加函数
+	for(i=0;i<list.length;i++){
+		
+		list[i].onclick = function(){
+			this.style.background="#f0c";
+		}
+	}
+	
+	
+</script>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>调用方法自动转换为对象</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//当我们调用方法的时候,会自动的转换为对象
+	var a = true;
+	document.write(typeof a+"<br>");//boolean
+	document.write(a.toString()+"<br>");//true
+
+	//new一个对象
+	var b = new Boolean(false);
+	document.write(typeof b+"<br>");//object
+	document.write(b.toString()+"<br>");//false
+</script>

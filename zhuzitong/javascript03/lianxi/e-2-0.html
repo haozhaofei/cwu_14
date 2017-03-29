@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>changeDiv</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			border: 2px solid gray;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="show(1)">Big</button>
+	<button onclick="show(2)">Small</button>
+	<button onclick="show(3)">Gone</button>
+	<button onclick="show(4)">Show</button>
+	<div id="did"></div>
+	
+</body>
+</html>
+
+<script>
+	var oDiv = document.getElementById('did');
+	var width = 100;
+	var height = 100;
+	function show(i){
+		if (i == 1) {
+			width+= 10;
+			height+= 10;
+			oDiv.style.width = width+"px";
+			oDiv.style.height = height+"px";
+		}
+		if (i == 2) {
+			width-= 10;
+			height-= 10;
+			oDiv.style.width = width+"px";
+			oDiv.style.height = height+"px";
+		}
+		if (i == 3) {
+			oDiv.style.display = "none";
+		}
+		if (i == 4) {
+			oDiv.style.display = "block";
+		}
+	}
+</script>

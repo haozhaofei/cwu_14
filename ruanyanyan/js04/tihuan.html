@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图点击替换,玩崩了</title>
+</head>
+ <style>
+	div,ul,li,img{padding: 0px;margin: 0px;}
+	#uid img {width: 387px; height: 250px}
+	#did img{width: 93px;height: 80px;}
+	#up{
+		position: absolute;;
+		left: 230px;
+	}
+	#down{
+		position:relative;
+		left: 300px;
+	}
+</style>
+<body>
+	<div id="uid">
+		<img src="images/1.jpg" id="m1" alt="">
+	</div>
+	<div id="did">
+		<img src="images/1.jpg"  id="m2" alt="">
+		<img src="images/2.jpg"  id="m3" alt="">
+		<img src="images/3.jpg"  id="m4" alt="">
+		<img src="images/4.jpg"  id="m5" alt="">
+	</div>
+	<input type = "button" value = "上一张" onclick = "change('pre')" id="up"/>
+	<input type = "button" value = "下一张" onclick = "change('next')" id="down"/>
+</body>
+</html>
+
+<script>
+		var num = 1;
+	function change(which){
+
+		var img = document.getElementById("m1");
+		if(which == 'pre'){
+		num--;
+		if(num < 1){
+
+		num = 4;
+		img.src = "images/"+num+".jpg"
+		}
+		img.src = "images/"+num+".jpg";
+
+
+		}else{
+
+		num++;
+		if(num > 4){
+		num = 1;
+		img.src = "images/"+num+".jpg";
+		}
+	img.src = "images/"+num+".jpg";
+
+}
+
+
+}
+	
+</script>

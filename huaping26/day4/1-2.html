@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<button onclick="fun1(this)">button1</button>
+<button id="did">button2</button>
+	
+</body>
+</html>
+<<script>
+	// 1.event source
+	// 2.event
+	// 3.handle     
+	//problem:1.我的sublime输入中文不显示中文
+	//         2。我的script按table前面会出来<<script>
+	function fun1(obj){
+		this.style.color = "blue";
+		alert("I am a active event");
+	}
+	document.getElementById("did").onclick = function(){
+		this.style.color = "red";
+		alert("i am a passive event");
+	}
+
+</script>

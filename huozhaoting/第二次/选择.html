@@ -1,75 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>choose</title>
-</head>
-<body>
-
+<html>
+    <head><meta charset="UTF-8"></head>
+    <body>
         <div id="div">
-
-            嘿 ！<input type="checkbox" /><br />
-
-            哈 ！<input type="checkbox" /><br />
-
-            吼 ！<input type="checkbox" /><br />
-            
-            嘿 ！<input type="checkbox" /><br />
-
-            哈 ！<input type="checkbox" /><br />
-
-            吼 ！<input type="checkbox" /><br />
-
+            <label><input type="checkbox" />A</label><br />
+            <label><input type="checkbox" />B</label><br />
+            <label><input type="checkbox" />C</label><br />
         </div>
-
-        <input type="button" value="全选" onclick="CheckAll()"/>
-
-        <input type="button" value="不选" onclick="UnCheck()"/>
-
-        <input type="button" value="反选" onclick="othercheck()"/>
-
+        <input type="button" value="全选" onclick="CheckAll()"/><br />
+        <input type="button" value="不选" onclick="UnCheck()"/><br />
+        <input type="button" value="反选" onclick="othercheck()"/><br />
         <script>
-
             var CheckBox=div.getElementsByTagName('input');
-
-             
-
             //全选
-
             function CheckAll(){
-
                 for(i=0;i<CheckBox.length;i++){CheckBox[i].checked=true;};
-
             };
-
-             
-
             //不选
-
             function UnCheck(){
-
                 for(i=0;i<CheckBox.length;i++){CheckBox[i].checked=false;};
-
                 };
-
-             
-
             //反选
-
             function othercheck(){
-
                 for(i=0;i<CheckBox.length;i++){
-
                     if(CheckBox[i].checked==true){ CheckBox[i].checked=false;}
-
                     else{ CheckBox[i].checked=true}
-
                 }
-
             };
-
         </script>
-
     </body>
-
 </html>

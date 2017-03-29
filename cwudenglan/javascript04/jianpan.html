@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>用键盘控制小方块的移动</title>
+        <style>
+            #bk{
+                width:100px;height:100px;background:#f0c;
+            }
+
+        </style>
+    </head>
+    <body onkeyup="keyEvent(event)">
+    <div id="bk"></div>
+    
+    </body>
+</html>
+<script>
+    function keyEvent(event){
+        var block1=document.getElementById('bk');
+        var x=block1.style.left;
+        var y=block1.style.top;
+        if(x<0){
+            x=0;
+            return;
+        }
+        if(y<0){
+            y=0;
+            return;
+        }
+
+         switch(event.keyCode)
+      {
+          case 37:
+                x-=10;
+                block1.style.left=x+"px";
+                console.log(x);
+             //alert("left");
+             break; 
+          case 38:
+                y-=10;
+                block1.style.top=y+"px";
+             //alert("up");
+             break;
+         case 39:
+                 x+=10;
+                  block1.style.left=x+"px";
+            // alert("right");
+             break;
+         case 40:
+            y+=10;
+             block1.style.top=y+"px";
+            // alert("down");
+             break;
+         default:
+             break;
+}
+}
+
+    </script>

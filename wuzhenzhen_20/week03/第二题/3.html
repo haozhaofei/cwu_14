@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />  
+<title>模拟双色球抽奖——不使用Interval和Timeout</title>  
+  
+<style  type="text/css">  
+    .myStyle{  
+        height:35px;  
+        width:200px;  
+    }  
+</style>  
+  
+</head>  
+  
+<body>  
+<table align="center">  
+    <tr>  
+        <td><font size="2" color="blue">号码1</font></td>  
+        <td><font size="2" color="black">号码2</font></td>  
+        <td><font size="2" color="green">号码3</font></td>  
+        <td><font size="4" color="red"><b>特殊号码</b></font></td>  
+    </tr>  
+    <tr>  
+        <td><input style="color:blue;" class="myStyle" id="num1" type="text" value=""></td>  
+        <td><input style="color:black;" class="myStyle" id="num2" type="text" value=""></td>  
+        <td><input style="color:green;" class="myStyle" id="num3" type="text" value=""></td>  
+        <td><input style="color:red;font-size:20pt;height:35px;width:200px;" id="num4" type="text" value=""></td>  
+    </tr>  
+    <tr>  
+        <td colspan="2" align="right"><input style="height:35px;width:100px;" type="button" value="开始" onclick="control()"></td>  
+        <td colspan="2"><input style="height:35px;width:100px;" type="button" value="停止" onclick="stop()"></td>  
+    </tr>  
+    <tr>  
+        <td colspan="2" align="right">  
+            <font size="4" color="red"><b>抽奖结果：</b></font>  
+        </td>  
+        <td colspan="2">  
+            <input id="result" type="text" value="" class="myStyle">  
+        </td>  
+    <tr>  
+      
+</table>  
+</body>  
+</html>
+<script  type="text/javascript">  
+  
+var running = false;  
+  
+//控制开始或者暂停  
+function control(){  
+    if(document.getElementById("result").value == "changing") {   
+        document.getElementById("result").value = "start";   
+        running = false;  
+        return;   
+    }else if(document.getElementById("result").value == "stop"){  
+        running = false;  
+        return;  
+    }else{  
+        running = true;  
+        start();  
+    }  
+}  
+//  
+var num1;  
+var num2;  
+var num3;  
+var num4;  
+  
+//开始抽奖  
+function start(){  
+  
+    if(running){  
+          
+        document.getElementById("result").value="changing";   
+          
+        num1 = parseInt(Math.random() * 10);  
+        num2 = parseInt(Math.random() * 20);  
+        num3 = parseInt(Math.random() * 30);  
+        num4 = parseInt(Math.random() * 10);  
+          
+        document.getElementById('num1').value = num1;  
+        document.getElementById('num2').value = num2;  
+        document.getElementById('num3').value = num3;  
+        document.getElementById('num4').value = num4;  
+          
+        document.getElementById('result').value = num1 + "" + num2 + "" + num3 + "" + num4;  
+          
+      
+    }  
+}  
+//结束抽奖  
+function stop(){  
+      
+    document.getElementById("result").value="stop";  
+    control();  
+    var result = num1 + "" + num2 + "" + num3 + "" + num4;  
+    document.getElementById('result').value = result;  
+    alert("恭喜您！您的中奖号码是：" + result);  
+}  
+  
+var myTime = setInterval("start()", 100);  
+  
+</script>

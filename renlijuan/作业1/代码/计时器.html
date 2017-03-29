@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>计时器</title>
+</head>
+
+<body bgcolor="#FFCCFF">
+	<p>这是一个简易计时器</p>
+	<button id="bid" 
+	 style="height: 70px; width: 90px; font-size: 35px">10</button>
+</html>
+<script>
+	//多次执行
+	var oBid = document.getElementById('bid');
+	var m = 10;
+	var time  = setInterval(function(){
+		m--;
+		oBid.innerHTML = m;
+		if(m == 0){
+			oBid.disabled = true;
+			clearInterval(time);
+			var girl = "你好！计时已完成";
+	        alert(girl);
+		}
+	},1000)  
+	
+</script>

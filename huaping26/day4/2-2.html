@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dulclick to change color</title>
+	<style >
+	ul,li{margin:0; padding:0;}
+	ul li {
+		height:20px;width:100px;margin-top: 10px;background:#ddffcc;
+	}
+	</style>
+</head>
+<ul>
+	<li>eee</li>
+	<li>eee</li>
+	<li>dee</li>
+</ul>
+<body>
+	
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName("li");
+	for(var i = 0;i<list.length;i++){
+		list[i].ondblclick = function(){
+			this.style.background = "pink";
+		}
+	}
+</script>

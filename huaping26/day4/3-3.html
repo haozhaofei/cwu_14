@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>right-click</title>
+	<style>
+	ul,li{margin:0;padding:0;}
+	ul{border:0.5px solid green;position:relative;top:2px;left:40px;display:none;}
+	ul li{height:20px;width:300px;margin-top:30px;background:#cceeff;text-align:center;list-style-type:none;line-height:20px;}
+	</style>
+</head>
+<body>
+<ul id="uid">
+	<li>cut</li>
+	<li>copy</li>
+	<li>paste</li>
+	<li>creat</li>
+</ul>
+	
+</body>
+</html>
+<script>
+	window.document.oncontextmenu = function(ent){
+		var event = ent || window.ent;
+		var x = event.clientX;
+		var y = event.clientY;
+		var oUid = document.getElementById("uid");
+		oUid.style.left = x + "px";
+		oUid.style.top = y + "px";
+		oUid.style.display = "block";
+		return false;
+	}
+</script>

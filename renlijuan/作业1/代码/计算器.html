@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>计算器</title>
+
+<script type="text/javascript">
+var numresult;
+var str;
+function onclicknum(nums){
+str=document.getElementById("nummessage");
+str.value=str.value+nums;
+}
+
+function onclickclear(){
+str=document.getElementById("nummessage");
+str.value="";
+}
+
+function onclickresult(){
+str=document.getElementById("nummessage");
+numresult=eval(str.value);
+str.value=numresult;
+}
+</script>
+</head>
+
+<body bgcolor="#FF99CC">
+<h3>下面是一个简易的计算器，请你试试吧</h3>
+<table border="1" align="left" bgcolor="#FFCCCC"
+style="height:350px; width:270px">
+<tr>
+<td colspan="4">
+<input type="text" id="nummessage"
+style="height:90px;width:350px;font-size:30px"/>
+</td>
+</tr>
+<tr>
+<td> 
+<input type="button" value="1" id="1" onclick="onclicknum(1)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="2" id="2" onclick="onclicknum(2)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="3" id="3" onclick="onclicknum(3)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="+" id="add" onclick="onclicknum('+')" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+</tr>
+<tr> 
+<td> 
+<input type="button" value="4" id="4" onclick="onclicknum(4)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="5" id="5" onclick="onclicknum(5)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="6" id="6" onclick="onclicknum(6)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="-" id="sub" onclick="onclicknum('-')" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<input type="button" value="7" id="7" onclick="onclicknum(7)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="8" id="8" onclick="onclicknum(8)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="9" id="9" onclick="onclicknum(9)" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="*" id="mul" onclick="onclicknum('*')" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2"> 
+<input type="button" value="0" id="0" onclick="onclicknum(0)" 
+style="height: 70px; width: 190px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="." id="point" onclick="onclicknum('.')" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+<td> 
+<input type="button" value="/" id="division" 
+onclick="onclicknum('/')" 
+style="height: 70px; width: 90px; font-size: 35px"> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2"> 
+<input type="button" value="Del" id="clear" 
+onclick="onclickclear()" 
+style="height: 70px; width: 190px; font-size: 35px" /> 
+</td> 
+<td colspan="2"> 
+<input type="button" value="=" id="result" 
+onclick="onclickresult()" 
+style="height: 70px; width: 190px; font-size: 35px" /> 
+</td> 
+
+</tr> 
+</table>
+</body>
+</html>

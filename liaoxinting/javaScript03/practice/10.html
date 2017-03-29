@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>checkbox</title>
+    </head>
+    <body>
+        <h3>checkbox</h3>
+        <h4>check the checkbox you like</h4>
+        <ul>
+            <li><input type="checkbox" name="uid"/> rice</li>
+            <li><input type="checkbox" name="uid"/> tomato</li>
+            <li><input type="checkbox" name="uid"/> eggs</li>
+            <li><input type="checkbox" name="uid"/> milk</li>
+            <li><input type="checkbox" name="uid"/> coffee</li>
+            <li><input type="checkbox" name="uid"/> candy</li>
+        </ul>
+        <button onclick="doSelect(1);">全选</button>
+        <button onclick="doSelect(2);">全不选</button>
+        <button onclick="doSelect(3);">反选</button>
+        <script type="text/javascript">
+            function doSelect(b){
+                var list = document.getElementsByTagName("input");
+          
+                for(var i=0;i<list.length;i++){
+                    switch(b){
+                        case 1: list[i].checked = true; break;
+                        case 2: list[i].checked = false; break;
+                        case 3: list[i].checked = !list[i].checked; break;
+                    }
+                    
+                }
+            
+            }
+        
+        </script>
+       
+    </body>
+</html>

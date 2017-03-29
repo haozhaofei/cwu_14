@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dblclick </title>
+	<style>
+	ul,li{margin:0;padding:0;}
+	ul li{height:60px;width:200px;margin-top: 90px;margin-left:50px;background:#ddeeff;list-style-type:none;list-style-image: url(images/nextBtnTop.png);}
+	</style>
+</head>
+<body>
+<ul>
+	<li>soft beancurd  tofu water </li>
+	<li>eat steamed stuffed bun</li>
+	<li>the twisted dough-strips </li>
+</ul>
+	
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName("li");
+	for(var i= 0 ; i<list.length;i++){
+		list[i].ondblclick = function(){
+			this.style.background = "green";
+		}
+
+	}
+</script>

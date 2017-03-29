@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击按钮改变颜色</title>
+	<style>
+		#did{
+			width:100px;
+			height:100px;
+			background: #ccc;
+			margin:10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<button onclick="show(1)">红</button>
+		<button onclick="show(2)">绿</button>
+		<button onclick="show(3)">蓝</button>
+	</div>
+	<div id="did"></div>
+	<script>
+		function show(i){
+			var Odid=document.getElementById("did");
+			if(i==1){
+				Odid.style.background="red";
+			}else if(i==2){
+				Odid.style.background="green";
+			}else if(i==3){
+				Odid.style.background="blue";
+			}
+		}
+	</script>
+</body>
+</html>

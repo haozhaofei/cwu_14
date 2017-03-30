@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>images</title>
+</head>
+<style>
+	.list ul{padding:0px;margin:0px;}
+	.list li{float:left;width:98px;height:393px;list-style: none;}
+	 #uid img{width: 387px;}
+	 #did img{width: 93px;height: 80px;} 
+</style>
+<body>
+	<div id="uid">
+		<img src="images/01.jpg" id="m1" alt="">
+	</div>
+	 <div id="did">
+		<div class="list">
+			<ul>
+				<li><img src="images/01.jpg"  original="images/01.jpg" onclick="showOriginal(this)"></li>
+				<li><img src="images/02.jpg"  original="images/02.jpg" onclick="showOriginal(this)"></li>
+				<li><img src="images/03.jpg"  original="images/03.jpg" onclick="showOriginal(this)"></li>
+				<li><img src="images/04.jpg"  original="images/04.jpg" onclick="showOriginal(this)"></li> 
+			</ul>
+		</div>
+		</div>
+
+
+	<div id="imgframe">
+	        <div id="did"></div>
+	    </div> 
+</bobox
+</html>
+<script>
+	var img = document.getElementById('did').getElementsByTagName("img");
+	var ouid = document.getElementById('uid');
+	function showOriginal(img) {
+            img.style.display = "block";
+            ouid.innerHTML = "<img src='" + img.getAttribute("original") + "' />";
+        }
+</script>
+

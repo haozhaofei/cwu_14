@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style>
+	div,ul,li,img{
+		padding:10px;margin:10px;
+	}
+	#bid{
+		margin-left: 500px;
+	}
+	#uid img {width: 850px;
+		     height: 520px;}
+	#did img{
+		width: 180px;
+		height: 160px;
+		border: 1px solid gray;}
+	#m2,#m3,#m4{
+		display: none;
+	}
+</style>
+<body>
+	<div id ="bid">
+	<div id="uid">
+		<img src="11.jpg" id="m1" />
+		<img src="22.jpg" id="m2" />
+		<img src="33.jpg" id="m3" />
+		<img src="44.jpg" id="m4" />
+	</div>
+	<div id="did">
+		<img src="11.jpg" id="n1" onclick="f(1)"/>
+		<img src="22.jpg" id="n2" onclick="f(2)"/>
+		<img src="33.jpg" id="n3" onclick="f(3)"/>
+		<img src="44.jpg" id="n4" onclick="f(4)"/>
+	</div>
+	</div>
+</body>
+</html>
+
+<script>
+	function f(x){
+		for (var i = 1; i <= 4; i++) {
+			var oImg = document.getElementById('n'+i);
+			var sImg = document.getElementById('m'+i);
+			if(i == x){
+				sImg.style.display = "block";
+			}else{
+				sImg.style.display = "none";
+				}
+		}
+
+	}
+</script>

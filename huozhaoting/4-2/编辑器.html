@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>write</title>
+</head>
+<body>
+	<p id="pid">每一天</p>
+	<button onclick="f(1)">加粗</button>  
+	<button onclick="f(2)">下划线</button>
+	<button onclick="f(3)">倾斜</button>
+	<button onclick="f(4)">字体变大</button>
+	<button onclick="f(5)">字体变小</button>
+</body>
+</html>
+
+<script>
+	
+	function f(i){
+		var psize = 15;
+		var pid = documentgetElementById('pid');
+		if (i == 1){
+			
+				pid.style.fontWeight = "Bold";
+			
+		}
+
+		else if (i == 2) {
+			
+			pid.style.textDecoration = "underline";
+		 
+		}
+		else if (i == 3) {
+
+			pid.style.fontStyle = "Italic";
+		}
+		else if (i == 4) {
+			psize += 8;
+			pid.style.fontSize = psize+"px";
+		}
+		else if (i == 5) {
+			psize -= 8;
+			pid.style.fontSize = psize+"px";
+
+		}
+	}
+	
+</script>

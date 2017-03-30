@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS强制类型转换</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var num1 = Number("hello");//NaN
+	var num2 = Number("");//0
+	var num3 = Number("00123");//123
+	var num4 = Number("true");//1
+	var num5 = Number("hello123");//NaN,Not A Number
+	document.write(num5);
+	
+	var num1 = parseInt("hello");//NaN
+	var num2 = parseInt("");//NaN
+	var num3 = parseInt("00123");//123
+	var num4 = parseInt("true");//NaN
+	var num5 = parseInt("hello123");//NaN,Not A Number
+	document.write(num5);
+ 
+ 	var num1 = parseFloat("hello");//NaN
+	var num2 = parseFloat("");//NaN
+	var num3 = parseFloat("00123");//123
+	var num4 = parseFloat("true");//NaN
+	var num5 = parseFloat("hello123");//NaN,Not A Number
+	var num6 = parseFloat(1.2);//1.2
+	var num7 = parseInt(1.2);//1
+	document.write(num5);
+
+</script>

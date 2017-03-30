@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+　　<title>无标题页</title>
+</head>
+<body>
+<!--作为编辑区的iframe-->
+<iframe style="width: 100%; height:100" marginwidth="0" marginheight="0" frameborder="1" id="MsgFrame"　 src="about:blank"></iframe>
+<br />
+<input type="button" onclick="t('UnderLine')" value="下划线" />
+<input type="button" onclick="t('bold')" value="粗体" id="Button1" />
+<input type="button" onclick="t('JustifyLeft')" value="左对齐" />
+<input type="button" onclick="t('JustifyCenter')" value="居中对齐" />
+<input type="button" onclick="t('JustifyRight')" value="右对齐" />
+<input type="button" onclick="t2()" value="增高" />
+<input type="button" onclick="t3()" value="减少" />
+<input type="button" onclick="ViewSource()" value="查看源代码" />
+<script type="text/javascript" language="javascript">
+　　//使iframe进入编辑状态。
+　　var editor;
+　　 editor = document.getElementByIdx("MsgFrame").contentWindow;
+// editor = frames["HtmlEdit"];也可以用这行
+　　 editor.document.designMode = 'On';
+　　 editor.document.contentEditable = true;
+　　 editor.document.open();
+　　 editor.document.writeln('<html><head>');
+　　 editor.document.writeln("</head><body></body></html>");
+　　 editor.document.onclick = "alert()";
+　　 editor.document.close();
+　　 editor.document.charset="gb2312";
+　　function t(s)
+　　 {
+　　　　 editor.document.execCommand(s,false,null);
+　　 }
+　　//增高
+　　function t2(){
+　　　　　var obj=window.frames["MsgFrame"].frameElement;
+　　　　　
+　　　　　var height = parseInt(obj.offsetHeight);//获取iframe的高度
+　　　　　
+　　　　　if (height+100 >= 100){
+　　　　　　 obj.height = height+100;
+　　　　　 }
+　　 }
+　　//减低
+　　function t3(){
+　　　　　var obj=window.frames["MsgFrame"].frameElement;
+　　　　　
+　　　　　var height = parseInt(obj.offsetHeight);
+　　　　　
+　　　　　if (height-100 >= 100){
+　　　　　　 obj.height = height-100;
+　　　　　 }
+　　 }
+　　function ViewSource(){
+　　　　 document.getElementByIdx("textarea1").value = document.getElementByIdx("MsgFrame").contentWindow.document.lastChild.outerHTML;
+　　　　 }
+</script>
+<br/>
+<textarea name="textarea1" rows="20" cols="100"></textarea>
+</body>
+</html>

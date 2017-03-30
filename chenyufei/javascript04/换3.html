@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>出换背景</title>
+</head>
+<script>
+function change_pic(){
+var imgObj = document.getElementById("caocao_pic");
+var Flag=(imgObj.getAttribute("src",2)=="Practice04/images/0006.jpg")
+imgObj.src=Flag?"Practice04/images/06.jpg":"Practice04/images/0006.jpg";
+}
+</script>
+<img src="Practice04/images/0006.jpg" class="wujiang_pic_size" id="caocao_pic" onClick="change_pic()">
+</html>

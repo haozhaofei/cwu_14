@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片浏览</title>
+</head>
+<style>
+	div,ul,li,img{
+		padding: 0px;
+		margin: 0px;
+	}
+	#m2,#m3,#m4{
+		display: none;
+	}
+	#did img{
+		width:600px;
+		height: 200px;
+	}
+/*	#did{
+		width: 600px;
+		border:1px solid black;
+	}*/
+</style>
+<body>
+	<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="image/1.jpg" id="m1" alt="">
+		<img src="image/2.jpg" id="m2" alt="">
+		<img src="image/3.jpg" id="m3" alt="">
+		<img src="image/4.jpg" id="m4" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var m=1;
+	var mytime=null;
+	function doStart(){
+		if(mytime==null){
+			mytime=setInterval(function(){
+				m++;
+				show(m);
+				if(m>=4){
+					m=0;				}
+			},1000)
+		}
+	}
+	doStart;
+	function doStop(){
+		if(mytime!=null){
+			clearInterval(mytime);
+			mytime=null;
+		}
+	}
+
+	function show(x){
+		for(var i=1;i<=4;i++){
+			var oImg=document.getElementById("m"+i);
+			if(x==i){
+				oImg.style.display="block";
+			}else{
+				oImg.style.display="none";
+			}
+		}
+	}
+</script>

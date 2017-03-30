@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>简易文本编辑器</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+<p align="center">简易文本编辑器</p>
+<div align="center">
+<div align="center"
+style="width: 460px; height: 30px; border-top: 1px solid; border-left: 1px solid; border-right: 1px solid;">
+<select onchange=document.execCommand('FontSize',false,this.value)>
+<option value=3>3号字</option>
+<option value=4>4号字</option>
+<option value=5>5号字</option>
+<option value=6>6号字</option>
+<option value=7>7号字</option>
+</select> <input type=button value="红色" onclick=document.execCommand('ForeColor',false,'#ff0000')>
+<input type="button" value="粗体" unselectable="on" onclick='document.execCommand("Bold"); foo.focus();'>
+<input type="button" value="斜体" unselectable="on" onclick='document.execCommand("Italic"); foo.focus();'>
+<input type="button" value="下划线" unselectable="on" onclick='document.execCommand("Underline"); foo.focus();'>
+<input type=button value="黑体" onclick=document.execCommand('FontName',false,'黑体')>
+<input type=button value="撤消" onclick=document.execCommand('Undo')>
+<input type=button value="重做" onclick=document.execCommand('Redo') id=button2 name=button2>
+</div>
+<div id="editArea" contenteditable style="height: 200px; width: 460px; border: 1px solid; overflow-y: auto;" align="center">
+</div>
+</div>
+</body>
+</html>

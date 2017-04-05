@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>城市级联</title> 
+</head> 
+<body> 
+<script type="text/javascript">  
+function initcity(city) { 
+switch (document.creator["province"].value) { 
+case "安徽" : var cityOptions = new Array( "请选择地区", "", "合肥", "合肥", "安庆", "安庆", "蚌埠", "蚌埠", "亳州", "亳州", "巢湖", "巢湖", "滁州", "滁州", "阜阳", "阜阳", "贵池", "贵池", "淮北", "淮北", "淮化", "淮化", "淮南", "淮南", "黄山", "黄山", "九华山", "九华山", "六安", "六安", "马鞍山", "马鞍山", "宿州", "宿州", "铜陵", "铜陵", "屯溪", "屯溪", "芜湖", "芜湖", "宣城", "宣城"); break; 
+case "北京" : var cityOptions = new Array( "请选择地区", "", "东城", "东城", "西城", "西城", "崇文", "崇文", "宣武", "宣武", "朝阳", "朝阳", "丰台", "丰台", "石景山", "石景山", "海淀", "海淀", "门头沟", "门头沟", "房山", "房山", "通州", "通州", "顺义", "顺义", "昌平", "昌平", "大兴", "大兴", "平谷", "平谷", "怀柔", "怀柔", "密云", "密云", "延庆", "延庆"); break; 
+case "浙江" : var cityOptions = new Array( "请选择地区", "", "杭州", "杭州", "安吉", "安吉", "慈溪", "慈溪", "定海", "定海", "奉化", "奉化", "海盐", "海盐", "黄岩", "黄岩", "湖州", "湖州", "嘉兴", "嘉兴", "金华", "金华", "临安", "临安", "临海", "临海", "丽水", "丽水", "宁波", "宁波", "瓯海", "瓯海", "平湖", "平湖", "千岛湖", "千岛湖", "衢州", "衢州", "江山", "江山", "瑞安", "瑞安", "绍兴", "绍兴", "嵊州", "嵊州", "台州", "台州", "温岭", "温岭", "温州", "温州", "余姚", "余姚", "舟山", "舟山"); break; 
+case "广西" : var cityOptions = new Array( "请选择地区", "", "南宁", "南宁", "百色", "百色", "北海", "北海", "桂林", "桂林", "防城港", "防城港", "河池", "河池", "贺州", "贺州", "柳州", "柳州", "钦州", "钦州", "梧州", "梧州", "玉林", "玉林"); break; 
+case "海外" : var cityOptions = new Array( "请选择地区", "", "欧洲", "欧洲", "北美", "北美", "南美", "南美", "亚洲", "亚洲", "非洲", "非洲", "大洋洲", "大洋洲"); break; default: var cityOptions = new Array("请选择地区", ""); break; } document.creator["city"].options.length = 0; for(var i = 0; i < cityOptions.length/2; i++) { document.creator["city"].options[i]=new Option(cityOptions[i*2],cityOptions[i*2+1]); if (document.creator["city"].options[i].value==city){ document.creator["city"].selectedIndex = i; } } } function creatprovince(province){ var provinces = new Array( "北京",  "安徽",  "广西", "浙江", "海外" ); document.creator["province"].options[0]=new Option("请选择省份",""); for(var i = 0; i < provinces.length; i++) { document.creator["province"].options[i+1]=new Option(provinces[i],provinces[i]); if (document.creator["province"].options[i+1].value==province){ document.creator["province"].selectedIndex = i+1; } } } 
+</script> 
+<form name=creator> 
+<select onchange="initcity();" name="province" > 
+       <SCRIPT>creatprovince();</SCRIPT> 
+</select> 
+<select name="city"> 
+      <option value="">选择城市</option> 
+</select> 
+</form> 
+</body> 
+</html>

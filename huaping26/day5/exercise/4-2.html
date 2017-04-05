@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li</title>
+</head>
+<body>
+	<ul>
+		<li>风回云断雨初晴</li>
+		<li>返照湖边暖复明</li>
+		<li>乱点碎红山杏发</li>
+		<li>平铺新绿水蘋生</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i= 0; i<list.length; i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

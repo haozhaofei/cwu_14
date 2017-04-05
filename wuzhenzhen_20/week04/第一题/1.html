@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+
+<meta http-equiv=Content-Type content=text/html; charset=gb2312 />
+
+</head>
+
+<body>
+
+<div id=dSquare style=background:#0000FF;POSITION: absolute; width:20px; height:20px; top:50px; left:200px;></div>
+
+</body>
+
+</html>
+
+<script language=javascript>
+
+if(typeof GetControlundefined) GetControl=function (id)
+
+{
+
+return document.getElementById(id);
+
+};
+
+var control=GetControl(dSquare);
+
+function KeyDown(e) {
+
+var key;
+
+try{
+
+key=event.keyCode; //取得键盘Code编号
+
+}
+
+catch(a){ //对于Firefox来说，不支持event.keyCode
+
+key=KeyDown.arguments[0].keyCode;
+
+}
+
+switch(key)
+
+{
+
+case 40://40 down
+
+control.style.top=(parseInt(control.style.top)+1)+ px;
+
+break;
+
+case 39://39 right
+
+control.style.left=(parseInt(control.style.left)+1)+ px;
+
+break;
+
+case 38://38 up
+
+control.style.top=(parseInt(control.style.top)-1)+ px;
+
+break;
+
+case 37://37 left
+
+control.style.left=(parseInt(control.style.left)-1)+ px;
+
+break;
+
+}
+
+}
+
+document.onkeydown=KeyDown; //附加事件
+
+document.onkeypress=KeyDown; //附加事件
+
+</script>

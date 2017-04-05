@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>背景更换</title>
+<style>
+#body{ background:no-repeat; background-position:center; margin:100px 80px 60px 100px }
+</style>
+</head>
+
+<body  id="body"  background="img/a.jpg">
+<select name="select" onclick="changeImge(this)" >  
+          <option value="img/1.jpg">1</option>  
+	  <option value="img/2.jpg">2</option> 
+	  <option value="img/3.jpg">3</option> 
+	  <option value="img/4.jpg">4</option> 
+          <option value="img/5.jpg">5</option> 
+	 
+</select> 
+</body>
+</html>
+<script language="javascript" type="text/javascript">  
+function changeImge(option){  
+    document.getElementById("body").style.backgroundImage = "url("+option.options[option.selectedIndex].value+")";  
+}  
+</script>  

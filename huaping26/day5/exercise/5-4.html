@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fangdajing</title>
+	<style>
+		#did{
+			width: 600px;height:450px;overflow:hidden;display:none;position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<img src="../images/timg.jpg" id="tid" width="300px" alt="">
+	<div id ="did">
+	<img src="../images/timg.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var tid = document.getElementById('tid');
+	var did = document.getElementById('did');
+	tid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop + "px";
+		did.style.left = this.offsetLeft + this.offsetWidth + 10 + "px";
+
+	}
+	tid.onmouseout = function(){
+		did.style.display = "none";
+
+	}
+	tid.onmousemove = function(ent){
+		var event = ent || window.event;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		did.scrollTop = y*8-650;
+		did.scrollLeft = x*8 - 650;
+
+
+	}
+</script>

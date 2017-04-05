@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>load用法</title>
+</head>
+<script>
+	window.onload = function(){
+		var arr = ["cyan","violet","purple"];
+		var number = Math.ceil(Math.random()*100)%3;
+		var oBid = document.getElementById('bid');
+		oBid.style.background = arr[number];
+	}
+</script>
+<body id="bid">
+	
+</body>
+</html>

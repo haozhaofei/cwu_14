@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>no</title>
+<style type="text/css">
+.img1
+{
+    background:url(pic1.jpg) no-repeat left top;
+    color:#FFF;
+    border:0;
+    width:107px;
+    height:28px;
+    line-height:27px
+}
+.img2
+{
+    background:url(pic2.jpg) no-repeat left top;
+    color:#000;
+    border:0;
+    width:107px;
+    height:28px;
+    line-height:27px;
+}
+</style>
+<script type="text/javascript">
+    function updateImg(obj) {
+        switch (obj.className) {//根据样式更改背景
+            case "img1":
+                obj.className = "img2";
+                break;
+            case "img2":
+                obj.className = "img1";
+                break;
+        }
+    }
+</script>
+</head>
+<body>
+<input class="img1" type="button" value="切换背景" onclick="updateImg(this)" />
+</body>
+</html>

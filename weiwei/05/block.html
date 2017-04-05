@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#bid{width: 30px;height: 30px;background: red;display: none;}
+	</style>
+</head>
+<body>
+	<div id="bid"></div>
+</body>
+</html>
+<script>
+	var y = 10;
+	var bid = document.getElementById('bid');
+	function fight(){
+		var fi = document.getElementById('bid');
+		if(fi.style.display != "block"){
+				fi.style.display = "block";
+			}
+		if(fi.style.display == "block"){
+				y += 5;
+				fi.style.top = y+"px";
+			}
+			//alert(fi.style.top);
+		setTimeout("fight()",50);
+	}
+	fight();
+
+</script>

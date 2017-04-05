@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+<body >
+	<img src="inages/22.jpg" width="386" alt="" id="mid">
+	<div id="did">
+		<img src="images/22.jpg" alt="">
+	</div>
+</body>
+</html>
+<script>
+	var mid=document.getElementById('mid');
+	var did=document.getElementById('did');
+	mid.onmouseover=function(){
+		did.style.display="block";
+		did.style.top=this.offsetTop+5+"PX";
+		did.style.left=this.offsetLeft+10+"px";
+	}
+	mid.onmouseout function(){
+		did.style.display="none";
+	}
+	mid.onmousemove function(ent){
+		var event=ent||window.event;
+		var x=event.clientX-this.offsetLeft;
+		var y=event.clientY-this.offsetTop;
+		did.scrollTop=y*5-160;
+		did.scrollLeft=x*5-160;
+	}
+</script>

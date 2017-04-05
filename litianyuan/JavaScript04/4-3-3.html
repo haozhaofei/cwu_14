@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右击鼠标</title>
+</head>
+<style>
+	ul,li{padding: 0px;margin: 0px;}
+	ul{
+		width:100px;
+		border: 1px solid white;
+		position:relative;
+		display: none;
+	}
+	ul li{
+		height: 30px;
+		background: #ccc;
+		width: 100px;
+		text-align: center;
+		list-style-type: none;
+		line-height: 30px;
+		font-size: 20px;
+		border: 1px solid white;
+	}
+	li:hover{background: #fc0;}
+</style>
+<body>
+	<ul id="uid">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+	</ul>
+</body>
+</html>
+<script>
+	window.document.oncontextmenu=function(ent){
+		var event=ent||window.event;
+		var x=event.clientX;
+		var y=event.clientY;
+		var oUid=document.getElementById("uid");
+		oUid.style.left=x+'px';
+		oUid.style.top=y+'px';
+		oUid.style.display='block';
+		return false;
+	}
+</script>

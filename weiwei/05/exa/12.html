@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>换位置</title>
+</head>
+
+<script>
+//先加载完所有文档之后执行函数
+	window.onload = function () {
+		var arr = ["blue","yellow","green"];
+		var ran = Math.ceil(Math.random()*100)%3;
+		var oBid = document.getElementById('bid');
+		oBid.style.background = arr[ran];
+	}
+	
+</script>
+
+<body id="bid">
+	
+</body>
+</html>

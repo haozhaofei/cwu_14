@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move</title>
+    <style>
+        #did{
+            height: 1000px;
+        }
+        #uid{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100px;
+            height: 100px;
+            background: #f0c;
+        }
+    </style>
+</head>
+<body>
+<div id="did">
+    <div id="uid"></div>
+</div>
+<script>
+    var flag = false;
+    var cur = {
+        x:0,
+        y:0
+    }
+    var nx,ny,dx,dy,x,y ;
+    function down(){
+        flag = true;
+        var touch ;
+        if(event.touches){
+            touch = event.touches[0];
+        }else {
+            touch = event;
+        }
+        cur.x = touch.clientX;
+        cur.y = touch.clientY;
+        dx = uid.offsetLeft;
+        dy = uid.offsetTop;
+    }
+    function move(){
+        if(flag){
+            var touch ;
+            if(event.touches){
+                touch = event.touches[0];
+            }else {
+                touch = event;
+            }
+            nx = touch.clientX - cur.x;
+            ny = touch.clientY - cur.y;
+            x = dx+nx;
+            y = dy+ny;
+            uid.style.left = x+"px";
+            uid.style.top = y +"px";
+            //阻止页面的滑动默认事件
+            document.addEventListener("touchmove",function(){
+                event.preventDefault();
+            },false);
+        }
+    }
+    //鼠标释放时候的函数
+    function end(){
+        flag = false;
+    }
+    var uid = document.getElementById("uid");
+    uid.addEventListener("mousedown",function(){
+        down();
+    },false);
+    uid.addEventListener("touchstart",function(){
+        down();
+    },false)
+    uid.addEventListener("mousemove",function(){
+        move();
+    },false);
+    uid.addEventListener("touchmove",function(){
+        move();
+    },false)
+    document.body.addEventListener("mouseup",function(){
+        end();
+    },false);
+    uid.addEventListener("touchend",function(){
+        end();
+    },false);
+</script>
+</body>
+</html>

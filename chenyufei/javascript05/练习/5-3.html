@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>Gotta Have You</li>
+		<li>手心的蔷薇</li>
+		<li>青石巷</li>
+		<li>无心</li>
+		<li>你飞到城市另一边</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			//alert(list[i].innerHTML);
+			//this代表当然前/本身/自己的意思 
+			alert(this.innerHTML);
+		}
+	}
+
+</script>
+
+

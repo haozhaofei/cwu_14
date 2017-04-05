@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style>
+#big{  width:500px; height:300px; overflow:hidden; margin-bottom:30px};
+
+</style>
+</head>
+
+<body>
+	<div  id="big"  >
+		<img  src="file:///C|/Users/wdm/Desktop/4/04/img/a.jpg"  width="500px" height="300px" id="bigImag"/>
+	</div>
+	<div id="big_more" style="display:none; position:absolute; width:400px; overflow:hidden; height:300px">
+		<img src="file:///C|/Users/wdm/Desktop/4/04/img/a.jpg"  id="big_more_img"/>
+	</div>
+	
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="file:///C|/Users/wdm/Desktop/4/04/img/a.jpg"  width="90px" height="70px" onmouseover="f0();"/>
+	</div>
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="file:///C|/Users/wdm/Desktop/4/04/img/b.jpg"  width="90px" height="70px" onmouseover="f1();"/>
+	</div>
+	<div  style="width:90px; height:70px; float:left; margin-left:10px">
+	 	<img  src="file:///C|/Users/wdm/Desktop/4/04/img/c.jpg"  width="90px" height="70px" onmouseover="f2();"/>
+	</div>
+	<div  style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="file:///C|/Users/wdm/Desktop/4/04/img/d.jpg"  width="90px" height="70px" onmouseover="f3();"/>
+	</div>
+</body>
+</html>
+<script>
+	var o_bigImag=document.getElementById("bigImag");//原图的img
+	var o_big_more=document.getElementById("big_more");//放大图的div
+	var o_big_more_img=document.getElementById("big_more_img");//放大的img
+	
+	//缩略图函数
+	function f0(){
+		o_bigImag.src="img/a.jpg";
+		o_big_more_img.src="img/a.jpg";
+	}
+	function f1(){	
+		o_bigImag.src="img/b.jpg";
+		o_big_more_img.src="img/b.jpg";
+	}
+	function f2(){
+		o_bigImag.src="img/c.jpg";
+		o_big_more_img.src="img/c.jpg";
+	}
+	function f3(){
+		o_bigImag.src="img/d.jpg";
+		o_big_more_img.src="img/d.jpg";
+	}
+	
+	//放大镜效果
+	
+	 o_bigImag.onmouseover=function(){
+	 	o_big_more.style.display = "block";
+		o_big_more.style.top = this.offsetTop+"px";
+		o_big_more.style.left = this.offsetWidth + this.offsetLeft+10+"px";
+	 }
+	 o_bigImag.onmouseout = function(){
+	  	o_big_more.style.display = "none";
+	 }
+	 o_bigImag.onmousemove = function(ent){
+		var event = ent || window.event;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		o_big_more.scrollTop = y*2.5-150;
+		o_big_more.scrollLeft =x*2.5-150;
+	  }
+</script>

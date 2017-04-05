@@ -1,0 +1,40 @@
+<HTML> 
+<HEAD> 
+<TITLE>使用onBlur事件处理程序</TITLE> 
+</HEAD> 
+<BODY BGCOLOR="lavender"> 
+<FORM name="f1"> 
+<input type="text"  value="失去焦点发生变化" readonly="true">
+<br>
+<br>
+<INPUT TYPE=text NAME=text1  value="绿色" ONBLUR="(document.bgColor='green')"  readonly="true"> 
+<INPUT TYPE=text NAME=text2  value="黑色"ONBLUR="(document.bgColor='black')"  readonly="true"> 
+<INPUT TYPE=text NAME=text2  value="黄色" ONBLUR="(document.bgColor='yellow')"  readonly="true"> 
+<br>
+<p>
+<input type="text"  value="获取焦点发生变化" readonly="true">
+<br>
+<br>
+<INPUT TYPE=text NAME=text3  value="蓝色" onFocus="(document.bgColor='blue')"  readonly="true"> 
+<INPUT TYPE=text NAME=text4  value="红色"onfocus="(document.bgColor='red')"  readonly="true">
+<INPUT TYPE=text NAME=text4  value="橙色" onFocus="(document.bgColor='orange')"  readonly="true">
+<br>
+<br>
+<br>
+<select name="select1" size="2"  onChange="f()" id="select1">
+	 <option selected="selected">北京</option>
+	 <option>上海</option>
+	 <option>成都</option>
+	 <option>深圳</option>
+	 <option>广州</option>
+	 <option>南宁</option>
+	 <option>柳州</option>
+</select>
+</FORM> 
+</BODY> 
+</HTML>
+<script>
+	function f(){
+		alert(select1.children[select1.selectedIndex].innerHTML);
+	}
+</script>

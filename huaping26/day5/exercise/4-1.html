@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击标题弹标题内容</title>
+	<style>
+		ul,li{color:violet;font-style:oblique;font-weight:bold;height:40px;width:500px;list-style-type: none;list-style-image: url(../images/icecream-02.png) ;}
+		body{
+			background-image:url(../images/logy.png);background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>更深月色半人家</li>
+		<li>北斗阑干南斗斜</li>
+		<li>今夜偏知春气暖</li>
+		<li>虫声新透绿窗纱</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

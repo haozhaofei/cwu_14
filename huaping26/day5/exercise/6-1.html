@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bomb</title>
+
+	<style>
+		#did{
+			width:400px;height:400px;position:relative;background:#eeccdd;
+		}
+
+		#mid{
+			width:40px;height:40px;background:red;position: absolute;top:300px;left: 30px;
+		}
+
+		#b0,#b1,#b2,#b3,#b4,#b5{display:none;position:absolute}
+
+	</style>
+</head>
+<body>
+	<div id="did">
+	<img src="../images/bomb.png" id ="b0" alt="">
+	<img src="../images/bomb.png" id ="b1" alt="">
+	<img src="../images/bomb.png" id ="b2" alt="">
+	<img src="../images/bomb.png" id ="b3" alt="">
+	<img src="../images/bomb.png" id ="b4" alt="">
+	<img src="../images/bomb.png" id ="b5" alt="">
+	<div id = "mid"></div>
+	</div>
+</body>
+</html>
+<script>
+	var mid = document.getElementById('mid');
+
+	window.document.onkeydown = function(ent){
+		var event = ent || window.event;
+		switch(event.keyCode){
+			case 37 : mid.style.left = Math.max(0,mid.offsetLeft-5) + "px";
+			break;
+
+			case 38 : mid.style.top = Math.max(0,mid.offsetTop-5)+ "px";
+			break;
+
+			case 39 :mid.style.left = Math.min(360,mid.offsetLeft+5) + "px";
+			break;
+
+			case 40 :mid.style.top = Math.min(360,mid.offsetTop+5) + "px";
+			break;
+
+			case 32 :fire(mid.offsetLeft+16,mid.offsetTop);
+			break;
+
+
+		}
+	}
+
+	//炮弹出现
+	function fire(x,y){
+		for(var i = 0;i<6;i++){
+			var b = document.getElementById("b"+i);
+			if(b.style.display != "block"){
+				b.style.top = y + "px";
+				b.style.left = x + "px";
+				b.style.display = "block";
+
+				return;
+			}
+		}
+	}
+
+	function running(){
+		for(var i = 0; i<6; i++){
+
+			var b = document.getElementById("b"+i);
+
+			if(b.style.display == "block"){
+				b.style.top = b.offsetTop - 5 + "px";
+				if(b.offsetTop < -20){
+					b.style.display = "none";
+				}
+
+			}
+
+		}
+		setTimeout("running()",33);
+	}
+	running();
+
+</script>

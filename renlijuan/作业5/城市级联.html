@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>城市级联</title>
+</head>
+
+<body >
+<center>
+	<h2>请选择您所在的省市</h2>
+<form action="" name="form1" method="post">
+ <select name="province" onchange="change()">
+ <option>请选择省份</option>
+ <OPTION value="河南省">河南省</OPTION>
+ <OPTION value="山东省">山东省</OPTION>
+ <OPTION value="云南省">云南省</OPTION>
+ <OPTION value="海南省">海南省</OPTION>
+ </select>
+ <select name="city">
+ <option>请选择城市</option>
+ </select>
+</form>
+</center>
+</body>
+</html>
+<script language="javascript">
+ function change(){
+ var List = new Array();
+ List['河南省'] = ['郑州','洛阳','安阳','南阳','开封','平顶山','新乡','信阳','驻马店','济源','新郑'];
+ List['山东省'] = ['济南','烟台','蓬莱','德州','青岛','聊城','临沂','菏泽','淄博'];
+ List['云南省'] = ['昆明','大理','保山','楚雄','东川','个旧','景洪','开远','丽江'];
+ List['海南省'] = ['海口','陵水','琼海','三亚','通什','万宁'];
+ var index = document.form1.province.value;
+ var newoption1;
+ document.form1.city.options.length = 0;
+ for(var i in List[index]){
+  newoption1 = new Option(List[index][i],List[index][i]);
+  document.form1.city.options.add(newoption1);
+ }
+ }
+</script>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜缩略图</title>
+<style>
+#big{  width:500px; height:300px; overflow:hidden; margin-bottom:30px};
+
+#did{width:300px;height: 300px;overflow: hidden;position:absolute;display: none;}
+	
+</style>
+</head>
+
+<body background="images/倪妮2.jpg">
+<p align="center"><h2>简易缩略图</h2></p>
+
+	<div  id="big"  >
+		<img  src="images/倪妮1.jpg" width="384"  alt=""id="bigImag"/>
+		<div id="did">
+		<img src="images/倪妮1.jpg" alt="">
+	</div>
+	</div>
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="images/倪妮1.jpg"  width="90px" height="70px" onmouseover="f0();"/>
+	</div>
+	<div style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="images/倪妮2.jpg"  width="90px" height="70px" onmouseover="f1();"/>
+	</div>
+	<div  style="width:90px; height:70px; float:left; margin-left:10px">
+	 	<img  src="images/尼坤1.jpg"  width="90px" height="70px" onmouseover="f2();"/>
+	</div>
+	<div  style=" width:90px; height:70px; float:left; margin-left:10px">
+		<img  src="images/尼坤2.jpg"  width="90px" height="70px" onmouseover="f3();"/>
+	</div>
+
+</body>
+</html>
+<script>
+	function f0(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="images/倪妮1.jpg";
+	}
+	function f1(){	
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="images/倪妮2.jpg";
+	}
+	function f2(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="images/尼坤1.jpg";
+	}
+	function f3(){
+		var bigimage=document.getElementById("bigImag");
+		var big=document.getElementById("big");
+		bigimage.src="images/尼坤2.jpg";
+	}
+	//放大镜
+	var  bigImag = document.getElementById('bigImag');
+	var  did = document.getElementById('did');
+	bigImag.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+10+"px";
+	}
+
+	bigImag.onmouseout = function(){
+		did.style.display = "none";
+	}
+
+	big.onmousemove = function(ent){
+		//兼容问题解决
+		var event = ent || window.event;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		did.scrollTop = y*5-150;
+		did.scrollLeft =x*5-150;
+	}	
+</script>

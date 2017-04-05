@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页刷新变色</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+	var arr = ["yellow","blue","red","green"];
+	var ran = Math.ceil(Math.random()*100)%4;
+	var oBid = document.getElementById('bid');
+	oBid.style.background = arr[ran];
+</script>

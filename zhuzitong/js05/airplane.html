@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:400px;height: 400px;position:relative;background: #ccc}
+		#mid{width:40px;height: 40px;background: red;position: absolute;top:300px;left: 30px;}
+		#bid{width:40px;height: 40px;background: yellow;position: absolute;top:0px;left: 50px;display: none;}
+		#pd0,#pd1,#pd2,#pd3,#pd4,#pd5{display: none;position: absolute}
+		
+	</style>
+</head>
+
+<body>
+	<div id="did">
+		<img  src="img/b.jpg" id="pd0" alt=""> 
+		<img src="img/b.jpg" id="pd1" alt="">
+		<img src="img/b.jpg" id="pd2" alt="">
+		<img src="img/b.jpg" id="pd3" alt="">
+		<img src="img/b.jpg" id="pd4" alt="">
+		<img src="img/b.jpg" id="pd5" alt="">
+		<div id="mid">
+		</div>
+		<div id="bid"></div>
+	</div>
+</body>
+</html>
+
+<script>
+	var mid = document.getElementById('mid');
+	window.document.onkeydown = function(ent){
+		//兼容事件
+		var event = ent || window.event;
+		switch(event.keyCode){
+			case 37 :  //左
+				mid.style.left = Math.max(0,mid.offsetLeft-5)+"px";
+			break;
+			case 38 :  //上
+				mid.style.top = Math.max(0,mid.offsetTop-5)+"px";
+			break;
+			case 39 :  //右
+				mid.style.left = Math.min(360,mid.offsetLeft+5)+"px";
+			break;
+			case 40 :  //下
+				mid.style.top = Math.min(360,mid.offsetTop+5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+16,mid.offsetTop);
+			break;
+			case 13 :
+				fight();
+		}
+	}
+	//炮弹出现
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			//获取所有的炮弹
+			var pd = document.getElementById("pd"+i);
+			//判断炮弹是否隐藏
+			if(pd.style.display != "block"){
+				pd.style.top = y+"px";
+				pd.style.left = x+"px";
+				pd.style.display = "block";
+				return;
+			}
+			
+		}
+	}
+	//敌机出现
+	function fight(){
+		var fi = document.getElementById('bid');
+		if(fi.style.display != "block"){
+				fi.style.display = "block";
+			}
+			fighting();
+	}
+	//敌机降落
+	function fighting(){
+		var fi = document.getElementById('bid');
+		if(fi.style.display == "block"){
+				fi.style.top = Math.min(360,fi.offsetTop+5)+"px";
+			}
+		setTimeout("fight()",1000);
+	}
+	//敌机毁灭
+	function destory(){
+		var fi = document.getElementById('bid');
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById("pd"+i);
+		if (fi.style.top == pd.style.top && fi.style.left < pd.style.left < fi.style.left+40 ) {
+			fi.style.display = "none";
+		}
+	}
+	}
+	//游戏主程序
+	function running(){
+		
+		for(var i=0;i<6;i++){
+			//获取所有的炮弹
+			var pd = document.getElementById("pd"+i);
+			if(pd.style.display == "block"){
+				//获取炮弹离上方的距离,逐渐减5
+				pd.style.top = pd.offsetTop-5+"px";
+				//回收炮弹
+				if(pd.offsetTop < -20){
+					pd.style.display = "none";
+				}
+			}
+			
+		}
+		setTimeout("running()",33);
+		destory();
+		
+	}
+	running();
+</script>

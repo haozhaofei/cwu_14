@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form validation</title>
+</head>
+<body>
+	<form method="post">
+
+    username：<input type="username" name="username" size="18" value=""/>
+    <br>
+    password：<input type="password" name="password" size="18" value=""/>
+    <br>
+    <input type=submit name="submit" value="submit" onclick="return check(this.form)"/>
+    </form> 
+</body>
+</html>
+<script type="text/javascript">
+	function check(form){
+		if(form.username.value==""){
+			alert("The username field can not be blank. Please fill in the field.");
+			form.username.focus();
+			return false;
+		}
+		if(form.password.value==""){
+			alert("The password field can not be blank. Please fill in the field.");
+			form.password.focus();
+			return false;
+		}else{
+			var href = "http://github.com/haozhaofei/cwu_14";
+			alert("submitted successfully")
+			window.open(href);
+			return true;
+		}
+		
+	}
+</script> 
+

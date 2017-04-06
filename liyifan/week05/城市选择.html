@@ -1,0 +1,81 @@
+﻿ <!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <title></title>
+     </head>
+     <body>
+         省：
+         <select style="width: 100px;" id="pre" onchange="chg(this);">
+             <option value="-1">请选择</option>
+         </select>
+         市：
+         <select style="width: 100px;" id="city" onchange="chg2(this)" ;></select>
+         区：
+         <select style="width: 100px;" id="area"></select>
+     </body>
+     <script>
+          //声明省
+         var pres = ["浙江", "江苏", "山东"]; //直接声明Array
+          //声明市
+         var cities = [
+             ["杭州", "温州", "绍兴"],
+             ["南京", "苏州", "扬州"],
+             ["烟台", "青岛", "济南"]
+         ];
+         var areas = [
+                 [
+                     ["西湖", "萧山", "上城"],
+                     ["鹿城", "龙湾", "洞头"],
+                     ["越城", "上虞", "新昌"]
+                 ],
+                 [
+                     ["西湖", "萧山", "上城"],
+                     ["鹿城", "龙湾", "洞头"],
+                     ["越城", "上虞", "新昌"]
+                 ],
+                 [
+                     ["西湖", "萧山", "上城"],
+                     ["鹿城", "龙湾", "洞头"],
+                     ["越城", "上虞", "新昌"]
+                 ]
+             ]
+         var pIndex = -1;
+         var preEle = document.getElementById("pre");
+         var cityEle = document.getElementById("city");
+         var areaEle = document.getElementById("area");
+         for (var i = 0; i < pres.length; i++) {
+             var op = new Option(pres[i], i);
+             preEle.options.add(op);
+         }
+         function chg(obj) {
+             if (obj.value == -1) {
+                 cityEle.options.length = 0;
+                 areaEle.options.length = 0;
+             }
+             var val = obj.value;
+             pIndex = obj.value;
+             var cs = cities[val];
+             var as = areas[val][0];
+             cityEle.options.length = 0;
+             areaEle.options.length = 0;
+             for (var i = 0; i < cs.length; i++) {
+                 var op = new Option(cs[i], i);
+                 cityEle.options.add(op);
+             }
+             for (var i = 0; i < as.length; i++) {
+                 var op = new Option(as[i], i);
+                 areaEle.options.add(op);
+             }
+         }
+         function chg2(obj) {
+             var val = obj.selectedIndex;
+             var as = areas[pIndex][val];
+             areaEle.options.length = 0;
+             for (var i = 0; i < as.length; i++) {
+                 var op = new Option(as[i], i);
+                 areaEle.options.add(op);
+             }
+         }
+     </script>
+ </html>

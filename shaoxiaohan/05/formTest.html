@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 
+<title>表单验证</title> 
+<script> 
+ 
+   function $(id) { 
+       return document.getElementById(id); 
+   } 
+    
+   function check() { 
+       var email = $("email").value; 
+       var password = $("password").value; 
+       var repassword = $("repassword").value; 
+       var name = $("name").value; 
+          
+       $("emailinfo").innerHTML = ""; 
+       $("passwordinfo").innerHTML = ""; 
+       $("repasswordinfo").innerHTML = ""; 
+       $("nameinfo").innerHTML = ""; 
+        
+       if(email == "") { 
+          $("emailinfo").innerHTML = "Email值不能为空"; 
+           $("email").focus(); 
+           return false; 
+       } 
+        
+       if(email.indexOf("@") == -1 || email.indexOf(".") == -1) { 
+           $("emailinfo").innerHTML = "邮箱格式不正确,必须包含@和."; 
+           $("email").focus(); 
+           return false; 
+       } 
+        
+       if(password == "") { 
+           $("passwordinfo").innerHTML = "密码不能为空"; 
+           $("password").focus(); 
+           return false; 
+       } 
+        
+       if(password.length < 6) { 
+           $("passwordinfo").innerHTML = "密码长度必须大于或者等于6"; 
+           $("password").focus(); 
+           return false; 
+       } 
+        
+       if(repassword != password) { 
+           $("repasswordinfo").innerHTML = "两次输入的密码不一致"; 
+           $("repassword").focus(); 
+           return false; 
+       } 
+        
+       if(name == "") { 
+          $("nameinfo").innerHTML = "姓名不能为空"; 
+           $("name").focus(); 
+           return false; 
+       } 
+       else {
+        alert("注册成功！")
+       }
+        
+       for(var i = 0; i < name.length; i++) { 
+           var j = name.subString(i , i+1); 
+           if(isNaN(j) == false) { 
+               $("nameinfo").innerHTML = '姓名中不能包含数字'; 
+               $("name").focus(); 
+               return false; 
+           } 
+       } 
+   } 
+</script> 
+<style>
+  div{
+    width:500px;height:40px;margin:0 auto;
+  }
+  
+</style>
+</head> 
+<body> 
+  <form name="login_form" method="post" onsubmit="return check()"> 
+      <div> 
+           用户邮箱:<input type="text" name="email" id="email"/>
+           <span id="emailinfo"></span> 
+      </div>    
+      <div> 
+           用户密码:<input type="password" name="password" id="password" />
+           <span id="passwordinfo"></span> 
+      </div> 
+      <div> 
+          重输密码:<input type="password" name="repassword" id="repassword" />
+          <span id="repasswordinfo"></span> 
+      </div> 
+      <div> 
+          用户姓名:<input type="text" name="name" id="name" />
+          <span id="nameinfo"></span> 
+      </div> 
+      <div> 
+          <input type="submit" value="立即注册" /> 
+      </div> 
+  </form> 
+</body> 
+</html>

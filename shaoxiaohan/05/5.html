@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this和list[i]</title>
+</head>
+<body>
+<ul>
+	<li>你好</li>
+	<li>再见</li>
+	<li>早安</li>
+	<li>晚安</li>
+</ul>
+
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(i=0;i<list.length;i++){
+		list[i].onclick = function (argument) {
+			// this代表本身，当前
+			alert(this.innerHTML);
+			// alert(list[i].innerHTML);
+			//i=4,无法获取
+		}
+	}
+</script>

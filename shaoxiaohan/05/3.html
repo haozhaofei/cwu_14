@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onload作用</title>
+</head>
+
+<script>
+//在所有文档加载后执行
+	window.onload = function(){
+		var arr = ["yellow","green","pink"];
+		var index = Math.ceil(Math.random()*1000)%3;
+		//tagName获取一组值，id获取一个值
+		//document.getElementsByTagName('body')[0].style.background = arr[index];
+		var oBid = document.getElementById('bid');
+		oBid.style.background = arr[index];
+		}
+</script>
+<body id="bid">
+
+</body>
+</html>

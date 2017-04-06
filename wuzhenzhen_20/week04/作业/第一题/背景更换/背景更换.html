@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style>
+#body{ background:no-repeat; background-position:center;}
+</style>
+</head>
+
+<body  id="body"  background="img/a.jpg">
+<select name="select" onclick="changeBgImg(this)" >  
+      <option value="img/b.jpg">1</option>  
+	  <option value="img/c.jpg">2</option> 
+	  <option value="img/d.jpg">3</option> 
+	  <option value="img/e.jpg">4</option> 
+	  <option value="img/f.jpg">5</option> 
+	  <option value="img/g.jpg">6</option> 
+      <option value="http://pic17.nipic.com/20111122/6759425_152002520144_2.jpg">7</option>  
+      <option value="http://pic17.nipic.com/20111122/6759425_152002637140_2.jpg">8</option>  
+</select> 
+</body>
+</html>
+<script language="javascript" type="text/javascript">  
+function changeBgImg(option){  
+    document.getElementById("body").style.backgroundImage = "url("+option.options[option.selectedIndex].value+")";  
+}  
+</script>  

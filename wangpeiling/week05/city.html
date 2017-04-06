@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jilian</title>
+<script language="javascript">
+ function change(){
+ var List = new Array();
+ List['江苏省'] = ['南京','徐州','扬州','苏州','连云港','宿迁','淮安','常州','无锡'];
+ List['河北省'] = ['石家庄','唐山','秦皇岛','邯郸','邢台','保定','张家口','承德','廊坊'];
+ List['湖北省'] = ['武汉','黄石','荆州','宜昌','鄂州','黄冈','咸宁'];
+ var index = document.form1.province.value;
+ var newoption1;
+ document.form1.city.options.length = 0;
+ for(var i in List[index]){
+  newoption1 = new Option(List[index][i],List[index][i]);
+  document.form1.city.options.add(newoption1);
+ }
+ }
+</script>
+</head>
+
+<body bgcolor="#a6ffff" leftmargin="60" topmargin="40">
+<div align="left">
+<form action="" name="form1" method="post">
+ <select name="province" onchange="change()">
+ <option>请选择省份</option>
+ <OPTION value="江苏省">江苏省</OPTION>
+ <OPTION value="河北省">河北省</OPTION>
+ <OPTION value="湖北省">湖北省</OPTION>
+ </select>
+ <select name="city">
+ <option>请选择城市</option>
+ </select>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市级联</title>
+</head>
+<body>
+	<div id="fromcitybox">
+	<script>  
+	showprovince('fromprovince', 'fromcity', '北京', 'fromcitybox'); 
+	showcity('fromcity', '北京', 'fromprovince', 'fromcitybox'); 
+	</script>
+	</div>
+</body>
+</html>
+<script>
+	function setcity(proviceid,cityid){
+		var province = document.getElementById(provinceid).value;
+		switch(province){
+			case "北京"；
+				var cityOptions=new Array("北京","北京" "昌平", "昌平","朝阳", "朝阳","崇文", "崇文","大兴", "大兴","东城", "东城","房山", "房山","丰台", "丰台","海淀", "海淀","怀柔", "怀柔","门头沟", "门头沟","密云", "密云","平谷", "平谷","石景山", "石景山","顺义", "顺义","通州", "通州","西城", "西城","宣武", "宣武","延庆", "延庆","六郎庄", "六郎庄");
+				break;
+			// case "上海" :              
+			// 	var cityOptions = new Array("上海", "上海","宝山", "宝山","长宁", "长宁","崇明", "崇明","奉贤", "奉贤","虹口", "虹口","黄浦", "黄浦","嘉定", "嘉定","金山", "金山","静安", "静安","卢湾", "卢湾","闵行", "闵行","南汇", "南汇","浦东新", "浦东新","普陀", "普陀","青浦", "青浦","松江", "松江","徐汇", "徐汇","杨浦", "杨浦","闸北", "闸北");break;         
+			// case "天津" :              
+			// 	var cityOptions = new Array("天津", "天津","宝坻", "宝坻","北辰", "北辰","大港", "大港","东丽", "东丽","汉沽", "汉沽","和平", "和平","河北", "河北","河东", "河东","河西", "河西","红挢", "红挢","蓟县", "蓟县","津南", "津南","静海", "静海","南开", "南开","宁河", "宁河","塘沽", "塘沽","武清", "武清","西青", "西青");break;
+			case "新疆维吾尔自治区" :              
+				var cityOptions = new Array("乌鲁木齐", "乌鲁木齐","克拉玛依", "克拉玛依","石河子", "石河子","阿拉尔", "阿拉尔","图木舒克", "图木舒克","五家渠", "五家渠","吐鲁番", "吐鲁番","哈密", "哈密","和田", "和田","阿克苏", "阿克苏","喀什", "喀什","阿图什", "阿图什","库尔勒", "库尔勒","昌吉", "昌吉","博尔塔拉", "博尔塔拉", "伊宁", "伊宁","塔城", "塔城","阿勒泰", "阿勒泰");
+				break;
+			 default:              
+			 	var cityOptions = new Array("选择城市", "");
+			 	break;
+		}
+		var cityObject=document.getElementById(cityid);
+		cityObject.options.length=0;
+		cityObject.options[0]=new Option("选择城市","");
+		var j=0;
+		for(var i=0;i<cityOptions.length/2;i++){
+			j=i+1;
+			cityObject.options[j]=new Option(cityOptions[i*2],cityOptions[i*2+1]);
+		}
+	}
+	function initprocity(provinceid,province){
+		var provobject=document.getElementById(provinceid);
+		for(var i=0;i<provObject.options.length;i++){
+			if(provObject.options[i].value==province){
+				provObject.selectedIndex=i;
+				break;
+			}
+		}
+	}
+	function showprovince(proviceid,cityid,province,boxid){
+		var provinces=new Array("北京"，"新疆维吾尔自治区");
+		var selObj=document.createElement("select");
+		selObj.name=provinceid;
+		selObj.id=provinceid;
+		selObj.style.width="95px";
+		selObj.onchange=function(){
+			setcity(provinceid,cityid);
+		}
+		document.getElementById(boxid).appendChild(selObj);
+
+		selObj.options[0]=new Option("选择省份","");
+		var j=0;
+		for(var i=0;i<provinces.length;i++){
+			j=i+1;
+			selObj.options[j]=new Option(provinces[i],provinces[i]);
+		}
+		initprocity(provinceid,province);
+	}
+
+	function showcity(cityid,city,provinceid.boxid){
+		if(typeof provinceid=="undefined")provinceid="";
+		var selObj=document.createElement("select"); 
+		selObj.name=cityid;
+		selObj.id=cityid;
+		selObj.style.width="95px";
+		document.getElementById(boxid).appendChild(selObj);
+		if(city==""){
+			selObj.options[0]=new Option("选择城市","");
+		}else{
+			selObj.options[0]=new Option(city,city);
+		}
+
+		if(provinceid!=""){
+			setcity(provinceid,cityid);
+			initprocity(cityid,city);
+		}
+	}
+
+</script>

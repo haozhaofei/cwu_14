@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	//对象里面除了属性就是方法
+	//第一种 使用原始的方式创建内置对象
+	/*var person = new Object();
+	person.name = "大乔";
+	person.age = 100;
+	person.sanwei = "100 85 90";
+	person.say = function(){
+		return "我的名字是:"+this.name+"我的三围"+this.sanwei;
+	}
+
+	document.write(person.name);*/
+
+
+	//第二种: 使用自定义构造函数创建对象
+	/*function girl(){
+			//对象的name属性
+			this.name = "王昭君";
+			//对象的color属性
+			this.color = "blue";
+			//对象的say方法
+			this.say = function(){
+				return this.name;
+			};
+	}
+
+	var girl = new girl();
+	document.write(girl.name);*/
+
+	var bajie = {
+		name:"八戒",
+		age:"10000",
+		say:function(){
+			return this.name;
+		}
+
+	}
+
+	document.write(bajie.say());
+</script>

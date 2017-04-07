@@ -1,0 +1,62 @@
+﻿    <!DOCTYPE html>  
+    <html>  
+      <head>  
+        <title>城市级联</title>  
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">  
+        <script type="text/javascript">   
+              
+            var json = {"贵州":["遵义","贵阳","凯里"],  
+                        "湖南":["长沙","浏阳","株洲"],  
+                        "河南":["驻马店","郑州","安阳"]};  
+                       
+         
+            function fun1(){  
+                  
+                var province = document.getElementById("province");  
+               
+                for(var key in json){    
+                   
+                    var option = document.createElement("option");  
+                    option.innerHTML = key; 
+                   
+                    province.appendChild(option);  
+                }  
+            }  
+              
+            function fun2(){  
+               
+                var province = document.getElementById("province");  
+                var city = document.getElementById("city");  
+                
+                city.length =1;   
+                
+                if(!province.selectedIndex){  
+                 
+                return;  
+                }  
+                var options = province.options;  
+                var pName = options[province.selectedIndex].innerHTML;  
+                
+                var cities = json[pName];  
+                 
+                for(var i = 0 ; i<cities.length;i++){  
+                var cityName = cities[i];  
+                 
+                    var option = document.createElement("option");  
+                    option.innerHTML = cityName;   
+                    
+                    city.appendChild(option);  
+                }  
+            }  
+              
+        </script>  
+      </head>  
+      <body onload="fun1();" >  
+        <select id="province" onchange="fun2();" >  
+            <option>---请选择省---</option>  
+        </select>  
+        <select id="city" >  
+            <option>---请选择市---</option>  
+        </select>  
+      </body>  
+    </html>  

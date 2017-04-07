@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>刚好遇见你</li>
+		<li>给我一首歌的时间</li>
+		<li>告白气球</li>
+		<li>我有一只小毛驴</li>
+		<li>小苹果</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick = function(){
+			//alert(list[i].innerHTML);
+			//this代表当然前/本身/自己的意思 
+			alert(this.innerHTML);
+		}
+	}
+
+</script>
+
+

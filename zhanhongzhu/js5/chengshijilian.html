@@ -1,0 +1,65 @@
+<!DOCTYPE HTML >
+<html>
+  <head>
+    <title>城市级联</title>
+    <script type="text/javascript">
+    window.onload=function(){
+        var provinceNode=document.getElementById('province');
+        provinceNode.onchange=function(){
+            //清除city节点的所有子节点（除第一个节点）
+            var cityNode=document.getElementById('city');
+            var cityNodeOptions=cityNode.getElementsByTagName('option');
+            var len=cityNodeOptions.length;
+            for(var i=1;i<len;i++){
+                //每次都清除第2个，因为数组cityNodeOptions的长度是动态变化的
+                cityNode.removeChild(cityNodeOptions[1]);
+                }
+            var provinceVal=this.value;
+            if(provinceVal==null){
+                return false;
+                }
+            
+            var xmlDoc=parseXml('cities.xml');
+            
+            var provinceEles = xmlDoc.selectNodes("province[@name='" 
+                                                   + provinceVal + "']");
+            var cityNodes=provinceEles[0].getElementsByTagName('city');
+            //遍历city，得到每个文本值，创建新的节点并添加
+            for(var i=0;i<cityNodes.length;i++){
+                var text=cityNodes[i].firstChild.nodeValue;
+                var addNodeOption=document.createElement('option');
+                var addNodeText=document.createTextNode(text);
+                addNodeOption.appendChild(addNodeText);
+                //将新节点挂载到city节点下
+                cityNode.appendChild(addNodeOption);
+              }
+            }
+        }
+
+    function parseXml(fileName){
+        if (window.ActiveXObject) {
+            //创建 DOM 解析器
+            var doc = new ActiveXObject("Microsoft.XMLDOM");
+            doc.async = "false";
+            doc.load(fileName);
+            return doc;
+        }
+    }
+
+   </script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+   <select id="province">
+      <option value="">请选择...</option>
+      <option value="吉林省">吉林省</option>
+      <option value="辽宁省">辽宁省</option>
+      <option value="山东省">山东省</option>
+   </select>
+   <select id='city'>
+     <option value="">请选择...</option>
+   </select>
+  </body>
+
+</html>

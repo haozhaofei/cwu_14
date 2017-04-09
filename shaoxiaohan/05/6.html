@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>放大图片局部</title>
+	<style>
+		#did{width: 300px;height: 300px;overflow: hidden;position: absolute;display: none;}
+	</style>
+</head>
+<body>
+<img src="images/11.jpg" width="384" id="mid" alt="">
+	<div id="did">
+	<img src="images/11.jpg" alt="">
+	</div>
+
+</body>
+</html>
+<script>
+	var mid = document.getElementById('mid');
+	var did = document.getElementById('did');
+	mid.onmouseover = function () {
+		// body...
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth+this.offsetLeft+10+"px";
+		}
+			mid.onmouseout = function(){
+				did.style.display = "none";
+			}
+			mid.onmousemove = function(ent){
+				//兼容解决
+				var event = ent || window.event;
+				var x = event.clientX = this.offsetLeft;
+				var y = event.clientY - this.offsetTop;
+				did.scrollTop = y*5-150;
+				did.scrollLeft = x*5-150;
+			}
+
+	}
+</script>

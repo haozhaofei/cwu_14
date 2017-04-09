@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>刷新改变背景颜色</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+	//inum取0-2之间的整数
+	var inum = Math.ceil((Math.random()*10000)%3)-1;
+	//生成一个随机数组
+	var oc = ["red","yellow","pink"];
+	document.getElementById("bid").style.background=oc[inum];
+</script>

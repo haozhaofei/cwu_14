@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩略图-转化图</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin: 0px;}
+	#mid img {width: 387px;height: 387px;}
+	#nid img{width: 93px;height: 80px;border: 1px solid gray;}
+	#sid img{width:387px;height:387px;overflow:hidden;position: absolute;display: none;}
+	#m2,#m3,#m4{display: none;}
+</style>
+<body>
+	<div id="mid">
+		<img src="../images/1.jpg" id="m1" alt="">
+		<img src="../images/2.jpg" id="m2" alt="">
+		<img src="../images/3.jpg" id="m3" alt="">
+		<img src="../images/4.jpg" id="m4" alt="">
+	</div>
+	<div id="nid">
+		<img src="../images/1.jpg" id="n1" onclick="show(1)">
+		<img src="../images/2.jpg" id="n2" onclick="show(2)">
+		<img src="../images/3.jpg" id="n3" onclick="show(3)">
+		<img src="../images/4.jpg" id="n4" onclick="show(4)">
+	</div>
+	<div id="sid">
+		<img src="../images/1.jpg" id="s1" alt="">
+		<img src="../images/2.jpg" id="s2" alt="">
+		<img src="../images/3.jpg" id="s3" alt="">
+		<img src="../images/4.jpg" id="s4" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for (var i = 1; i <= 4; i++) {
+			var nImg = document.getElementById('n'+i);
+			var mImg = document.getElementById('m'+i);
+			
+			if(i == x){
+				mImg.style.display = "block";
+
+				var sImg = document.getElementById('s'+x);
+
+				mImg.onmouseover = function(){
+				sImg.style.display = "block";
+				sImg.style.top = this.offsetTop + "px";
+				sImg.style.left = this.offsetWidth + this.offsetLeft + 10 + "px";
+			}
+
+			mImg.onmouseout = function(){
+				sImg.style.display = "none";
+			}
+
+			mImg.onmousemove = function(ent){
+				var event = ent || window.event;
+				var x = event.clientX - this.offsetLeft;
+				var y = event.clientY - this.offsetTop;
+				sImg.scrollTop = y*8 - 600;
+		        sImg.scrollLeft = x*8 - 600;
+			}
+			
+
+			}else{
+				mImg.style.display = "none";
+				}
+
+			
+		}
+
+		
+
+	}
+</script>

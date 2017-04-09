@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>free to channge background</title>
+</head>
+<body id = "bid">
+	
+</body>
+</html>
+<script>
+	var arr = ["cyan","lightskyblue","pink"];
+	var index = Math.ceil(Math.random()*1000)%3;   //Math.random()*1000生成0--1000的随机数后对3取余得到可随机得到0,1,2
+	//法一 
+	// document.getElementsByTagName('body')[0].style.background = arr[index];
+
+	//法二
+	document.getElementById('bid').style.background = arr[index];
+
+</script>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:400px;height: 400px;position:relative;background: #ccc}
+		#mid{width:40px;height: 40px;background: red;position: absolute;top:300px;left: 30px;}
+		#pd0,#pd1,#pd2,#pd3,#pd4,#pd5,#boom,#enemy0,#enemy1,#enemy2,#enemy3,#enemy4,#enemy5{display: none;position: absolute}
+	</style>
+</head>
+
+<body>
+	<div id="did">
+		<img src="images/pd.png" id="pd0" alt="">
+		<img src="images/pd.png" id="pd1" alt="">
+		<img src="images/pd.png" id="pd2" alt="">
+		<img src="images/pd.png" id="pd3" alt="">
+		<img src="images/pd.png" id="pd4" alt="">
+		<img src="images/pd.png" id="pd5" alt="">
+		<img src="images/enemy.png" id="enemy0" alt="">
+		<img src="images/enemy.png" id="enemy1" alt="">
+		<img src="images/enemy.png" id="enemy2" alt="">
+		<img src="images/enemy.png" id="enemy3" alt="">
+		<img src="images/enemy.png" id="enemy4" alt="">
+		<img src="images/enemy.png" id="enemy5" alt="">
+		<div id="mid">
+			
+		</div>
+	</div>
+	<img src="images/boom.png" id="boom" alt="">
+
+	
+
+</body>
+</html>
+
+<script>
+	var mid = document.getElementById('mid');
+
+	window.document.onkeydown = function(ent){
+		var event = ent || window.event;
+		switch(event.keyCode){
+			case 37 :  
+				mid.style.left = Math.max(0,mid.offsetLeft-5)+"px";
+			break;
+			case 38 :  
+				mid.style.top = Math.max(0,mid.offsetTop-5)+"px";
+			break;
+			case 39 :  
+				mid.style.left = Math.min(360,mid.offsetLeft+5)+"px";
+			break;
+			case 40 :  
+				mid.style.top = Math.min(360,mid.offsetTop+5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+16,mid.offsetTop);
+			break;
+			case 13:
+				battle(mid.offsetLeft+10,mid.offsetTop-300);				
+			break;
+		}
+	}
+	
+	function fire(x,y){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById("pd"+i);
+			if(pd.style.display != "block"){
+				pd.style.top = y+"px";
+				pd.style.left = x+"px";
+				pd.style.display = "block";
+				return;
+			}
+			
+		}
+	}
+
+	function running(){
+		for(var i=0;i<6;i++){
+			var pd = document.getElementById("pd"+i);
+			if(pd.style.display == "block"){
+				pd.style.top = pd.offsetTop-5+"px";
+				if(pd.offsetTop < -20){
+					pd.style.display = "none";
+				}
+			}
+			
+		}
+		setTimeout("running()",33);
+	}
+
+	running();
+
+	function battle(x,y){
+		for(var i=0;i<6;i++){
+			var enemy = document.getElementById("enemy"+i);
+			if(enemy.style.display != "block"){
+				enemy.style.top = y+"px";
+				enemy.style.left = x+"px";
+				enemy.style.display = "block";
+				return;
+			}
+			
+		}
+	}
+	function fall(){
+		for(var i=0;i<6;i++){
+			var enemy = document.getElementById("enemy"+i);
+			if(enemy.style.display == "block"){
+				enemy.style.top = enemy.offsetTop+5+"px";
+				if(enemy.offsetTop > 340){
+					enemy.style.display = "none";
+				}
+			}
+			
+		}
+		setTimeout("fall()",50);
+	}
+	fall();
+
+//碰撞
+	
+		/*var boom=document.getElementById('boom');
+		for(var i=0;i<6;i++){
+			for(var j=0;j<6;j++){
+				if (pd[i].style.top=enemy[j].style.top&&pd[i].style.left=enemy[j].style.left) {
+					//enemy.src=boom.src;
+					enemy[j].imagenode.src=enemy[j].boomimage;
+				}else{
+					pd[i].imagenode.src=pd[i].boomimage;
+				}
+			}
+		}*/
+	//function start(){}	
+</script>

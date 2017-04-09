@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	//在所有的文档加载完以后执行
+	//可以换顺序
+	window.onload = function(){
+		var arr = ["orange","pink","black"];
+		var index = Math.ceil(Math.random()*1000)%3;
+		//getElementsByTagName:返回的是一个集合 所以要用下标0,1,2....
+		//document.getElementsByTagName('body')[0].style.background = arr[index];
+		var oBid = document.getElementById('bid');
+		oBid.style.background = arr[index];
+	}
+	
+
+</script>
+<body id="bid">
+	
+</body>
+</html>
+

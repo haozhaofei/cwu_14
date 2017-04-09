@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动改变大方块颜色</title>
+	<style>
+		
+		#did{width: 400px;height: 400px;background: #eee;position: relative;}
+		#mid{width:40px;height:40px;background:#bbb;position: absolute;top:170px;left: 170px}
+	</style>
+</head>
+<body>
+	<center>
+		<div id="did">
+			<div id="mid"></div>
+		</div>
+	</center>
+</body>
+</html>
+<script>
+	function changeColor(){
+	var arr = ["lavender","pink","darkSeaGreen"];
+	var index = Math.ceil(Math.random()*1000)%3;
+	document.getElementById('did').style.background = arr[index];
+	}
+	window.document.onkeydown=function(ent){
+	var event = ent || window.event;
+
+		switch(event.keyCode){
+			case 37 :  //左
+				mid.style.left = Math.max(0,mid.offsetLeft-5)+"px";
+				changeColor();
+			break;
+			case 38 :  //上
+				mid.style.top = Math.max(0,mid.offsetTop-5)+"px";
+				changeColor();
+			break;
+			case 39 :  //右
+				mid.style.left = Math.min(360,mid.offsetLeft+5)+"px";
+				changeColor();
+			break;
+			case 40 :  //下
+				mid.style.top = Math.min(360,mid.offsetTop+5)+"px";
+				changeColor();
+			break;
+		}
+	
+	}
+</script>

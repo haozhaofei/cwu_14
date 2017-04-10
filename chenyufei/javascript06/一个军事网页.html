@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>一个军事网页</title>
+<link href="../css/style.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+
+
+<style>
+
+header,nav,main,aside,footer,article,section,figure,figcaption{
+display: block; 
+}
+
+header{
+	height:40px;
+	background-color:#a82828;
+	margin-top:-15px;
+}
+header li{
+	list-style:none;
+	width:90px;
+	float:left;
+	background-color:#004100;
+	height:40px;
+}
+h1{
+	font-size:19px;
+	color:#fff;
+}
+li.border a{
+	border-right:1px solid #FFF;
+}
+header li a{
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	float:left;
+	margin-top:10px;
+	font-size:14px;
+	display:block;
+}
+header li a:hover{
+	color:#66CC00;
+}
+
+li.downmenu{
+	position:relative;
+}
+
+ul.menuchild{
+	position:absolute;
+	left:-1200em;
+}
+li.downmenu:hover ul.menuchild{
+	top:40px;
+	left:-40px;
+	background-color:4c4c53;
+}
+
+	
+aside.second{
+	background-color:#B6ADEC;
+	height:450px;
+}
+aside.second li{
+	list-style:none;
+}
+aside.second li a{
+	text-decoration:none;
+}
+section.ul{
+	float:left;
+	margin-left:800px;
+	margin-top:-430px;
+}
+
+img.did{
+	border:1px solid #004100;
+	position:relative;
+	margin-left:0px;
+	margin-top:20px;
+}
+img.small{
+	padding-top: 0;
+	position:relative;
+	margin-left:40px;
+}
+img.a{
+	position:absolute;
+	margin-left:1000px;
+	margin-top:10px;
+}
+
+section.ul{
+	border:1px solid #ffffff;
+	background-color:#ffffff;
+	width:500px;
+	height:420px;
+	line-height:28px;
+	position:absolute;
+	margin-left:798px;
+	margin-top:3px;
+}
+
+section.ul li a{
+	color:#333333;
+	font-size:18px;
+}
+section.ul li {
+	margin-left:18px;
+}
+section.ul h1{
+	color:#333333;
+	margin-left:20px;
+	font-size:22px;
+	
+}
+
+#did{
+	float:left;
+	margin-left:0px;
+	margin-top:0px;
+}
+section.ul li.o a{
+	color:#e00000;
+	}
+section.ul li.p a{
+	color:#c4c4c4;
+	
+	}
+section.ul li.s a{
+	color:#333333;
+	font-size:22px;
+	font-weight:bold;
+	}
+section.ul li.p a:hover{
+	color:#c4c4c4;
+	font-style:oblique;//斜体
+
+	}
+
+section.ul h1:hover{
+	color:#a82828;
+	font-style:oblique;//斜体
+	text-decoration:underline;
+}
+section.ul li a:hover{
+	font-weight:bold;
+	color:#a82828;
+	font-style:oblique;//斜体
+}
+
+
+</style>
+</head>
+
+
+
+<div>
+<img class="small" src="images/03.png" alt=""/>
+<img class="a" src="images/04.jpg" alt=""/>
+</div>
+<body>
+<header role="banner">
+<nav role="navigation">
+<ul>
+<li class="downmenu"><a href="http://www.baidu.com">&nbsp;首页&nbsp;<ul class="menuchild"></a></li>
+<li><a href="http://www.baidu.com">滚动</a></li>
+<li><a href="http://www.baidu.com">图片</a></li>
+<li><a href="http://www.baidu.com">深度</a></li>
+<li><a href="http://www.baidu.com">《出鞘》</a></li>
+</ul>
+<li class="border"><a href="http://www.baidu.com">滚动&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">图片&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">深度&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">《出鞘》&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">大国博弈&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">军史&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">东海局势&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">南海局势&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">新闻排行&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">航空&nbsp;&nbsp;
+</a></li>
+<li class="border"><a href="http://www.baidu.com">回顾&nbsp;&nbsp;
+</a></li>
+<li><a href="http://www.baidu.com"></a></li>
+
+<li><a href="http://www.baidu.com"></a></li>
+
+<div id="did" onmouseover="doStop()" onmouseout="doStart()">
+		<img src="images/01.jpg" id="m1" width="749" height="420" alt="">
+		<img src="images/06.jpg" id="m2" width="749" height="420" alt="">
+		<img src="images/07.jpg" id="m3" width="749" height="420" alt="">
+		<img src="images/08.jpg" id="m4" width="749" height="420" alt="">
+	</div>
+
+
+</ul>
+</nav>
+</header>
+
+<aside class="second">
+
+<section class="ul"><h1>  美国称中国建超级核潜艇生产线 3年造12艘</h1>
+<li class="o"><a href="http://www.163.com">中国对俄军购又出现新动向 这次是24架米格31战机
+</a></li>
+<li><a href="http://www.163.com">俄称中国百万陆军毫无作用却被打脸 歼20配激光设备
+</a></li>
+<li><a href="http://www.163.com">中国或另起炉灶建核航母 面临两大难题投入或超2千亿
+</a></li>
+<li><a href="http://www.163.com">
+</a></li>
+<p></p>
+<li class="o"><a href="http://www.163.com">中国何时能解决航发短板 两年内有6大型号将获突破
+</a></li>
+<li><a href="http://www.163.com">我军多艘战舰装超音速反舰弹 005配双波段相控阵雷达
+</a></li>
+<li><a href="http://www.163.com">韩方竟称中国高新技术落后韩 刚说完感谢中国就翻脸
+</a></li>
+<li class="p"><a>--------------------------------------------------------
+</a></li>
+<li><a href="http://www.163.com">
+</a></li>
+<li class="s"><a href="http://www.163.com">辽宁舰时隔两月再次演习 透露一重大信号
+</a></li>
+<li class="o"><a href="http://www.163.com">中印国产航母比拼：印航母火力仅为中方50%不堪一击
+</a></li>
+<li><a href="http://www.163.com">安倍政府这个决定让日本网友急了：这不等于认输吗
+</a></li>
+<li><a href="http://www.163.com">巴铁有3种中国武器让印害怕 美称中国造075舰是浪费
+</a></li>
+</ul>
+</section>
+</header>
+
+</body>
+</html>
+
+<script>
+var m = 1;
+	var mytime = null;
+	function doStart(){
+		if(mytime == null){
+			mytime = setInterval(function(){
+			m++;
+			show(m);
+			if(m >=4){
+				m = 0;
+			}
+		},10000)
+		}
+	}
+	doStart();
+	function doStop(){
+		if(mytime != null){
+			clearInterval(mytime);
+			mytime = null;
+		}
+		
+	}
+
+	function show(x){
+		for(var i=1;i<=4;i++){
+			//获取m1 - m4 的元素
+			var oImg = document.getElementById('m'+i);
+			if(x == i){
+				oImg.style.display = "block";
+			}else{
+				oImg.style.display = "none";
+			}
+		}
+	}
+</script>

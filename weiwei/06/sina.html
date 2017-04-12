@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sina</title>
+	<style>
+		#whole{width: 990px;margin: 0 auto;position: relative;}
+		*{margin:0 ; border:0; padding:0;font-size:11pt;font-family:  "Microsoft YaHei","微软雅黑","SimSun","宋体"}
+		#logo{float: left;text-align: center;}
+		#ri,#si{height:22px;width:65px;margin-top:25px;text-align:right;border:0 solid #f00;float:right;padding:0 25px 0 0;background:url(http://i2.sinaimg.cn/dy/deco/2012/0117/sjbi.jpg) no-repeat 0 0;}
+		#ul0{float: left;width: 980px;height: 40px;}
+		#ul0 ul{background-color: #004100;list-style:none;}
+		#ul0 li{display:inline;line-height:40px;border-right:0.5px solid gray;}
+		#ul0 a{color:#fff;text-decoration:none;padding:5px 14px}
+		#ul0 ul li a:hover{background-color:#060;text-decoration: underline;}
+		#pic{display: none;}
+		#spic{position: relative;top: 100px;}
+		#p1{border:1px solid;position: absolute;left: 0px;}
+		#btn{display:inline-block;position: absolute;left: 10px;bottom: -350px;}
+		#b1,#b2,#b3,#b4{width: 30px;height: 10px;background: #ccc;float: left;margin-left: 5px;}
+		#left{position: absolute;left:10px;top: 300px;}
+		#right{position: absolute;left: 620px;top: 300px;}
+		#news{float: right;position: absolute;right: 5px;top: 100px}
+		#news h1 a{font-size: 18px;float:right;text-decoration:none;color: gray;}
+		#news a{font-size: 13px;float:right;text-decoration:none;color: black;margin-left: 2px;margin-top: 8px;}
+		#news a:hover{color:red;cursor: hand;text-decoration: underline;}
+
+	</style>
+</head>
+<body>
+<div id="whole">
+	<div id="logo">
+		<a href="http://mil.news.sina.com.cn">
+		<img src="img/logo.jpg" alt="">
+		</a>
+	</div>
+	
+	<div id="ri" style="float:right;margin-top:27px;zoom:1;">
+		<a href="#" style="position:relative;top:3px;text-decoration:none;color: black;" >手机版</a>
+	</div>
+	<div id="si" style="float:right;margin-top:27px;zoom:1;">
+		<a href="#" style="position:relative;top:3px;text-decoration:none;color: black;">设书签</a>
+	</div>
+
+	<div id="ul0">
+		<ul>
+			<li>
+				<a href="sina.html">首页</a>
+			</li>
+			<li>
+				<a href="#">滚动</a>
+			</li>
+			<li>
+				<a href="#">图片</a>
+			</li>
+			<li>
+				<a href="#">深度</a>
+			</li>
+			<li>
+				<a href="#">《出鞘》</a>
+			</li>
+			<li>
+				<a href="#">大国博弈</a>
+			</li>
+			<li>
+				<a href="#">军史</a>
+			</li>
+			<li>
+				<a href="#">东海形势</a>
+			</li>
+			<li>
+				<a href="#">南海局势</a>
+			</li>
+			<li>
+				<a href="#">新闻排行</a>
+			</li>
+			<li>
+				<a href="#">航空</a>
+			</li>
+			<li>
+				<a href="#">回顾</a>
+			</li>
+
+		</ul>
+	</div>
+	
+	<div id="spic">
+		<img id="p1" src="http://n.sinaimg.cn/mil/transform/20170408/Si8X-fyeceza1522070.jpg" alt="">
+		<div id="btn">
+			<div id="b1" onmouseover="show(1)"></div>
+			<div id="b2" onmouseover="show(2)"></div>
+			<div id="b3" onmouseover="show(3)"></div>
+			<div id="b4" onmouseover="show(4)"></div>
+		</div>
+		
+	</div>
+	<div id="left" onclick="play(1)">
+			<button>L</button>
+	</div>
+	<div id="right" onclick="play(2)">
+			<button>R</button>
+	</div>
+	
+	<div id="news">
+		<h1><a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></h1>
+		<a href="#">卡尔文森号原计访澳大利亚</a>
+		<a href="#">卡尔文森号原计划访澳大利亚</a></br>
+		<a href="#">卡尔文森号原计划访澳大利亚</a>
+		<a href="#">卡尔文号原计划访澳大利亚</a></br>
+		<a href="#">卡尔文森号原计划访澳大利亚</a>
+		<a href="#">卡尔文森号原计划访澳利亚</a></br>
+		<a href="#" >俄媒：亚洲国家不愿在中美之间选边站 希望维持lala现状</a></br>
+		<a href="#" style="margin-top: 30px">俄媒：亚洲国家不愿在中美之间选边站 希望维持lala现状</a></br>
+		<a href="#">俄媒：亚洲国家不愿在中美之间选边站 希望维持lala现状</a></br>
+		<a href="#">俄媒：亚洲国家不愿在中美之间选边站 希望维持lala现状</a></br>
+		<img src="img/fenGe.jpg" alt="" style="margin-top: 10px">
+		<h1><a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></h1>
+		<a href="#">卡尔文森号原计访澳大利亚</a>
+		<a href="#">卡尔文森号原计划访澳大利亚</a></br>
+		<a href="#">卡尔文森号原计划访澳大利亚</a>
+		<a href="#">卡尔文号原计划访澳大利亚</a></br>
+	</div>
+
+
+</div>
+</body>
+</html>
+
+<script>
+	function show(i){
+		var b1 = document.getElementById('b1');
+		var b2 = document.getElementById('b2');
+		var b3 = document.getElementById('b3');
+		var b4 = document.getElementById('b4');
+		var pic = document.getElementById('p1');
+		if (i==1) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170408/Si8X-fyeceza1522070.jpg"
+			if (b1.style.background=="green") {
+				b1.style.background="gray";
+			}else{
+				b1.style.background="green";
+				b2.style.background="gray";
+				b3.style.background="gray";
+				b4.style.background="gray";
+			}
+			
+		}else if (i==2) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170408/S5fP-fyecfak9844313.jpg"
+			if (b2.style.background=="green") {
+				b2.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="green";
+				b3.style.background="gray";
+				b4.style.background="gray";
+			}
+		}else if (i==3) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170408/69Zw-fyeceza1522216.jpg"
+			if (b3.style.background=="green") {
+				b3.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="gray";
+				b3.style.background="green";
+				b4.style.background="gray";
+			}
+		}else if (i==4) {
+			pic.src="http://n.sinaimg.cn/mil/transform/20170408/RbuK-fyecfak9882292.jpg"
+			if (b4.style.background=="green") {
+				b4.style.background="gray";
+			}else{
+				b1.style.background="gray";
+				b2.style.background="gray";
+				b3.style.background="gray";
+				b4.style.background="green";
+			}
+		}
+	}
+
+		var m=4;
+		var n=2;
+	function play(a){
+		var pic = document.getElementById('p1');
+		if (m<1) {m=4;}
+		if (n>4) {n=1;}
+		if (a==1) {
+			show(m);
+			m--;
+		}else if (a==2) {
+			show(n);
+			n++
+		}
+	}
+
+</script>

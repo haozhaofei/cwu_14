@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>讨厌的小窗口</title>
+</head>
+<body>
+	<!--小窗口弹出-->
+	<button onclick="window.open('http://www.baidu.com','','width=200,height=100')">百度</button>
+</body>
+</html>
+<script type="text/javascript">
+	//弹出选择框做出选择后相应文本
+	var r=confirm("你今天做作业了没");
+	if(r==true){
+		document.write("做了");
+	}else{
+		document.write("鬼才做了");
+	}
+	//小窗口输入框
+	window.prompt("请输入你的年龄");
+</script>

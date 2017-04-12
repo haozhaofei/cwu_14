@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var str = 100;
+	function test(){
+		var str =200;
+		document.write("函数内部调用"+str);
+	}
+	test();
+	document.write(str);
+
+	/*function test(){
+		 str =200;//全局变量
+		 函数内部不使用var申明的变量为全局变量，声明的为局部变量
+		document.write("函数内部调用"+str);
+	}
+	test();
+	document.write(str);*/
+
+	var str = 1000;
+	function say(){
+		document.write(str);
+	}
+	say();
+</script>

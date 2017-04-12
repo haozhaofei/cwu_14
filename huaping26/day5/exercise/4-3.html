@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>li --onclick</title>
+	<style>
+	ul,li{
+		list-style-type:none;
+		list-style-image: url(../images/icecream-02.png);
+	}
+	body{
+		background-image: url(../images/poisoned.png);
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>翅低白雁飞仍重</li>
+		<li>舌涩黄鹂语未成</li>
+		<li>不道江南春不好</li>
+		<li>年年衰病减心情</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0; i<list.length; i++){
+		list[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+		
+	}
+</script>

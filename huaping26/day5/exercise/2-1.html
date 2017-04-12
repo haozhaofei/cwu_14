@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onload</title>
+</head>
+
+<script>
+		window.onload = function(){
+			var arr = ["red","cyan","violet"];
+			var index = Math.ceil(Math.random()*1000)%3;
+			var oBid = document.getElementById('bid');
+			oBid.style.background = arr[index];
+		}
+</script>
+
+<body id = "bid">
+	
+</body>
+</html>

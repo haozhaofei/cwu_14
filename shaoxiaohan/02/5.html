@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+//old way to create inner Object
+	var person = new Object();
+	person.name = "joe";
+	person.age = 18;
+	person.sex = female;
+	person.hobby = "swim";
+	person.say = function(){
+		return "name:"+this.name+"aeg:"+this.age+"sex:"+this.sex+"hobby:"+this.hobby;
+	}
+	document.write(person.name);
+
+//self-definite void to create Object
+function girl(){
+	this.name = "lily";
+	this.age = 20;
+	this.color = "pink";
+	this.say = function(){
+		return this.name;
+	};//;;;
+	var girl = new girl();
+	document.write(girl.name);
+
+}
+</script>

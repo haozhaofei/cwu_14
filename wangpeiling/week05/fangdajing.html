@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>magnifier</title>
+
+	<style type="text/css">
+	body{
+		margin: 0;
+	}
+	#div1{
+		width: 400px;
+		height: 300px;
+		position: relative;
+		float: left;
+	}
+	#div1 img{
+		width: 100%;
+		height: 100%;
+	}
+	#drag{
+		width:70px;
+		height: 70px;
+		background-color: yellow;
+		opacity: .5;
+		position: absolute;
+		left: 0;
+		top:0;
+		cursor:move;
+	}
+	#box{
+		float: left;
+		width: 400px;
+		height: 300px;
+		overflow: hidden;
+		margin-left: 20px;
+		position: relative;
+	}
+	#box img{
+		width: 200%;
+		height: 200%;
+		position: absolute;
+		left:0;
+		top:0;
+	}
+	</style>
+</head>
+<body bgcolor="#a6ffff">
+   <center>
+	<div id="div1">
+		<img src="1.jpg" alt="">
+		<div id="drag"></div>
+	</div>
+	<div id="box">
+		<img src="1.jpg" alt="">
+	</div>
+    </center>
+	<script type="text/javascript">
+	var drag = document.getElementById('drag');
+	var div1 = document.getElementById('div1');
+	var box = document.getElementById('box');
+	var img  = box.getElementsByTagName('img')[0];
+	var maxY = div1.clientHeight - drag.offsetHeight;
+	var maxX = div1.clientWidth - drag.offsetWidth;
+	var maxTop = box.clientHeight - img.offsetHeight;
+	var maxLeft = box.clientWidth - img.offsetWidth;
+        div1.onmouseover=function() 
+        { 
+         drag.style.display='block'; 
+         img.style.display='block'; 
+         }; 
+         div1.onmouseout=function() 
+         { 
+         drag.style.display='none'; 
+         img.style.display='none'; 
+         }; 
+	div1.onmousemove = function(ev){
+		var disX = ev.clientX - drag.offsetWidth/2;
+		var disY = ev.clientY - drag.offsetHeight/2;
+		var scaleY = disY / maxY;
+		var scaleX = disX / maxX;
+		
+		
+		if(disX<0) 
+         { 
+          disX=0; 
+         } 
+          else if(disX>div1.offsetWidth-drag.offsetWidth) 
+         { 
+          disX=oShow.offsetWidth-drag.offsetWidth; 
+         } 
+          if(disY<0) 
+         { 
+          disY=0; 
+         } 
+          else if(disY>div1.offsetHeight-drag.offsetHeight) 
+         { 
+          disY=div1.offsetHeight-drag.offsetHeight 
+          } 
+		console.log(scaleX*maxLeft)
+		img.style.left = scaleX*maxLeft+'px';
+		img.style.top = scaleY*maxTop+'px';
+		drag.style.left = disX+"px";
+		drag.style.top = disY+"px";
+	}
+	</script>
+</body>
+</html>

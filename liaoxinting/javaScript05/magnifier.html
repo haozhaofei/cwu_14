@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>images</title>
+</head>
+<style>
+    #mid{width:200px;height:200px;overflow: hidden;position: absolute;display: none; }
+    #uid {width: 387px;height: 240px;}
+    #mag {width: 387px;height: 240px;}
+    #did img{float:left;width:93px;height:80px;list-style: none;margin: 2px;}  
+</style>
+<body>
+
+    <div id="uid">
+    <img src="images/01.jpg" width="387" id="mag">
+    </div>
+
+    <div id="did">
+        <img src="images/01.jpg"  original="images/01.jpg" onmouseover="showOriginal(this)">
+        <img src="images/02.jpg"  original="images/02.jpg" onmouseover="showOriginal(this)">
+        <img src="images/03.jpg"  original="images/03.jpg" onmouseover="showOriginal(this)">
+        <img src="images/04.jpg"  original="images/04.jpg" onmouseover="showOriginal(this)">       
+    </div>
+    <div id="mid">  
+        <img src="images/01.jpg" width="387" id="bImg">
+    </div> 
+     
+</boby>
+</html>
+<script>
+    var did = document.getElementById('did').getElementsByTagName('img');
+    var mid = document.getElementById('mid');
+    var ouid = document.getElementById('uid');
+    var mag =document.getElementById('mag');
+    var bImg =document.getElementById('bImg');
+
+    for(var i=0;i < did.length;i++){
+        did[i].onmouseover = function(){
+            mag.src = this.src;
+            bImg.src = this.src;
+        }                
+    }
+
+    ouid.onmouseover=function(){
+            mid.style.display="block";
+            mid.style.top=this.offsetTop+"px";
+            mid.style.left=this.offsetWidth+this.offsetLeft+10+'px';
+        }
+    ouid.onmouseout=function(){
+        mid.style.display="none";
+    }
+    ouid.onmousemove=function(ent){
+        var event=ent || window.event;
+        var x=event.clientX-this.offsetLeft;
+        var y=event.clientY-this.offsetTop;
+        mid.scrollTop=y*1-100;
+        mid.scrollLeft=x*1-100;
+    }  
+</script>
+

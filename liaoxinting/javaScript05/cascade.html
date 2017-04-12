@@ -1,0 +1,51 @@
+<html> 
+    <head> 
+    	<meta charset="UTF-8">
+    <title>change</title> 
+    </head> 
+ 
+<body onload='getProvince()'> 
+<div id='province'><select><option>省份</option></select></div> 
+<div id='city'><select><option>城市</option></select></div> 
+
+</body> 
+
+</html> 
+<script>
+	var city;city=new Array(3);
+	city[0]=new Array(5); 
+	city[0][0]="北京";city[0][1]="朝阳";city[0][2]="海淀";city[0][3]="昌平";city[0][4]="东城";
+	city[1]=new Array(5);
+	city[1][0]="上海";city[1][1]="浦东";city[1][2]="闵行";city[1][3]="静安";city[1][4]="南汇";
+	
+	city[2]=new Array(12);
+	city[2][0]="安徽";city[2][1]="合肥";
+	city[2][2]="淮南";city[2][3]="蚌埠";
+	city[2][4]="黄山";city[2][5]="阜阳";
+	city[2][6]="六安";city[2][7]="巢湖";
+	city[2][8]="滁州";city[2][9]="芜湖";
+	city[2][10]="池州";city[2][11]="安庆";
+    function getRegion(){
+    	document.getElementById("city").innerHTML=""; 
+        var provinces=document.getElementById("provinces"); 
+        var prov=provinces[provinces.selectedIndex].value; 
+        var str="<select>"; 
+
+            for(var i=0;i<city[prov].length;i++) 
+            {         
+                str=str+"<option>"+city[prov][i]+"</option>";     
+            } 
+            str=str+"</select>"; 
+    document.getElementById("city").innerHTML=str; 
+
+    } 
+    function getProvince(){    
+    	var strs="<select onchange='getRegion()' id='provinces'><option></option>"; 
+        for(var i=0;i<=2;i++) 
+        { 
+            strs=strs+"<option value="+i+">"+city[i][0]+"</option>"; 
+        }     
+        strs=strs+"</select>"; 
+        document.getElementById('province').innerHTML=strs; 
+    } 
+</script>

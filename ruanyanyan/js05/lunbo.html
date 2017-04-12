@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播放大</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin: 0px;}
+	#uid img {width: 387px;  height: 250px;}
+	#did img{width: 93px;height: 80px;}
+	#mid{width:300px;height: 300px;overflow: hidden;position:absolute;display: none;}
+	#mid img{width: 1900px; height: 1200px;}
+</style>
+<body>
+	<div id="uid">
+		<img src="images/01.jpg" id="m1" alt="">
+	</div>
+
+	<div id="did">
+		<img src="images/01.jpg"  alt="">
+		<img src="images/02.jpg"  alt="">
+		<img src="images/03.jpg"  alt="">
+		<img src="images/04.jpg"  alt="">
+	</div>
+	<div id="mid">
+		<img src="images/01.jpg" id="m2" alt="">
+	</div>
+	
+</body>
+</html>
+
+<script>
+	var img = document.getElementById('did').getElementsByTagName("img");
+    var uid = document.getElementById('m1');
+   
+    for(var i=0;i < img.length;i++){
+			
+				img[i].onmouseover = function(){
+					document.getElementById("m1").src = this.src;
+					document.getElementById("m2").src = this.src;
+				}
+	}
+
+  
+
+   uid.onmouseover = function(){
+		mid.style.display = "block";
+ 		mid.style.top = this.offsetTop+"px";
+	 	mid.style.left = this.offsetWidth + this.offsetLeft+10+"px";
+	 }
+
+	 uid.onmouseout = function(){
+	 	mid.style.display = "none";
+	 }
+
+	 uid.onmousemove = function(ent){
+	 	//兼容问题解决
+	 	var event = ent || window.event;
+	 	var x = event.clientX - this.offsetLeft;
+	 	var y = event.clientY - this.offsetTop;
+	 	mid.scrollTop = y*5-150;
+	 	mid.scrollLeft =x*5-150;
+	 }	
+	    //onmouseover
+			
+</script>

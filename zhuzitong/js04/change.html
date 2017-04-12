@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>photo menu</title>
+</head>
+<style>
+	div,ul,li,img{padding: 0px;margin: 0px;}
+	#uid img {width: 670px;height: 400px;}
+	#did img{width: 160px;height: 100px;border: 1px solid gray;}
+	#m2,#m3,#m4{display: none;}
+</style>
+<body>
+	<div id="uid">
+		<img src="images/1.jpg" id="m1" alt="">
+		<img src="images/2.jpg" id="m2" alt="">
+		<img src="images/3.jpg" id="m3" alt="">
+		<img src="images/4.jpg" id="m4" alt="">
+	</div>
+	<div id="did">
+		<img src="images/1.jpg" id="n1" onclick="show(1)">
+		<img src="images/2.jpg" id="n2" onclick="show(2)">
+		<img src="images/3.jpg" id="n3" onclick="show(3)">
+		<img src="images/4.jpg" id="n4" onclick="show(4)">
+	</div>
+</body>
+</html>
+
+<script>
+	function show(x){
+		for (var i = 1; i <= 4; i++) {
+			var oImg = document.getElementById('n'+i);
+			var sImg = document.getElementById('m'+i);
+			if(i == x){
+				sImg.style.display = "block";
+			}else{
+				sImg.style.display = "none";
+				}
+		}
+
+	}
+</script>

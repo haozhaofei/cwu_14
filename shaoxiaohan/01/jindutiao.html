@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>js进度条实例</h3>
+	<div style="width:400px;height:30px;border:2px solid #aaa;padding:2px;">
+		<div style="width:0px;height:30px;background-color:pink;" id="did"></div>
+	</div>
+	<br/>
+	<button onclick="doStart()">start</button>
+	<script type="text/javascript">
+	function doStart () {
+		// body...
+		var m = 0;
+		var mytime = setInterval(function(){
+			m++;
+			document.getElementById('did').style.width=m+"%";
+			if(m==100){
+				clearInterval(mytime);
+				alert("over!");
+			}
+		},10);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景变色</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+	window.onload=function(){
+		var arr=["red","blue","yellow"];
+		var index=Math.ceil(Math.random()*1000)%3;
+		var oBid=document.getElementById('bid');
+		oBid.style.background=arr[index];
+	}
+</script>

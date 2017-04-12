@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bomb</title>
+	<style>
+			#did{
+				width:400px;height:400px;position:relative;background:#ccc;
+			}
+
+			#mid{
+				width:40px;height:40px;background:red;position:absolute;top:300px;left:30px;
+			}
+
+			#bb0,#bb1,#bb2,#bb3,#bb4,#bb5,#bb6{
+				display:none;position: absolute;
+			}
+	</style>
+</head>
+<body>
+	<div id="did">
+		<img src="../images/bomb.png" id="bb0" alt="">
+		<img src="../images/bomb.png" id="bb1" alt="">
+		<img src="../images/bomb.png" id="bb2" alt="">
+		<img src="../images/bomb.png" id="bb3" alt="">
+		<img src="../images/bomb.png" id="bb4" alt="">
+		<img src="../images/bomb.png" id="bb5" alt="">
+		<img src="../images/bomb.png" id="bb6" alt="">
+		<div id="mid"></div>
+	</div>
+	
+	
+</body>
+</html>
+<script>
+	var mid = document.getElementById('mid');
+	window.document.onkeydown = function(ent){
+		var event = ent || window.event;
+		// alert(event.keyCode);
+		switch(event.keyCode){
+			case 37 :  //左
+				mid.style.left = Math.max(0,mid.offsetLeft-5)+"px";
+			break;
+			case 38 :  //上
+				mid.style.top = Math.max(0,mid.offsetTop-5)+"px";
+			break;
+			case 39 :  //右
+				mid.style.left = Math.min(360,mid.offsetLeft+5)+"px";
+			break;
+			case 40 :  //下
+				mid.style.top = Math.min(360,mid.offsetTop+5)+"px";
+			break;
+			case 32 :
+				fire(mid.offsetLeft+16,mid.offsetTop);
+			break;
+
+		}
+	}
+
+	function fire(x,y){
+		for(var i=0;i<7;i++){
+			var bb = document.getElementById('bb' + i);
+			if(bb.style.display !="block"){
+				bb.style.top = y + "px";
+				bb.style.left = x + "px";
+				bb.style.display = "block";
+
+				return;
+			}
+		}
+	}
+
+	function running(){
+		for(var i=0;i<7;i++){
+			var bb = document.getElementById('bb'+i);
+			if(bb.style.display == "block"){
+				bb.style.top = bb.offsetTop-5 + "px";
+
+				if(bb.offsetTop < -20){
+					bb.style.display = "none";
+				}
+			}
+		}
+		setTimeout("running()",33);
+
+	}
+
+	running();
+</script>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机变色</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+	var arr = ["red","green","blue"];
+	var ran = Math.ceil(Math.random()*100)%3;
+	var oBid = document.getElementsByTagName('body');
+	//getElementsByTagName获取的是一个数组
+	oBid[0].style.background = arr[ran];
+</script>

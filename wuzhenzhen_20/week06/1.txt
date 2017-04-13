@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -38,13 +38,10 @@
 		tr,td{padding: 0px;margin: 0px}
 	}
 	</style>
-</head>2
+</head>
 <body >
+<div id="top_0"><a href="http://mil.news.sina.com.cn/"><img src="1.png" id="img1"></a></div>
 
-</body>
-<div id="top_img" style="background:url(top2.png); overflow: hidden;">
-</div>
-<div id="top_0"><a href="http://mil.news.sina.com.cn/"><img src="top1.png" id="img1"></a></div>
 <div id="nav">
 	<ul>
 		<li style="width: 40px">首页</li>
@@ -72,6 +69,7 @@
 		<li style="width: 40px">回顾</li>
 	</ul>
 </div>
+
 <div id="center">
 	<div id="left_div">
 		 <div  id="big"  style="position: relative;" >
@@ -120,6 +118,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="center2">
 	<div id="center2_div1">
 		<a href="" id="gaoqingtu">高清图</a>
@@ -145,18 +144,15 @@
 		<img src="16.png" width="344px" height="312px">
 	</div>
 </div>
+</body>
 </html>
-
 <script>
-	var o_bigImag=document.getElementById("bigImag");//原图的img
-	//获取图片的说明文字
+	var o_bigImag=document.getElementById("bigImag");
 	var img_a1=document.getElementById("img_a1");
 	var img_a2=document.getElementById("img_a2");
 	var img_a3=document.getElementById("img_a3");
 	var img_a4=document.getElementById("img_a4");
 
-
-	//缩略图函数
 	function f0(){
 		o_bigImag.src="6.jpg";
 		img_a2.style.display="none";

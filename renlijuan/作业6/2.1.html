@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<iframe src="1.1.html"></iframe>
+		<iframe src="http://qq.com"></iframe>
+		<iframe src="1.2.html"></iframe>
+		<iframe src="1.3.html"></iframe>
+	</body>
+	<button onclick="doChange()">变色</button>
+</html>
+<script>
+		alert(window.frame.length);
+	function doChange(){
+		window.frame[1].document.getElementById('jk').style.color="red";
+	}
+</script>

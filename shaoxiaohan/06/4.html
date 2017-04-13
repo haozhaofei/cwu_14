@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Navigator对象</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+	//Navigator对象
+	with(document){
+		write("你的浏览器信息：<ul>");
+		write("<li>代码： "+navigator.appCodeName+"</li>")
+		write("<li>名称："+navigator.appCodeName+"</li>")
+		write("<li>版本："+navigator.appVersion+"</li>")
+		write("<li>语言："+navigator.language+"</li>")
+		write("<li>编译平台："+navigator.platform+"</li>")
+		write("<li>用户表头："+navigator.userAgent+"</li>")
+		write("<ul>");
+	}
+	function myBrowser(){
+		//获取浏览器的useragent字符串
+		var userAgent = navigator.userAgent;
+		var isOpera = userAgent.indexOf("opera")> -1;
+		if(isOpera){
+			return "Opera";
+			}//浏览器
+			if(userAgent.indexOf("Firefox")> -1){
+				return "FF";//浏览器
+			}
+			if(userAgent.indexOf("Safari")> -1){
+				return "Safari";
+			}
+			if(userAgent.indexOf("Chrome")> -1){
+				return "Chrome";
+			}
+			if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+       			return "IE";
+    			}//判断是否IE浏览器
+			//调用上面函数
+			var mb = myBrowser();
+			if("Chrome"==mb){
+				alert("我是Chrome");
+			}
+			if("Safari"==mb){
+				alert("我是Safari");
+			}
+			if("FF"==mb){
+				alert("我是firefox");
+			}
+			if("Opera"==mb){
+				alert("我是Opera");
+			}
+			if ("IE" == mb) {
+   				 alert("我是 IE");
+			}
+		myBrowser();
+	}
+
+</script>

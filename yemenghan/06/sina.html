@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>军事频道_新浪网</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+</head>
+<!-- 样式 -->
+<link rel="stylesheet" href="sina.css"/>
+<!-- ——————————————————————————————————————————————————————————————————————————————-->
+<body>
+<!-- 标签 -->
+<div class="clearfix">
+      <div class="tag">
+            <h3 class="h_tag">新浪军事</h3>
+      </div>
+
+<!-- 列表 -->
+	<div class="yemei">
+		<ul>
+		<li class="yemei_links">
+            <a class="link" href="#title_first"><p class="yemei_p">首页</p></a>
+            </li>
+          
+            
+            <li class="yemei_links">
+            <a class="link" href="#title_second"><p class="yemei_p">滚动</p></a>
+            </li>
+          
+            
+            <li class="yemei_links">
+            <a class="link" href="#title_third"><p class="yemei_p">图片</p></a>
+            </li>
+          
+            
+            <li class="yemei_links">
+            <a class="link" href="#title_fourth"><p class="yemei_p">深度</p></a>
+            </li>
+          
+            
+            <li class="yemei_links">
+            <a class="link" href="#title_fifth"><p class="yemei_p">《出鞘》</p></a>
+            </li>
+          
+            
+            <li class="yemei_links">
+            <a class="link" href="#title_sixth"><p class="yemei_p">大国博弈</p></a>
+            </li>
+          
+            
+            <li class="yemei_links">
+            <a class="link" href="#title_seventh"><p class="yemei">军事</p></a>
+            </li>
+          
+            
+            <li class="yemei_links" >
+            <a class="link" href="#title_eighth"><p class="yemei_p">东海局势</p></a>
+            </li>
+
+            <li class="yemei_links" >
+            <a class="link" href="#title_eighth"><p class="yemei_p">南海局势</p></a>
+            </li>
+
+            <li class="yemei_links" >
+            <a class="link" href="#title_eighth"><p class="yemei_p">新闻排行</p></a>
+            </li>
+
+            <li class="yemei_links" >
+            <a class="link" href="#title_eighth"><p class="yemei_p">航空</p></a>
+            </li>
+
+            <li class="yemei_links" >
+            <a class="link" href="#title_eighth"><p class="yemei_p">回顾</p></a>
+            </li>
+		</ul>
+	</div>
+
+<!-- ______________________________________________________________________________________ -->
+<!-- _______________________________________________________________________________________________ -->
+
+<!-- 左边轮播图 -->
+ <div class="img-scroll">
+ 
+    <span class="prev">prev</span>
+ 
+    <span class="next">next</span>
+ 
+    <div class="img-list">
+
+
+            <ul>
+ 
+                  <li><img class="xiangying" style="width:320px;height:400px;" src="images/1.jpeg"></li>
+
+                  <li><img class="xiangying" style="width:320px;height:400px;" src="images/2.jpeg"></li>
+
+                  <li><img class="xiangying" style="width:320px;height:400px;" src="images/3.jpeg"></li>
+
+                  <li><img class="xiangying" style="width:320px;height:400px;" src="images/4.jpg"></li>
+
+                  <li><img class="xiangying" style="width:320px;height:400px;" src="images/5.jpg"></li>
+ 
+            </ul>
+      </div>
+</div>
+
+<!-- 右边文字说明 -->
+      <!-- 第一部分 -->
+      <div class="text">
+            
+            <div class="text_1">
+                  <h2 class="title_1">撒哈拉的故事</h2>
+                 <p class="introduce">生命，在这样荒僻落后而贫苦的地方，一样欣欣向荣地滋长着，它，并不是挣扎着生存，对于沙漠的居民而言，他们在此地的生老病死都好似是如此自然的事。我看着那些上升的烟火，觉得他们安详的近乎优雅起来。——————三毛《撒哈拉的故事》</p></br>
+            </div>
+
+            <p>---------------------------------------------------------------------------------</p>
+            <!-- 第二部分 -->
+            <div class="text_2">
+                <h2 class="title_1">平凡的世界</h2>
+                <p class="introduce">这是一部全景式地表现中国当代城乡社会生活的长篇小说。全书共三部。作者在近十年间广阔背景上，通过复杂的矛盾纠葛，刻划了社会各阶层众多普通人的形象。劳动与爱情，挫折与追求，痛苦与欢乐，日常生活与巨大社会冲突，纷繁地交织在一起，深刻地展示了普通人在大时代历史进程中所走过的艰难曲折的道路。</p>  
+            </div>
+      </div>
+</div>
+</body>
+
+
+
+<script type="text/javascript">
+
+      function DY_scroll(wraper,prev,next,img,speed,or){ 
+            var wraper = $(wraper);
+            var prev = $(prev);
+            var next = $(next);
+            var img = $(img).find('ul');
+            var w = img.find('li').outerWidth(true);
+            var s = speed;
+
+      next.click(function(){
+            img.animate({'margin-left':-w},function()
+                  {
+                   img.find('li').eq(0).appendTo(img);
+                   img.css({'margin-left':0});
+                   });
+            });
+
+      prev.click(function() {
+        img.find('li:last').prependTo(img);
+        img.css({'margin-left':-w});
+        img.animate({'margin-left':0});
+        });
+ 
+      if (or == true){
+            ad = setInterval(function() { next.click();},s*1000);
+             wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() { next.click();},s*1000);});
+            }
+ 
+      }
+ 
+      DY_scroll('.img-scroll','.prev','.next','.img-list',3,false);// true为自动播放，不加此参数或false就默认不自动
+
+</script>
+</html>
+

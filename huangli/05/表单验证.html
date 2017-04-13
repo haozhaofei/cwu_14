@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+</head>
+<style type="text/css">
+	.Register .row{
+		margin: 0.5em 0;
+	}
+	label{
+		cursor: pointer;
+		display: inline-block;
+		padding: 3px 6px;
+		text-align: right;
+		width: 150px;
+		vertical-align: top;
+	}
+	.btn{
+		position: relative;
+		left: 262px;
+	}
+</style>
+<body>
+	<div class="Register">
+
+	  <form name="form" method="post"  >
+      <p class="row"><label for="name">用户名: </label>
+      <input type="text" id="name" class="form-control" onblur="checkUn()"/>
+      <span id="nameInfo"></span>
+     
+      <p class="row"><label for="password">密码: </label>
+      <input type="text" id="password" class="form-control" onblur="checkPwd()"/>
+      <span id="passwordInfo"></span>
+      
+      <p class="row"><label for="repassword">重新输入密码: </label>
+      <input type="text" id="repassword" class="form-control" onblur="checkRePwd()"/>
+      <span id="repasswordInfo"></span>
+      
+      <p class="row"><label for="email">邮箱: </label>
+      <input type="text" id="email" class="form-control" onblur="checkEmail()"/>
+      <span id="emailInfo"></span>
+      
+      <p class="row"><input type="submit" value="提交" class="btn" onclick="subForm()"></p>
+    </form>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+  
+
+
+	function checkUn(){
+		 var name=document.getElementById("name").value.trim();
+   		 var nameRegex=/^[^@#]{3,16}$/;
+    if(!nameRegex.test(name)){
+        document.getElementById("nameInfo").innerHTML="用户名为3到16个字符，且不能包含@和#字符";
+        return false;
+    }else{
+        document.getElementById("nameInfo").innerHTML="";
+        return true;
+    }
+	}
+	function checkPwd(){
+		 var password = document.getElementById("password").value.trim();
+    	var passwordRegex=/^[0-9A-Za-z_]\w{7,15}$/;
+    if(!passwordRegex.test(password)){
+        document.getElementById("passwordInfo").innerHTML="密码长度必须在8个字符到16个字符之间";
+        return false;
+    }else{
+        document.getElementById("passwordInfo").innerHTML="";
+        return true;
+    }
+	}
+	function checkRePwd(){
+		var repassword = document.getElementById("repassword").value.trim();
+		 if(repassword !== password.value){
+        document.getElementById("repasswordInfo").innerHTML="两次输入的密码不一致,请重新输入";
+        return false;
+    	}else if(repassword == password.value){
+        document.getElementById("repasswordInfo").innerHTML="";
+        return true;
+    } 
+	}
+	function checkEmail(){
+		var email=document.getElementById("email").value.trim();
+		var emailRegex= /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/; 
+		if(!emailRegex.test(email)){
+        document.getElementById("emailInfo").innerHTML="邮箱格式不对，请重新输入";
+        return false;
+    }else{
+        document.getElementById("emailInfo").innerHTML="";
+        return true;
+    }
+			}
+
+ function subForm(){
+    var fgusername = checkUn();
+    var fgpassword = checkPwd();
+    var fgrepassword = checkRePwd();
+    var fgemail = checkEmail();
+    checkUn();
+    checkPwd();
+    checkRePwd();
+    checkEmail();
+     if(fgusername==true&&fgpassword==true&&fgrepassword==true&&fgemail==true){
+         alert("恭喜您！注册成功！");
+     }else{
+      return false;
+     }
+}
+
+</script>

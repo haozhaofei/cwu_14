@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>js实现城市级联效果</title>
+    </head>
+    <body>
+    <h1>城市级联</h1>
+    <select name="sid" id="sid">
+        <option value="">--请选择--</option>
+        <option value="1">北京</option>
+        <option value="2">河北</option>
+        <option value="3">湖北</option>
+        <option value="4">河南</option>
+        <option value="5">天津</option>
+    </select>
+    <select name="cid" id="cid"></select>     
+    </body>
+</html>
+<script>
+        var  city=new Array();
+             city[1]=["朝阳区","海淀区","东城区","西城区","昌平区","丰台区"];
+             city[2]=["石家庄","保定","邯郸","邢台","廊坊","衡水"];
+             city[3]=["武汉","咸安","咸宁","通山","仙桃","宜昌"];
+             city[4]=["郑州","洛阳","开封","驻马店","周口"];
+             city[5]=["河东区","河西区","河北区","南开区"];
+
+        var sid=document.getElementById('sid');
+        var cid=document.getElementById('cid');
+           
+        sid.onchange=function(){
+            cid.length=0;//清除上一次选择的干扰
+            n=this.value;
+            for(var i=0;i<city[n].length;i++){ //城市遍历
+                cid.add(new Option(city[n][i],i));//创建一个下拉项，并添加到cid中
+            }
+        }
+</script>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片浏览放大</title>
+	<style>
+		#did{width:200px;height: 200px;overflow: hidden;position:absolute;display: none;}
+		#mid img{
+			width:144px;
+			height: 47px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="nid">
+		<img src="image/1.jpg" width="600" id="n1" alt="">
+	</div>
+	
+	<div id="did">
+		<img src="image/1.jpg" id="m1" alt="">
+
+	</div>
+	<div id="mid" >
+		<img src="image/1.jpg" alt="">
+		<img src="image/2.jpg" alt="">
+		<img src="image/3.jpg" alt="">
+		<img src="image/4.jpg" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	var img=document.getElementById("mid").getElementsByTagName("img");
+	var  mid = document.getElementById('n1');
+	for(var i=0;i<img.length;i++){
+		img[i].onmouseover=function(){
+			document.getElementById("n1").src=this.src;
+			document.getElementById("m1").src=this.src;
+		}
+		mid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+10+"px";
+		}
+		mid.onmouseout = function(){
+			did.style.display = "none";
+		}
+
+		mid.onmousemove = function(ent){
+			//兼容问题解决
+			var event = ent || window.event;
+			var x = event.clientX - this.offsetLeft;
+			var y = event.clientY - this.offsetTop;
+			did.scrollTop = y*2-100;
+			did.scrollLeft =x*2-100;
+		}	
+	}
+	
+	
+
+	
+</script>

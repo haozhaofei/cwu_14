@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>DOM</title>
+</head>
+<body>
+	<ul id="hi">
+		<li>一个</li>
+	</ul>
+	<h3 id="halo">又一个</h3>
+
+</body>
+</html>
+<script>
+	//html文档对象模型，定义了访问和处理html文档的标准方法
+	//整个文档是一个文档节点
+	//每个html标签是一个元素节点
+	//在html元素中的文本是文本节点
+	//每个html属性是一个属性节点
+	//注释属于注释节点
+	var oUid = document.getElementById('hi');
+	var oH3 = document.getElementsByTagName('h3')[0].firstChild;
+	alert(oH3.nodeType);
+	alert(oH3.nodeValue);
+	alert(oH3.nodeName);
+
+</script>

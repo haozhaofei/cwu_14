@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+    header{
+	       height:40px;
+		   background-color:#004100;
+		  }
+		  
+    body{
+		  margin:0 auto;
+	      width:1060px;
+		}
+		
+   header li{
+	 float:left;
+	 list-style:none;
+	 text-align:right;
+	 width:75px;
+	 height:40px;
+	 background-color:#004100;
+	 font-size:14px;
+	 }
+	 
+	header li:hover{
+	 background-color:#528E17;
+	 text-decoration:underline;
+	 text-decoration-color:#fff;
+	}
+	 
+   header li a{
+	 border-right:1px solid #999;
+	  line-height:37px;
+	  text-align:right;
+	  text-decoration:none;
+	  color:#fff;
+    }
+	
+   span{
+		margin-right:20px;
+		}
+		
+   span.one{
+		margin-right:7px;
+		}
+   
+   a.last{border-right:none;}
+   
+   #box{
+		width:650px;
+		height: 400px;
+		margin-top:10px;
+		position: relative;
+	}
+	
+	#box img{
+		width:650px;
+		height: 400px;
+		border:1px solid #000;
+	}
+	#box a{
+		width: 40px;
+		height: 40px;
+		border:1px solid #fff;
+		border-radius:50%;
+		background:#fff;
+		position: absolute;
+		top:0;
+		bottom: 0;
+		margin: auto 0;
+		font-size: 40px;
+		text-decoration: none;
+		color:gray;
+		opacity: 0.5;
+		line-height:40px;
+		font-weight: bold;
+		text-align: center;
+	}
+	#box a:hover{
+		opacity:0.8;
+	}
+	#prev{
+		left: 20px;
+		margin-top:130px;
+	}
+	#next{
+		right: 20px;
+		margin-top:130px;
+	}
+	#list{
+		margin: -30px 0 0 ;
+		padding: 0;
+	}
+	#list li{
+		width:30px;
+		height: 6px;
+		magrin-left:40px;
+	    transform:skew(-30deg);
+	    -webkit-transform:skew(-30deg);
+	    -moz-transform:skew(-30deg);
+	    -o-transform:skew(-30deg);
+	    -ms-transform:skew(-30deg);
+		list-style: none;
+		vertical-align:central;
+		background: #ccc;
+		display: inline-block;
+		margin: 0 5px;
+		position: relative;
+	}
+	#list li:hover{
+		cursor: pointer;
+	}
+	#list .active{
+		background: #528E17;
+	}
+	#list li div{
+		position: absolute;
+		top:-112px;
+		left:-35px;
+		display: none;
+	}
+	#list li:hover div{
+		display: block;
+	}
+	span.biao{
+		margin-bottom:10px;
+	
+	}
+	#text{
+	   margin-top:-400px;
+	   margin-left:670px;
+	   border-bottom:1px dashed #666;
+	}
+	
+	#text a{
+		text-decoration:none;
+		color:#000;
+		font-size:15px;
+		line-height:30px;
+	}
+	
+    #text a:hover{
+		text-decoration:underline;
+		color:#E42F36;
+	}
+	
+	#text a.sec:hover{
+		color:#E42F36;
+		}
+	
+    #text a.sec{
+		color:red;
+	}
+	#text a.fr{
+		font-weight:bold;
+		font-size:19px;
+		font-family:"黑体";
+	}
+	
+	#local a{
+		text-decoration:none;
+		color:#000;
+		font-size:15px;
+		line-height:30px;
+	}
+	
+	#local{
+	
+	   margin-left:670px;
+	}
+	
+    #local a:hover{
+		text-decoration:underline;
+		color:#E42F36;
+	}
+	
+	#local a.sec:hover{
+		color:#E42F36;
+		}
+	
+    #local a.sec{
+		color:red;
+	}
+	#local a.fr{
+		font-weight:bold;
+		font-size:19px;
+		font-family:"黑体";
+	}
+</style>
+</head>
+
+<body>
+
+  <header>
+    <ul>
+      <li><a href="#"><span>首页</span></a></li>
+      <li><a href="#"><span>滚动</span></a></li>
+      <li><a href="#"><span>图片</span></a></li>
+      <li><a href="#"><span>深度</span></a></li>
+      <li><a href="#"><span class="one">《出鞘》</a></li>
+      <li><a href="#"><span class="one">大国博弈</span></a></li>
+      <li><a href="#"><span>军史</span></a></li>
+      <li><a href="#"><span class="one">东海局势</span></a></li>
+      <li><a href="#"><span class="one">南海局势</span></a></li>
+      <li><a href="#"><span class="one">新闻排行</span></a></li>
+      <li><a href="#"><span>航空</span></a></li>
+      <li><a href="#" class="last"><span>回顾</span></a></li>
+    </ul>
+  </header>
+  
+  
+  <div id="box">
+		<img src="images/1.gif" alt="" id="img">
+		<a href="javascript:;" id="prev"> < </a>
+		<a href="javascript:;" id="next"> > </a>
+		<ul id="list"></ul>
+	</div>
+    
+    
+    <div id="text">
+        <a class="fr" href="#">国产航母被指确定23日下水 试航时间曝光</a><br>
+        <a class="sec" href="#">美最强航母选在中国航母下水前海试</a>&nbsp;
+        <a class="sec" href="#" >性能甩人几条街</a><br>
+        <a href="#">中国3.0版FC31战机或将亮相 沙特购买可能性有多大</a><br>
+        <a href="#">英称中国第6艘071坞登已开工</a>
+        <a href="#"> 俄战机雷达在中国惨败</a> <br>
+        <a href="#">军报披露中国或正在研发第6代战机 可轻松击败F22</a><br><br>
+        <a class="sec" href="#">英国苦等10年终获新军舰却是韩国造 性能远不及中国</a><br>
+        <a href="#">朝鲜导弹失败或因美干扰</a>
+        <a href="#">韩支持萨德候选人全面反超</a><br>
+        <a href="#">美航母来势汹汹想开战？</a>
+        <a href="#"> 中方回应向中朝边境临增兵</a><br><br>
+    </div>
+  
+    <div id="local">
+    <br>
+    <a class="fr" href="#">歼20年产量能否达到36架这一因素是关键</a><br>
+    <a class="sec" href="#">S400在叙没能拦战斧 中国能应对吗</a>
+    <a class="sec" href="#">打美GPS是否有用</a><br>
+    <a href="#">俄称俄美距冲突仅一步之遥</a>
+    <a href="#">川普回应将再次对叙袭击</a>
+    
+    </div>
+  
+	<script type="text/javascript">
+		var prev = document.getElementById('prev');
+		var next = document.getElementById('next');
+		var img = document.getElementById('img');
+		var list =document.getElementById('list');
+		var lis = list.getElementsByTagName('li');
+		var arr = ['images/1.gif','images/2.jpg','images/3.jpg','images/4.jpg','images/5.png'];
+		
+		var num = 0;
+
+		for(var i = 0;i < arr.length;i++){
+			list.innerHTML += '<li></li>';
+		}
+		lis[0].className = 'active';
+
+		for(var i = 0;i < lis.length;i++){
+			lis[i].index = i;
+			lis[i].onmouseover = function(){
+				for(var i = 0;i < lis.length;i++){
+					lis[i].className = '';
+				}
+					this.className = 'active';
+				img.src = arr[this.index];
+				num = this.index;
+			}
+		}
+		
+		next.onclick = function(){
+			num++;
+			if(num >= arr.length){
+				num = 0;
+			}
+			
+			fn();
+			
+		}
+		prev.onclick = function(){
+			num--;
+			if(num < 0){
+				num = arr.length - 1;
+			}
+			fn();
+		}
+		function fn(){
+			img.src = arr[num];
+			for(var i = 0;i < lis.length;i++){
+				lis[i].className = '';
+			}
+			lis[num].className = 'active';
+		}
+	</script>
+    
+</body>
+</html>

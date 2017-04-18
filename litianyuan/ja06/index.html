@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻</title>
+	</head>
+	<style>
+		.btn_addfav_w{ position: relative; z-index: 999; display: block; width: 55px; padding-left: 12px; height: 20px; line-height: 20px; text-align: left; background: url(http://i3.sinaimg.cn/dy/sinatag/btn_addfav_news.png) left center no-repeat; _background: url(http://i0.sinaimg.cn/dy/sinatag/btn_addfav_news.gif) left center no-repeat;  font-family: "Microsoft YaHei","微软雅黑","黑体";}
+		.btn_addfav_w a.btn_addfav, .btn_addfav_w a.btn_addfav:visited{ font-size: 12px; color: #333;font-family: "宋体";}
+		/*.btn_addfav_w a.btn_addfav:hover{ color: #c00}*/
+		.btn_addfav_w span.addfav_key{ font-weight: bold; color: #0A75C7; padding-right: 5px;}
+		.addfav_pop{ position: absolute; display: none; visibility: hidden; top: 20px; left: -32px; z-index: 9999999995; width: 282px; height: 123px; overflow: hidden;}
+		.addfav_pop_bg0{ position: absolute; display: block; top: 0px; left: 0px; z-index: 9999999997; width: 282px; height: 123px; background: url(http://i2.sinaimg.cn/dy/sinatag/addfav_pop_bg.png) 0 0 no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i2.sinaimg.cn/dy/sinatag/addfav_pop_bg.png');}
+		.addfav_pop_nowin{ height: 80px;}
+		.addfav_pop_nowin .addfav_pop_bg0{ background: url(http://i0.sinaimg.cn/dy/sinatag/addfav_pop_nowin_bg.png) 0 0 no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i0.sinaimg.cn/dy/sinatag/addfav_pop_nowin_bg.png');}
+		.addfav_pop_nowin .addfav_pop_p1{ display: none;}
+		/*.addfav_pop a.addfav_close, .addfav_pop a.addfav_close:visited{ position: absolute; z-index: 9999999999; top: 18px; right: 12px; width: 10px; height: 10px; background: url(http://i1.sinaimg.cn/dy/sinatag/btns_addfav_spirite.png) -38px 1px no-repeat; transition: all ease 0.3s;overflow:hidden;}*/
+		.addfav_pop a.addfav_close:hover{ background-position: -54px 1px;}
+		.btn_addfav_w .addfav_pop_p0{ display: block; position: relative; z-index: 9999999998; padding: 20px 0 0 20px; margin-right: 20px; color: #101010; font-size: 14px; line-height: 22px;}
+		.btn_addfav_w .addfav_pop_p1{ display: block; zoom:1;position: relative; z-index: 9999999998; padding: 20px 0 0 20px; margin-right: 20px; color: #656565; font-size: 14px; line-height: 22px;}
+		/*.btn_addfav_w a.addfav_dl, .btn_addfav_w a.addfav_dl:visited{ display: inline-block; vertical-align: top; _vertical-align: 1px; margin-top: 1px; margin-left: 8px; width: 66px; height: 22px; overflow: hidden; text-indent: -99em; line-height: 22px; text-align: center; color: #fff; background: url(http://i1.sinaimg.cn/dy/sinatag/btns_addfav_spirite.png) 0px -15px no-repeat; transition: all ease 0.3s;}*/
+		.btn_addfav_w a.addfav_dl:hover{ background-position: 0 -43px;}
+
+		.pullDown{display:block;visibility:visible;animation-name:pullDown;-webkit-animation-name:pullDown;animation-duration:0.3s;-webkit-animation-duration:0.3s;animation-timing-function:ease-out;-webkit-animation-timing-function:ease-out;transform-origin:50% 0%;-ms-transform-origin:50% 0%;-webkit-transform-origin:50% 0%;}@keyframes pullDown{0%{transform:scaleY(0.1);}100%{transform:scaleY(1);}}@-webkit-keyframes pullDown{0%{-webkit-transform:scaleY(0.1);}100%{-webkit-transform:scaleY(1);}}
+		.daohang{width: 100%;height: 40px;background-color: #006400;}
+		.daohang ul{width: 1024px;margin: 0 auto;}
+	 	.daohang ul li{float: left;margin-top: 5px;/*width: 100px;*/height:30px;list-style-type:none;text-align:left;line-height:30px;margin-right:10px;margin-left: 10px;border-right:1px solid #FFFFFF;padding-left:10px;}
+		.nav li{padding-left:6px;list-style-type: none;}
+		a{text-decoration:none;}
+		a.nav udv-clearfix:link{color: #FFFFFF;}
+		.daohang a:link{color: #FFFFFF;}
+		.daohang a:hover{text-decoration: underline;background: #008800;}
+		.daohang a:visited{color:#ffffff;}
+		/*.p1 .scroll-box{height: 358px;width: 638px;margin-top: 15px;}*/
+		.p1 .scroll{width:638px;height:358px;overflow:hidden;position:relative;border:1px solid #000000;}
+		.col640{width: 638px;}
+		.p1 .blk1{margin-top: 30px;}
+		.col360 a:link{color: #000000;}
+		.col360 a:visited{color: #8b008b;text-decoration: underline;}
+		.col360 a:hover{color:#ff0000;text-decoration: underline; }
+		.col360{top: 10px;line-height: 15px;}
+	</style>
+	<div id="all" style="margin: 0 auto; width: 1200px;">
+	
+	<body>
+		<div id="container" style="display:table;width:100%;">
+			<div id="left" style="float: left; display:table-cell;">
+				<img style="margin-top: 100px;" border="0" src="./style/1.jpg" alt="//d3.sina.com.cn/pfpghc2/201704/07/1.jpg">
+			</div>
+
+			<div style="display:table-cell;"> </div>
+
+			<div class="udv-clearfix" style="float: right; display:table-cell;" data-sudaclick="logo">
+		        <div style="float: left" class="logo">
+		            <a href="http://mil.news.sina.com.cn/"></a>
+		        </div>
+		        <div  style=" height:22px;width:65px;font-size: 12px;margin-top:28px;text-align:right;border:0 solid #f00;float:right;padding:0 25px 0 0;background:url(http://i2.sinaimg.cn/dy/deco/2012/0117/sjbi.jpg) no-repeat 0 0;">
+		        	<a title="新浪军事手机版" href="http://mil.sina.cn/" style="position:relative;top:3px;">手机版</a>
+		        </div>
+				
+				<div style="float:right; margin-top:27px;_zoom:1;">
+			    	<span class="btn_addfav_w">
+						<a href="javascript:" class="btn_addfav" suda-uatrack="key=index_addfav&amp;value=addfav_click" id="btn_addfav" >设为书签</a>
+						<span class="addfav_pop" id="addfav_pop">
+						<span class="addfav_pop_bg0"></span>
+						<span class="addfav_pop_bg1"></span>
+						<a class="addfav_close" id="addfav_close" title="关闭" href="javascript:"></a>
+						<span class="addfav_pop_p0"><span class="addfav_key" id="addfav_key">Ctrl+D</span>将本页面保存为书签，全面了解最新资讯，方便快捷。</span>
+						<span class="addfav_pop_p1" id="addfav_pop_p1">您也可下载桌面快捷方式。<a suda-uatrack="key=index_addfav&amp;value=download_click" class="addfav_dl" id="addfav_dl" href="http://i0.sinaimg.cn/dy/home/desktop/mil.exe">点击下载</a></span>
+						</span>
+					</span>
+			    	
+				</div>
+			</div>
+		</div>
+<!-- 导航开始 -->
+		
+		<div class="daohang">
+			<ul class="nav udv-clearfix" data-sudaclick="nav">
+		        <li><a href="http://mil.news.sina.com.cn/" class="link-fff">首页</a></li>
+		        <li><a href="http://roll.mil.news.sina.com.cn/col/zgjq/index.shtml" target="_blank" class="link-fff">滚动</a></li>
+		        <li><a href="http://slide.mil.news.sina.com.cn/" target="_blank" class="link-fff">图片</a></li>
+		        <li><a href="http://mil.news.sina.com.cn/jssd/" target="_blank" class="link-fff">深度</a></li>
+		        <li><a href="http://slide.mil.news.sina.com.cn/s_list_8_62085.html" target="_blank" class="link-fff">《出鞘》</a></li>
+		       	<li><a href="http://mil.news.sina.com.cn/dgby/" target="_blank" class="link-fff">大国博弈</a></li>
+		       	<li><a href="http://mil.news.sina.com.cn/jshm/" target="_blank" class="link-fff">军史</a></li>
+		        <li><a href="http://roll.mil.news.sina.com.cn/s_zghjxldyd_all/index.shtml" target="_blank" class="link-fff">东海局势</a></li>
+		        <li><a href="http://mil.news.sina.com.cn/nz/nhjszxdt/" target="_blank" class="link-fff">南海局势</a></li> 
+		        <li><a href="http://mil.news.sina.com.cn/hotnews/Daily/" target="_blank" class="link-fff">新闻排行</a></li>
+		        <li><a href="http://sky.news.sina.com.cn/" target="_blank" class="link-fff">航空</a></li>
+		        <li class="noLine"><a href="http://mil.news.sina.com.cn/oldnews/" target="_blank" class="link-fff">回顾</a></li>
+			</ul>
+		</div>
+	<!-- 导航结束 --> 
+		
+			
+		<div class="p1">
+	        <div class="udv-clearfix">
+	            <div class="col640">
+	                <div class="blk1" data-sudaclick="foucs_pic">
+						<div class="scroll" id="scroll1" style="float: left; width: 638px;  zoom: 1;overflow: hidden;">
+							<div style="overflow: hidden; zoom: 1;width: 32766px;">
+								<div id="timg" style=" overflow: hidden; zoom: 1; float: left;">
+		                        	<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49640.html" target="_blank">
+										<img src="style/-Yn2-fyeceza2044729.gif" height="358" width="638" alt="大国风范！中国护航编队在亚丁湾营救被劫船只" id="t1"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49640.html" target="_blank" class="link-fff">大国风范！中国护航编队在亚丁湾营救被劫船只</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49641.html" target="_blank">
+										<img src="style/YUuA-fyecfam0255052.jpg" height="358" width="638" alt="中国新建核潜艇车间内部曝光！可同时造2艘095"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49641.html" target="_blank" class="link-fff">中国新建核潜艇车间内部曝光！可同时造2艘095</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/h/slide_8_198_49643.html" target="_blank">
+										<img src="style/LBav-fyecrxv5139664.jpg" height="358" width="638" alt="磨刀霍霍向朝鲜！美国航母打击群急速驶向韩国"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_198_49643.html" target="_blank" class="link-fff">磨刀霍霍向朝鲜！美国航母打击群急速驶向韩国</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/k/slide_8_205_49644.html" target="_blank">
+										<img src="style/kWUP-fyecfam0255944.jpg" height="358" width="638" alt="中国歼20急缺这关键作战能力：俄军战机已搞成"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/k/slide_8_205_49644.html" target="_blank" class="link-fff">中国歼20急缺这关键作战能力：俄军战机已搞成</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/l/slide_8_28669_49647.html" target="_blank">
+										<img src="style/ZRUF-fyecezv3045844.png" height="358" width="638" alt="叙利亚内战继续在打 中国神器107火箭炮随处见"></a>
+		        						<div class="cover">
+										<p><a href="http://slide.mil.news.sina.com.cn/l/slide_8_28669_49647.html" target="_blank" class="link-fff">叙利亚内战继续在打 中国神器107火箭炮随处见</a></p>
+		        						</div>
+									</div>
+								</div>
+								<div id="bimg" style="overflow: hidden; zoom: 1; float: left;">
+		                        	<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49640.html" target="_blank">
+										<img src="style/-Yn2-fyeceza2044729.gif" height="358" width="638" alt="大国风范！中国护航编队在亚丁湾营救被劫船只"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49640.html" target="_blank" class="link-fff">大国风范！中国护航编队在亚丁湾营救被劫船只</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49641.html" target="_blank">
+										<img src="style/YUuA-fyecfam0255052.jpg" height="358" width="638" alt="中国新建核潜艇车间内部曝光！可同时造2艘095"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_203_49641.html" target="_blank" class="link-fff">中国新建核潜艇车间内部曝光！可同时造2艘095</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/h/slide_8_198_49643.html" target="_blank">
+										<img src="style/LBav-fyecrxv5139664.jpg" height="358" width="638" alt="磨刀霍霍向朝鲜！美国航母打击群急速驶向韩国"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/h/slide_8_198_49643.html" target="_blank" class="link-fff">磨刀霍霍向朝鲜！美国航母打击群急速驶向韩国</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/k/slide_8_205_49644.html" target="_blank">
+										<img src="style/kWUP-fyecfam0255944.jpg" height="358" width="638" alt="中国歼20急缺这关键作战能力：俄军战机已搞成"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/k/slide_8_205_49644.html" target="_blank" class="link-fff">中国歼20急缺这关键作战能力：俄军战机已搞成</a></p>
+		        						</div>
+									</div>
+									<div class="scroll-box">
+										<a href="http://slide.mil.news.sina.com.cn/l/slide_8_28669_49647.html" target="_blank">
+										<img src="style/ZRUF-fyecezv3045844.png" height="358" width="638" alt="叙利亚内战继续在打 中国神器107火箭炮随处见"></a>
+		        						<div class="cover">
+											<p><a href="http://slide.mil.news.sina.com.cn/l/slide_8_28669_49647.html" target="_blank" class="link-fff">叙利亚内战继续在打 中国神器107火箭炮随处见</a></p>
+		        						</div>
+									</div>
+								</div>
+							</div>
+						</div>
+							<a href="javascript:;" class="leftArr" id="leftArr1"></a>
+	                    	<a href="javascript:;" class="rightArr" id="rightArr1"></a>
+	                    <div class="dot-wrap" id="dot1">
+	                    	<span class="current" title="第1页"></span>
+	                    	<span class="" title="第2页"></span>
+	                    	<span class="" title="第3页"></span>
+	                    	<span class="" title="第4页"></span>
+	                    	<span class="" title="第5页"></span>
+	                    </div>
+					</div>
+				</div>
+				<div style="display:table-cell;"> </div>
+				
+				<div class="col360" style="float: right;">
+	                <div class="blk2 imp" data-sudaclick="foucs_news">
+						<div>
+							<h2 align="center">
+								<a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyecezv3027886.shtml">国产航母被指确定23日下水 试航时间曝光</a>
+							</h2>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyeceza2041624.shtml" class="linkRed">美最强航母选在中国航母下水前海试</a> 
+								<a target="_blank" class="linkRed" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyeceza2033126.shtml">性能甩人几条街</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyecfnu8013064.shtml">中国军官谈首艘国产航母：不是最先进却符合我们需求</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyecezv3049374.shtml">英称中国第6艘071坞登已开工</a> 
+								<a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyeceza2051357.shtml">俄战机雷达在中国惨败</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyeayzu7489458.shtml">军报披露中国或正在研发第6代战机 可轻松击败F22</a>
+							</p>
+						</div>
+						<div class="space-h15"></div>
+						<div>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/world/2017-04-11/doc-ifyecezv3039133.shtml" class="linkRed">美双航母将部署朝鲜周边</a> 
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyecezv3020775.shtml" class="linkRed">中方被指向中朝边境临增兵</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyecezv3031749.shtml">朝若再核试中美反应将空前</a> 
+								<a target="_blank" href="http://mil.news.sina.com.cn/world/2017-04-11/doc-ifyecezv3023252.shtml">导弹发射失败或因美干扰</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/world/2017-04-11/doc-ifyecezv3037210.shtml">韩国超4成受访者支持打朝鲜</a> 
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyeayzu7484615.shtml">支持萨德候选人全面反超</a>
+							</p>
+						</div>
+						<div class="dotted-h30"></div>
+						<div>
+							<h2>
+								<a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyecezv3047624.shtml">歼20受进口材料制约 年产量或难超20架</a>
+							</h2>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyecezv3060366.shtml" class="linkRed">S400在叙没能拦截美战斧导弹 中国防空系统能应对吗</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/world/2017-04-11/doc-ifyecfnu8009228.shtml">俄称俄美距冲突仅一步之遥</a> 
+								<a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-11/doc-ifyeceza2061933.shtml">川普回应将再次对叙袭击</a>
+							</p>
+							<p>
+								<a target="_blank" href="http://mil.news.sina.com.cn/dgby/2017-04-11/doc-ifyeayzu7493048.shtml">中缅原油管道已投运</a> 
+								<a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-11/doc-ifyeceza2040920.shtml">中东原油将不经马六甲直达中国</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+		<script>
+			(function(){
+				var btn_addfav = _id('btn_addfav');
+				var addfav_pop = _id('addfav_pop');
+				var addfav_close = _id('addfav_close');
+				var addfav_key = _id('addfav_key');
+				var org_favpop_cls;
+				var isMac = _isMac();
+				if(isMac){
+					org_favpop_cls = addfav_pop.className = 'addfav_pop addfav_pop_nowin';
+					addfav_key.innerHTML = '\u2318+D';
+				}else{
+					org_favpop_cls = 'addfav_pop';
+				}
+				addEvent(btn_addfav, 'click', function () {
+				var popCls = addfav_pop.className;
+				if(popCls.indexOf('pullDown') > -1){
+					addfav_pop.className = org_favpop_cls;
+				}else{
+					ddfav_pop.className = org_favpop_cls + ' pullDown';
+				}
+			});
+			_addEvent(addfav_close, 'click', function () {
+				addfav_pop.className = org_favpop_cls;
+			});
+			function _id (id) {
+				return document.getElementById(id);
+			}
+			function _isMac(){
+				if(navigator.userAgent.indexOf("Mac OS X") > 0 && navigator.userAgent.indexOf("Windows") == -1) {  
+					return true;  
+				}
+			}
+			function _addEvent (obj, type, fn) {
+				if (obj.addEventListener)
+					obj.addEventListener(type, fn, false);
+				else if (obj.attachEvent) {
+					obj["e" + type + fn] = fn;
+					obj[type + fn] = function() {
+					    obj["e" + type + fn](window.event);
+					}
+					obj.attachEvent("on" + type, obj[type + fn]);
+				}
+			}
+		})();
+		</script>
+</html>

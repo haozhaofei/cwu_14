@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="images/HLL-11_xuandong.gif" cwu="image/1.jpg" alt="">
+	<img src="images/HLL-11_xuandong.gif" cwu="image/2.jpg" alt="">
+	<img src="images/HLL-11_xuandong.gif" cwu="image/3.jpg" alt="">
+	<img src="images/HLL-11_xuandong.gif" cwu="image/4.jpg" alt="">
+</body>
+</html>
+<script>
+	//window.onload
+	setTimeout(function(){
+		var list = document.getElementsByTagName('img');
+		for(var i=0;i<list.length;i++){
+			list[i].src = list[i].getAttribute("cwu");
+			list[i].width = "300";
+		}
+	},3000)
+</script>

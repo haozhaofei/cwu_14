@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	<ul id="hello">
+		<li>lalala</li>
+	</ul>
+	<h3 id="h3">bad</h3>
+</body>
+</html>
+<script>
+	var oUid=document.getElementById("hello");
+	// alert(oUid.nodeName);
+	// alert(oUid.nodeType);
+	var oH3=document.getElementsByTagName("h3")[0].firstChild;
+	// alert(oH3.nodeType);  //节点类型
+	// alert(oH3.nodeName);  //节点名称
+	// alert(oH3.nodeValue);  //节点值
+
+</script>

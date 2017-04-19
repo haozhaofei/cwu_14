@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title阻止事件冒泡title>
+	<style>
+		#max{width:400px;height: 400px;background: #ccc;}
+		#min{width: 100px;height: 100px;background: red;}
+	</style>
+</head>
+<body>
+	篮球：<input type="checkbox" name="likes[]" value="篮球"><br>
+	排球：<input type="checkbox" name="likes[]" value="排球"><br>
+	足球：<input type="checkbox" name="likes[]" value="足球"><br>
+	板球：<input type="checkbox" name="likes[]" value="板球"><br>
+	<!-- <input type="password"> -->
+	<button onclick="fun()">爱好</button>
+</body>
+</html>
+<script type="text/javascript">
+function fun(){
+	var list = document.getElementsByTagName('input');
+	var res = new Array();
+	for(var i=0;i<list.length;i++){
+		if(list[i].type =="checkbox" && list[i].checked){
+		res[res.length] = list[i].value;
+		}
+	}
+	alert(res);
+}
+
+</script>

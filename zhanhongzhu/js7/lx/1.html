@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<!-- onkeypress 属性在按下按键时触发。 -->
+<body>
+	变成大写：
+	<input type="text" onkeypress="fun(this)"/>
+
+</body>
+<script type="text/javascript">
+	// toUpperCase() 方法用于把字符串转换为大写。
+	/*
+stringObject.toUpperCase()
+返回值
+一个新的字符串，在其中 stringObject 的所有小写字符全部被转换为了大写字符。
+它返回的是一个新的字符串, 新的! 你是怎麽理解它是修改原有字符串的?
+所以
+x.value=x.value.toUpperCase()
+的意思是, 把返回值重新赋给x.value
+	*/
+	function fun(a){
+		a.value=a.value.toUpperCase();
+	}
+</script>
+</html>

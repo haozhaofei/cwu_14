@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#s1{
+		float: left;
+		width: 100px;
+		height: 200px;
+	}
+	#btn{
+		float: left;
+		margin-top: 50px;
+	}
+	#s2{
+		float: left;
+		width: 100px;
+		height: 200px;
+	}
+	</style>
+</head>
+<body>
+	<select id="s1" multiple>
+		<option>奔跑吧1</option>
+		<option>奔跑吧2</option>
+		<option>奔跑吧3</option>
+		<option>奔跑吧4</option>
+
+	</select>
+	<div id="btn">
+		<button onclick="fun('s1','s2')">》</button>
+		<button onclick="fun('s2','s1')">《</button>
+	</div>
+	<select id="s2" multiple></select>
+</body>
+</html>
+<script type="text/javascript">
+	function fun(x,y){
+		var s1 = document.getElementById(x);
+		var s2 = document.getElementById(y);
+		var list = s1.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected = false;
+				s2.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

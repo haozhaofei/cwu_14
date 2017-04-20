@@ -1,0 +1,57 @@
+﻿    <!DOCTYPE html>  
+    <html>  
+      <head>  
+        <title>省市.html</title>  
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">  
+        <script type="text/javascript">   
+              
+            var pc = {"北京":["怀柔","密云","延庆"],  
+                   "江西":["南昌","九江","抚州"],  
+                   "内蒙古":["呼伦贝尔","莫旗","包头"]};  
+              
+              
+            // 初始化省的下拉选  
+            function fun1(){  
+                //获得省  
+                var province = document.getElementById("province");    
+                for(var key in pc){    
+                    // 创建一个option  
+                    var option = document.createElement("option");  
+                    option.innerHTML = key;   
+                    // 将option添加到select中  
+                    province.appendChild(option);  
+                }  
+            }  
+              
+            function fun2(){  
+                //获得市  
+                var province = document.getElementById("province");  
+                var city = document.getElementById("city");  
+                //清空市的数据  
+                city.length =1;   
+                //获得省  
+                if(!province.selectedIndex){   
+                return;  
+                }  
+                var options = province.options;  
+                var pName = options[province.selectedIndex].innerHTML;    
+                var cities = pc[pName]; 
+                for(var i = 0 ; i<cities.length;i++){  
+                var cityName = cities[i];  
+                    var option = document.createElement("option");  
+                    option.innerHTML = cityName;     
+                    city.appendChild(option);  
+                }  
+            }  
+              
+        </script>  
+      </head>  
+      <body onload="fun1();" >  
+        <select id="province" onchange="fun2();" >  
+            <option>---请选择省---</option>  
+        </select>  
+        <select id="city" >  
+            <option>---请选择市---</option>  
+        </select>  
+      </body>  
+    </html>  

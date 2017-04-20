@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格多个拖拽</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<select id="form1" size=8 multiple>
+		<option value="apple">apple</option>
+		<option value="peach">peach</option>
+		<option value="watermalon">watermelon</option>
+		<option value="lemon">lemon</option>
+		<option value="banana">banana</option>
+		<option value="strawberry">strawberry</option>
+	</select>
+	<!-- <button onclick="selectMultiple()">多选</button>
+	<button onclick="selectMultiple()"> 多选 </button> -->
+	<button onclick="formAdd('form1','form2')">--></button>
+	<button onclick="formAdd('form2','form1')"><--</button>
+
+	
+	<select id="form2" size=8 multiple>
+		<option value="apple">apple</option>
+		<option value="peach">peach</option>
+		<option value="watermalon">watermelon</option>
+		<option value="lemon">lemon</option>
+		<option value="banana">banana</option>
+		<option value="strawberry">strawberry</option>
+	</select>
+</body>
+</html>
+
+<script>
+	
+
+
+	function formAdd(x,y){
+		var left = document.getElementById(x);
+		var right = document.getElementById(y);
+		var list = left.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected = false;
+				right.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

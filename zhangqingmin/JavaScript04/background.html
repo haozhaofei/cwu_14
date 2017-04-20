@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	改变背景</title>
+</head>
+<body bgcolor="#fc0">
+ 	 
+	   <button id="changeColor" onclick="changeColor()">改变颜色</button>
+       <button id="firstColor" onclick="firstColor()">默认颜色</button>
+    
+    
+    
+</body>
+</html>
+<script>
+	     setTimeout("validate()",24*60*60*1000);
+                    function firstColor(){
+                        document.body.bgColor ="#fc0";
+                    }
+                    function changeColor(){
+                        document.body.bgColor = "#f0c";
+                    }
+                    function validate(){
+                        var cbutton = document.getElementById("changeColor");
+                        var fbutton = document.getElementById("firstColor");
+                        cbutton.disabled = true;
+                        fbutton.disabled = true;
+                    }
+</script>

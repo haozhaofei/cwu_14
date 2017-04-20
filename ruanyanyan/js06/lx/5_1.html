@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navigator对象</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	with(document){
+		write("浏览器信息:<ul>");
+		write("<li>代码:"+navigator.appCodeName+"</li>");
+		write("<li>名词:"+navigator.appName+"</li>");
+		write("<li>版本:"+navigator.appVersion+"</li>");
+		write("<li>语言:"+navigator.language+"</li>");
+		write("<li>编译平台:"+navigator.platform+"</li>");
+		write("<li>用户表头:"+navigator.userAgent+"</li>");
+		write("</ul>");
+	}
+	/*代码:Mozilla
+    名词:Netscape
+    版本:5.0 (Windows)
+    语言:zh-CN
+    编译平台:Win32
+    用户表头:Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0*/
+    	function myBrower(){
+    		var userAgent = navigator.userAgent;
+    		var isOpera = userAgent.indexOf("Opera") > -1;
+    		if (isOpera) {
+    			return "Opera";
+    		};
+    		if (userAgent.indexOf("Firefox") > -1) {
+    			return "Firefox";
+    		};
+    		if (userAgent.indexOf("Chrome") > -1) {
+    			return "Chrome";
+    		};
+    		if (userAgent.indexOf("Safari") > -1) {
+    			return "Safari";
+    		};
+    		if (userAgent.indexOf("compatibal") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+    			return "IE";
+    		};
+    	}
+    	var mb = myBrower();
+    	if ("IE" == mb) {
+    		alert("我是IE");
+    	}
+    	if ("Firefox" == mb) {
+    		alert("我是FireFox");
+    	}
+    	if ("Chrome" == mb) {
+    		alert("我是 Chrome");
+		}
+		if ("Opera" == mb) {
+   		 	alert("我是 Opera");
+		}
+		if ("Safari" == mb) {
+    		alert("我是 Safari");
+		}
+	myBrower();
+</script>

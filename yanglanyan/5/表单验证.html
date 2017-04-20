@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+input:focus{
+	border-color:#09F;
+	border-radius:5px;
+	}
+	div{
+		width:400px;
+		border:1px solid #FFF;
+		background-color:#9CF;
+	}
+</style>
+<script> 
+ 
+   function $(id) { 
+       return document.getElementById(id); 
+   } 
+    
+   function check() { 
+       var email = $("email").value; 
+       var password = $("password").value; 
+       var repassword = $("repassword").value; 
+       var name = $("name").value; 
+        
+       if(email == "") { 
+           alert("Email值不能为空"); 
+           $("email").focus(); 
+           return false; 
+       } 
+        
+       if(email.indexOf("@") == -1 || email.indexOf(".") == -1) { 
+           alert("邮箱格式不正确,必须包含@和."); 
+           $("email").focus(); 
+           return false; 
+       } 
+        
+       if(password == "") { 
+           alert("密码不能为空"); 
+           $("password").focus(); 
+           return false; 
+       } 
+        
+       if(password.length < 6) { 
+           alert("密码长度必须大于或者等于6"); 
+           $("password").focus(); 
+           return false; 
+       } 
+        
+       if(repassword != password) { 
+           alert("两次输入的密码不一致"); 
+           $("repassword").focus(); 
+           return false; 
+       } 
+        
+       if(name == "") { 
+           alert("姓名不能为空"); 
+           $("name").focus(); 
+           return false; 
+       } 
+        
+       for(var i = 0; i < name.length; i++) { 
+           var j = name.subString(i , i+1); 
+           if(isNaN(j) == false) { 
+               alert('姓名中不能包含数字'); 
+               $("name").focus(); 
+               return false; 
+           } 
+       } 
+   } 
+</script> 
+</head> 
+<body> 
+<center>
+<div>
+  <form name="login_form" method="post" onsubmit="return check()"> 
+    <table border="0" cellpadding="10" cellspacing="0" width="400px">
+            <tr>
+                <td align="right">email：</td>
+                <td><input type="text" name="email" id="email"/></td>
+            </tr> &nbsp;&nbsp;
+            <tr>
+                <td align="right">密码：</td>
+                <td><input type="password" name="password" id="password"/></td>
+            </tr>
+            <tr>
+                <td align="right">确认密码：</td>
+                <td><input type="password" name="repassword" id="repassword"/></td>
+            </tr>
+            <tr>
+                <td align="right">姓名：</td>
+                <td><input type="text" name="name" id="name"/></td>
+            </tr>
+            <tr>
+            <td></td>
+         <td>&nbsp;&nbsp;<input type="submit" value="注册"/>&nbsp;&nbsp;<input type="reset" value="重置"/></td>     
+           </tr>
+        </table>
+</form>
+</div>
+  </center>
+</body> 
+</html>

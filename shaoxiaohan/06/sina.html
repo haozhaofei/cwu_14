@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sina军事网页</title>
+	<style>
+		#all{width: 990px;margin: 0 auto;position: relative;}
+		*{margin:0 ; border:0; padding:0;font-size:11pt;font:"宋体"}
+		#photo{float: left;text-align: center;}
+		
+		#oUl{float: left;width: 980px;height: 40px;}
+		#oUl ul{background-color: #004100;list-style:none;}
+		#oUl li{display:inline;line-height:40px;border-right:0.5px solid gray;}
+		#oUl a{color:#fff;text-decoration:none;padding:5px 14px}
+		#oUl ul li a:hover{background-color:#060;text-decoration: underline;}
+		#pic{display: none;}
+		#scroll{position: relative;top: 80px;}
+		#l{position: absolute;left:5px;top: 250px;}
+		#n{position: absolute;left:590px;top: 300px;}
+		#img{border:1px solid;position: absolute;left: 0px;}
+		#l{position: absolute;left:5px;top: 260px;}
+		#n{position: absolute;left: 620px;top: 260px;}
+		#lines{float: left;position: absolute;right: 5px;top: 80px}
+		#lines h1 a{font-size: 18px;float:right;text-decoration:none;color: black;}
+		#lines a{font-size: 15px;float:right;text-decoration:none;color: black;margin-left: 5px;margin-top: 5px;}
+		#lines a:hover{color:red;cursor: hand;text-decoration: underline;}
+
+	</style>
+</head>
+<body>
+<div id="all">	
+
+	<div id="oUl">
+		<ul>
+		<li><a href="http://mil.news.sina.com.cn/">首页</a></li>
+        <li><a href="http://roll.mil.news.sina.com.cn/col/zgjq/index.shtml">滚动</a></li>
+        <li><a href="http://slide.mil.news.sina.com.cn/">图片</a></li>
+        <li><a href="http://mil.news.sina.com.cn/jssd/">深度</a></li>
+        <li><a href="http://slide.mil.news.sina.com.cn/s_list_8_62085.html">《出鞘》</a></li>
+        <li><a href="http://mil.news.sina.com.cn/dgby/">大国博弈</a></li>
+        <li><a href="http://mil.news.sina.com.cn/jshm/">军史</a></li>
+        <li><a href="http://roll.mil.news.sina.com.cn/s_zghjxldyd_all/index.shtml">东海局势</a></li>
+        <li><a href="http://mil.news.sina.com.cn/nz/nhjszxdt/">南海局势</a></li> 
+        <li><a href="http://mil.news.sina.com.cn/hotnews/Daily/">新闻排行</a></li>
+        <li><a href="http://sky.news.sina.com.cn/">航空</a></li>
+        <li class="noLine"><a href="http://mil.news.sina.com.cn/oldnews/">回顾</a></li>
+
+		</ul>
+		</div>
+	<div id="photo">
+		<img src="img/photo.jpg" alt="">	
+	</div>
+	<div id="scroll">
+		<img id="img" src="imgs/p01.jpg" alt="">
+	</div>
+	<div id="l" onclick="play(1)">
+			<button><</button>
+	</div>
+	<div id="n" onclick="play(2)">
+			<button>></button>
+	</div>
+	
+	<div id="lines">
+		<h1><a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></h1></br>
+		<a href="#">国产001A航母4月23日下水！回首一年来的进程</a></br>
+		<a href="#">卡尔文森号原计划访澳大利亚</a></br>		
+		<a href="#">俄媒：亚洲国家不愿在中美之间选边站</a></br>
+		<a href="#">俄媒：亚洲国家不愿在中美之间选边站</a></br>
+		<a href="#">俄媒：亚洲国家不愿在中美之间选边站</a></br>
+		<a href="#">俄媒：亚洲国家不愿在中美之间选边站</a></br>			
+		<h1><a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></h1></br>
+		<a href="#">卡尔文森号原计访澳大利亚</a></br>
+		<a href="#">卡尔文森号原计访澳大利亚</a></br>
+		<a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></br>
+		<a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></br>
+		<a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></br>
+		<a href="#">美军卡尔文森号航母战斗群驶向朝鲜半岛</a></br>
+			
+	</div>
+
+
+</div>
+</body>
+</html>
+
+<script>
+	function show(i){
+		var pic = document.getElementById('img');
+		if (i==1) {
+			pic.src="imgs/p01.jpg";			
+		}else if (i==2) {
+			pic.src="imgs/p02.jpg";
+			
+		}else if (i==3) {
+			pic.src="imgs/p03.jpg";
+			
+		}else if (i==4) {
+			pic.src="imgs/p04.jpg";		
+			
+		}
+	}
+
+		var m=4;
+		var n=2;
+	function play(a){
+		var pic = document.getElementById('img');
+		if (m<1) {
+			m=4;
+		}
+		if (n>4) {
+			n=1;
+		}
+		if (a==1) {
+			show(m);
+			m--;
+		}else if (a==2) {
+			show(n);
+			n++
+		}
+	}
+
+</script>

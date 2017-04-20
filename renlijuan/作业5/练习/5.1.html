@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景变色</title>
+</head>
+<body >
+	<ul>
+		<li>我</li>
+		<li>和你</li>
+		<li>心连心</li>
+		<li>地球村</li>
+		<li>白云黑土</li>
+	</ul>
+</body>
+</html>
+<script>
+	var list=document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=function(){
+			alert(this.innerHTML);
+		}
+	}
+</script>

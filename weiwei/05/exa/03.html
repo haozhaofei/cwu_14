@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击</title>
+</head>
+<body>
+	<ul>
+		<li>H</li>
+		<li>E</li>
+		<li>L</li>
+		<li>L</li>
+		<li>O</li>
+	</ul>
+</body>
+</html>
+
+<script>
+	var list = document.getElementsByTagName('li');
+	for (var i = 0; i <= list.length; i++) {
+		list[i].onclick = function () {
+			//alert(list[i].innerHTML);
+			//这样无法获取点击事件，因为for循环在点击时已经循环到停止所以i的值为list.length+1
+			alert(this.innerHTML);
+		}
+	}
+</script>

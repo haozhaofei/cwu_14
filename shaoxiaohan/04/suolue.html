@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>缩略图</title> 
+</head>
+<script>
+$(function(){
+ $("img.smallImage").mouseenter(function(){
+  var bigImageURL = $(this).attr("bigImageURL");
+  $("img.bigImg").attr("src",bigImageURL);
+ });
+ $("img.bigImg").load(
+  function(){
+   $("img.smallImage").each(function(){
+    var bigImageURL = $(this).attr("bigImageURL");
+    img = new Image();
+    img.src = bigImageURL;
+    img.onload = function(){
+     console.log(bigImageURL); 
+     $("div.img4load").append($(img));
+    };
+   });  
+  }
+ );
+});
+</script>
+<style>
+div.imgAndInfo{
+ margin: 40px 20px;
+}
+div.imgInimgAndInfo{
+ width: 400px;
+ float: left;
+}
+div.imgAndInfo img.bigImg{
+ width: 400px;
+ height: 400px;
+ padding: 20px;
+ border: 1px solid #F2F2F2;
+}
+div.imgAndInfo div.smallImageDiv{
+ width: 80%;
+ margin: 20px auto;
+}
+div.imgAndInfo img.smallImage{
+ width: 60px;
+ height: 60px;
+ border: 2px solid white;
+}
+div.imgAndInfo img.smallImage:hover{
+ border: 2px solid black;
+}
+</style>
+<body>
+<div class="imgAndInfo">
+ <div class="imgInimgAndInfo">
+  <img width="100px" class="bigImg" src="images/01.jpg">
+  <div class="smallImageDiv">
+    <img width="100px" class="smallImage" src="images/01.jpg" bigImageURL="images/01.jpg">
+    <img width="100px" class="smallImage" src="images/02.jpg" bigImageURL="images/02.jpg">
+    <img width="100px" class="smallImage" src="images/03.jpg" bigImageURL="images/03.jpg">
+    <img width="100px" class="smallImage" src="images/04.jpg" bigImageURL="images/04.jpg">
+    <img width="100px" class="smallImage" src="images/05.jpg" bigImageURL="images/05.jpg">
+  </div>
+ <div class="img4load hidden" ></div>  
+ </div>
+ <div style="clear:both"></div>
+</div>
+</body>

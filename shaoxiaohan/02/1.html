@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//1.传统声明方法
+	function(){
+		return "hello,wrold!";
+	}
+	document.write(hello());
+
+	//2.构造函数
+	var add = new Function("a","b","return a+b";);
+	document.write(add(10,20));
+
+	//3.表达式中定义，匿名函数
+	var add = =function(a,b){
+		return a+b;
+	}
+	document.write(add(10,10));
+	</script>
+

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移动</title>
+	<style>
+		ul,li{padding: 0px;margin: 0px;}
+		ul{width: 100px;border: 1px solid #ccc;position: relative;display: none;}
+		ul li{height: 30px;background:#ccc;width: 100px;margin-top: 5px;text-align: center;list-style-type:none;  }
+		li:hover{background: #fc0}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>复制</li>
+		<li>粘贴</li>
+		<li>剪切</li>
+
+	</ul>
+	
+</body>
+</html>
+<script>
+	//鼠标右键事件
+	window.document.oncontextmenu=function (ent) {
+ 
+		var enent = ent ||window.event;
+		var x = event.clientX;
+		var y = event.clientY;
+		var oUid = document.getElementById('uid');
+		oUid.style.left = x+"px";
+		oUid.style.top = y+"px";
+		oUid.style.display = "block";
+		return false;
+		
+	}
+</script>

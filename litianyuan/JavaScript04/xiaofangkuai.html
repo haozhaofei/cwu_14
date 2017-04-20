@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小方块移动</title>
+</head>
+<style>
+body,div{margin:0;padding:0}
+div{width:100px;height:100px;background:red;position:absolute;top:50px;left:50px}
+</style>
+<body>
+	<div id=div1></div>
+</body>
+</html>
+<script>
+	window.onload= function (){
+		var dx=50;
+		var dy =50
+		document.onkeydown =function (num){
+			var keycode =num.keyCode;
+			switch (keycode){
+			case 37:
+			dx-=10;
+			break;
+			case 38:
+			dy-=10;
+			break;
+			case 39:
+			dx+=10;
+			break;
+			case 40:
+			dy+=10;
+			break;
+		}
+		var div_obj =document.getElementById("div1");
+		div_obj.style.position="absolute";
+		div_obj.style.top=dy+"px";
+		div_obj.style.left=dx+"px";
+
+		} 
+	}
+
+</script>

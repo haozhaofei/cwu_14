@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编辑器</title>
+</head>
+<style>
+	div{
+		/*padding: 0px;*/
+		border: 2px black solid;
+		margin:0px auto;
+		width:400px; 
+		height:30px; 
+		margin-bottom:2px; 
+		margin-top:30px;
+	}
+	#div1{
+		border: 2px black solid;
+		margin:0px auto;
+		width:400px; 
+		height:500px;
+		overflow:hidden;
+	}
+	textarea{
+		font-size:24px; 
+		margin-left:0; 
+		text-align:left;
+	}
+	#btn1,#btn2,#btn3,#btn4,#btn5{
+		margin-top:4px;
+		margin-left: 15px;
+		/*float: left;*/
+	}
+
+</style>
+<body>
+<div>
+	<button id="btn1" onclick="fun1()">加粗</button>
+	<button id="btn2" onclick="fun2()">斜体</button>
+	<button id="btn3" onclick="fun3()">下划线</button>
+	<button id="btn4" onclick="fun4()">字体变大</button>
+	<button id="btn5" onclick="fun5()">字体变小</button>
+</div>
+<div id="div1" >
+	<textarea  cols="50" rows="50" name="text" id="text"></textarea>
+</div>
+</body>
+</html>
+<script>
+
+ 	var otext=document.getElementById("text");
+	var obtn1=document.getElementById("btn1");
+	var obtn2=document.getElementById("btn2");
+	var obtn3=document.getElementById("btn3");
+	var obtn4=document.getElementById("btn4");
+	var obtn5=document.getElementById("btn5");
+	function fun1(){
+		otext.style.fontWeight=700;
+	}
+	function fun2(){
+		otext.style.fontStyle="italic";
+	}
+	function fun3(){
+		otext.style.textDecoration="underline";
+	}
+	function fun4(){
+		otext.style.fontSize=48+"px";
+	}
+	function fun5(){
+		otext.style.fontSize=24+"px";
+	}
+</script>

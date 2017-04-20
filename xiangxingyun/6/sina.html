@@ -1,0 +1,233 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新浪新闻</title>
+	<!-- <link rel="stylesheet" href="main.css"> -->
+	<style>
+	/*头部*/
+		header{
+			height:45px;
+			width: 960px;
+		}
+		.header-left{
+			position:absolute;
+			float:left;
+			left: 15px;
+		}
+		.header-right{
+			position:absolute;
+			left:800px;
+		}
+	
+	/*导航*/
+		nav ul{
+			display: block;
+			height:40px;
+			background: darkGreen;
+			width: 960px;
+			margin:10px 0px;
+		}
+		
+		nav ul li{
+			float:left;
+			list-style-type: none;
+			color: white;
+			text-align: center;
+			line-height: 2.5;
+
+		}
+		ul span{
+			padding:9px 12px;
+			margin:4px 2px;
+			text-align: center;
+		}
+		ul span:hover{
+			background: green;
+		}
+
+
+	/*主体*/
+		.left-part{
+			position: absolute;
+			width: 640px;
+			height:360px;
+			border: 1px solid black;
+		}
+		.left-part li{
+			display: none;
+		}
+		#next{
+			position:absolute;
+			font-size: 50px;
+			left: 585px;
+			text-decoration: none;
+			font-weight: bold;
+			top:150px;
+			color: #aaa;
+		}
+		#prev{
+			position:absolute;
+			font-size: 50px;
+			left: 20px;
+			text-decoration: none;
+			font-weight: bold;
+			top:150px;
+			color:#aaa;
+		}
+	
+
+	
+	/*sidebar*/
+		.right-part{
+			position: absolute;
+			left:660px;
+			width:350px;
+			height:360px;
+			text-align: center;
+			float: right;
+		}
+		.right-part a{
+			font-size:14px;
+			display: block;
+			height: 3px;
+			color:black;
+			text-decoration: none;
+		}
+		.right-part a:hover{
+			color:red;
+			text-decoration: underline;
+		}
+		.ared{
+			color: red;
+			font-size: 14px;
+		}
+		.right-part h3{
+			font-size:18px;
+			line-height: 3px;
+		}
+		.right-part-dot{
+			font-size: 3px;
+			color: #aaa;
+		}
+	
+
+	</style>
+</head>
+
+
+<body>
+<!-- header begin -->
+	<header>
+		<div class="header-left"><img src="images/header-img.png" alt="新浪军事网"></div>
+		<div class="header-right">
+		<img src="images/mark.png" alt="设为书签">设为书签
+		<img src="images/mobile.png" alt="手机版">手机版
+		</div>
+	</header>
+<!-- header end -->
+
+<!-- nav begin -->
+	<nav >
+		<ul>
+			<li><span>首页</span></li>
+			<li><span>滚动</span></li>
+			<li><span>图片</span></li>
+			<li><span>深度</span></li>
+			<li><span>《出窍》</span></li>
+			<li><span>大国博弈</span></li>
+			<li><span>军史</span></li>
+			<li><span>东海局势</span></li>
+			<li><span>南海局势</span></li>
+			<li><span>新闻排行</span></li>
+			<li><span>航空</span></li>
+			<li><span>回顾</span></li>
+		</ul>
+	</nav>
+<!-- nav end -->
+
+<!-- main begin -->
+	<main>
+		<div class="left-part">
+			<img src="images/01.jpg" alt="" id="img">
+			<a href="javascript:;" id="prev"><</a>
+			<a href="javascript:;" id="next">></a>
+			<ul id="list"></ul>
+		</div>
+		<div class="right-part">
+			<h3>美称中国建超级核潜艇生产线 3年造12艘</h3>
+			<a href=""><span class="ared">卡尔文森号原计划访澳大利亚 朝鲜称不会被此事吓倒</span></a><br>
+			<a href="">美国官方提三招制朝鲜 在韩部署核武、斩首与渗透</a><br>
+			<a href="">卡尔文森号赴朝鲜半岛 辽宁舰正在黄渤海区域训练</a><br>
+			<a href="">美最新航母福特号或将服役 中国这型舰建造如下饺子</a><br><br>
+
+			<a href="">英媒称美空袭叙利亚毁美俄互信 军事冲突只差毫厘</a><br>
+			<a href="">美媒披露战斧导弹攻叙详情 59枚导弹命中1枚故障</a><br>
+			<a href="">美战斧突袭叙机场大出风头 中国长剑导弹更胜一筹</a><br>
+			<span class="right-part-dot">-------------------------------------------------------------</span>
+			<h3>美称中国新航母提升载荷 可载36架歼15</h3>
+			<a href=""><span class="ared">俄关注中国开建075型两栖攻击舰 称将在2020年服役</span></a><br>
+			<a href="">美俄外长电话讨论叙问题 伊朗与俄将继续支持叙政府</a><br>
+			<a href="">叙表示将对美袭击进行报复 美称俄不会因叙报复美国</a><br>
+		</div>
+	</main>
+<!-- main end -->
+</body>
+</html>
+
+
+<script>
+		var arr = ["images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg"];
+		var next = document.getElementById('next');
+		var img = document.getElementById('img');
+		var list =document.getElementById('list');
+		var lis = list.getElementsByTagName('li');
+
+		
+		var num = 0;
+
+		for(var i = 0;i < arr.length;i++){
+			list.innerHTML += '<li><div><img src="'+arr[i]+'"/><span></span></div></li>';
+		}
+				lis[0].className = 'active';
+
+		for(var i = 0;i < lis.length;i++){
+			lis[i].index = i;
+			
+			lis[i].onclick = function(){
+				
+				// for(var i = 0;i < lis.length;i++){
+				// 	lis[i].className = '';
+				// }
+				
+				//this.className = 'active';
+				fn(this.index);
+				
+				//img.src = arr[this.index];
+				num = this.index;
+			}
+		}
+		next.onclick = function(){
+			num++;
+			if(num >= arr.length){
+				num = 0;
+			}
+			
+			fn(num);
+			
+		}
+		prev.onclick = function(){
+			num--;
+			if(num < 0){
+				num = arr.length - 1;
+			}
+			fn(num);
+		}
+		function fn(num){
+			img.src = arr[num];
+			for(var i = 0;i < lis.length;i++){
+				lis[i].className = '';
+			}
+			lis[num].className = 'active';
+		}
+</script>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js实现放大，变小</title>
+	<style type="text/css">
+		#mm{
+			width:100px;height:100px;border:1px solid red;margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="big()">变大</button>
+	<button onclick="small()">变小</button>
+	<button onclick="none()">隐藏</button>
+	<button onclick="block()">显示</button>
+	<div id="mm"></div>
+</body>
+</html>
+<script type="text/javascript">
+	var id=document.getElementById("mm");
+	var i=100;
+	function big(){
+		i=i+20;
+		id.style.width=i+"px";
+		id.style.height=i+"px";
+
+	}
+	function small(){
+		i=i-20;
+		id.style.width=i+"px";
+		id.style.height=i+"px";
+		if(id.style.width==0&&id.style.height==0){
+			return;
+		}
+		console.log(id.style.width);
+		console.log(id.style.height);
+	} 
+
+	function none(){
+		id.style.display="none";
+	}
+	function block(){
+		id.style.display="block";
+	}
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ymh_编辑器</title>
+        <style>
+            #btn{text-align: center; margin-top:20px;
+            }
+            #btn button{height:30px;
+            }
+            #words{color: blue; margin-top:100px; width:500px;height:200px;border:5px solid #ccc;text-align: center;font-size:20px;
+            }
+        </style>
+    </head>
+
+    <body>
+    <center>
+    <div id="words"><p> 人生到处知何似？应似飞鸿踏雪泥。<br/>雪上偶留趾爪印，鸿飞哪复计东西。</p></div>
+    </center>
+
+    <div id="btn">
+        <button onclick="show(1)">加粗</button>
+        <button onclick="show(2)">下滑线</button>
+        <button onclick="show(3)">倾斜</button>
+        <button onclick="big()">字体变大</button>
+        <button onclick="small()">字体变小</button>
+    </div>
+    </body>
+</html>
+
+    <script type="text/javascript">
+    var ymh=document.getElementById('words');
+
+    function show(i){
+        if(i==1){
+            ymh.style.fontWeight="bold";
+        }else if(i==2){
+            ymh.style.textDecoration="underline";
+        }else if(i==3){
+            ymh.style.fontStyle="oblique ";
+        }
+    }
+
+    var a = 20;
+    function big(){
+         a = a + 2;
+         ymh.style.fontSize=a + "px";
+    }
+
+    function small(){
+        a = a - 2;
+         ymh.style.fontSize=a + "px";
+    }
+
+</script>
+

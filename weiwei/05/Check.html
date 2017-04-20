@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+</head>
+<body>
+	<form action="Bigg.html" onsubmit="return checkBack(this)" method="post">
+	Email: <input type="text" name="email" size="30">
+	<input type="submit" value="Submit"> 
+</body>
+</html>
+<script>
+	function checkEmail(field,alerttxt)
+	{
+		with (field)//with可以引用某个特定对象中已有的属性
+		{
+			apos=value.indexOf("@")
+			dotpos=value.lastIndexOf(".")
+			if (apos<1||dotpos-apos<2) {
+				alert(apos);
+			  	return false}
+			else {return true}
+		}
+	}
+
+	function checkBack(thisform)
+	{
+		with (thisform)
+		{
+			if (checkEmail(email,"Not a valid e-mail address!")==false){
+			  	email.focus();
+			  	return false}
+		}
+	}
+</script>

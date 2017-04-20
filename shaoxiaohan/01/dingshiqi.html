@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tik tok</title>
+</head>
+<body>
+	<h3>JS example</h3>
+	<form name="myform">
+		<input type="text" size="4" name="h"/>hour
+		<input type="text" size="4" name="m"/>min
+		<input type="text" size="4" name="s"/>sec
+		<input type="button" onclick="doStart()" value="start"/>
+		<input type="button" onclick="doStop()" value="stop"/>
+		<input type="button" onclick="doRun()" value="continue"/>
+	</form>
+	</br>
+	<div style="font-size:40px;"id="idi">00:00:00</div>
+	<script type="text/javascript">
+	var idi = document.getElementById('idi');
+	var hh = 0,mm =0;ss = 0;
+	var mytime = null;
+	function doStart () {
+		if(mytime==null){
+			hh = parseInt(document.myform.h.value);
+			mm = parseInt(document.myform.m.value);
+			ss = parseInt(document.myform.s.value);
+			doRun();
+		}
+		// body...
+	}
+
+	function doRun() {
+		idi.innerHTML = hh+":"+mm+":"(ss<10?"0"+ss:ss);
+		ss--;
+		if(ss<0){
+			ss=59;		
+			mm--;
+		if(mm<0){
+			mm=59;
+			hh--;
+			if(hh<0){
+				alert("This is an end!");
+				return;
+			}
+		}// body...
+	}
+	mytime = setTimeout("doRun()",1000);
+}
+function doStop(){
+	if(mytime!=null){
+		clearTimeout(mytime);
+		mytime=null;
+	}
+}
+	</script>
+
+</body>
+</html>

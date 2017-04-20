@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:300px;height: 300px;overflow: hidden;position:absolute;display: none;}
+		#uid img{width: 93px;height: 80px;}
+	</style>
+</head>
+
+<body>
+	<img src="javascript04/images/11.jpg" width="384" id="mid" alt="">
+	<div id="did">
+		<img src="javascript04/images/11.jpg"  alt="">
+	</div>
+	<div id="uid" >
+		<img src="javascript04/images/11.jpg" onmouseover="reshow(1)" alt="">
+		<img src="javascript04/images/22.jpg" onmouseover="reshow(2)" alt="">
+		<img src="javascript04/images/33.jpg" onmouseover="reshow(3)" alt="">
+		<img src="javascript04/images/44.jpg" onmouseover="reshow(4)" alt="">
+	</div>
+</body>
+</html>
+
+<script>
+	var  mid = document.getElementById('mid');
+	var  did = document.getElementById('did');
+	var  img= did.getElementsByTagName('img')[0];
+	function reshow(i){
+			if(i == 1){
+					mid.src="javascript04/images/11.jpg";
+					img.src="javascript04/images/11.jpg";
+			}else if(i == 2){
+					mid.src="javascript04/images/22.jpg";
+					img.src="javascript04/images/22.jpg";
+			//console.log(mid.src);				
+			}else if(i == 3){
+					mid.src="javascript04/images/33.jpg";
+					img.src="javascript04/images/33.jpg";
+			}else if(i == 4){
+				
+					mid.src="javascript04/images/44.jpg";
+					img.src="javascript04/images/44.jpg";
+			
+			}
+		}
+	
+	mid.onmouseover = function(){
+		did.style.display = "block";
+		did.style.top = this.offsetTop+"px";
+		did.style.left = this.offsetWidth + this.offsetLeft+10+"px";
+	}
+
+	mid.onmouseout = function(){
+		did.style.display = "none";
+	}
+
+	mid.onmousemove = function(ent){
+		//兼容问题解决
+		var event = ent || window.event;
+		var x = event.clientX - this.offsetLeft;
+		var y = event.clientY - this.offsetTop;
+		did.scrollTop = y*5-150;
+		did.scrollLeft =x*5-150;
+	}	
+
+
+</script>

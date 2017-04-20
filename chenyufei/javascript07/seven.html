@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+select{
+width:100px;
+height:200px;
+}
+
+btn{
+width:40px;
+height:70px;
+}
+</style>
+<body>
+	<select id="b1" multiple>
+    	<option>洗刷刷</option>
+        <option>天高地远</option>
+        <option>不将就</option>
+        <option>小酒窝</option>
+        <option>红玫瑰</option>
+        <option>十年</option>
+     </select>
+     <div id="btn">
+     	<button onClick="Ch('b1','b2')">一一》</button>
+        <button onClick="Ch('b2','b1')">《一一</button>
+     </div>
+     <select id="b2" multiple></select>
+</body>
+</html>
+<script>
+	function Ch(x,y){
+		var b1 = document.getElementById(x);
+		var b2 = document.getElementById(y);
+		var list = b1.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected = false;
+				b2.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

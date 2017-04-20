@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <style type="text/css">
+    select{
+    	width: 100px;
+    	}
+    	</style>
+    <body>
+        <span>省份:</span>
+        <select id="provice" onchange="change(this);">
+            <option value="-1">请选择</option>
+        </select>
+        <span>市:</span>
+        <select id="city" onchange="change2(this)" ;></select>
+        <span>区/县:</span>
+        <select id="area"></select>
+        
+    </body>
+   
+</html>
+ <script type="text/javascript">
+         //省份
+        var pros = ["北京", "上海", "福建"]; //直接声明Array
+         //市
+        var cities = [
+            ["朝阳", "昌平", "海淀","西城","东城"],
+            ["浦东", "高区","金山","黄埔"],
+            ["南平", "厦门","宁德"]
+        ];
+        //地区
+        var areas = [
+                [
+                    ["A", "B", "C"],
+                    ["A", "B", "C"],
+                    ["A", "B", "C"],
+                    ["A", "B", "C"],
+                    ["A", "B", "C"]
+                ],
+                [
+                    ["A", "B", "C"],
+                    ["A", "B", "C","D"],
+                    ["A", "B", "C"],
+                    ["A", "B", "C"]
+                ],
+                [
+                    ["A", "B", "C"],
+                    ["A", "B", "C"],
+                    ["A", "B", "C"]
+                ]
+            ]
+         
+        var pIndex = -1;
+        var procho= document.getElementById("provice");
+        var citycho = document.getElementById("city");
+        var areacho = document.getElementById("area");
+         //先设置省的值
+        for (var i = 0; i < pros.length; i++) {
+            var op = new Option(pros[i], i);
+            //添加
+            procho.options.add(op);
+        }
+        function change(obj) {
+            if (obj.value == -1) {
+                citycho.options.length = 0;
+                areacho.options.length = 0;
+            }
+            //获取值
+            var val = obj.value;
+            pIndex = obj.value;
+            //获取ctiy
+            var cs = cities[val];
+            //获取默认区
+            var as = areas[val][0];
+            //先清空市
+            citycho.options.length = 0;
+            areacho.options.length = 0;
+            for (var i = 0; i < cs.length; i++) {
+                var op = new Option(cs[i], i);
+                citycho.options.add(op);
+            }
+            for (var i = 0; i < as.length; i++) {
+                var op = new Option(as[i], i);
+                areacho.options.add(op);
+            }
+        }
+        function change2(obj) {
+            var val = obj.selectedIndex;
+            var as = areas[pIndex][val];
+            areacho.options.length = 0;
+            for (var i = 0; i < as.length; i++) {
+                var op = new Option(as[i], i);
+                areacho.options.add(op);
+            }
+        }
+    </script>

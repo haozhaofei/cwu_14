@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	篮球:<input type="checkbox" name="likes[]" value="篮球"><br>
+	足球:<input type="checkbox" name="likes[]" value="足球"><br>
+	网球:<input type="checkbox" name="likes[]" value="网球"><br>
+	气球:<input type="checkbox" name="likes[]" value="气球"><br>
+
+	<input type="password">
+	<button onclick="fun()">爱好</button>
+</body>
+</html>
+<script>
+	function fun(){
+		var list = document.getElementsByTagName('input');
+		var res = new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].type == "checkbox" && list[i].checked){
+				res[res.length] = list[i].value;
+			}
+		}
+		alert(res);
+	}
+</script>

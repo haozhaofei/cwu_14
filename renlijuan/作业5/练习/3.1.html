@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景变色</title>
+</head>
+<body id="bid">
+	
+</body>
+</html>
+<script>
+	//在所有文档加载完后执行，可以换顺序
+	window.onload=function(){
+		var arr=["red","orange","yellow"];
+		var index=Math.ceil(Math.random()*1000)%3;
+		var oBid=document.getElementById('bid');
+		oBid.style.background=arr[index];
+	}
+</script>

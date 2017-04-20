@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>随机改变背景颜色</title>
+</head>
+<body id="bid">
+
+</body>
+</html>
+<script>
+	var arr = ["yellow","green","pink"];
+	var index = Math.ceil(Math.random()*1000)%3;
+	//tagName获取一组值，id获取一个值
+	document.getElementsByTagName('body')[0].style.background = arr[index];
+</script>

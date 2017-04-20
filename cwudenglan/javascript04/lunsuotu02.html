@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>轮缩图</title>
+ <style>
+    #m2,#m3,#m4{display: none;}
+    #did img{width:384px;height: 240px;}
+    #did{width: 384px;border:1px solid red;}
+</style>
+    </head>
+    <body>
+    <div id ="did" onmouseover="stop()"  onmouseout="start()">
+    <img src="images/11.jpg" id="m1" alt="">
+    <img src="images/22.jpg" id="m2" alt="">
+    <img src="images/33.jpg" id="m3" alt="">
+    <img src="images/44.jpg" id="m4" alt="">
+    </div>
+    </body>
+</html>
+<script>
+         var m=1;
+        var mytime = null;
+    function start(){
+       
+        if(mytime==null){
+         mytime=setInterval(function(){
+            m++;
+            show(m);
+            if(m>=4){
+                m=0;
+            }
+        },1000)
+     }
+    }
+    start();
+    function stop(){
+        if(mytime != null){
+            clearInterval(mytime);
+            mytime = null;
+        }
+    }
+    function show(n){
+        for(var i=1;i<=4;i++){
+            var img=document.getElementById('m'+i);
+            if(n==i){
+                img.style.display="block";
+            }else{
+                img.style.display="none";
+            }
+        }
+    }
+
+</script>

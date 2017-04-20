@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="../javascript07/images/HLL-11_xuandong.gif" cwu="images/22.jpg" alt="">
+	<img src="../javascript07/images/HLL-11_xuandong.gif" cwu="images/33.jpg" alt="">
+	<img src="../javascript07/images/HLL-11_xuandong.gif" cwu="images/44.jpg" alt="">
+	<img src="../javascript07/images/HLL-11_xuandong.gif" cwu="images/11.jpg" alt="">
+</body>
+</html>
+<script>
+	//window.onload
+	setTimeout(function(){
+		//获取所有的图片
+		var list = document.getElementsByTagName('img');
+		for(var i=0;i<list.length;i++){
+			//getAttribute:获取自定义属性
+			list[i].src = list[i].getAttribute("cwu");
+			list[i].width = "300";
+		}
+	},3000)
+</script>

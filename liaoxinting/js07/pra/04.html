@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>pink</li>
+		<li>green</li>
+		<li>#c9d96f</li>
+		<li>#ccc</li>
+	</ul>
+	<ol id="oid">
+		<li>this is love</li>
+		<li>who do you love on earth</li>
+	</ol>
+</body>
+</html>
+<script type="text/javascript">
+	var list1=document.getElementsByTagName('li');
+	//alert(list1.length);
+
+	var list2=document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	//alert(list2.length);
+
+	var list3=document.getElementById("oid").getElementsByTagName("li")
+	//alert(list3.length);
+
+	for (var i = 0; i < list2.length; i++) {
+		list2[i].onclick=function() {
+			this.parentNode.style.color=this.innerHTML;
+		}
+		}
+		//alert(document.all.length);
+	
+	
+</script>

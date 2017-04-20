@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#max{width:400px;height: 400px;background: #ccc;}
+		#min{width: 100px;height: 100px;background: green;}
+	</style>
+</head>
+<body>
+	<div id="max">
+		<div id="min"></div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var max=document.getElementById('max');
+	var min=document.getElementById('min');
+	max.onclick=function(){
+		alert("Big DIV is clicked");
+	}
+	min.onclick=function(ent) {
+		var event=window.event || ent;
+		alert("small div is clicked");
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+	}
+	
+</script>

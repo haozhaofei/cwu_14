@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>新浪军事新闻</title>
+        <style>
+        #box{
+            margin:20px;
+        }
+        #pic{
+            float:left;
+            margin-top:20px;
+            position:relative;
+        }
+        #aid a{
+            position:absolute;
+            width:50px;
+            height:50px;
+            top:0;
+            bottom: 0;
+            margin: auto 0;
+            font-size: 60px;
+            text-decoration: none;
+            color:blue;
+            opacity: 0.4;
+            font-weight: bold;
+            line-height: 60px;
+            text-align: center;
+        }
+         #aid a:hover{
+            opacity: 1;
+         }
+        #pid a{
+            position:absolute;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color:white;
+            bottom:80px;
+            left:10px;
+        }
+        #pid a:hover{
+            text-decoration: underline;
+
+        }
+
+        #prev{
+            left:20px;
+
+        }
+        #next{
+            right:20px;
+        }
+        .nav-main li{
+            display:inline-block;   
+            padding:10px;  
+        }
+        .nav-main li a{
+            text-decoration: none;
+            color:white;
+        }
+        .nav-main li a:hover{
+            text-decoration:underline;
+            background:#abb;
+        }
+        .nav-main{
+            width:1050px;
+            border-top:4px solid #c7c7c8;
+            border-bottom:1px solid #c7c7c8;
+            background:#019443;
+        }
+        #page{
+            margin:0px;
+             float:left;
+             margin-left:80px;
+        }
+        #page a{
+            text-decoration: none;
+            color:black;
+        }
+        #page a:hover{
+            text-decoration: underline;
+            color:red;
+        }
+
+        h2{
+            font-size:18px;
+        }
+        p{
+            font-size:14px;
+            line-height:0.8;
+        }
+        #p2,#p3{
+            margin-top:35px;
+        }
+        #p11 a{
+            color:red;
+        }
+        #list li{
+            width:30px;
+            height:30px;
+            list-style: none;
+            background: yellow;
+            display: inline-block;
+            bottom:40px;
+            position: absolute;
+            left:10px;
+        }
+        #list li:hover{
+            cursor: pointer;
+        }
+        #list .active{
+             background: red;
+         }
+        </style>
+    </head>
+    <body>
+    <div id="box">
+        <h2>新浪军事</h2>
+        <nav role="navigation">
+            <ul class="nav-main">
+                <li><a href="http://mil.news.sina.com.cn/" class="current-page">首页</a></li>
+                <li><a href="http://roll.mil.news.sina.com.cn/col/zgjq/index.shtml">滚动</a></li>
+                <li><a href="http://slide.mil.news.sina.com.cn/">图片</a></li>
+                <li><a href="http://mil.news.sina.com.cn/jssd/">深度</a></li>
+                <li><a href="http://slide.mil.news.sina.com.cn/s_list_8_62085.html">《出鞘》</a></li>
+                <li><a href="http://mil.news.sina.com.cn/dgby/">大国博弈</a></li>
+                <li><a href="http://mil.news.sina.com.cn/jshm/">军史</a></li>
+                <li><a href="http://roll.mil.news.sina.com.cn/s_zghjxldyd_all/index.shtml">东海局势</a></li>
+                <li><a href="http://mil.news.sina.com.cn/nz/nhjszxdt/">南海局势</a></li>
+                <li><a href="http://mil.news.sina.com.cn/hotnews/Daily/">新闻排行</a></li>
+                <li><a href="http://sky.news.sina.com.cn/">航空</a></li>
+                <li><a href="http://mil.news.sina.com.cn/oldnews/">回顾</a></li>
+            </ul>
+        </nav>
+        <div id="pic">
+                <img id="img" src="http://n.sinaimg.cn/mil/transform/20170407/IqPi-fyecrxv4367081.jpg" height="358" width="638" alt="中国电磁航母出航CG帅气！目标直指美军福特级"/>  
+                <div id="aid">
+                    <a href="#" id="prev"><</a>
+                    <a href="#" id="next">></a>
+                </div>
+                <div id="pid">
+                    <p ><a id="page1" href="http://slide.mil.news.sina.com.cn/h/slide_8_198_49585.html" target="_blank"> 中国电磁航母出航CG帅气！目标直指美军福特级</a></p>
+                 </div>
+                 <!--<ul id="list"></ul>-->
+        </div>
+   
+        <div id="page">
+            <div id="p1">
+                <h2 ><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyecezv2428599.shtml">辽宁舰总师：中国最少需要三艘航母</a></h2>
+
+                 <p  id="p11"><a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyeceza1461732.shtml" >中国卫星性能有多强：连美最神秘的51区都能拍到(图)</a></p>
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyecezv2431023.shtml">美称歼20换航发可媲美F22</a>
+                <a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyecezv2454847.shtml">作战半径超F22一倍都多</a></p>
+
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyecfnu7560403.shtml">中国第5艘071舰已建成船体</a> <a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1439942.shtml">潜艇击败6国夺71亿大单</a></p>
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyecezv2431244.shtml">俄称欲与中国共同开发黑瞎子岛</a> <a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1455593.shtml">055舰速度令美畏惧</a></p>
+            </div>
+            
+            <div id="p2">
+                <p id="p11"><a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyecezv2445818.shtml">中国核潜艇生产速度比美快1倍</a> <a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyecezv2449205.shtml" >从10年1舰到1年10舰</a></p>
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyecezv2449038.shtml">美F35B难以打击朝鲜 仅中国援建的地铁就有100米深</a></p>
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1439725.shtml">不解决萨德韩企着急没用</a> <a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyeceza1466239.shtml">中国潜艇或赴印度洋威慑美</a></p>
+            </div>
+
+            <div id="p3">
+                <h2><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1442249.shtml">美军向叙利亚射超50枚导弹 回应毒气袭击</a></h2>
+                <p id="p11"><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1465807.shtml" class="linkRed">中方回应美军空袭叙利亚</a> <a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1456858.shtml" class="linkRed">我驻叙使馆：目前情况还好</a></p>
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyecfnu7573756.shtml">美打击叙基地该基地部署有俄军</a> <a target="_blank" href="http://mil.news.sina.com.cn/2017-04-07/doc-ifyecezv2448533.shtml">普京指责是侵略行为</a></p>
+                <p><a target="_blank" href="http://mil.news.sina.com.cn/china/2017-04-07/doc-ifyeceza1443862.shtml">美首次直接打击阿萨德</a> <a target="_blank" href="http://mil.news.sina.com.cn/jssd/2017-04-07/doc-ifyeceza1467148.shtml">告诉中俄谁巡航导弹玩得最好</a></p>
+            </div>
+        </div>
+         
+
+    </div>
+
+    <script type="text/javascript">
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        var img  = document.getElementById('img');
+        var page = document.getElementById('page1');
+        /*var list =document.getElementById('list');
+        var lis = list.getElementsByTagName('li');
+*/
+        var arr = ['http://n.sinaimg.cn/mil/transform/20170407/IqPi-fyecrxv4367081.jpg',
+                    'http://n.sinaimg.cn/mil/20170407/-ocU-fyecrxv4369649.jpg',
+                    'http://n.sinaimg.cn/mil/transform/20170407/UfL8-fyecrxv4098090.jpg',
+                    'http://n.sinaimg.cn/mil/20170407/5fbn-fyecrxv4371838.jpg',
+                    'http://n.sinaimg.cn/mil/transform/20170407/xpLy-fyecrxv4097259.jpg'];
+        var arr1= ['http://slide.mil.news.sina.com.cn/h/slide_8_198_49585.html',
+                    'http://slide.mil.news.sina.com.cn/h/slide_8_203_49588.html',
+                    'http://slide.mil.news.sina.com.cn/l/slide_8_249_49572.html',
+                    'http://slide.mil.news.sina.com.cn/k/slide_8_205_49589.html',
+                    'http://slide.mil.news.sina.com.cn/h/slide_8_198_49582.html'];
+        var arr2=['中国电磁航母出航CG帅气！目标直指美军福特级',
+                    '这飞鲨够狠够凶猛！解放军歼15航母舰载机联队',
+                    '伊拉克陆军航空兵曝光中国造无人机 挂实弹参战',
+                    '来比比外挂啊！中美俄五代机机翼挂载武器对比',
+                    '美军公开攻击叙机场画面：驱逐舰发射战斧导弹'];
+
+        var num = 0;
+
+        /*for(var i = 0;i < arr.length;i++){
+            list.innerHTML += '<li></li>';
+
+        }*/
+
+        /*lis[0].className = 'active';
+        for(var i = 0;i < lis.length;i++){
+            lis[i].index = i;
+                     lis[i].onclick = function(){
+                fn(this.index);
+                    num = this.index;
+            }
+        }*/
+
+       next.onclick = function(){
+            num++;
+            if(num >= arr.length){
+                num = 0;
+            }
+            
+            fn(num);
+
+        }
+        prev.onclick = function(){
+            num--;
+            if(num < 0){
+                num = arr.length - 1;
+            }
+            fn(num);
+        }
+        function fn(num){
+            img.src = arr[num];
+            page.href=arr1[num];
+            page.innerHTML=arr2[num];
+            /*for(var i = 0;i < lis.length;i++){
+                lis[i].className = '';
+            }
+            lis[num].className = 'active';*/
+        }
+    </script>
+    </body>
+</html>

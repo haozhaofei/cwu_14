@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a id="aid" href="http://www.baidu.com">baidu</a>
+	<button onclick="fun()">change</button>
+</body>
+</html>
+<script type="text/javascript">
+	function  fun() {
+		var aid=document.getElementById('aid');
+		aid.href="http://www.sina.com";
+		aid.innerHTML="sina";
+		aid.name="cwu";
+		aid.className="cwuclassname";
+		aid.title="cwutitle";
+		}
+	
+</script>

@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取多选框内容</title>
+</head>
+<body>
+        <div>
+	侯亮平<input type="checkbox" value="侯亮平"><br></br>
+	李达康<input type="checkbox" value="李达康"><br></br>
+	高育良<input type="checkbox" value="高育良"><br></br>
+	祁同伟<input type="checkbox" value="祁同伟"><br></br>
+	<button onclick="fun()">确定</button>
+        </div>
+</body>
+</html>
+<script>
+      alert("请选择你喜欢的人物");
+      function fun(){
+              var list=document.getElementsByTagName("input");
+              var res=new Array();
+              for(i=0;i<list.length;i++){
+                  if(list[i].=="checkbox"&&list[i].checked){
+       	                res[res.length]=list[i].value; }
+                                        }
+              alert(res);
+                    }
+</script>

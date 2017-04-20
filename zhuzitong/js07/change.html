@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大写转换器</title>
+</head>
+<body>
+	<div>
+		请输入文本：
+	<input type="text"  onkeypress="change()">
+	</div>
+</body>
+</html>
+<script>
+        alert("欢迎使用大写转换器");
+	function change(){
+		var ch=document.getElementsByTagName('input')[0];
+		ch.value=ch.value.toUpperCase();
+	}
+	
+</script>

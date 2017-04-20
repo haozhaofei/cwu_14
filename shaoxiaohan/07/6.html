@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<a id="aid" href="http://www.baidu.com">百度</a>
+	<button onclick="fun()">change</button>
+
+</body>
+</html>
+<script type="text/javascript">
+	function fun(){
+		var aid = document.getElementById('aid');
+		aid.href = "http://www.sina.com";
+		aid.innerHTML = "新浪";
+		aid.name = "cwu";
+		aid.className = "cwuClassName";
+		aid.title = "cwutitle";
+	}
+	
+</script>

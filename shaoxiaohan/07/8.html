@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title阻止事件冒泡title>
+	<style>
+		#max{width:400px;height: 400px;background: #ccc;}
+		#min{width: 100px;height: 100px;background: red;}
+	</style>
+</head>
+<body>
+	<div id="max">
+		<div id="min"></div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var max = document.getElementById('max');
+	var max = document.getElementById('min');
+	max.onclick = function(){
+		alert("大div点击了")；
+		
+	}	min.onclick = function(ent){
+		var event = window.event || ent;
+		//event.stopPropagation();
+		//event.cancleBubble = true;
+		alert("小div点击了");
+		if(document.all){
+			event.cancleBubble = true;
+		}else{
+			event.stopPropagation();
+		}
+
+	}
+
+</script>

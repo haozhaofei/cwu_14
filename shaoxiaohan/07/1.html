@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>输入框大小写切换</title>
+</head>
+<body>
+	变大写
+	<input type="text" onkeypress="fun(this)"/>
+	//<input type="tetx" onkeyup="this.value=this.value.toUpperCase()"/><br>
+	变小写
+	<input type="text" onkeyup="this.value=this.value.toLowerCase()"/><br>
+
+
+</body>
+</html>
+<script>
+	function fun(obj){
+		obj.value = obj.value.toUpperCase();
+	}
+</script>

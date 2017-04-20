@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action=""></form>
+    <form action="" name="myform">
+    	<input type="text" name="uname" value="刚好遇见你">
+</body>
+</html>
+<script>
+	var res = document.myform.uname.value;
+	var res = document.myform.uname.value;//后边会覆盖前面的变量
+	//alert(document.myform.username.value);
+	alert(document.forms.myform.username.value);
+	//alert(document.forms.item(1).username.value);
+	//alert(document.forms['myform'].username.value);
+	//alert(document['myform'].username.value);
+	//alert(document.form.item('myform').username.value);
+	alert(res);
+</script>

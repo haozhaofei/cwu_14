@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+    	<li>黑色</li>
+        <li>黄色</li>
+        <li>蓝色</li>
+        <li></li>
+    </ul>
+    
+    <ol id="oid">
+    		<li>天高地远</li>
+            <li>不愿回头</li>
+    </ol>
+    
+</body>
+</html>
+<script>
+	//获取所有的li节点
+	var list1 = document.getElementsByTagName('li');
+	//alert(list.length);
+	//获取ul下面的所有li节点
+	var list2 = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	//alert(list.length);
+	
+	//获取ol下面的所有li节点
+	var list3 = document.getElementsByTagName("oid").getElementsByTagName("li");
+	//alert(list.length);
+	
+	for(var i=0;i<list2.length;i++){
+		list2[i].onclick=function(){
+			//获取li父节点，并获取li的值，然后添加颜色
+			this.parentNode.style.color=this.innerHTML;
+		};
+	}
+	
+	
+</script>

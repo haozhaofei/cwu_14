@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#le1{float: left;}
+		#did{float: left;}
+		
+	</style>
+</head>
+<body>
+	
+	<select id="le1" multiple>
+		<option>dfgd</option>
+		<option>zzsg</option>
+		<option>dfgd</option>
+		<option>xfxgd</option>
+	</select>
+	<select id="le2" multiple></select>
+	<div id="did">
+		<button onclick="change('le1','le2')">>></button>
+		<button onclick="change('le2','le1')"><<</button>
+		
+	</div>
+	
+
+
+	
+</body>
+</html>
+<script type="text/javascript">
+	function change (a,b) {
+		// body...
+		var leap1=document.getElementById(a);
+		var leap2=document.getElementById(b);
+		var list=leap1.options;
+		for(var i=0;i<list.length;i++){
+			if (list[i].selected) {
+				list[i].selected=false;
+				leap2.add(list[i]);
+				i--;
+			}
+		}
+	}
+
+</script>

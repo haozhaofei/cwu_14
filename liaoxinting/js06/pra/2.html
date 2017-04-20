@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<iframe src="1.html"></iframe>
+	<iframe src="http://www.baidu.com"></iframe>
+	<iframe src="1.html" frameborder="1"></iframe>
+	<iframe src="1.html" frameborder="1"></iframe>
+</body>
+<button onclick="doChange()">变色</button>
+</html>
+<script type="text/javascript">
+	function doChange () {
+		window.frame[1].document.getElementById('haha').style.color="pink";
+	}
+</script>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action=""></form>
+	<form action="" name="myform">
+		<input type="text" name="uname" value="刚好遇见你">
+	</form>
+</body>
+</html>
+<script>
+	var res=document.myform.uanme.value;
+	var res=document.form[1].uname.value;
+	alert(document.forms[1].uname.value);
+	alert(document.myform.uname.value);
+	alert(document.form.myform.uname.value);
+	alert(document.form.item(1).uname.value);
+	alert(document.forms['myform'].uname.value);
+	alert(document['myform'].username.value);
+	alert(document.forms.item('myfrom').uname.value);
+	alert(res);
+</script>

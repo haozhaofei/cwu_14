@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stu id="1001">
+<name>沈浪</name>
+<age>21</age>
+<sex>男</sex>
+<classid>武林外史</classid>
+</stu>
+
+<stu id="1002">
+<name>白飞飞</name>
+<age>19</age>
+<sex>女</sex>
+<classid>武林外史</classid>
+</stu>
+
+<stu id="1003">
+<name>百灵</name>
+<age>18</age>
+<sex>女</sex>
+<classid>武林外史</classid>
+</stu>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>获取表单元素</title>
+</head>
+<body>
+<form action="" name="myform">
+	<input type="text" name="iname" value="因为天气刚刚好">
+</form>
+
+</body>
+</html>
+<script type="text/javascript">
+	var res = document.myform.iname.value;
+	var res = document.forms[0].iname.value;
+	alert(document.myform.username.value);
+</script>

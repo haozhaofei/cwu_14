@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计时器</title>
+</head>
+<body>
+	<button id="bid">30</button>
+	<button id="bid1">30</button>
+</body>
+</html>
+<script>
+	//多次执行
+	var oBid = document.getElementById('bid');
+	var m = 30;
+	var n = 30;
+	var time  = setInterval(function(){
+		m--;
+		oBid.innerHTML = m;
+		if(m == 0){
+			bid1--;
+			oBid.disabled = true;
+			clearInterval(time);
+		}
+	},1000)
+	01:10:22     
+</script>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a id="aid" href="http://mail.163.com/">163邮箱</a>
+	<button onclick="fun()">变一下</button>
+</body>
+</html>
+<script>
+	function fun(){
+		var aid = document.getElementById('aid');
+		aid.href = "http://www.sina.com";
+		aid.innerHTML = "新浪";
+		aid.name = "cwu";
+		aid.className = "cwuclassname";
+		aid.title = "cwutitle";
+	}
+</script>

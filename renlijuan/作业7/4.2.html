@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>red</li>
+		<li>yellow</li>
+		<li>blue</li>
+		<li>#f0c</li>
+	</ul>
+
+	<ol id="oid">
+		<li>爱</li>
+		<li>个鬼</li>
+	</ol>
+</body>
+</html>
+<script>
+	var list1=document.getElementsByTagName('li');
+	var list2=document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	var list3=document.getElementById("oid").getElementsByTagName("li");
+	for(i=0;i<list2.length;i++){
+		list2[i].onclick=function(){
+			this.parentNode.style.color=this.innerHTML;
+		}
+	}
+</script>

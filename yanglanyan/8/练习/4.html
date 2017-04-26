@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ ul {
+	 list-style-type:none;
+	 margin:0;
+	 padding:0;
+ }
+ ul li{
+	  background:#0C3;
+	  margin-top:6px;
+	  height:25px;
+  }
+ ul li:hover{
+	 background:#0F6;
+ }
+ ul li.cc{
+	  background:#0F6;
+  }
+</style>
+</head>
+
+<body>
+
+   <ul>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+   </ul>
+   
+   <button onClick="del()">删除</button>
+</body>
+</html>
+  <script>
+      var list = document.getElementsByTagName('li');
+	  for(var i=0;i<list.length;i++){
+		  list[i].ondblclick = function(){
+			 //list[i].style.background = "#039";
+			 this.setAttribute("class","cc");
+		  }
+	  }
+  
+  
+   function del(){
+	    for(var i=0;i<list.length;i++){
+			if(list[i].getAttribute("class")=="cc"){
+			         list[i].parentNode.removeChild(list[i]);
+					 i--;
+			}
+   }
+   }
+  </script>

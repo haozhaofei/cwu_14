@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="01.html" name="myform" method="get">
+		<input type="text" name="uname">
+		<input type="submit" value="submit">
+	</form>
+	<button onclick="document.myform.reset()">reset</button>
+	<button onclick="document.myform.submit()">submit</button>
+	<button onclick="fun()">try again</button>
+		
+	
+</body>
+</html>
+<script type="text/javascript">
+	function fun(){
+		var form=document.myform;
+		form.action="02.html";
+		form.method="post";
+		form.submit();
+	}
+	
+</script>

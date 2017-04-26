@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+ul li{list-style-type:none;}
+div{
+width:100px;
+height:100px;
+border:1px solid red;
+border-radius:50%;
+}
+</style>
+</head>
+<div id="did"></div>
+<button onclick="doShow(1)">变大</button>
+<button onclick="doShow(2)">变小</button>
+<button onclick="doShow(3)">隐藏</button>
+<button onclick="doShow(4)">显示</button>
+<body>
+</body>
+</html>
+<script>
+var oDid=document.getElementById('did');
+var width=100;
+var height=100;
+var border=1;
+function doShow(i){
+if(i==1){
+width+=10;
+height+=10;
+border+=2;
+oDid.style.width=width+"px";
+oDid.style.height=height+"px";
+oDid.style.border=border+"px solid #f0c";
+}else if(i=2){
+width-=10;
+height-=10;
+border-=1;
+oDid.style.width=width+"px";
+oDid.style.height=height+"px";
+
+}else if(i==3){
+oDid.style.display="none";
+}else if(i==4){
+oDid.style.display="block";
+}
+}
+</script>

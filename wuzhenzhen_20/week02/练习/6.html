@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javaScript中的对象</title>
+</head>
+<body>
+<script>
+//第一种:使用原始方法创建内置对象
+var person=new Object();
+person.name="伍珍珍";
+person.age=21;
+person.say=function(){
+return "我叫"+this.name+"我今年"+this.age+"岁啦!";
+}
+document.write(peron.name);
+
+//第二种:使用自定义构造函数创建对象
+var girl=new girl();
+function girl(){
+this.name="伍珍珍";
+this.age=21;
+this.say=function(){
+return "我叫"+this.name+"我今年"+this.age+"岁啦!";
+}
+}
+document.write(girl.age);
+
+var wzz={
+name:"伍珍珍",
+age:21,
+say:function(){
+return "我叫"+this.name+"我今年"+this.age+"岁啦!";
+}
+}
+document.write(wzz.say());
+</script>
+</body>
+</html>

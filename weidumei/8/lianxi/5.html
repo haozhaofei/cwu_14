@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul,li{margin:0px;padding: 0px;}
+		ul{list-style-type: none;}
+		ul li{height: 30px;margin-top: 5px;background: #ccc;}
+		ul li:hover{background: #fc0;}
+		ul li.cc{background: #f0c;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>中华女子学院</li>
+		<li>赵云</li>
+		<li>小乔</li>
+		<li>王昭君</li>
+		<li>貂蝉</li>
+	</ul>
+	名字:<input type="text" name="name" id="nid"/>
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		//获取表单value
+		var name = document.getElementById('nid').value;
+		//获取ul元素节点
+		var ul = document.getElementById('uid');
+		//创建文本节点
+		var tt =document.createTextNode(name);
+		//创建元素节点
+		var li =document.createElement("li");
+		//向li元素中追加文本节点(tt)
+		li.appendChild(tt);
+		//向ul元素中追加li元素节点
+		ul.appendChild(li);
+	}
+</script>

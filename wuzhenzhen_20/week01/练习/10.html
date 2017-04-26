@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>计算器</title>
+</head>
+<body>
+<form action="" method="get" name="myform">
+第一个数:<input type="text" name="num1"/><br/>
+第二个数:<input type="text" name="num2"/><br/>
+计算结果:<input type="text" name="res"/><br/>
+<input type="button" onclick="doFun(1)" value="加"/>
+<input type="button" onclick="doFun(2)" value="减"/>
+<input type="button" onclick="doFun(3)" value="乘"/>
+<input type="button" onclick="doFun(4)" value="除"/>
+</form>
+
+<script>
+function doFun(n){
+var num1=Number(document.myform.num1.value);
+var num2=Number(document.myform.num2.value);
+switch(n){
+case1:var res=mun1+num2;break;
+case2:var res=mun1-num2;break;
+case3:var res=mun1*num2;break;
+case4:var res=mun1/num2;break;
+}
+document.myform.res.value=res;
+}
+</script>
+
+</body>
+</html>

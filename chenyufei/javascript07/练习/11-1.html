@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="../javascript07/1.html" name="myform" method="get">
+		<input type="text" name="uname">
+		<input type="submit" value="提交">
+	</form>
+
+	<button onclick="document.myform.reset()">重置</button>
+	<button onclick="document.myform.submit()">外面提交</button>
+	<button onclick="fun()">在试试</button>
+</body>
+</html>
+
+<script>
+	function fun(){
+		var form = document.myform;
+		form.action = "2.html";
+		form.method = "post";
+		form.submit();
+	}
+</script>

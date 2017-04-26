@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title></title>
+<style>
+	select{width: 150px;height: 200px;float: left;}
+	div{width: 100px;height: 300px;float: left;margin-top: 90px;margin-left: 30px}
+</style></head>
+
+<body>
+	<select name="" id="fid1" multiple="multiple">
+		
+		
+		
+		
+	<option value="4">choice4</option></select>
+	<div>
+		<button onclick="move('fid1','fid2')">&gt;&gt;</button>
+		<button onclick="move('fid2','fid1')">&lt;&lt;</button>
+	</div>
+	<select name="" id="fid2" multiple="multiple"><option value="1">choice1</option><option value="3">choice3</option><option value="2">choice2</option></select>
+
+
+
+<script>
+	function move(s1,s2){
+		var select1 = document.getElementById(s1);
+		var select2 = document.getElementById(s2);
+		//获取fid中的选项
+		var list = select1.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected = false;
+				 select2.add(list[i]);
+				 var mv = list[i];
+				 select1.remove(i);
+				 select2.add(mv);
+				 i--;
+			}
+		}
+	}
+</script></body></html>

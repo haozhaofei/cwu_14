@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title></title>
+  </head>
+  <body>
+  <span>
+        <select id="left" multiple="multiple" style="width: 80px; height:120px; background:#CCC;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          <option>5</option>
+             <option>6</option>
+         </select>
+         <input type="button" value=">>" id="MforR"/>
+         <input type="button" value="<<" id="MforL"/>
+         <select id="right" multiple="multiple" style="width:80px; height:120px; background:#CCC;">
+         </select>
+    </span>
+ </body>
+ <script type="text/javascript" >
+       var forR = document.getElementById("forR");
+      var MforR = document.getElementById("MforR");
+      var forL = document.getElementById("forL");
+      var MforL = document.getElementById("MforL");
+     
+     /*多项左向右移动*/
+     MforR.onclick = function(){
+             //获得两个select框元素节点
+             var left = document.getElementById("left");
+             var right = document.getElementById("right");
+             //获得所有选项元素
+             var loptions = left.options;
+             //遍历所有选项对象
+             for(var i=0;i<loptions.length;i++){
+                 var op = loptions[i];
+                 //如果选项被选中则将该元素添加到右边的选择框中、也就是移动
+                 if(op.selected){
+                     right.appendChild(op);
+                     i--;    
+                 }
+             }    
+     }
+     /*多向右往左移动*/
+     MforL.onclick = function(){
+             //获得两个select框元素节点
+             var left = document.getElementById("left");
+             var right = document.getElementById("right");
+             //获得所有选项元素
+             var roptions = right.options;
+             //遍历所有选项对象
+             for(var i=0;i<roptions.length;i++){
+                 var op = roptions[i];
+                 //如果选项被选中则将该元素添加到右边的选择框中、也就是移动
+                 if(op.selected){
+                     left.appendChild(op);
+                     i--;    
+                 }
+             }
+     }
+
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	冰淇淋:<input type="checkbox" name="likes[]" value="冰淇淋"><br>
+	牛奶:<input type="checkbox" name="likes[]" value="牛奶"><br>
+	咖啡:<input type="checkbox" name="likes[]" value="咖啡"><br>
+	燕麦:<input type="checkbox" name="likes[]" value="燕麦"><br>
+
+	<input type="password">
+	<button onclick="fun()">爱好</button>
+</body>
+</html>
+
+<script>
+	function fun(){
+		var list = document.getElementsByTagName('input');
+		var res = new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].type == "checkbox" && list[i].checked){
+				res[res.length] = list[i].value;
+			}
+		}
+		alert(res);
+	}
+</script>

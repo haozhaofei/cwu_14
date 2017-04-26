@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	select{
+	width:100px;
+	height:200px;
+	}
+
+
+	</style>
+</head>
+<body>
+	<select id="a" multiple>
+		//multiple可接受多个值文件上传
+		<option value="1">aaaaaaaa</option>
+		<option value="2">bbbbbbbb</option>
+		<option value="3">cccccccc</option>
+		<option value="4">dddddddd</option>
+
+	</select>
+	
+		<button onclick="change('a','b')">向右</button>
+		<button onclick="change('b','a')">向左</button>
+	
+	
+	<select id="b" multiple>
+		//multiple可接受多个值文件上传
+		<option value="5">eeeeeeee</option>
+		<option value="6">ffffffff</option>
+		<option value="7">gggggggg</option>
+
+	</select>
+	
+
+</body>
+</html>
+<script>
+		function change(a,b){
+		var select1=doucument.getElementById(a);
+		var select2=doucument.getElementById(b);
+		var list=select1.options;
+		for (var i = 0; i <list.length; i++) {
+			if (list[i].selected) {
+				list[i].selected=false;
+				select2.add(list[i]);
+				i--;
+			}
+		
+		}
+	}
+
+
+
+</script>

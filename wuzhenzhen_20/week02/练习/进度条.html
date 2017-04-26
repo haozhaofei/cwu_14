@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>进度条</title>
+</head>
+<body>
+<h1>进度条</h1>
+<div style="width:200px;height:20px;border:1px solid #aaa;padding:2px;">
+<div id="did" style="width:0px;height:20px;background-color:blue;"></div>
+<br/>
+<button onclick="doStart()">开始</button>
+</div>
+</body>
+</html>
+<script>
+function doStart(){
+var m=0;
+var mytime=setInterval(function(){
+m++;
+document.getElementById("did").style.width=m+"%";
+if(m==100){
+clearInterval(mytime);
+alter("over!");
+}
+},10);
+}
+</script>

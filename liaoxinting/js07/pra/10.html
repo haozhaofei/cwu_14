@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+		ball1: <input type="checkbox" id="" value="a"/><br>
+		ball2: <input type="checkbox" id="" value="b"/><br>
+		ball3: <input type="checkbox" id="" value="c"/><br>
+		ball4: <input type="checkbox" id="" value="d"/><br>
+
+		<button onclick="fun()"> submit</button>
+
+	
+</body>
+</html>
+<script type="text/javascript">
+	function fun(){
+		var list=document.getElementsByTagName('input');
+		var res=new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].type=="checkbox" && list[i].checked){
+				res[res.length]=list[i].value;
+			}
+
+		}
+		alert(res);
+	}
+	
+</script>

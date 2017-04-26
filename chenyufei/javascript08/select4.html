@@ -1,0 +1,139 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>select选择框内容左右移动添加删除代码</title>
+<html> 
+<style type="text/css"> 
+  .select_move { margin:0px auto; width:206px; height:140px; margin-top:300px;} 
+  .select_move_1 { float:left;} 
+  .select_move_2 { float:left;} 
+  .select_move_3 { float:left;} 
+</style> 
+</head> 
+  
+<body> 
+  <div class="select_move"> 
+    
+    <div class="select_move_1"> 
+     <select name="first" size="10" id="first" multiple="multiple"> 
+      <option value="晴天">晴天</option> 
+      <option value="下雨天">下雨天</option> 
+      <option value="写作业">写作业</option> 
+      <option value="五一假">五一假</option> 
+      <option value="周五">周五</option> 
+      <option value="周六">周六</option> 
+      <option value="周日">周日</option> 
+        
+     </select> 
+    </div> 
+     <div class="select_move_2"> 
+        <input type="button" value="------>" onclick="moveRight()"/><br /> 
+        <input type="button" value="===>" onclick="moveAll()" /><br /> 
+        <input type="button" value="<------" onclick="moveLeft()"/><br /> 
+        <input type="button" value="<===" onclick="moveAllLeft()"/> 
+     </div> 
+    <div class="select_move_3"> 
+       <select size="10" id="secend" multiple="multiple"> 
+       </select> 
+    </div> 
+  </div> 
+    
+</body> 
+</html>
+
+<script type="text/javascript"> 
+  
+    
+  /**选中的元素向右移动**/
+  function moveRight() 
+  { 
+      
+      //得到第一个select对象 
+    var selectElement = document.getElementById("first"); 
+    var optionElements = selectElement.getElementsByTagName("option"); 
+    var len = optionElements.length; 
+    
+  
+    if(!(selectElement.selectedIndex==-1))  //如果没有选择元素，那么selectedIndex就为-1 
+    { 
+        
+      //得到第二个select对象 
+      var selectElement2 = document.getElementById("secend"); 
+    
+        // 向右移动 
+        for(var i=0;i<len ;i++) 
+        { 
+          selectElement2.appendChild(optionElements[selectElement.selectedIndex]); 
+        } 
+    } else
+    { 
+      alert("您还没有选择需要移动的元素！"); 
+    } 
+  } 
+    
+  //移动所有的到右边 
+  function moveAll() 
+  { 
+    //得到第一个select对象 
+    var selectElement = document.getElementById("first"); 
+    var optionElements = selectElement.getElementsByTagName("option"); 
+    var len = optionElements.length; 
+    //alert(len); 
+    
+    //将第一个selected中的数组翻转 
+    var firstOption = new Array(); 
+    for(var k=len-1;k>=0;k--) 
+    { 
+      firstOption.push(optionElements[k]); 
+    
+    } 
+    var lens = firstOption.length; 
+      //得到第二个select对象 
+    var selectElement2 = document.getElementById("secend"); 
+    for(var j=lens-1;j>=0;j--) 
+    { 
+      selectElement2.appendChild(firstOption[j]); 
+    } 
+  } 
+    
+  //移动选中的元素到左边 
+  function moveLeft() 
+  { 
+    //首先得到第二个select对象 
+    var selectElement = document.getElementById("secend"); 
+    var optionElement = selectElement.getElementsByTagName("option"); 
+    var len = optionElement.length; 
+      
+    //再次得到第一个元素 
+    if(!(selectElement.selectedIndex==-1)) 
+    { 
+      var firstSelectElement = document.getElementById("first"); 
+      for(i=0;i<len;i++) 
+      { 
+        firstSelectElement.appendChild(optionElement[selectElement.selectedIndex]);//被选中的那个元素的索引 
+      } 
+    }else
+    { 
+      alert("您还没有选中要移动的项目!"); 
+    } 
+  } 
+    
+  //全部向左移 
+  function moveAllLeft() 
+  { 
+    var selectElement = document.getElementById("secend"); 
+    var optionElements = document.getElementsByTagName("option"); 
+    var len = optionElements.length; 
+    var optionEls = new Array(); 
+    for(var i=len-1;i>=0;i--) 
+    { 
+      optionEls.push(optionElements[i]); 
+    } 
+    var lens = optionEls.length; 
+      
+    var firstSelectElement = document.getElementById("first"); 
+    for(var j=lens-1;j>=0;j--) 
+    { 
+      firstSelectElement.appendChild(optionEls[j]); 
+    } 
+  } 
+</script>

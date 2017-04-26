@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stulist>
+	<stu id = "10001">
+		<name>徐华萍</name>
+		<sex>女</sex>
+		<age>18</age>
+		<abstract>loving laungin</abstract>	
+	</stu>
+	<stu id = "10002">
+		<name>大桥</name>
+		<sex>女</sex>
+		<age>22</age>
+		<abstract>beautiful</abstract>
+	</stu>
+	<stu id = "10003">
+		<name>小乔</name>
+		<sex>女</sex>
+		<age>20</age>
+		<abstract>Chou Yu's wife</abstract>
+	</stu>
+</stulist>

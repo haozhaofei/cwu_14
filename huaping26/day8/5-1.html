@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{list-style-type:none;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>until you</li>
+		<li>excutive memory</li>
+		<li>ordinary path</li>
+		<li>because of you</li>
+	</ul>
+	name:<input type="text" name="name" id="nid"/>
+	<button onclick="doAdd()">add</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var name = document.getElementById('nid').value;
+		var ul = document.getElementById('uid');
+		var t = document.createTextNode(name);
+		var li = document.createElement("li");
+		li.appendChild(t);
+		ul.appendChild(li);
+	}
+</script>

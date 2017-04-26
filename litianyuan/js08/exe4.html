@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul,li{margin:0px;padding: 0px;}
+		ul{list-style-type: none;}
+		ul li{height: 30px;margin-top: 5px;background: #ccc;}
+		ul li:hover{background: #fc0;}
+		ul li.cc{background: #f0c;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<button onclick="doDel()">删除</button>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('li');
+	for(var i=0;i<list.length;i++){
+		list[i].ondblclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+	function doDel(){
+		for(var i=0;i<list.length;i++){
+			if(list[i].getAttribute("class") == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+
+		}
+	}
+</script>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>添加学生信息</title>
+	<style>
+		table,th,td{
+			border:1px solid #000000;
+		}
+		td{
+			text-align:center;
+		}
+	</style>
+	</head>
+	<body>
+		<table width="630" id="did">
+			<tbody>
+				<tr>
+		    		<th>学号</th>
+		    		<th>姓名</th>
+		    		<th>性别</th>
+		    		<th>年龄</th>
+		    		<th>操作</th>
+		  		</tr>
+		  		<tr>
+			    	<td>001</td>
+			    	<td>小花</td>
+				    <td>女</td>
+				    <td>3</td>
+				    <td><button onClick="del(this)">删除</button></td>
+			  	</tr>
+		  
+			  	<tr>
+				    <td>002</td>
+				    <td>小白</td>
+				    <td>男</td>
+				    <td>4</td>
+				    <td><button onClick="del(this)">删除</button></td>
+			  	</tr>
+		  
+			  	<tr>
+				    <td>003</td>
+				    <td>小米</td>
+				    <td>女</td>
+				    <td>3</td>
+				    <td><button onClick="del(this)">删除</button></td>
+			  	</tr>
+		  	</tbody>
+		</table>
+		<h1>添加学生信息</h1>
+		<form action="#" name="myform" onsubmit="return add()">
+		    学号：<input type="text" name="num" /><br><br>
+		    姓名：<input type="text" name="name" /><br><br>
+		    性别：<input type="text" name="sex" /><br><br>
+		    年龄：<input type="text" name="age" /><br><br>
+		    <input type="submit" value="添加">
+		</form>
+	</body>
+</html>
+<script>
+	function del(option){
+		 option.parentNode.parentNode.parentNode.removeChild(option.parentNode.parentNode);
+	}
+	  
+	function add(){
+		var data = new Array();
+		data[0] = document.myform.num.value;
+		data[1] = document.myform.name.value;
+		data[2] = document.myform.sex.value;
+		data[3] = document.myform.age.value;
+	    var tbody = document.getElementById("did").getElementsByTagName("tbody")[0];
+	    var tr = document.createElement("tr");
+	    for(var i=0;i<data.length;i++){
+			var td = document.createElement("td");
+			var text = document.createTextNode(data[i]);
+			td.appendChild(text);
+			tr.appendChild(td);
+	    }
+		var td = document.createElement("td");
+		td.innerHTML = '<button onClick="del(this)">删除</button>';
+		tr.appendChild(td);
+		tbody.appendChild(tr);
+		document.myform.reset();
+		return false;
+  	}
+</script>

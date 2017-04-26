@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在下拉列表中进行多选项移除</title>
+	<script type="text/javascript">
+//思想：选择任务一中的选项，点左移动图标，则实现移动，反之右移。
+/*主要应用while循环语句，判断如果select元素的selectedIndex属性值不为-1，则获取在下拉列表中的选中项的索引值和对应的文本，然后应用select元素对象的add()方法将此选项添加到另一个下拉列表中，并应用select元素对象的remove()方法移除当前下拉列表中的此选项。*/
+	</script>
+</head>
+<body>
+<table border="1px" cellpadding="5px" cellspacing="0" width="400px" align="center"  >
+	<tr>
+		<td width="150px" height="140px">
+			<select name="select1" multiple style="width: 150px;height: 140px">
+			   <option>111111</option>
+			   <option>222222</option>
+			   <option>333333</option>
+			   <option>444444</option>
+			   <option>555555</option>
+			   <option>666666</option>
+			   <option>111111</option>
+			   <option>222222</option>
+			   <option>333333</option>
+			   <option>444444</option>
+			   <option>555555</option>
+			   <option>666666</option>
+			</select>
+		</td>
+		<td width="35px" style="position: relative; border: 0" >
+			<button style="position: absolute;bottom: 0px" name="left_btn"  onclick="moving(document.all.select2,document.all.select1)">左移
+			</button>
+		</td>
+		<td width="35px" style="position: relative; border: 0" >
+			<button style="position: absolute;bottom: 0px" name="right_btn" onclick="moving(document.all.select1,document.all.select2)">右移
+			</button>
+		</td>
+		<td width="150px" >
+			<select style="width: 150px; height: 140px" name="select2" size="8">
+			</select>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+
+<script type="text/javascript">
+	function moving(n1,n2){
+		//alert(123);
+		//alert(document.all.select1);
+		while(n1.selectedIndex!=-1){ //没选中是-1
+			var indx=n1.selectedIndex; //得到索引
+  			var t=n1.options[indx].text; //对应索引的值
+  			n2.options.add(new Option(t));//new Option(t)注意大写！！
+  			n1.remove(indx);
+		}
+	}
+	
+</script>

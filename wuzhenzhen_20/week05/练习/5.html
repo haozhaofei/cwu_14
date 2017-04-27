@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>弹出自己</title>
+</head>
+<body>
+<ul>
+<li>伍珍珍</li>
+<li>女</li>
+<li>21</li>
+<li>安徽</li>
+</ul>
+</body>
+</html>
+<script>
+var list=document.getElementByTagName('li');
+for(var i=0;i<list.length;i++){
+list[i].onclick=function(){
+alter(this.innerHTML);
+}
+}
+</script>

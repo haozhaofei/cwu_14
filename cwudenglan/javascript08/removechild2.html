@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>为元素添加属性，删除子节点</title>
+    </head>
+     <style>
+        ul,li{margin:0px;padding: 0px;}
+        ul{list-style-type: none;}
+        ul li{height: 30px;margin-top: 5px;background: #ccc;}
+        ul li:hover{background: #fc0;}
+        .nn{
+            background: green;
+        }
+    </style>
+    <body>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button onclick="del()">删除</button>
+    </body>
+</html>
+<script>
+    var list1=document.getElementsByTagName('li');
+    for(i=0;i<list1.length;i++){
+        list1[i].ondblclick=function(){
+            this.setAttribute("class","nn");
+        }
+    }
+    function del(){
+        for(i=0;i<list1.length;i++){
+            if(list1[i].getAttribute("class")=="nn"){
+                list1[i].parentNode.removeChild(list1[i]);
+                i--;
+            }
+        }
+    }
+
+</script>

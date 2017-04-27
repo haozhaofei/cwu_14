@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>移动选中内容</title>
+ </head>
+ <body bgcolor="#fc0" topmargin="200" leftmargin="500">
+ 	<select id="box1" multiple="multiple" style="height: 200px;width: 160px;" >
+ 	   <option value="1">人民的名义</option>
+ 	   <option value="2">三生三世</option>
+ 	   <option value="3">外科风云</option>
+ 	   <option value="4">繁星四月</option>
+ 	   <option value="5">剃刀边缘</option>
+           <option value="6">生活大爆炸</option>
+           <option value="7">神探夏洛克</option>
+ 	</select>                                                                                                                                  
+
+ 	<button onclick="move('box1','box2')">移至右边</button>
+ 	<button onclick="move('box2','box1')">移至左边</button>
+
+ 	<select id="box2" multiple="multiple" style="height: 200px;width: 160px;">
+ 		<option value="8">电锯惊魂</option>
+ 	   	<option value="9">死神来了</option>
+ 	   	<option value="10">魔鬼代理人</option>
+ 	   	<option value="11">肖生克的救赎</option>
+ 	   	<option value="12">明日边缘</option>
+                <option value="13">速度与激情8</option>
+ 	</select>
+ </body>
+ </html>
+
+ <script>
+
+ 		function move(x,y){
+	 		var left=document.getElementById(x);
+	 		var right=document.getElementById(y);
+	 		var list=left.options;
+ 		for(var i=0;i<list.length;i++){
+ 			if(list[i].selected){
+ 				list[i].selected=false;
+ 			 	right.appendChild(list[i]);
+ 				i--;//多选
+ 		 	}
+ 	 	}
+ 			
+ 		 
+ 	}
+ 
+ </script>

@@ -30,6 +30,7 @@
  </html>
 
  <script>
+
  		function move(x,y){
 	 		var left=document.getElementById(x);
 	 		var right=document.getElementById(y);
@@ -37,8 +38,8 @@
  		for(var i=0;i<list.length;i++){
  			if(list[i].selected){
  				list[i].selected=false;
- 			 	right.add(list[i]);
- 				i--;
+ 			 	right.appendChild(list[i]);
+ 				i--;//多选
  		 	}
  	 	}
  			

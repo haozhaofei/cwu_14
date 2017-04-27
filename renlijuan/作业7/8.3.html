@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阻止冒泡事件</title>
+	<style>
+		#max{width: 400px;height: 400px;background: #ccc;}
+		#min{width: 100px;height: 100px;background: red;}
+	</style>
+</head>
+<body>
+	<div id="max">
+		<div id="min"></div>
+	</div>
+</body>
+</html>
+<script>
+	var max=document.getElementById('max');
+	var min=document.getElementById('min');
+	max.onclick=function(){
+		alert("大div点击了");
+	}
+	min.onclick=function(ent){
+		var event=window.event||ent;
+		alert("小div点击了");
+		if(document.all){
+			event.cancelBubble=true;
+		}else{
+			event.stopPropagation();
+		}
+	}
+</script>

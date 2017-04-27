@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh_table</title>
+</head>
+<body>
+	<h1>XML DOM实例：XML DOM中table</h1>
+	<table border="1" id="Utable">
+  <tr id="trid">
+    <th>学号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>年龄</th>
+    <th>操作</th>
+  </tr>
+  <tr>
+    <td>1001</td>
+    <td>张三</td>
+    <td>男</td>
+    <td>22</td>
+    <td><button onclick="doDel()">删除</button></td>
+  </tr>
+  <tr>
+    <td>1002</td>
+    <td>李四</td>
+    <td>男</td>
+    <td>21</td>
+    <td><button onclick="doDel()">删除</button></td>
+  </tr>
+  <tr>
+    <td>1003</td>
+    <td>王二麻子</td>
+    <td>男</td>
+    <td>21</td>
+    <td><button onclick="doDel()">删除</button></td>
+  </tr>
+</table>
+
+	<h2>添加学生信息</h2>
+	学号：<input type="text" name="name" id="nid"/></br>
+	姓名：<input type="text" name="name" /></br>
+	性别：<input type="text" name="name" /></br>
+	年龄：<input type="text" name="name" />
+	<button onclick="doAdd">添加</button>
+</body>
+</html>
+<script>
+	var list = document.getElementsByTagName('tr');
+	for (var i = 0; i < list.length; i++) {
+		list[i].onclick = function(){
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		for (var i = 0; i < list.length; i++) {
+			if(list[i].getAttribute("class" == "cc")){
+				list[i].parentNOde.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+
+	function doAdd(){
+		//获取表单value
+		var name = document.getElementById('nid').value;
+		//获取ul元素节点
+		var tr = document.getElementById('trid');
+		//创建文本节点
+		var tt =document.createTextNode(name);
+		//创建元素节点
+		var td =document.createElement("td");
+		//向li元素中追加文本节点(tt)
+		td.appendChild(tt);
+		//向ul元素中追加li元素节点
+		tr.appendChild(td);
+	}
+</script>

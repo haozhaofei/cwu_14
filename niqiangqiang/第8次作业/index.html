@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<table id="tab" width="400px" border="1px">
+		<tr>
+			<td>姓名</td>
+			<td>性别</td>
+			<td>年龄</td>
+                        <td>政治面貌</td>
+			<td>操作</td>
+		</tr>
+		<tr>
+			
+			<td>侯亮平</td>
+			<td>男</td>
+			<td>43</td>
+                        <td>党员</td>
+			<td><button onClick="delet(this)">删除</button></td>
+		</tr>
+		<tr>
+			<td>侯浩然</td>
+			<td>男</td>
+			<td>10</td>
+                        <td>少先队员</td>
+			<td><button onClick="delet(this)">删除</button></td>
+		</tr>
+		<tr>
+			<td>高小琴</td>
+			<td>女</td>
+			<td>33</td>
+                        <td>群众</td>
+			<td><button onClick="delet(this)">删除</button></td>
+		</tr>
+	</table>
+
+	姓名:<input type="text" name="name" id="nid0"/>
+
+	性别:<input type="text" name="sex" id="nid1"/>
+
+	年龄:<input type="text" name="age" id="nid2"/>
+      
+        政治面貌:<input type="text" name="zhengzhimianmao" id="nid3"/>
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var text = new Array();
+		text[0] = document.getElementById('nid0').value;
+		text[1] = document.getElementById('nid1').value;
+		text[2] = document.getElementById('nid2').value;
+		text[3] = document.getElementById('nid3').value;
+		//获取table元素节点
+		var table = document.getElementById('tab');
+		//创建元素节点
+		var itr =document.createElement("tr");
+		for(i=0;i<=3;i++){
+			//获取表单value
+			var addtext = text[i];
+			//alert(name);
+			//创建元素和文本节点
+			var itd =document.createElement("td");
+			var tt =document.createTextNode(addtext);
+			//向li元素中追加文本节点(tt)
+			itd.appendChild(tt);
+			//向ul元素中追加li元素节点
+			itr.appendChild(itd);
+			table.appendChild(itr);
+		}
+		var itd =document.createElement("td");
+		itd.innerHTML = '<button onClick="delet(this)">删除</button>';
+		itr.appendChild(itd);
+		table.appendChild(itr);	
+	}
+
+	function delet(a){
+		//a的父亲tr的父亲td的父亲table删除a的父亲tr的父亲td!
+		a.parentNode.parentNode.parentNode.removeChild(a.parentNode.parentNode);
+	}
+</script>

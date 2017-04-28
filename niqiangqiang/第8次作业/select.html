@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+select{
+	width:100px;
+	height:200px;
+	float:left;
+}
+
+div{
+	width:100px;
+	height:200px;
+	float:left;
+	margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+<select id="a1" multiple>
+   <option value="0">111111</option>
+   <option value="1">222222</option>
+   <option value="2">333333</option>
+   <option value="3">444444</option>
+</select>
+
+
+<div>
+   <button onclick="Move('a1','a2')">>></button>
+   <button onclick="Move('a2','a1')"><<</button>
+</div>
+ <select id="a2" multiple>
+
+   <option value="0">aa</option>
+   <option value="1">hgf</option>
+   <option value="2">hyt</option>
+   <option value="3">sf</option>
+</select>
+ </select>
+ 
+ 
+ 
+ <script>
+ function Move(a1,a2){
+	 var select1=document.getElementById(a1);
+	 var select2=document.getElementById(a2);
+	 var list=select1.options;
+	 for(var i=0;i<list.length;i++){
+		 if(list[i].selected){
+			 list[i].selected = false;
+	    	 select2.appendChild(list[i]);
+			 i--;
+		 }
+	 }
+ }
+	 
+ </script>
+</body>
+</html>

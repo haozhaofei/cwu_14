@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{list-style-type:none;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>ordinary path</li>
+		<li>until you</li>
+		<li>booty music</li>
+	</ul>
+	music:<input type="text" name="music" id="mid">
+	<button onclick="doAdd()">add</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var music = document.getElementById('mid').value;
+		var ul = document.getElementById('uid');
+		var t = document.createTextNode(music);
+		var li = document.createElement("li");
+		li.appendChild(t);
+		ul.appendChild(li);
+	}
+</script>

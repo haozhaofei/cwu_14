@@ -1,0 +1,93 @@
+<!doctype html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>表单添加和删除</title>  
+ </head>  
+  
+ <style>
+ do{
+	width:500px;
+	height:40px;
+ }
+ </style>
+<body>  
+<tr>
+      <td colspan="2" width="500"><div align="center">学生信息列表</div></td>
+    </tr>
+<table id="tab1" width="500" border="1" align="center" cellpadding="10">  
+	
+    <thead >  
+        <th>学号</th>  
+        <th>姓名</th>  
+        <th>性别</th>  
+        <th>年龄</th>  
+        <th>操作</th>  
+    </thead>  
+    <tbody>  
+    </tbody>  
+</table>  
+<br></br>
+<div id="do">
+<h2>添加学生</h2>
+姓名：<input type="text" id="txt1" /></br> 
+性别：<input type="text" id="txt2" /></br>
+年龄：<input type="text" id="txt3" /></br>
+<input type="button" id="btn1" value="添加"/>  
+</div>
+</body>  
+</html> 
+  
+<script>  
+function toAdd(n)  
+{  
+    if(n<10)  
+    {  
+        return '0'+n;  
+    }  
+    else  
+    {  
+        return ''+n;  
+    }  
+}     
+window.onload=function()  
+{  
+    var oTxt1=document.getElementById("txt1");  
+    var oTxt2=document.getElementById("txt2"); 
+    var oTxt3=document.getElementById("txt3"); 
+    var oBtn=document.getElementById("btn1");  
+    var oTab=document.getElementById('tab1');  
+      
+      
+    var id1=oTab.tBodies[0].rows.length+1;  
+      
+    oBtn.onclick=function()  
+    {  
+        var oTr=document.createElement('tr');  
+        var oTd=document.createElement('td');  
+        oTd.innerHTML=id1++;  
+        oTr.appendChild(oTd);  
+        var oTd=document.createElement('td');  
+        oTd.innerHTML=oTxt1.value;  
+        oTr.appendChild(oTd);  
+        var oTd=document.createElement('td');  
+        oTd.innerHTML=oTxt2.value;  
+        oTr.appendChild(oTd);  
+        var oTd=document.createElement('td');  
+        oTd.innerHTML=oTxt3.value;  
+        oTr.appendChild(oTd);  
+        var oTd=document.createElement('td');  
+        oTd.innerHTML='<a href="javascript:;">删除</a>';  
+        oTr.appendChild(oTd);  
+          
+        oTab.tBodies[0].appendChild(oTr);  
+          
+        oTd.getElementsByTagName('a')[0].onclick=function()  
+        {  
+            oTab.tBodies[0].removeChild(this.parentNode.parentNode);  
+        };  
+    };  
+      
+};  
+</script>  
+  

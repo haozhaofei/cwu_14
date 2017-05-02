@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<h1>XML DOM实例:XML DOM中table</h1>
+<table width="500" cellpadding="10" border="1" id="tid">
+  <tr align="center"> 
+    <th>学号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>年龄</th>
+    <th>操作</th>
+  </tr>  
+  <tr>
+    <td>1001</td>
+    <td>张三</td>
+    <td>男</td>
+    <td>20</td>
+    <td><button onClick="del(this)">删除</button></td>
+  </tr>  
+  <tr>
+    <td>1002</td>
+    <td>李四</td>
+    <td>女</td>
+    <td>21</td>
+    <td><button onClick="del(this)">删除</button></td>
+  </tr>
+  <tr>
+    <td>1003</td>
+    <td>王五</td>
+    <td>男</td>
+    <td>22</td>
+    <td><button onClick="del(this)">删除</button></td>
+  </tr>
+</table>
+<h1>添加学生信息</h1>
+<form action="#" name="myform" onsubmit="return add()">
+    学号：<input type="text" name="no" /><br><br>
+    姓名：<input type="text" name="name" /><br><br>
+    性别：<input type="text" name="sex" /><br><br>
+    年龄：<input type="text" name="age" /><br><br>
+<input type="submit" value="添加">
+</form>
+</body>
+</html>
+<script>
+  function del(option){
+	 option.parentNode.parentNode.parentNode.removeChild(option.parentNode.parentNode);
+  }  
+  function add(){
+	  var data = new Array();
+	  data[0] = document.myform.no.value;
+	  data[1] = document.myform.name.value;
+	  data[2] = document.myform.sex.value;
+	  data[3] = document.myform.age.value;  
+          var tab = document.getElementById("tid");
+          var tr = document.createElement("tr");
+      for(var i=0;i<data.length;i++){
+  		  var td = document.createElement("td");
+  		  var text = document.createTextNode(data[i]);
+  		  td.appendChild(text);
+  		  tr.appendChild(td);
+      }
+	  var td = document.createElement("td");
+	  td.innerHTML = '<button onClick="del(this)">删除</button>';
+	  tr.appendChild(td);
+	  tab.appendChild(tr);
+	  document.myform.reset();
+	  return false;
+  }
+</script>

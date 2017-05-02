@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>选择移动</title>
+        <style>
+           
+            #s1{
+                margin:50px;
+                width:200px;
+                float:left;
+                font-size:18px;
+                background:#fcc;
+                text-align:center;
+            }
+            #btn{
+                margin:50px;
+                float:left;
+                margin-top:200px;
+            }
+            #left{
+                width:50px;
+                height:50px;
+                font-size:18px;
+            }
+            #right{
+                width:50px;
+                height:50px;
+                font-size:18px;
+
+            }
+             #s2{
+                margin:50px;
+                 float:left;
+                 width:200px;
+                 margin-left:40px;
+                 font-size:18px;
+                 background:#fcc;
+                 text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+            <select name="s1" id="s1" size="20" multiple="true">
+                <option value="1">爱囚</option>
+                <option value="2">晴天</option>
+                <option value="3">刚好遇见你</option>
+                <option value="3">AlwaysOnLine</option>
+            </select>
+            <div id="btn">
+                <button id="left" onclick="doMove(1)"><<</button></br></br></br>
+                <button id="right"onclick="doMove(2)">>></button>
+            </div>
+            <select name="s2" id="s2" size="20" multiple="true">
+                <option value="1">庄心妍</option>
+                <option value="2">周杰伦</option>
+                <option value="3">李玉刚</option>
+                <option value="3">林俊杰</option>
+            </select>
+    </body>
+</html>
+<script>
+    function doMove(m){
+        var selectl=document.getElementById('s1');
+        var selectr=document.getElementById('s2');
+
+        
+        var op1 = new Array();
+        var op2 = new Array();
+        
+        if(m==1){
+
+            for(i=0;i<selectr.length;i++){
+                //判断选项是否选中
+                if(selectr.options[i].selected){
+                    op1.push(selectr.options[i]);//将选中的选项压入数组
+                    selectr.options[i].selected=false;
+               }
+            }
+        
+
+            for(n=0;n<op1.length;n++){
+                selectl.add(op1[n],null);//将右边选择的选项添加到左边选择列表
+            }
+
+           
+            //alert(selectr.selectedIndex);
+        }
+        if(m==2){
+            for(i=0;i<selectl.length;i++){
+               if(selectl.options[i].selected){
+                    op2.push(selectl.options[i]);
+                    selectl.options[i].selected=false;
+               }
+            }
+        
+
+            for(n=0;n<op2.length;n++){
+                selectr.add(op2[n],null);
+            }
+
+        }
+
+    }
+</script>

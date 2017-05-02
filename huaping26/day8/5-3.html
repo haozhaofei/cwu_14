@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>add elements to list</title>
+	<style>
+		ul li{list-style-type: none;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>flipped</li>
+		<li>three days to see</li>
+		<li>the love notebook</li>
+	</ul>
+	bookname:<input type="text" name="book" id="bid"/>
+	<button onclick="doAdd()">add</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var book = document.getElementById('bid').value;
+		var ul = document.getElementById('uid');
+		var t = document.createTextNode(book);
+		var li = document.createElement("li");
+		li.appendChild(t);
+		ul.appendChild(li);
+	}
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>XML DOM中select对象操作实现</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<select name="" id="sel1" size=10 style="float: left;">
+		<option value="0">lala</option>
+		<option value="1">duoduo</option>
+		<option value="2">biebie</option>
+		<option value="3">xinxin</option>
+		<option value="4">tiantian</option>
+		<option value="5">kele</option>
+	</select>
+	<div style="float: left;">
+		<button onclick="fun1('a','b')">>></button>
+		<button onclick="fun1('a','b')"><<</button>
+	</div>
+	<select name="" id="sel2" size=10 style="float: left;">
+		<option value="0">lala</option>
+		<option value="1">duoduo</option>
+		<option value="2">biebie</option>
+		<option value="3">xinxin</option>
+		<option value="4">tiantian</option>
+		<option value="5">kele</option>
+	</select>
+</body>
+</html>
+<script>
+	function fun(x,y){
+		var l = document.getElementById(x);
+		var r = document.getElementById(y);
+		var list = l.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected = false;
+				r.add(list[i]);
+				i--;
+			}
+		}
+	}
+</script>

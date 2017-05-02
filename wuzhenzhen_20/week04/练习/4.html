@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+ul,li{padding: 0px;margin: 0px;}
+	ul{width:100px;border: 1px solid #ccc;position:relative;display: none;}
+	ul li{height: 20px;background: #ccc;margin-top: 5px;width: 100px;text-align: center;list-style-type: none;line-height: 30px;}
+	li:hover{background: #fc0;}
+</style>
+</head>
+<body>
+<ul id="uid">
+<li>¸´ÖÆ</li>
+<li>Õ³Ìù</li>
+<li>¼ôÇÐ</li>
+</ul>
+</body>
+</html>
+<script>
+window.document.oncontextmenu=function(ent){
+var event=ent || window.event;
+var x=event.clientX;
+var y=event.clientY;
+var oUid=document.getElementById("uid");
+oUid.style.left=x+"px";
+oUid.style.top=y+"px";
+oUid.style.display="block";
+return false;
+}
+</script>

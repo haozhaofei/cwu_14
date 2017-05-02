@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+<meta charset="utf-8" /> 
+<head> 
+    <title></title> 
+    <script type="text/javascript"> 
+      document.addEventListener("DOMContentLoaded",function(){ 
+        var leftTxt = document.getElementById("left"); 
+        var rightTxt = document.getElementById("right"); 
+        var btnTrans = document.getElementById("btn1"); 
+        var rightArr = new Array(); 
+        function txtTrans(){ 
+          var leftVal = leftTxt.value; 
+          if(leftVal !=null || leftVal !=""){ 
+            var regExp = /\b|\B/g; 
+            var leftArr = leftVal.split(regExp); 
+            rightArr.push(leftArr[leftArr.length -1]); 
+            leftArr = leftArr.slice(0,leftArr.length - 1); 
+            leftTxt.value = leftArr.join(""); 
+            rightTxt.value = arrayReverse(rightArr).join(""); 
+          } else { 
+            clearInterval(interID); 
+          } 
+        } 
+          
+        function arrayReverse(arr){ 
+          var reversedArray = new Array(); 
+          for (var i = arr.length - 1;i >= 0;i--){ 
+            reversedArray.push(arr[i]); 
+          } 
+          return reversedArray; 
+        } 
+        btnTrans.onclick = function(){ 
+          interID = setInterval(txtTrans,100); 
+        } 
+          
+          
+      },false); 
+    </script> 
+    <style type="text/css"> 
+          
+    </style> 
+</head> 
+<body> 
+<textarea id="left" rows="5" cols="20"></textarea> 
+<button id="btn1">transfer</button> 
+<textarea id="right" rows="5" cols="20"></textarea> 
+</body> 
+</html>  
+

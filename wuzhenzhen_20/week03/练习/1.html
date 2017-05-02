@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+ul li{list-style-type:none;}
+</style>
+</head>
+<body>
+<h1 onclick="doShow(1)">女装</h1>
+<ul id="u1" style="display:none;">
+<li>连衣裙</li>
+<li>衬衫</li>
+<li>T恤</li>
+<li>牛仔裤</li>
+</ul>
+
+<h1 onclick="doShow(2)">美妆</h1>
+<ul id="u2" style="display:none;">
+<li>面膜</li>
+<li>护肤套装</li>
+<li>爽肤水</li>
+<li>防晒</li>
+</ul>
+
+<h1 onclick="doShow(3)">箱包</h1>
+<ul id="u3" style="display:none;">
+<li>斜挎包</li>
+<li>单肩包</li>
+<li>迷你包</li>
+<li>手提包</li>
+</ul>
+
+<h1 onclick="doShow(4)">鞋靴</h1>
+<ul id="u4" style="display:none;">
+<li>猫跟鞋</li>
+<li>复古方头</li>
+<li>条带单鞋</li>
+<li>潮流印花</li>
+</ul>
+</body>
+</html>
+<script>
+function doShow(i){
+var ul=document.getElementById("u"+i);
+if(ul.style.display=="none"){
+ul.style.display="block";
+}else{
+ul.style.display="none";
+}
+}
+</script>

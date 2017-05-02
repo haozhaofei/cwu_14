@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>改变标签里面内容</title>
+</head>
+<body>
+<a id="aid" href="http://www.baidu.com">百度</a>
+<button onclick="fun()">变一下</button>
+</body>
+</html>
+<script>
+function fun(){
+var sid=document.getElementById('aid');
+aid.href="http://www.sina.com";
+aid.name="cwu";
+aid.classname="cwuclassname";
+aid.title="cwutitle";
+aid.innerHTML="新浪";
+
+}
+</script>

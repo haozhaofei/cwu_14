@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        苹果<input type="checkbox" name="fruits"  value="苹果"/></br>
+        香蕉<input type="checkbox" name="fruits"  value="香蕉"/></br>
+        圣女果<input type="checkbox" name="fruits"  value="圣女果"/></br>
+        火龙果<input type="checkbox" name="fruits"  value=" 火龙果"/></br>
+        哈密瓜<input type="checkbox" name="fruits"  value="哈密瓜"/></br>
+
+        <button onclick="fn()">love</button>
+    </body>
+</html>
+<script>
+    function fn(){
+        var res =new Array();
+        var list=document.getElementsByTagName('input');
+        for(i=0;i<list.length;i++){
+            if(list[i].type=="checkbox" && list[i].checked){
+                res[res.length]=list[i].value;
+            }
+        }
+        alert(res);
+    }
+</script>

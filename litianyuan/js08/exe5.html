@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul,li{margin:0px;padding: 0px;}
+		ul{list-style-type: none;}
+		ul li{height: 30px;margin-top: 5px;background: #ccc;}
+		ul li:hover{background: #fc0;}
+		ul li.cc{background: #f0c;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>天天幼儿园</li>
+		<li>小白</li>
+		<li>小花</li>
+		<li>小明</li>
+		<li>小米</li>
+	</ul>
+	名字:<input type="text" name="name" id="nid"/>
+	<button onclick="doAdd()">添加</button>
+</body>
+</html>
+<script>
+	function doAdd(){
+		var name = document.getElementById('nid').value;
+		var ul = document.getElementById('uid');
+		var tt =document.createTextNode(name);
+		var li =document.createElement("li");
+		li.appendChild(tt);
+		ul.appendChild(li);
+	}
+</script>

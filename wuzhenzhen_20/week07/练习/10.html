@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>»ñÈ¡¸´Ñ¡¿òÖĞÔªËØ</title>
+</head>
+<body>
+ÀºÇò<input type="checkbox" name="likes[]" value="ÀºÇò"><br>
+×ãÇò<input type="checkbox" name="likes[]" value="×ãÇò"><br>
+ÓğÃ«Çò<input type="checkbox" name="likes[]" value="ÓğÃ«Çò"><br>
+Æ¹ÅÒÇò<input type="checkbox" name="likes[]" value="Æ¹ÅÒÇò"><br>
+<button onclick="fun()">°®ºÃ</button><input type="password">
+</body>
+</html>
+<script>
+function fun(){
+var list=document.getElementsByTagName('input');
+var res=new Array();
+for(var i=0;i<list.length;i++){
+if(list[i].type="cheskbox"&&list[i].checked){
+res[res.length]=list[i].value;
+}
+}
+alert(res);
+}
+</script>

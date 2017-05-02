@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javaScript中的全局变量与局部变量</title>
+</head>
+<body>
+<script>
+var str=1;
+function test(){
+var str=2;
+document.write("函数内部调用"+str);
+}
+test();
+document.write(str);
+
+function test(){
+str=1;
+var str=2;
+}
+test();
+document.write(str);
+
+var str=1;
+function hello(){
+document.write(str);
+}
+hello();
+</script>
+</body>
+</html>

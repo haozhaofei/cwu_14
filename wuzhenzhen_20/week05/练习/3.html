@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>所有文档加载在完以后执行</title>
+</head>
+<script>
+window.onload=function(){
+var arr=["red","green","blue"];
+var index=Math.ceil(Math.random()*1000)%3;
+var oBid=document.getElementById('bid');
+oBid.style.background=arr[index];
+}
+</script>
+<body id="bid">
+</body>
+</html>

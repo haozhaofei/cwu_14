@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>定时器</title>
+</head>
+<body>
+<h1>倒计时</h1>
+<form name="myform">
+<input type="text" name="h"/>时
+<input type="text" name="m"/>分
+<input type="text" name="s"/>秒
+<br/>
+<input type="button" onclick="doStart()"value="开始"/>
+<input type="button" onclick="doStop()"value="暂停"/>
+<input type="button" onclick="running()"value="继续"/>
+</form>
+<br/>
+<div>00:00:00</div>
+</body>
+</html>
+<script>
+var did=document.getElementById("did");
+var h=0,m=0,s=0;
+var mytime=null;
+
+function doStart(){
+if(mytime==null){
+h=parseInt(document.myform.h.value);
+h=parseInt(document.myform.m.value);
+h=parseInt(document.myform.s.value);
+running();
+}
+}
+
+function running(){
+did.innerHTML=h+":"+m+":"+(s<10?"0"+s:s);
+
+s--;
+if(s<0){
+s=59;
+m--;
+if(m<0){
+m=59;
+h--;
+if(h<0){
+alert("倒计时结束!");
+return;
+}
+}
+}
+}
+
+function doStop(){
+if(mytime!=null){
+clearTimeout(mytime);
+mytime=null;
+}
+}
+</script>

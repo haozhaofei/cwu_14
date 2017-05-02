@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>元素子节点类型</title>
+    </head>
+    <body>
+        <ul id="uid">
+        <li>刘备</li>
+            <li>赵子龙</li>
+            <li>关云长</li>
+            <li>孔明</li>
+            <li>卧龙</li>
+        </ul>
+        <h3></h3>
+    </body>
+</html>
+<script>
+    var list=document.getElementById('uid').childNodes;
+    for(i=0;i<list.length;i++){
+       document.write(list[i].nodeType); 
+    }
+    var h3=document.getElementsByTagName('h3')[0];
+     document.write("------"+h3.nodeType);
+</script>

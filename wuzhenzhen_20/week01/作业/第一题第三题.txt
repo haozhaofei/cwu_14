@@ -1,0 +1,106 @@
+﻿-------------------------------------------------
+    作业
+--------------------------------------------------
+	一、理论作业：
+	   1. JavaScript三种定义函数方法?
+	   
+	   一、正常方法
+function print(msg){
+    document.write(msg);
+}
+对函数进行调用的几种方式：
+函数名（传递给函数的参数1，传递给函数的参数2，….）
+变量 = 函数名（传递给函数的参数1，传递给函数的参数2，….）
+对于有返回值的函数调用，也可以在程序中直接使用返回的结果，例如：alert("sum=“+ square(2,3));
+不指定任何函数值的函数，返回undefined
+二、构造函数方法  new Function();
+//构造函数方式定义javascript函数 注意Function中的F大写
+var add=new Function('a','b','return a+b;');
+//调用上面定义的add函数
+var sum=add(3,4);
+alert(sum);
+//弹出7
+注:接受任意多个字符串参数，最后一个参数是函数体。
+如果只传一个字符串，则其就是函数体。
+三、函数直接量定义函数
+//使用函数直接量的方式定义函数
+
+var result=function(a,b){return a+b;}
+//调用使用函数直接量定义的函数
+var sum=result(7,8);
+alert(sum);
+注:函数直接量是一个表达式，它可以定义匿名函数
+匿名函数如下：
+btnElement.onclick=function(){
+alert("点击按钮");
+}
+
+	   2. arguments对象的理解？
+	   
+	   函数体内标识符arguments指向实参象引用实参象类数组象 arguments[0]arguments.length
+	   
+	   3. 简述JS中全局变量和局部变量的作用域？
+	   局部变量和全局变量同名时,会隐藏这个全局变量
+  1 没有块级作用域
+   函数中声明的变量,无论在哪里声明的,在整个函数中它们都是有定义的
+  2 未声明的变量和未赋值的变量
+    alert(u);会产生一个错误--使用未声明的变量会产生一个错误
+    var u;alert(u);会跳出undefined---使用未赋值的变量,使用的它的默认值undefined
+    
+	 
+
+	二、代码题：
+	   1. 作业全选/全不选/反选的实例
+	   2. 做一个文件进度条的特效。
+	   3. 使用自定义构造函数创建对象
+	   4. （选做） 做一个树形菜单的点击效果
+	三、预习作业：
+	   1. JavaScript中常用内置对象都有哪些？
+	   
+	   数组(Array)对象
+	   字串(String)对象
+	   数字(Math)对象
+	   日期(Date)对象
+	   
+	   2. 如何使用Date获取当前时间。
+	   
+	   <script type="text/javascript">  
+<!--  
+var myDate = new Date();  
+    myDate.getYear();      //获取当前年份(2位)  
+    myDate.getFullYear(); //获取完整的年份(4位,1970-????)  
+    myDate.getMonth();      //获取当前月份(0-11,0代表1月)  
+    myDate.getDate();      //获取当前日(1-31)  
+    myDate.getDay();        //获取当前星期X(0-6,0代表星期天)  
+    myDate.getTime();      //获取当前时间(从1970.1.1开始的毫秒数)  
+    myDate.getHours();      //获取当前小时数(0-23)  
+    myDate.getMinutes();    //获取当前分钟数(0-59)  
+    myDate.getSeconds();    //获取当前秒数(0-59)  
+    myDate.getMilliseconds(); //获取当前毫秒数(0-999)  
+    myDate.toLocaleDateString();    //获取当前日期  
+    var mytime=myDate.toLocaleTimeString();    //获取当前时间  
+    myDate.toLocaleString( );      //获取日期与时间----如果涉及到时分秒，直接使用即可。  
+if (mytime<"23:30:00"){  
+    alert(mytime);  
+}  
+//-->  
+<pre name="code" class="java"><pre name="code" class="java"></script>  
+  
+  
+	   3. 如何创建一个数组对象。
+	   
+	   var list=[];//大的集合
+var obj = new Object();  //集合对象
+obj.Id="1"  //对象属性
+source.push(obj );   //对象放入集合
+
+	   4. 如何使用对象的基本操作for..in。
+	   
+	   for...in 语句用于对数组或者对象的属性进行循环操作。
+for ... in 循环中的代码每执行一次，就会对数组的元素或者对象的属性进行一次操作。
+
+===================end==========================
+
+
+		
+			

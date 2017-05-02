@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+sid1{width=100px;
+height=100px;
+}
+sid2{width=100px;
+height=100px;
+}
+</style>
+</head>
+<body>
+<select name="" id="sid1" multiple>
+<option value="1">姚贝娜</option>
+<option value="2">张雨生</option>
+<option value="3">梅艳芳</option>
+<option value="4">黄家驹</option>
+<option value="2">邓丽君</option>
+<option value="3">迈克尔.杰克逊</option>
+<option value="4">张国荣</option>
+</select>
+<div>
+<button onclick="doMove('sid1','sid2')">>></button>
+<button onclick="doMove('sid2','sid1')"><<</button>
+</div>
+<select name="" id="sid2" multiple></select>
+</body>
+</html>
+<script>
+function doMove(d1,d2){
+var select1=document.getElementById(d1);
+var select2=document.getElementById(d2);
+var list=select1.options;
+for(var i=0;i<list.length;i++){
+if(list[i].selected){
+list[i].selected=false;
+select2.add(list[i]);
+i--;
+}
+}
+}
+</script>

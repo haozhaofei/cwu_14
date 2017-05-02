@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加删除</title>
+	<style type="text/css">
+   tr{ text-align: center;}
+ </style>
+ </head>
+ 
+ <body>
+ <h1>学生信息</h1>
+ <table width="650" cellpadding="10" id="tid"  border="1" >
+ 
+   <tr align="center"> 
+     <th>学号</th>
+     <th >姓名</th>
+     <th >院系</th>
+     <th >专业</th>
+     <th >操作</th>
+   </tr>
+   
+   <tr align="center">
+     <td>140801030</td>
+     <td>任利娟</td>
+     <td>计算机</td>
+     <td>计算机</td>
+     <td><button onClick="del(this)">删除</button></td>
+   </tr>
+   
+   <tr align="center">
+     <td>140801030</td>
+     <td>任利娟</td>
+     <td>计算机</td>
+     <td>计算机</td>
+     <td><button onClick="del(this)">删除</button></td>
+   </tr>
+ </table>
+ 
+ <br><br>
+ 
+ <h2>添加学生信息</h2>
+ <form action="#" name="myform" onsubmit="return add()">
+     学号：<input type="text" name="sno" /><br><br>
+     姓名：<input type="text" name="name" /><br><br>
+     院系：<input type="text" name="yuanxi" /><br><br>
+     专业：<input type="text" name="zhuanye" /><br><br>
+     <input type="submit" value="添加">
+ </form>
+ </body>
+ 
+ <script>
+   function del(option){
+ 	 option.parentNode.parentNode.parentNode.removeChild(option.parentNode.parentNode);
+   }
+   
+   function add(){
+ 	  var data = new Array();
+ 	  data[0] = document.myform.sno.value;
+ 	  data[1] = document.myform.name.value;
+ 	  data[2] = document.myform.yuanxi.value;
+ 	  data[3] = document.myform.zhuanye.value;
+   
+       var tab = document.getElementById("tid");
+       var tr = document.createElement("tr");
+       for(var i=0;i<data.length;i++){
+   		  var td = document.createElement("td");
+   		  var text = document.createTextNode(data[i]);
+   		  td.appendChild(text);
+   		  tr.appendChild(td);
+       }
+ 	  var td = document.createElement("td");
+ 	  td.innerHTML = '<button onClick="del(this)">删除</button>';
+ 	  tr.appendChild(td);
+ 	  tab.appendChild(tr);
+ 	  document.myform.reset();
+	  return false;
+   }
+ </script>
+ 

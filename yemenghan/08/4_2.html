@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh_eg？？自己写的效果总是出不来</title>
+	<style type="text/css">
+		ul,li{margin: 0px;padding: 0px;}
+		ul{list-style-type:none;}
+		ul li{height: 30px;margin-top: 5px;background: #ccc;}
+		ul li:hover{background: #fc0;}
+		ul li.cc{background: #f0c;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<button onclick="doDel()">删除</button>
+	</ul>
+</body>
+
+<script type="text/javascript">
+	var list = document.getElementsByTagName('li');
+	for (var i = 0; i < list.length; i++) {
+		list[i].ondblclick = function(){
+			//传统的标准属性
+			// this.className = "cc";
+			//XML DOM 方法
+			this.setAttribute("class","cc");
+		}
+	}
+
+	function doDel(){
+		for (var i = 0; i < list.length; i++) {
+			if(list[i].getAttribute("class") == "cc"){
+				list[i].parentNode.removeChild(list[i]);
+				i--;
+			}
+		}
+	}
+</script>
+</html>

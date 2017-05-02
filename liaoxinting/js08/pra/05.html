@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul,li{margin: 0px;padding: 0px;}
+		ul{list-style-type: none;}
+		ul li{height: 30px;margin-top: 5px;background: #ccc;}
+		ul li:hover{background: #fc0;}
+		ul li.cc{background: #f0c;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>ghfgh</li>
+		<li>fhj</li>
+		<li>fsd</li>
+		<li>kuk</li>
+		<li>vngy</li>
+		<li>ufj</li>
+
+	</ul>
+	name:<input type="text" name="name" id="nid"/>
+	<button onclick="doAdd()">add</button>
+</body>
+</html>
+<script type="text/javascript">
+	function doAdd(){
+		var name=document.getElementById('nid').value;
+		var ul=document.getElementById('uid');
+		var tt=document.createTextNode(name);
+		var li=document.createElement("li");
+		li.appendChild(tt);
+		ul.appendChild(li);
+	}
+</script>

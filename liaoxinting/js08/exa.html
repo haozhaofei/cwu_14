@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+     
+        <table width="50%" border="1" id="tb">
+            <tr>
+                <td>学号</td>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>年龄</td>
+                <td>操作</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>zhang</td>
+                <td>女</td>
+                <td>20</td>
+                <td><button onclick="del(this)">delete</button></td>
+               
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>lisi</td>
+                <td>女</td>
+                <td>21</td>
+                <td><button onclick="del(this)">delete</button></td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>wang</td>
+                <td>女</td>
+                <td>22</td>
+                <td><button onclick="del(this)">delete</button></td>
+            </tr>
+            
+        </table><br>
+        <h2>添加学生信息：</h2>
+        学号：<input type="text" num="num" id="uid"/><br>
+        姓名：<input type="text" num="name" id="uname"/><br>
+        性别：<input type="text" num="sex" id="usex"/><br>
+        年龄：<input type="text" num="age" id="uage"/><br><br>
+
+        <button onclick="add()" id="add" >添加</button><br>
+        
+    
+</body>
+</html>
+<script type="text/javascript">
+        
+    function add(){
+        /*var table=document.getElementById('tb');
+        var td=document.createElement("td");
+        var tr=document.createElement("tr");*/
+                  
+            var num=document.getElementById('uid').value;
+            var nn=document.createTextNode(num);
+            var tb=document.getElementById('tb');
+            var td=document.createElement("td");
+            var tr=document.createElement("tr");
+            td.appendChild(nn);
+            tr.appendChild(td);
+            tb.appendChild(tr);
+  /* for(var i=0;i<2;i++){   }*/
+    
+    for(var i=0;i<1;i++){
+        var name=document.getElementById('uname').value;
+        var tt=document.createTextNode(name);
+        var tb=document.getElementById('tb');
+        var td=document.createElement("td");
+        var tr=document.createElement("tr");
+        td.appendChild(tt);
+        tr.appendChild(td);
+        tb.appendChild(tr);
+}
+    for(var i=0;i<1;i++){
+        var sex=document.getElementById('usex').value;
+        var ss=document.createTextNode(sex);
+        var tb=document.getElementById('tb');
+        var td=document.createElement("td");
+        var tr=document.createElement("tr");
+        td.appendChild(ss);
+        tr.appendChild(td);
+        tb.appendChild(tr);
+    }
+    for(var i=0;i<1;i++){
+        var age=document.getElementById('uage').value;
+        var aa=document.createTextNode(age);
+        var tb=document.getElementById('tb');
+        var td=document.createElement("td");
+        var tr=document.createElement("tr");
+        td.appendChild(aa);
+        tr.appendChild(td);
+        tb.appendChild(tr);
+    }
+}
+
+    /*for(var i=0;i<1;i++){
+    var tr =document.createElement("tr");
+    var td =document.createElement("td");
+    var table=document.getElementById('tb');
+    td.innerHTML = '<button onclick="del(this)">delete</button>';
+    tr.appendChild(td);
+    tb.appendChild(tr);
+    
+    }
+
+    
+    var tr =document.createElement("tr");
+    var td =document.createElement("td");
+    var table=document.getElementById('tb');
+    td.innerHTML = '<button onclick="del(this)">delete</button>';
+    var pp=td.innerHTML;
+    var qq=document.createTextNode(pp);
+    td.appendChild(pp);
+    
+    tr.appendChild(td);
+    tb.appendChild(tr);
+    }*/
+
+    function del(a){
+        a.parentNode.parentNode.parentNode.removeChild(a.parentNode.parentNode);
+
+    }
+</script>
+
+
+<!-- /*for(var i=0;i<1;i++){            
+            var num=document.getElementById('uid').value;
+            var nn=document.createTextNode(num);
+            var table=document.getElementById('tb');
+            var td=document.createElement("td");
+            td.appendChild(nn);
+            tb.appendChild(td);
+    }
+    
+    for(var i=0;i<1;i++){
+        var name=document.getElementById('uname').value;
+        var tt=document.createTextNode(name);
+        var table=document.getElementById('tb');
+        var td=document.createElement("td");
+        td.appendChild(tt);
+        tb.appendChild(td);
+}
+    for(var i=0;i<1;i++){
+        var sex=document.getElementById('usex').value;
+        var ss=document.createTextNode(sex);
+        var table=document.getElementById('tb');
+        var td=document.createElement("td");
+        td.appendChild(ss);
+        tb.appendChild(td);
+    }
+    for(var i=0;i<1;i++){
+        var age=document.getElementById('uage').value;
+        var aa=document.createTextNode(age);
+        var table=document.getElementById('tb');
+        var td=document.createElement("td");
+        td.appendChild(aa);
+        tb.appendChild(td);
+    }
+
+    /*for(var i=0;i<1;i++){
+    var tr =document.createElement("tr");
+    var td =document.createElement("td");
+    var table=document.getElementById('tb');
+    td.innerHTML = '<button onclick="del(this)">delete</button>';
+    tr.appendChild(td);
+    tb.appendChild(tr);
+    
+    }
+
+    
+    var tr =document.createElement("tr");
+    var td =document.createElement("td");
+    var table=document.getElementById('tb');
+    td.innerHTML = '<button onclick="del(this)">delete</button>';
+    var pp=td.innerHTML;
+    var qq=document.createTextNode(pp);
+    td.appendChild(pp);
+    
+    tr.appendChild(td);
+    tb.appendChild(tr);
+ 
+    
+    */ -->

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>╪стьм╪ф╛</title>
+</head>
+<body>
+<img src="images/HLL-11_xuandong.gif" cwu="images/01.jpg" alt="">
+<img src="images/HLL-11_xuandong.gif" cwu="images/02.jpg" alt="">
+<img src="images/HLL-11_xuandong.gif" cwu="images/03.jpg" alt="">
+<img src="images/HLL-11_xuandong.gif" cwu="images/04.jpg" alt="">
+</body>
+</html>
+<script>
+setTimeout(function(){
+var list=document.getElementsByTagName('img');
+for(var i=0;i<list.length;i++){
+list[i].src=list[i].getAttribute('cwu');
+list[i].width="300"
+}
+},3000)
+</script>

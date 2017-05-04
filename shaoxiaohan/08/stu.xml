@@ -1,0 +1,15 @@
+<<?xml version="1.0" encoding="UTF-8"?>
+	<stulist>
+		<stu id="01">
+			<name>john</name>
+			<sex>boy</sex>
+		</stu>
+		<stu id="02">
+			<name>johnna</name>
+			<sex>girl</sex>
+		</stu>
+		<stu id="03">
+			<name>johnseph</name>
+			<sex>boy</sex>
+		</stu>
+	</stulist>

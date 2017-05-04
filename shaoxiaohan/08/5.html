@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		ul,li{margin: 0px;padding: 0px;}
+		ul{list-style-type: none;}
+		ul li{height: 30px;margin-top: 5px;background: #ccc;		}
+		ul li:hover{background: #fc0;}
+		ul li.cc{background: #fc0;}
+	</style>
+</head>
+<body>
+	<ul id="uid">
+		<li>666</li>
+		<li>777</li>
+		<li>777</li>
+		<li>999</li>
+		<li>000</li>
+		<li>###</li>
+		<li>***</li>
+		名字：<input type="text" name="iname" id="iid">
+		<button onclick="doAdd()">添加</button>
+	</ul>
+
+</body>
+</html>
+<script>
+function doAdd(){
+	var name = document.getElementById('iid').value;//获取表单value
+	var ul = document.getElementById("uid");//获取Ul元素节点
+	//创建文本节点
+	var tt = document.createTextNode("li");
+	//创建元素节点
+	var li = document.createElement("li");
+	//向li元素中添加文本节点(tt)
+	li.appendChild(tt);
+	//向Ul元素中追加li元素节点
+	ul.appendChild(li);
+
+}
+
+
+	
+</script>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单添加和删除</title>
+<style>
+table,th,td{
+	border:1px solid gray;
+}
+th{
+	background-color:blue;color:black;
+}
+td{
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<table width="630" cellpadding="10" id="tid">
+<tbody>
+
+  <tr>
+    <th scope="col">学号</th>
+    <th scope="col">姓名</th>
+    <th scope="col">性别</th>
+    <th scope="col">年龄</th>
+    <th scope="col">操作</th>
+  </tr>
+  
+  <tr>
+    <td>140801036</td>
+    <td>邵晓涵</td>
+    <td>女</td>
+    <td>20</td>
+    <td><button onClick="del(this)">删除</button></td>
+  </tr>
+  
+ 
+  
+  <tr>
+    <td>140801028</td>
+    <td>刘欣欣</td>
+    <td>女</td>
+    <td>21</td>
+    <td><button onClick="del(this)">删除</button></td>
+  </tr>
+  
+  <tr>
+    <td>140801022</td>
+    <td>伍珍珍</td>
+    <td>女</td>
+    <td>21</td>
+    <td><button onClick="del(this)">删除</button></td>
+  </tr>
+  
+  </tbody>
+</table>
+
+<br><br>
+
+<h1>添加学生信息</h1>
+<form action="#" name="myform" onsubmit="return add()">
+    学号：<input type="text" name="sno" /><br><br>
+    姓名：<input type="text" name="name" /><br><br>
+    性别：<input type="text" name="sex" /><br><br>
+    年龄：<input type="text" name="age" /><br><br>
+    <input type="submit" value="添加">
+
+
+</form>
+
+<script>
+
+  function del(option){
+	 option.parentNode.parentNode.parentNode.removeChild(option.parentNode.parentNode);
+  }
+  
+  function add(){
+	  var data = new Array();
+	  data[0] = document.myform.sno.value;
+	  data[1] = document.myform.name.value;
+	  data[2] = document.myform.sex.value;
+	  data[3] = document.myform.age.value;
+  
+      var tbody = document.getElementById("tid").getElementsByTagName("tbody")[0];
+      var tr = document.createElement("tr");
+      for(var i=0;i<data.length;i++){
+		  var td = document.createElement("td");
+		  var text = document.createTextNode(data[i]);
+		  td.appendChild(text);
+		  tr.appendChild(td);
+      }
+	  var td = document.createElement("td");
+	  td.innerHTML = '<button onClick="del(this)">删除</button>';
+	  tr.appendChild(td);
+	  tbody.appendChild(tr);
+	  document.myform.reset();
+	  return false;
+  
+  }
+</script>
+
+</body>
+</html>
+

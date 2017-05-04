@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<ul id="uid">
+		<li>anna</li>
+		<li>snow</li>
+		<li>arya</li>
+		<li>sansa</li>
+		<li>robb</li>
+		<li>kalesi</li>
+	</ul>
+	<h3></h3>
+
+</body>
+</html>
+<script>
+//获取ul中的li节点
+	var list = document.getElementById('uid').getElementsByTagName('li');
+	document.write(list.length);
+	var list2 = document.getElementById("uid").childNodes;
+	document.write(list2.length);
+	for(var i=0;i<list2.length;i++){
+		if(list2[i].nodeType == 1){
+			document.write(list2[i].nodeType)
+		}
+	}
+</script>

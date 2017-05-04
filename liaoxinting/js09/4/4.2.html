@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form name="myform" onsubmit="return doLoad()">
+		用户:<input type="text" name="m1" onblur="doLoad(this.value)"><span id="sid"></span><br><br>
+		密码:<input type="text" name="m2"><br><br>
+	</form>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	function doLoad(){
+		var xmlhttp;
+		if(window.XMLHttpRequest){
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4&&xmlhttp.status==200){
+		  		var str=xmlhttp.responseText;
+		   		if(str=="yes"){
+		   			document.getElementById('sid').innerHTML="*用户已存在";
+		   			document.getElementById('sid').style.color="red";
+
+		   		}else{
+		   			document.getElementById('sid').innerHTML="可以使用该用户";
+		   			document.getElementById('sid').style.color="green";
+		   		}
+		    }
+	  	}
+		xmlhttp.open("GET","4.php?name="+name,true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xmlhttp.send();
+		return false;
+	}
+
+
+</script>

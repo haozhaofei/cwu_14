@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#did{width:300px;height: 100px;border:1px solid grey;}
+
+	</style>
+</head>
+<body>
+
+	<div id="did"></div>
+	<button onclick="doLoad()">说话</button>
+
+</body>
+</html>
+<script type="text/javascript">
+
+
+	function doLoad(){
+		var xmlhttp;
+		if(window.XMLHttpRequest){
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4&&xmlhttp.status==200){
+		  		var str=xmlhttp.responseText;
+		   		document.getElementById("did").innerHTML = str;
+		    }
+	  	}
+	  	
+		xmlhttp.open("GET","1.php",true);
+		xmlhttp.send();
+	}
+
+</script>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xml DOM实例：xml DOM中的table</title>
+	<style>
+		#box{
+			width:500px;
+			height:600px;
+		}
+		#table{
+			 border:1px solid #ccc;
+		}
+		#table tr td{
+			 border:1px solid black;
+			 width:100px;
+			 text-align: center;
+		}
+		#form{
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<div id="box">
+	<h3>xml DOM实例：xml DOM中的table</h3>
+	<table id="table">
+		<thead>
+			<tr style="font-weight:bold;">
+				<td>学号</td>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1002</td>
+				<td>王昭君</td>
+				<td>女</td>
+				<td>20</td>
+				<td><button onclick="del(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>1004</td>
+				<td>貂蝉</td>
+				<td>女</td>
+				<td>20</td>
+				<td><button onclick="del(this)">删除</button></td>
+			</tr>
+			<tr>
+				<td>1006</td>
+				<td>小乔</td>
+				<td>女</td>
+				<td>20</td>
+				<td><button onclick="del(this)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<form action="#" id="form" name="myform" onsubmit="return false">
+		<h3>添加学生信息</h3>
+		学号：<input type="text" name="num"  width="200"></br ></br >
+		姓名：<input type="text" name="uname"  width="200"></br ></br >
+		性别：<input type="text" name="sex" width="200"></br ></br >
+		年龄：<input type="text" name="age"  width="200"></br ></br >
+		<input type="submit" value="添加" onclick="ADD()" />
+	</form>
+	</div>
+	</center>
+</body>
+</html>
+<script>
+	function ADD(){
+		var date=[];
+		date[0]=document.myform.num.value;
+		date[1]=document.myform.uname.value;
+		date[2]=document.myform.sex.value;
+		date[3]=document.myform.age.value;
+
+		 var tbody = document.getElementById('table').getElementsByTagName('tbody')[0];
+
+		 var tr=document.createElement('tr');
+
+		for(i=0;i<date.length;i++){
+			var td=document.createElement('td');
+			var text=document.createTextNode(date[i]);
+				td.appendChild(text);
+				tr.appendChild(td);
+
+		}	
+		var td=document.createElement('td');
+			td.innerHTML="<button onclick='del(this)'>删除</button>";
+		tr.appendChild(td);
+		tbody.appendChild(tr);	
+		
+
+	}
+	function del(obj){
+		var table=obj.parentNode.parentNode.parentNode;
+		var tr=obj.parentNode.parentNode;
+		table.removeChild(tr);
+
+
+	}
+</script>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select id="a" multiple style="height: 200px;width: 100px;">
+
+	   <option value="1">苹果</option>
+	   <option value="2">西瓜</option>
+	   <option value="3">樱桃</option>
+	   
+	</select>
+
+	<button onclick="change1('a','b')">转向右</button>
+	<button onclick="change1('b','a')">转向左</button>
+
+	<select id="b" multiple style="height: 200px;width: 100px;">
+                <option value="4">桃子</option>
+		<option value="5">提子</option>
+	   	<option value="6">砂糖橘</option>
+	</select>
+</body>
+</html>
+<script>
+	function change1(a,b){
+		var s1=document.getElementById(a);
+		var s2=document.getElementById(b);
+		var list=s1.options;
+		for(var i=0;i<list.length;i++){
+			if(list[i].selected){
+				list[i].selected=false;
+			 	s2.appendChild(list[i]);//用了xml
+				i--;//无法多选就i--
+		 	}
+	 	}
+			
+		 
+	}
+</script>

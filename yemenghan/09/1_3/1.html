@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh_ajax</title>
+	<style>
+		#did{width:300px;height: 100px;border:1px solid red;}
+	</style>
+</head>
+<body>
+	<div id="did"></div>
+	<button onclick="doLoad()">说话</button>
+</body>
+</html>
+<script type="text/javascript">
+	function doLoad(){
+		if (window.XMLHttpRequest) {
+			var xmlhttp= new XMLHttpRequest();
+		};
+
+		xmlhttp.onreadystatechange = function(){
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			document.getElementById("did").innerHTML = xmlhttp.responseText;
+			Text;
+		}
+
+		}
+		xmlhttp.open("GET","1.php",true);
+		xmlhttp.send();
+	}
+	
+
+</script>

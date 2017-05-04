@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ymh_ajax实例</title>
+</head>
+<body>
+	<form action="" name="myform" onsubmit="return doLoad()">
+		数字1：<input type="text" name="m1"><br>
+		数字2：<input type="text" name="m2"><br>
+		结果：<input type="text" name="res" readonly style="border:0px;"><br>
+		<input type="submit" value="求和">
+	</form>
+</body>
+<script type="text/javascript">
+	function doLoad(){
+		var ma = document.myform.m1.value;
+		var mb = document.myform.m2.value;
+
+		// 1、创建AJAX对象
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp = new XMLHttpRequest();
+		}else{
+			xmlhttp = new ActionXObject("Microsoft.XMLHTTP");
+		}
+
+		// 2、回调函数
+		xmlhttp.onreadystatechange = function(){
+			if (xmlhttp.readyState==4 && xmlhttp.states==200) {
+				var str = xmlhttp.responseText;
+				document.myform.res.value = str;		
+			}
+		}
+
+		// 3、初始化操作
+		// 第一个参数：发送方式
+		// 第二个参数：发送地址
+		// 第三参数：同步或是异步（默认是异步）
+		xmlhttp.open("GET","2.php?ml="+m1+"&m2="+m2,true);
+		// 4、发送
+		xmlhttp.send();
+
+		return false;		
+	}
+</script>
+</html>

@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:300px;height: 100px;border:1px solid red;}
+	</style>
+</head>
+<body>
+	<form action="" name="myform" onsubmit="return doLoad()">
+		数字1:<input type="text" name="m1"><br><br>
+		数字2:<input type="text" name="m2"><br><br>
+		结果:<input type="text" name="res" readonly style="border:0px;"><br><br>
+		<input type="submit" value="求和">
+	</form>
+</body>
+</html>
+<script>
+	function doLoad(){
+		var m1 = document.myform.m1.value;
+		var m2 = document.myform.m2.value;
+		
+		var xmlhttp;
+		if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {// code for IE6, IE5
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+
+		
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4 && xmlhttp.status==200){
+		  		var str = xmlhttp.responseText;
+		   		document.myform.res.value = str;
+		    }
+	  	}
+		
+		xmlhttp.open("GET","2.php?m1="+m1+"&m2="+m2,true);
+		
+		xmlhttp.send();
+
+		return false;
+	}
+	
+
+</script>

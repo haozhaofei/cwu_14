@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<people>
+	<peo id="01">
+		<name>小王</name>
+		<sex>男</sex>
+		<work>学生</work>
+	</peo>
+
+	<peo id="02">
+		<name>小蓝</name>
+		<sex>女</sex>
+		<work>程序员</work>
+	</peo>
+
+	<peo id="03">
+		<name>小李</name>
+		<sex>男</sex>
+		<work>卖油条</work>
+	</peo>
+</people>

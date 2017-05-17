@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三页</title>
+	<style type="text/css">
+	body,ul,li,div,a,img,form,h2,h3{
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	body{
+		min-width: 1280px;
+	}
+	#header-contain{
+		position:fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #FFF;
+		z-index: 999;
+		}
+	#header{
+		height: 100px;
+	}
+	.gender-width{
+		margin-top: 0px;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: auto;
+		position: relative;
+		width: 1280px;
+	}
+	#header-left{
+		padding: 0 0 0 50px;
+		float: left;
+	}
+	#logo{
+		width: 152px;
+		margin: 37px 0 0 0;
+	}
+	#logo a{
+		font-size: 54px;
+		font-family: Helvetica;
+		color: #e6435e;
+	}
+	a{
+		color: #333;
+		text-decoration: none;
+	}
+	#header-quik-link{
+		height: 100px;
+		width: 101px;
+		background-color: #333;
+		float: right;
+	}
+	.my-email{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 49px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		top: 20px;
+		left: 15px;
+		font-family: cursive;
+	}
+	.my-email:hover{
+		color: #e16a7e; 
+	}
+	.my-qq{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 49px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		top: 20px;
+		left: 35px;
+		font-family: cursive;
+	}
+	.my-qq:hover{
+		color: #e16a7e;
+	}
+	.my-weibo{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 50px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		left: 15px;
+		top: 40px;
+		font-family: cursive;
+	}
+	.my-weibo:hover{
+		color: #e16a7e;
+	}
+	.my-weixing{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 50px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		left: 30px;
+		top: 40px;
+		font-family: cursive;
+	}
+	.my-weixing:hover{
+		color: #e16a7e;
+	}
+	#header-right{
+		float: right;
+		text-align: right;
+		zoom: 1;
+	}
+	#header-bumf{
+		padding:20px 17px 0 0;
+	}
+	#header-number{
+		margin: 1px 4px 0 33px;
+		font-size: 16px;
+		font-family: Helvetica;
+		font-weight: 300;
+		letter-spacing: 1.8px;
+		float: right;
+	}
+	#search-icon{
+		margin: 0 0 0 5px;
+		float: right;
+	}
+	#header-search{
+		height: 25px;
+		width: 231px;
+		position: relative;
+		float: right;
+	}
+	#header-nav{
+		margin: 22.2px 20px 0 0;
+	}
+	#header-nav ul{
+		list-style: none;
+		margin: 0;
+		
+		font-weight: 300;
+		letter-spacing: 0.8px;
+	}
+	#header-nav ul li{
+		float: left;
+		margin:0;
+	}
+	#header-nav ul li a{
+		display: block;
+		padding: 0 17px;
+		line-height: 32px;
+		color: #333;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: Helvetica;
+	}
+	#header-nav ul li a:hover{
+		background-color: #e16a7e;
+	}
+
+	.cb{
+		clear: both;
+	}
+	#header-line{
+		margin: 20px auto 0 auto;
+		border-bottom: 1px solid #DBDBDB;
+		width: 1280px;
+	}
+	#header-sapce{
+		height: 120px;
+		margin-bottom: 20px;
+	}
+	#thirdContainer{
+		position: relative;
+		margin: 102px 0 0 0;
+	}
+	#tc-container{
+		height: 82px;
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 50;
+	}
+	#tc-expandable{
+		background-color: #F0DDDF;
+		padding: 40px 0 55px 0;
+		z-index: 1;
+	}
+	#ct-text{
+		background-color: #F0DDDF;
+		height: 82px;
+		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.f1{
+		font-size: 16px;
+		float: left;
+		padding: 0 0 0 50px;
+		margin: 0;
+		line-height: 82px;
+		color: #333;
+	}
+	#ct-open{
+		float: right;
+		cursor: pointer;
+		display: block;
+		text-decoration: none;
+		width: 226px;
+		height: 50px;
+		background-color: #e16a7e;
+		padding: 0 0 0 54px;
+		color: #333;
+		font-size: 19px;
+		margin: 20px 50px 0 0;
+	}
+	#content{
+		margin-top: 1em;
+	}
+	#footer{
+		background-color: #262525;
+		padding: 60px 0;
+	}
+	.content{
+		padding: 0 50px 0 50px;
+		margin: 20px auto 0;
+	}
+	#content-left{
+		width: 280px;
+		float: left;
+		display: block;
+		overflow: hidden;
+	}
+	#content-right{
+		width: 880px;
+		float: right;
+		display: block;
+		overflow: hidden;
+	}
+	#side-nav{
+		margin: 0 0 30px 0;
+		display: block;
+		overflow: hidden;
+	}
+	#side-nav ul{
+		list-style: none;
+		margin: 0;
+	}
+	#side-nav ul li{
+		margin: 0;
+	}
+	#side-nav ul li a{
+		display: block;
+		padding: 12px 0 9px 0;
+		border-bottom: 1px solid #ccc;
+		color: #333;
+		text-decoration: none;
+		padding-left: 10px;
+		font-size: 13px;
+	}
+	#side-second{
+		background-color: #e6cbce;
+		padding: 25px 20px;
+		margin: 0 0 20px 0;
+	}
+	#side-second p{
+		font-family: Helvetica;
+		font-size: 16px;
+		margin: 0 0 20px 0;
+		line-height: 1.4;
+		color: #333;
+	}
+	#side-second ul{
+		list-style: none;
+		margin: 0;
+	}
+	#side-second ul li{
+		font-size: 16px;
+		padding: 0 0 0 27px;
+		margin: 0 0 15px 0;
+		background: url(img2/right.png);
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-clip: border-box;
+		background-origin: padding-box;
+		background-position-x: left;
+		background-position-y: center;
+		background-size: auto auto;
+	}
+	#side-second ul li p{
+		font-family: Helvetica;
+		font-size: 16px;
+		margin: 0 0 20px 0;
+		line-height: 1.4;
+		color: #333;
+	}
+	#side-third{
+		margin: 0 0 20px 0;
+	}
+	#sd-th-body{
+		border-left: 9px solid #e16a7e;
+		padding: 0 0 0 10px;
+		margin: 0 0 15px 0;
+	}
+	#sd-th-body p{
+		font-family: Times;
+		font-size: 16px;
+		font-style: italic;
+		margin: 0;
+		line-height: 1.4;
+		color: #333;
+	}
+	#sd-th-last span{
+		font-size: 14px;
+		background-color: #e6cbce;
+		padding: 3px 15px 3px 3px;
+		margin: 0 0 0 19px;
+	}
+	#ct-rt-first{
+		margin: 0;
+		float: left;
+	}
+	#ct-rt-first h1{
+		font-size: 80px;
+		line-height: 1;
+		font-weight: normal;
+		font-family: Helvetica;
+		margin: 0 0 20px 0;
+		color: 0 0 20px 0;
+		color: #333
+	}
+	#ser-c1{
+		width: 33%;
+		float: left;
+	}
+	#ser-c1 h2{
+		font-family: Times;
+		font-style: italic;
+		font-size: 22px;
+		line-height: 1.2;
+		background: none;
+		padding: 0;
+		display: inline;
+		margin: 0 0 12px 0;
+		color: #333;
+	}
+	#ser-c2{
+		width: 33%;
+		float: left;
+	}
+	#ser-c2 p{
+		padding: 0 15px 0 0;
+		margin: 0 0 12px 0;
+		font-family: Helvetica;
+		font-size: 13px;
+		line-height: 1.4;
+		color: #333;
+	}
+	#ser-c3{
+		width: 33%;
+		float: left;
+	}
+	#ser-c3 p{
+		padding: 0;
+		font-family: Helvetica;
+		margin: 0 0 12px 0;
+		font-size: 13px;
+		line-height: 1.4;
+		color: #333;
+	}
+	h3{
+		font-size: 16px;
+		padding: 10px 0 12px 0;
+		margin: 0 0 20px 0;
+		border-bottom: 1px solid #ccc;
+	}
+	#rt-sc-item{
+		margin: 0 20px 0 0;
+		width: 280px;
+		float: left;
+		overflow: hidden;
+	}
+	#rt-sc-item-last{
+		margin: 0;
+		width: 280px;
+		float: left;
+		overflow: hidden;
+	}
+	.sc-item-image{
+		margin: 0 0 10px 0;
+	}
+	.sc-item-image a{
+		display: block;
+		position: relative;
+		font-family: Helvetica;
+		color: #e16a7e;
+		text-decoration: none;
+		background: #e16a7e;
+	}
+	img{
+		display: block;
+		border: 0;
+		outline: 0;
+	}
+	.sc-item-text{
+		padding: 20px 0 0 0;
+		position: relative;
+	}
+	.sc-item-text p{
+		font-family: Helvetica;
+		margin: 0 0 12px 0;
+		font-size: 13px;
+		line-height: 1.4;
+		color: #333;
+	}
+	#person{
+		padding: 0 0 12px 0;
+	}
+	h3{
+		margin: 5px 0 20px 0;
+		font-size: 16px;
+		padding: 10px 0 12px 0;
+		border-bottom: 1px solid #ccc;
+	}
+	.person{
+		margin: 0 20px 10px 0;
+		width: 280px;
+		height: 140px;
+		float: left;
+		background-color: #F0DDDF;
+		position: relative;
+	}
+	.person-first{
+		margin: 0 20px 10px 0;
+		width: 280px;
+		height: 140px;
+		float: left;
+		background-color: #F0DDDF;
+		position: relative;
+	}
+	.person-second{
+		margin: 0 0 10px 0;
+		width: 280px;
+		height: 140px;
+		float: left;
+		background-color: #F0DDDF;
+		position: relative;
+	}
+	.person-last{
+		margin: 0 0 10px 0;
+		width: 280px;
+		height: 140px;
+		float: left;
+		background-color: #F0DDDF;
+		position: relative;
+	}
+	#ct-rt-last{
+		padding: 0 0 12px 0;
+	}
+	#footer-container{
+		float: left;
+	}
+	#footer-container a{
+		background-color: #ccc;
+		
+	}
+	#footer-container a p{
+		font-size: 80px;
+		float: left;
+		background-color: #ccc;
+		margin: 0px 40px 0 0;
+		width: 120px;
+		height: 120px;
+		text-align: center;
+		font-family: cursive;
+		color: red;
+	}
+	#footer-container a p:hover{
+		background-color: #a4a1a1;
+	}
+	.copyright{
+		margin: 60px 0 0 0;
+		color: #F1F0E6;
+		width: 350px;
+		float: right;
+		font-family: Helvetica;
+		font-size: 13px;
+		line-height: 1.4;
+	}
+	#keep-in-loop{
+		width: 285px;
+		float: right;
+	}
+	#login_form p{
+		color: red;
+		font-size: 30px;
+		font-family: Helvetica;
+		line-height: 1;
+		margin: 0 0 20px 0;
+	}
+	label{
+		color: #F1F0E6;
+		display: inline-block;
+		width: 40px;
+		font-size: 13px;
+	}
+	#footer input{
+		width: 210px;
+		height: 25px;
+		line-height: 25px;
+		margin: 0 5px 20px 0;
+		border: 1px solid #FFF;
+		border-radius: 0;
+	}
+	#f-submit{
+		float: right;
+		width: 212px;
+		line-height: 27px;
+		background-color: red;
+		border: none;
+		margin: 0 32px 0 0;
+		font-size: 15px;
+	}
+	.cb{
+		overflow: hidden;
+		clear: both;
+	}
+	.gender-width{
+		width: 1280px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.blank{
+		display: block;
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+	<div id="header-contain">
+		<div id="header">
+			<div class="gender-width">
+				<div id="header-left">
+					<div id="logo">
+						<a href="#" id="a1">My<span style="color:#605e5e">Web</span></a>
+					</div>
+				</div>
+				<div id="header-quik-link">
+					<a class="my-email" href="#">E</a>
+					<a class="my-qq" href="#">Q</a>
+					<div class="cb"></div>
+					<a class="my-weibo" href="#">W</a>
+					<a class="my-weixing" href="#">X</a>
+				</div>
+				<div id="header-right">
+					<div id="header-bumf">
+						<div id="header-number">140801023</div>
+						<div id="header-search">
+							<input class="text" type="text">	|	
+							<div id="search-icon">
+								<img src="img2/search.png">
+							</div>
+						</div>
+						<div class="cb"></div>
+					</div>
+					<div id="header-nav">
+						<ul>
+							<li>
+								<a href="myjs.html">first</a>
+							</li>
+							<li>
+								<a href="second.html">second</a>
+							</li>
+							<li>
+								<a href="third.html" style="background-color:#e16a7e">third</a>
+							</li>
+							<li>
+								<a href="#">fourth</a>
+							</li>
+							<li>
+								<a href="#">sixth</a>
+							</li>
+							<li>
+								<a href="#">seventh</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cb"></div>
+				</div>
+			</div>
+		</div>
+		<div id="header-line" class="gender-width"></div>
+	</div>	
+	<div class="cb"></div>
+	<div id="header-sapce"></div>
+	<div class="cb"></div>
+	<div second-body>
+		<div class="gender-width blank">
+			<div id="content" class="content">
+				<div id="content-left">
+					<div id="side-nav">
+						<ul>
+							<li>
+								<a href="#">best interface design & technology</a>
+							</li>
+							<li>
+								<a href="#">best effects of dynamic</a>
+							</li>
+							<li>
+								<a href="#">best constomer experience</a>
+							</li>
+						</ul>
+					</div>
+					<div id="side-second">
+						<p>why I chose this web?</p>
+						<ul>
+							<li>
+								<p>amusing</p>
+							</li>
+							<li>
+								<p>rich content</p>
+							</li>
+							<li>
+								<p>interactive experience is good</p>
+							</li>
+							<li>
+								<p>good-looking</p>
+							</li>
+						</ul>
+					</div>
+					<div id="side-third">
+						<div id="sd-th-body">
+							<p>
+								Hello, welcome to my website, there are the most novel experience, the best design concept and the best interactive experience, I hope you can experience in my website happy, remember praise.
+							</p>
+						</div>
+						<div id="sd-th-last">
+							<span>Yanyan Ruan</span>
+						</div>
+					</div>
+				</div>
+				<div id="content-right">
+					<div id="ct-rt-first">
+						<h1>my service</h1>
+						<div id="ser-c1">
+							<h2>What kind of service do you want? Home service or remote service, we can all change according to your needs.Please leave your comments.</h2>
+						</div>
+						<div id="ser-c2">
+							<p>The services we provide include network service, telephone consultation service, manual question answering service and home visiting service. Are you satisfied with our service?If you have any questions, please look at the text on the right.</p>
+						</div>
+						<div id="ser-c3">
+							<p>
+								Didn't you experience any service? Did you see any email addresses? I told you, do not have to find, because I did not provide any help, This is a fake website.ha ha ha ha!
+							</p>	
+						</div>
+					</div>
+					<div class="cb"></div>
+					<div id="ct-rt-second">
+						<h3></h3>
+						<div id="rt-sc-item">
+							<div class="sc-item-image">
+								<a href="#">
+									<img src="img2/computer2.png" width="100%" height="100%" onmouseover="this.src='img2/computer1.png'" onmouseout="this.src='img2/computer2.png'">
+								</a>
+							</div>
+							<div class="sc-item-text">
+								<p>
+									Starting in May 14, 2017, you can choose to browse online or download offline browsing without traffic.
+								</p>
+							</div>
+						</div>
+						<div id="rt-sc-item">
+							<div class="sc-item-image">
+								<a href="#">
+									<img src="img2/note2.png" width="100%" height="100%" onmouseover="this.src='img2/note1.png'" onmouseout="this.src='img2/note2.png'">
+								</a>
+							</div>
+							<div class="sc-item-text">
+								<p>
+									From May 14, 2017, please note down the key section. You can choose to see it or send it to us. We may not be able to receive it.
+								</p>
+							</div>
+						</div>
+						<div id="rt-sc-item-last">
+							<div class="sc-item-image">
+								<a href="#">
+									<img src="img2/idea2.png" width="100%" height="100%" onmouseover="this.src='img2/idea1.png'" onmouseout="this.src='img2/idea2.png'">
+								</a>
+							</div>
+							<div class="sc-item-text">
+								<p>
+									Do you have any good ideas? You can share it on the website so that people all over the world can see your creativity. Maybe we'll invite you to our team. Although I am the only one.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div id="ct-rt-third">
+						<h3>our team</h3>
+					</div>
+					<div id="person">
+						<div class="person">
+							<a href="#">
+								<img src="img2/p3.jpg" style="position:relative;padding:10px 10px 0px 140px;">
+							</a>
+						</div>
+						<div class="person-first">
+							<a href="#">
+								<img src="img2/p1.jpg" style="position:relative;padding:10px 0px 10px 10px;">
+							</a>
+						</div>
+						<div class="person-second">
+							<a href="#">
+								<img src="img2/p4.jpg" style="position:relative;padding:10px 0px 10px 10px;">
+							</a>
+						</div>
+						<div class="person-first">
+							<a href="#">
+								<img src="img2/p2.jpg" style="position:relative;padding:10px 10px 0px 140px;">
+							</a>
+						</div>
+						<div class="person">
+							<a href="#">
+								<img src="img2/p5.jpg" style="position:relative;padding:10px 0px 10px 10px;">
+							</a>
+						</div>
+						<div class="person-last">
+							<a href="#">
+								<img src="img2/p6.jpg" style="position:relative;padding:10px 0px 10px 10px;">
+							</a>
+						</div>
+						<div class="cb"></div>
+					</div>
+					<div class="cb"></div>
+					<div id="ct-rt-last"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cb"></div>
+	<div id="thirdContainer">
+		<div id="tc-container">
+			<div id="tc-expandable">
+				<div class="gender-width"></div>
+				<div class="cb"></div>	
+			</div>
+			<div id="ct-text">
+				<div class="gender-width">
+					<p class="f1">
+						<strong>What next?</strong>What can I help you?you can call me or send message to my E-mail.</p>
+					<a href="#" id="ct-open">
+						<p><strong>need me help?</strong></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cb"></div>
+	</div>
+	<div id="footer">
+		<div class="gender-width">
+			<div class="content">
+				<div id="footer-container">
+					<a href="#"><p>E</p></a>
+					<a href="#"><p>Q</p></a>
+					<a href="#"><p>W</p></a>
+					<a href="#"><p>X</p></a>
+					<a href="#"><p>G</p></a>
+					<div clss="cb"></div>
+					<p class="copyright">
+					<span>reference site:www.ifour.co.uk@2017.5.11.ruanyanyan</span>
+					</p>
+				</div>
+				
+				<div id="keep-in-loop">
+					<form id="login_form">
+						<p>
+							keep in the loop
+						</p>
+						<div clss="form-fields">
+							<label for="f-name">name</label>
+							<input id="f-name" name="c-name" value="" data-required="true" type="text" onblur="doLoad(this.value)">
+							<span id="star"></span>
+							<br>
+							<label for="f-email">email</label>
+							<input id="f-email" name="c-email" value="" data-required="true" type="email">
+							<span id="star"></span>
+							<br>
+							<button id="f-submit" class="fr" type="submit" onsubmit="return doLoad()">join our family</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cb"></div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	function doLoad(name){
+		//1.创建AJAX对象
+		var xmlhttp;
+		if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {// code for IE6, IE5
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+
+		//2.回调函数 
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4 && xmlhttp.status==200){
+		  		var str = xmlhttp.responseText;
+		   		if(str == "yes"){
+		   			document.getElementById('star').innerHTML = "N";
+		   			document.getElementById('star').style.color = "red";
+
+		   		}else{
+		   			document.getElementById('star').innerHTML = "Y";
+		   			document.getElementById('star').style.color = "green";
+		   		}
+		    }
+	  	}
+		//3.初始化操作  //第1个参数:发送方式 / 第2个参数:发送地址  第3个参数: 同步(false)或是异步(true) //默认是异步
+		xmlhttp.open("GET","3.php?name="+name,true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		//4.发送
+		xmlhttp.send();
+
+		return false;
+	}
+	
+</script>

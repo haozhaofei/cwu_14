@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二页</title>
+	<style type="text/css">
+	body,ul,li,div,a,img,form{
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	body{
+		min-width: 1280px;
+	}
+	#header-contain{
+		position:fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #FFF;
+		z-index: 999;
+		}
+	#header{
+		height: 100px;
+	}
+	.gender-width{
+		margin-top: 0px;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: auto;
+		position: relative;
+		width: 1280px;
+	}
+	#header-left{
+		padding: 0 0 0 50px;
+		float: left;
+	}
+	#logo{
+		width: 152px;
+		margin: 37px 0 0 0;
+	}
+	#logo a{
+		font-size: 54px;
+		font-family: Helvetica;
+		color: #e6435e;
+	}
+	a{
+		color: #333;
+		text-decoration: none;
+	}
+	#header-quik-link{
+		height: 100px;
+		width: 101px;
+		background-color: #333;
+		float: right;
+	}
+	.my-email{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 49px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		top: 20px;
+		left: 15px;
+		font-family: cursive;
+	}
+	.my-email:hover{
+		color: #e16a7e; 
+	}
+	.my-qq{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 49px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		top: 20px;
+		left: 35px;
+		font-family: cursive;
+	}
+	.my-qq:hover{
+		color: #e16a7e;
+	}
+	.my-weibo{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 50px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		left: 15px;
+		top: 40px;
+		font-family: cursive;
+	}
+	.my-weibo:hover{
+		color: #e16a7e;
+	}
+	.my-weixing{
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		width: 50px;
+		height: 50px;
+		font-size: 20px;
+		color: red;
+		text-decoration: none;
+		position: relative;
+		left: 30px;
+		top: 40px;
+		font-family: cursive;
+	}
+	.my-weixing:hover{
+		color: #e16a7e;
+	}
+	#header-right{
+		float: right;
+		text-align: right;
+		zoom: 1;
+	}
+	#header-bumf{
+		padding:20px 17px 0 0;
+	}
+	#header-number{
+		margin: 1px 4px 0 33px;
+		font-size: 16px;
+		font-family: Helvetica;
+		font-weight: 300;
+		letter-spacing: 1.8px;
+		float: right;
+	}
+	#search-icon{
+		margin: 0 0 0 5px;
+		float: right;
+	}
+	#header-search{
+		height: 25px;
+		width: 231px;
+		position: relative;
+		float: right;
+	}
+	#header-nav{
+		margin: 22.2px 20px 0 0;
+	}
+	#header-nav ul{
+		list-style: none;
+		margin: 0;
+		
+		font-weight: 300;
+		letter-spacing: 0.8px;
+	}
+	#header-nav ul li{
+		float: left;
+		margin:0;
+	}
+	#header-nav ul li a{
+		display: block;
+		padding: 0 17px;
+		line-height: 32px;
+		color: #333;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: Helvetica;
+	}
+	#header-nav ul li a:hover{
+		background-color: #e16a7e;
+	}
+
+	.cb{
+		clear: both;
+	}
+	#header-line{
+		margin: 20px auto 0 auto;
+		border-bottom: 1px solid #DBDBDB;
+		width: 1280px;
+	}
+	#header-sapce{
+		height: 120px;
+		margin-bottom: 20px;
+	}
+	#bd-ct-header{
+		width: 1180px;
+		padding: 20px 0 50px 0;
+		position: relative;
+		margin: 0 auto;
+	}
+	.a{
+		width: 420px;
+		height: 255px;
+		margin: 0 20px 20px 0;
+		position: relative;
+		overflow: hidden;
+		float: left;
+	}
+	.a:hover{
+		transform: scale(1.2,1.2);
+		z-index: 10;
+	}
+	.b{
+		float: right;
+		width: 270px;
+		height: 450px;
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+	}
+	.b:hover{
+		transform: scale(1.2,1.2);
+		z-index: 10;
+	}
+	.c{
+		width: 450px;
+		height: 295px;
+		margin: 0 20px 20px 0;
+		position: relative;
+		overflow: hidden;
+		float: right;
+	}
+	.c:hover{
+		transform: scale(1.2,1.2);
+		z-index: 10;
+	}
+	.d{
+		float: left;
+		position: relative;
+		overflow: hidden;
+		width: 420px;
+		height: 175px;
+		margin: 0 20px 0 0;
+	}
+	.d:hover{
+		transform: scale(1.2,1.2);
+		z-index: 10;
+	}
+	.e{
+		width: 145px;
+		height: 135px;
+		margin: 0 20px 0 0;
+		position: relative;
+		overflow: hidden;
+		float: left;
+	}
+	.e:hover{
+		transform: scale(1.2,1.2);
+		z-index: 10;
+	}
+	.f{
+		float: left;
+		width: 285px;
+		height: 135px;
+		margin: 0 20px 0 0;
+	}
+	.f:hover{
+		transform: scale(1.2,1.2);
+		z-index: 10;
+	}
+	.section{
+		position: relative;
+		overflow: hidden;
+	}
+	.contant{
+		padding: 0 50px 0 50px;
+		margin: 20px auto 0;
+	}
+	#roll-date{
+		position: absolute;
+		top: 180px;
+		right: 50px;
+		width: 439px;
+		height: 140px;
+	}
+	#stage{
+		position: relative;
+		background-color: #e6cbce;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+	}
+	#sction-text{
+		width: 470px;
+		padding: 143px 0;
+		font-size: 22px;
+		font-family: Times;
+		font-style: italic;
+		line-height: 1.2;
+		background: none;
+	}
+	#bd-ct-third{
+		background-color: rgb(17,21,26);
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-position-x: center;
+		background-position-y: top;
+		background-size: auto auto;  
+	}
+	.th-ct-title{
+		color: red;
+		font-family: Helvetica;
+		font-size: 72px;
+		line-height: 1;
+	}
+	#founding-year{
+		margin: 0 30px 150px 0;
+		float: left;
+		width: 272px;
+		overflow: hidden;
+	}
+	.counter{
+		position: relative;
+		z-index: 1;
+	}
+	#fy-number{
+		position: relative;
+		z-index: 2;
+		float: right;
+		height: 134px;
+	}
+	#founding-year p{
+		line-height: 1.4;
+		font-family: Helvetica;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		margin: 25px 0 0 0;
+	}
+	#teacher-number{
+		margin: 0 30px 150px 0;
+		float: left;
+		width: 272px;
+		overflow: hidden;
+	}
+	#tn-number{
+		position: relative;
+		z-index: 2;
+		float: right;
+		height: 134px;
+	}
+	#teacher-number p{
+		line-height: 1.4;
+		font-family: Helvetica;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		margin: 25px 0 0 0;
+	}
+	#student-number{
+		margin: 0 30px 150px 0;
+		float: left;
+		width: 272px;
+		overflow: hidden;
+	}
+	#sn-number{
+		position: relative;
+		z-index: 2;
+		float: right;
+		height: 134px;
+	}
+	#student-number p{
+		line-height: 1.4;
+		font-family: Helvetica;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		margin: 25px 0 0 0;
+	}
+	#major-number{
+		margin: 0 0 150px 0;
+		float: left;
+		width: 272px;
+		overflow: hidden;
+	}
+	#mn-number{
+		position: relative;
+		z-index: 2;
+		float: right;
+		height: 134px;
+	}
+	#major-number p{
+		font-family: Helvetica;
+		font-size: 20px;
+		color: #FFF;
+		text-align: center;
+		margin: 25px 0 0 0;
+		line-height: 1.4;
+	}
+	.box-box{
+		width: 60px;
+		height: 100px;
+		background-color: #454545;
+		float: left;
+		list-style-type: none;
+		padding: 0;
+		margin: 0 0 5px 5px;
+	}
+	.fourth-title{
+		font-family: Helvetica;
+		font-size: 72px;
+		margin: 70px 0 50px 0;
+		line-height: 1;
+		color: #333;
+	}
+	#big-small{
+		width: 355px;
+		padding: 0 0 180px 0;
+		font-size: 22px;
+		font-family: Times;
+		font-style: italic;
+		line-height: 1.2;
+		background: none;
+		color: #333;
+		margin: 0 0 12px 0;
+	}
+	#fourth-contanier{
+		position: absolute;
+		top: -20px;
+		right: 0;
+		width: 700px;
+		height: 350px;
+		margin: 0 0px 50px 50px;
+	}
+	#ft-stage{
+		position: relative;
+		background-color: #e6cbce;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		z-index: 10;
+	}
+	#ft-stage:hover{
+		transform: scale(1.2,1.2);
+		z-index: 12;
+	}
+	.fif-title{
+		font-family: Helvetica;
+		font-size: 72px;
+		margin: 70px 0 50px 0;
+		line-height: 1;
+		color: #333;
+	}
+	.fif-view-stats{
+		width: 170px;
+		height: 300px;
+		margin: 0 26px 50px 0;
+		float: left;
+	}
+	.pie_left, .pie_right 
+	{ 
+		width: 170px; 
+		height: 170px; 
+		position: absolute; top: 0;left: 0; 
+	} 
+	.left, .right 
+	{ 
+		display: block; 
+		width:170px; 
+		height:170px; 
+		background:#e6cbce; 
+		border-radius: 50%; 
+		
+		position: absolute; top: 0; left: 0;
+		transform: rotate(30deg); 
+	} 
+	.pie_right, .right 
+	{ 
+		clip:rect(0,auto,auto,100px); 
+	} 
+	.pie_left, .left 
+	{ 
+		clip:rect(0,100px,auto,0); 
+	} 
+	.fif_circle{
+		width: 170px; height: 170px; 
+		position: absolute;
+		border-radius: 50%; 
+		background: red;
+		/* background-color: transparent;
+		background-repeat: no-repeat; 
+		background-attachment: scroll;
+		background-size: auto auto;
+		background-position-x: center;
+		background-position-y: center;  */
+	}
+	.fif_pic{
+		width: 150px;
+		height: 150px;
+		line-height: 170px;
+		border-radius: 50%; 
+		background-color: #FFF;
+		/* background-color: transparent; */
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: auto auto;
+		background-position-x: center;
+		background-position-y: center; 
+		font-family: Helvetica;
+		font-size: 18px;
+		text-align: center;
+		position: relative;
+		margin: 10px 10px 5px ;
+		color: #333;
+	}
+	.fif_text{
+		text-align: center;
+		font-family: Helvetica;
+		font-size: 18px;
+		position: relative;
+		padding: 200px 0px 0px 0px;
+	}
+	.fif_text span{
+		position: relative;
+		padding-left: 5px;
+	}
+	.fif-view-stats p span{
+		
+		font-size: 36px;
+	}
+	#thirdContainer{
+		position: relative;
+		margin: 102px 0 0 0;
+	}
+	#tc-container{
+		height: 82px;
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 50;
+	}
+	#tc-expandable{
+		background-color: #F0DDDF;
+		padding: 40px 0 55px 0;
+		z-index: 1;
+	}
+	#ct-text{
+		background-color: #F0DDDF;
+		height: 82px;
+		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.f1{
+		font-size: 16px;
+		float: left;
+		padding: 0 0 0 50px;
+		margin: 0;
+		line-height: 82px;
+		color: #333;
+	}
+	#ct-open{
+		float: right;
+		cursor: pointer;
+		display: block;
+		text-decoration: none;
+		width: 226px;
+		height: 50px;
+		background-color: #e16a7e;
+		padding: 0 0 0 54px;
+		color: #333;
+		font-size: 19px;
+		margin: 20px 50px 0 0;
+	}
+	#footer{
+		background-color: #262525;
+		padding: 60px 0;
+	}
+	.content{
+		padding: 0 50px 0 50px;
+		margin: 20px auto 0;
+	}
+	#footer-container{
+		float: left;
+	}
+	#footer-container a{
+		background-color: #ccc;
+		
+	}
+	#footer-container a p{
+		font-size: 80px;
+		float: left;
+		background-color: #ccc;
+		margin: 0px 40px 0 0;
+		width: 120px;
+		height: 120px;
+		text-align: center;
+		font-family: cursive;
+		color: red;
+	}
+	#footer-container a p:hover{
+		background-color: #a4a1a1;
+	}
+	.copyright{
+		margin: 60px 0 0 0;
+		color: #F1F0E6;
+		width: 350px;
+		float: right;
+		font-family: Helvetica;
+		font-size: 13px;
+		line-height: 1.4;
+	}
+	#keep-in-loop{
+		width: 285px;
+		float: right;
+	}
+	#login_form p{
+		color: red;
+		font-size: 30px;
+		font-family: Helvetica;
+		line-height: 1;
+		margin: 0 0 20px 0;
+	}
+	label{
+		color: #F1F0E6;
+		display: inline-block;
+		width: 40px;
+		font-size: 13px;
+	}
+	#footer input{
+		width: 210px;
+		height: 25px;
+		line-height: 25px;
+		margin: 0 5px 20px 0;
+		border: 1px solid #FFF;
+		border-radius: 0;
+	}
+	#f-submit{
+		float: right;
+		width: 212px;
+		line-height: 27px;
+		background-color: red;
+		border: none;
+		margin: 0 32px 0 0;
+		font-size: 15px;
+	}
+	.cb{
+		overflow: hidden;
+		clear: both;
+	}
+	.gender-width{
+		width: 1280px;
+		margin: 0 auto;
+		position: relative;
+	}
+	</style>
+</head>
+<body class="second">
+	<div id="second-body">
+		<div id="header-contain">
+		<div id="header">
+			<div class="gender-width">
+				<div id="header-left">
+					<div id="logo">
+						<a href="#" id="a1">My<span style="color:#605e5e">Web</span></a>
+					</div>
+				</div>
+				<div id="header-quik-link">
+					<a class="my-email" href="#">E</a>
+					<a class="my-qq" href="#">Q</a>
+					<div class="cb"></div>
+					<a class="my-weibo" href="#">W</a>
+					<a class="my-weixing" href="#">X</a>
+				</div>
+				<div id="header-right">
+					<div id="header-bumf">
+						<div id="header-number">140801023</div>
+						<div id="header-search">
+							<input class="text" type="text">	|
+							<div id="search-icon">
+								<img src="img2/search.png">
+							</div>
+						</div>
+						<div class="cb"></div>
+					</div>
+					<div id="header-nav">
+						<ul>
+							<li>
+								<a href="myjs.html">first</a>
+							</li>
+							<li>
+								<a href="second.html" style="background-color:#e16a7e">second</a>
+							</li>
+							<li>
+								<a href="third.html">third</a>
+							</li>
+							<li>
+								<a href="#">fourth</a>
+							</li>
+							<li>
+								<a href="#">sixth</a>
+							</li>
+							<li>
+								<a href="#">seventh</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cb"></div>
+				</div>
+			</div>
+		</div>
+			<div id="header-line" class="gender-width"></div>
+		</div>	
+		<div class="cb"></div>
+		<div id="header-sapce"></div>
+		<div id="sc-body-contanier">
+			<div id="bd-ct-header">
+				<div class="a">
+					<img src="img2/x1.jpg" width="100%">
+				</div>
+				<div class="b">
+					<img src="img2/x2.jpg" width="100%">
+				</div>
+				<div class="c">
+					<img src="img2/x3.jpg" width="100%">
+				</div>
+				<div class="d">
+					<img src="img2/x4.jpg" width="100%">
+				</div>
+				<div class="e">
+					<img src="img2/x5.png" width="100%">
+				</div>
+				<div class="f">
+					<img src="img2/x6.jpg" width="100%">
+				</div>
+				<div class="cb"></div>
+			</div>
+			<div class="section" style="background:#e6cbce">
+				<div class="gender-width">
+					<div class="contant">
+						<div id="roll-date">
+							<div id="stage">
+								<div id="stage_R" class="st" style="position: absolute; margin: 0px; top: 3.15%; width:23%; height: 962.1%;right: auto; bottom: auto; background-size: 100% 100%;background-position: 0px 0px; background-repeat: no-repeat;background-image: url(img2/s1.png);">
+								</div>
+								<div id="stage_N" class="st" style="position: absolute; margin: 0px;left: 74.94%; top: 2.14%; width:21.4%; height: 427.6%;right: auto; bottom: auto; background-size: 100% 100%;background-position: 0px 0px; background-repeat: no-repeat;background-image: url(img2/s4.png);">
+								</div>
+								<div id="stage_A" class="st" style="position: absolute; margin: 0px;left: 51.03%; top: 3.57%; width:23.9%; height: 1069%;right: auto; bottom: auto; background-size: 100% 100%;background-position: 0px 0px; background-repeat: no-repeat;background-image: url(img2/s3.png);">
+								</div>
+								<div id="stage_U" class="st" style="position: absolute; margin: 0px;left: 26.42%; top: 2.14%; width:24.6%; height: 1175.9%;right: auto; bottom: auto; background-size: 100% 100%;background-position: 0px 0px; background-repeat: no-repeat;background-image: url(img2/s2.png);">
+								</div>
+							</div>
+						</div>
+						<p id="sction-text">
+							2014 I came to CHINA WOMEN'S UNIVERSITY,It's a beautiful unversity.Most of the school are grils,this is a novel experience and feel so cool.three years have passed,I adapt to life of the university.but I have a little scared to contact boys.I hope it can be best and change my stuation. We're going to graduate and than go our separate ways,I wish that have a happy life for me.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="bd-ct-third" class="section">
+				<div class="gender-width">
+					<div class="contant">
+						<p class="th-ct-title">vital digit</p>
+						<div id="th-ct-view">
+							<div id="founding-year">
+								<div class="counter">
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">1</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">9</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">4</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">9</p>
+									</div>
+								</div>
+								<div id="fy-number"></div>
+								<div class="cb"></div>
+								<p>founding year of university</p>
+							</div>
+							<div id="teacher-number">
+								<div class="counter">
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">0</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">5</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">4</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">6</p>
+									</div>
+								</div>
+								<div id="tn-number"></div>
+								<div class="cb"></div>
+								<p>teacher quantity statistcs</p>
+							</div>
+							<div id="student-number">
+								<div class="counter">
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">6</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">9</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">4</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">2</p>
+									</div>
+								</div>
+								<div id="sn-number"></div>
+								<div class="cb"></div>
+								<p>student quantity statistics</p>
+							</div>
+							<div id="major-number">
+								<div class="counter">
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">0</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">0</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">2</p>
+									</div>
+									<div class="box-box">
+										<p style="font-size:60px;font-family:Helvetica;margin: 15px auto;">5</p>
+									</div>
+								</div>
+								<div id="mn-number"></div>
+								<div class="cb"></div>
+								<p>major quantity staristics</p>
+							</div>
+							<div class="cb"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section" style="background:#e6cbce">
+				<div class="gender-width">
+					<div class="contant">
+						<p class="fourth-title">big and small</p>
+						<p id="big-small">
+							This is a small test, do not care about it, just a special effect, please ignore, Xiao Bian has copy incompetent. The international convention, the other school series number 140801023
+						</p>
+						<div id="fourth-contanier">
+							<div id="ft-stage">
+								<img src="img2/p12.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="bd-ct-fifth" class="section">
+				<div class="gender-width">
+					<div class="contant">
+						<p class="fif-title">in the media</p>
+						<div id="fifth-view">
+							<div class="fif-view-stats">
+								<div class="fif_circle">
+									<div class="pie_left">
+										<div class="left" id="circleleft1"></div>
+									</div> 
+									<div class="pie_right">
+										<div class="right" id="circleright1"></div>
+									</div> 
+									<p class="fif_pic">
+										<img src="img2/game.png">
+									</p>
+								</div>
+								<p class="fif_text">
+									<span class="persent" id="s1">50</span>%
+									<br>
+									gamers
+								</p>
+							</div>
+							<div class="fif-view-stats">
+								<div class="fif_circle">
+									<div class="pie_left">
+										<div class="left" id="circleleft2"></div>
+									</div> 
+									<div class="pie_right">
+										<div class="right" id="circleright2"></div>
+									</div> 
+									<p class="fif_pic">
+										<img src="img2/cell.png">
+									</p>
+								</div>
+								<p class="fif_text" id="s">
+									<span class="persent" id="s2">90</span>%
+									<br>
+									cellphone
+								</p>
+							</div>
+							<div class="fif-view-stats">
+								<div class="fif_circle">
+									<div class="pie_left">
+										<div class="left" id="circleleft3"></div>
+									</div> 
+									<div class="pie_right">
+										<div class="right" id="circleright3"></div>
+									</div> 
+									<p class="fif_pic">
+										<img src="img2/computer.png">
+									</p>
+								</div>
+								<p class="fif_text">
+									<span class="persent" id="s3">80</span>%
+									<br>
+									computer
+								</p>
+							</div>
+							<div class="fif-view-stats">
+								<div class="fif_circle">
+									<div class="pie_left">
+										<div class="left" id="circleleft4"></div>
+									</div> 
+									<div class="pie_right">
+										<div class="right" id="circleright4"></div>
+									</div> 
+									<p class="fif_pic">
+										<img src="img2/news.png">
+									</p>
+								</div>
+								<p class="fif_text">
+									<span class="persent" id="s4">77</span>%
+									<br>
+									news
+								</p>
+							</div>
+							<div class="fif-view-stats">
+								<div class="fif_circle">
+									<div class="pie_left">
+										<div class="left" id="circleleft5"></div>
+									</div> 
+									<div class="pie_right">
+										<div class="right" id="circleright5"></div>
+									</div> 
+									<p class="fif_pic">
+										<img src="img2/tv.png">
+									</p>
+								</div>
+								<p class="fif_text">
+									<span class="persent" id="s5">55</span>%
+									<br>
+									television
+								</p>
+							</div>
+							<div class="fif-view-stats">
+								<div class="fif_circle">
+									<div class="pie_left">
+										<div class="left" id="circleleft6"></div>
+									</div> 
+									<div class="pie_right">
+										<div class="right" id="circleright6"></div>
+									</div> 
+									<p class="fif_pic">
+										<img src="img2/radio.png">
+									</p>
+								</div>
+								<p class="fif_text">
+									<span class="persent" id="s6">90</span>%
+									<br>
+									broadcast
+								</p>
+							</div>
+							<div class="cb"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cb"></div>
+	<div id="thirdContainer">
+		<div id="tc-container">
+			<div id="tc-expandable">
+				<div class="gender-width"></div>
+				<div class="cb"></div>	
+			</div>
+			<div id="ct-text">
+				<div class="gender-width">
+					<p class="f1">
+						<strong>What next?</strong>What can I help you?you can call me or send message to my E-mail.</p>
+					<a href="#" id="ct-open">
+						<p><strong>need me help?</strong></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cb"></div>
+	</div>
+	<div id="footer">
+		<div class="gender-width">
+			<div class="content">
+				<div id="footer-container">
+					<a href="#"><p>E</p></a>
+					<a href="#"><p>Q</p></a>
+					<a href="#"><p>W</p></a>
+					<a href="#"><p>X</p></a>
+					<a href="#"><p>G</p></a>
+					<div clss="cb"></div>
+					<p class="copyright">
+					<span>reference site:www.ifour.co.uk@2017.5.11.ruanyanyan</span>
+					</p>
+				</div>
+				
+				<div id="keep-in-loop">
+					<form id="login_form">
+						<p>
+							keep in the loop
+						</p>
+						<div clss="form-fields">
+							<label for="f-name">name</label>
+							<input id="f-name" name="c-name" value="" data-required="true" type="text" onblur="doLoad(this.value)">
+							<span id="star"></span>
+							<br>
+							<label for="f-email">email</label>
+							<input id="f-email" name="c-email" value="" data-required="true" type="email">
+							<span id="star"></span>
+							<br>
+							<button id="f-submit" class="fr" type="submit" onsubmit="return doLoad()">join our family</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cb"></div>
+	</div>	
+</body>
+</html>
+<script type="text/javascript">
+	function doLoad(name){
+		//1.创建AJAX对象
+		var xmlhttp;
+		if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {// code for IE6, IE5
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+
+		//2.回调函数 
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4 && xmlhttp.status==200){
+		  		var str = xmlhttp.responseText;
+		   		if(str == "yes"){
+		   			document.getElementById('star').innerHTML = "N";
+		   			document.getElementById('star').style.color = "red";
+
+		   		}else{
+		   			document.getElementById('star').innerHTML = "Y";
+		   			document.getElementById('star').style.color = "green";
+		   		}
+		    }
+	  	}
+		//3.初始化操作  //第1个参数:发送方式 / 第2个参数:发送地址  第3个参数: 同步(false)或是异步(true) //默认是异步
+		xmlhttp.open("GET","3.php?name="+name,true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		//4.发送
+		xmlhttp.send();
+
+		return false;
+	}
+	
+        
+      
+</script>
+<script type="text/javascript">
+var ss = document.getElementById('s1').innerHTML.substr(0,3);
+    /*当span中数值为xx%时，需要截取*/
+    console.log(ss);
+        var num = ss * 3.6;
+        if (num<=180) {
+            document.getElementById('circleright1').style.transform="rotate(" + num + "deg)"; 
+        } else {
+            document.getElementById("circleright1").style.transform="rotate(180deg)";
+
+            document.getElementById("circleleft1").style.transform="rotate(" + (num - 180) + "deg)";
+      };
+
+      var ss2 = document.getElementById('s2').innerHTML.substr(0,3);
+    /*当span中数值为xx%时，需要截取*/
+    console.log(ss2);
+        var num = ss2 * 3.6;
+        if (num<=180) {
+            document.getElementById('circleright2').style.transform="rotate(" + num + "deg)"; 
+        } else {
+            document.getElementById("circleright2").style.transform="rotate(180deg)";
+
+            document.getElementById("circleleft2").style.transform="rotate(" + (num - 180) + "deg)";
+      };
+
+      var ss3 = document.getElementById('s3').innerHTML.substr(0,3);
+    /*当span中数值为xx%时，需要截取*/
+    console.log(ss3);
+        var num = ss3 * 3.6;
+        if (num<=180) {
+            document.getElementById('circleright3').style.transform="rotate(" + num + "deg)"; 
+        } else {
+            document.getElementById("circleright3").style.transform="rotate(180deg)";
+
+            document.getElementById("circleleft3").style.transform="rotate(" + (num - 180) + "deg)";
+      };
+
+       var ss4 = document.getElementById('s4').innerHTML.substr(0,3);
+    /*当span中数值为xx%时，需要截取*/
+    console.log(ss4);
+        var num = ss4 * 3.6;
+        if (num<=180) {
+            document.getElementById('circleright4').style.transform="rotate(" + num + "deg)"; 
+        } else {
+            document.getElementById("circleright4").style.transform="rotate(180deg)";
+
+            document.getElementById("circleleft4").style.transform="rotate(" + (num - 180) + "deg)";
+      };
+
+       var ss5 = document.getElementById('s5').innerHTML.substr(0,3);
+    /*当span中数值为xx%时，需要截取*/
+    console.log(ss5);
+        var num = ss5 * 3.6;
+        if (num<=180) {
+            document.getElementById('circleright5').style.transform="rotate(" + num + "deg)"; 
+        } else {
+            document.getElementById("circleright5").style.transform="rotate(180deg)";
+
+            document.getElementById("circleleft5").style.transform="rotate(" + (num - 180) + "deg)";
+      };
+
+       var ss6 = document.getElementById('s6').innerHTML.substr(0,3);
+    /*当span中数值为xx%时，需要截取*/
+    console.log(ss6);
+        var num = ss6 * 3.6;
+        if (num<=180) {
+            document.getElementById('circleright6').style.transform="rotate(" + num + "deg)"; 
+        } else {
+            document.getElementById("circleright6").style.transform="rotate(180deg)";
+
+            document.getElementById("circleleft6").style.transform="rotate(" + (num - 180) + "deg)";
+      };
+
+
+</script>

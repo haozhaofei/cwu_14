@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<script>
+		$(function(){
+			//匹配每一个第一个子元素
+			$("li:first-child").css("color","#f12345");
+			//匹配每一个最后一个子元素
+			$("li:last-child").css("color","#f12300");
+			$("li:nth-child(2)").css("color","#f2f9ac");
+
+		})
+	</script>
+</head>
+<body>
+	<ul>
+		<li>aaa</li>
+		<li>bbb</li>
+		<li>ccc</li>
+		<li>ddd</li>
+	</ul>
+	<ul>
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+	</ul>
+</body>
+</html>

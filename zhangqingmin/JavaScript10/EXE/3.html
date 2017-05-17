@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX-POST</title>
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+
+</head>
+<body>
+	<div id="did" style="width:200px;height:200px;border:1px solid red"></div>
+	<button >按钮</button>
+</body>
+</html>
+<script>
+	$("button").click(function(){
+		$.post("1.php", { names: "猪八戒", time: "2pm" },
+ 			function(data){
+  				$("div").html(data);
+			});
+	})
+	
+</script>

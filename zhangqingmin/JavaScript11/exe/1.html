@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX-GET</title>
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<script>
+		$(function(){
+			//获取匹配LI的第一个元素
+			//$("li:first").css("color","red");
+			//获取匹配LI的最后一个元素
+			//$("li:last").css("color","red");
+			//获取偶数li节点(在中国是奇数)
+			//$("li:even").css("color","#f0c");
+			////获取奇数li节点(在中国是偶数)
+			//$("li:odd").css("color","#f0c");
+			//等于索引位置的li节点(3)
+			//$("li:eq(3)").css("color","#f0c");
+			//大于索引位置的LI节点
+			//$("li:gt(3)").css("color","#ddd");
+			//小于索引位置的LI节点
+			$("li:lt(3)").css("color","#f0c");
+			$("li").mouseover(function(){
+				//如果想用jQuery的所有方法或是属性一定要用$(this)
+				$(this).animate({paddingLeft: "+=50",fontSize:"40px" }, 500);
+			}).mouseout(function(){
+				$(this).animate({paddingLeft: "-=50",fontSize:"20px" }, 1000);
+			})
+		})
+	</script>
+</head>
+<body>
+	<ul>
+		<li>赵云</li>
+		<li>关羽</li>
+		<li>张飞</li>
+		<li>小乔</li>
+		<li>大乔</li>
+	</ul>
+	
+</body>
+</html>

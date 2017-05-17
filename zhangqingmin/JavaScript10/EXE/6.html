@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery入口的在种写法</title> 
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<script>
+		//第一种
+		$(function(){
+			//获取所有的LI节点
+			$("li").css("color","red");
+			//获取ID为lid
+			$("#lid").css("color","blue");
+			//获取class为cid
+			$(".cid").css("color","yellow");
+			//获取ol下的li
+			$("ol li").css("color","green");
+		})
+
+	</script>
+
+</head>
+<body>
+	<ul>
+		<li>aaa</li>
+		<li>bbb</li>
+		<li id="lid">ccc</li>
+		<li>ddd</li>
+		<li class="cid">eee</li>
+		<li>fff</li>
+	</ul>
+	
+	<ol>
+		<li>ggg</li>
+		<li>hhh</li>
+		<li>iii</li>
+	</ol>
+</body>
+</html>

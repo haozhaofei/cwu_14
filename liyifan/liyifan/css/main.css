@@ -1,0 +1,272 @@
+w2@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+	}
+	
+	
+	
+	
+article, aside, figcaption, figure, footer, header, main, nav, section { 
+display: block; 
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+body{
+
+	background-image: url(../img/4b1c77dejw1enhbzv212yj21gu0pq41o.jpg);
+	}
+main{
+	border-right:5px solid #FFF; 
+	max-width:100%;
+	float:left;
+	width:640px;
+	padding:20px;
+	}
+.aside{
+	
+	max-width:70%;
+	float:right;
+	max-width:300px;
+	}
+	
+	
+img{
+	max-width:100%;
+	padding-top:6px;
+	}
+	/*body盒子*/
+.wrapper {
+	max-width:997px;
+	margin:0 auto;
+	background-image:
+	url(../img/7055c786gw1eqb4kcasi1j21hc0u0457.jpg);
+	
+	}
+/*main 盒子*/
+.box{
+	max-width:610px;
+	}
+/*table图片表格样式*/
+table td{border:3px dotted #666;}
+	
+/*表单样式*/
+	
+.form{	
+     float:right; 
+	 box-shadow:4px 4px 4px 4px  #EFEFEF spread;
+	 }
+.text{
+	font-color:#E2F6FD;
+	background:#C1F5B7;
+	}
+.submit{
+	background:#029443;
+	font-family:"华文琥珀";
+	color:#FFF;
+	border:none;
+	box-shadow:1px 1px 1px#E99D9F; 
+	border-radius :1.5px;
+	text-shadow:1px 1px 1px #26BEDD;}
+.submit:hover{
+		background: #F32438;
+		}
+/*main第一部分图片盒子*/
+.before{
+	max-width:610px;
+	max-height:620px;
+     }
+/*main第二部分盒子*/
+.composition {
+	max-width:100%;
+	float:left;
+	width:660px;
+	padding-top:8px;
+    }
+/*main第二部分天真文本*/	
+.first{
+	border-bottom:1px solid #c7c7c8;
+	font-family:"华文行楷";
+	background-image: url(../img/home-wrapper.jpg) ;
+	}
+/*home about contact div 链接*/
+.section-2 {
+	border-top:4px solid #019443;
+	border-bottom:1px solid #c7c7c8;
+		background: url(../img/pcqq68bgb.jpg) ;
+	}	
+/*无序列表转换成行*/
+          
+.section-2 .nav-main li{
+	display:inline-block;	
+	padding:10px;
+	background: url(../img/home-wrapper.jpg);
+	border-radius:0px 10px 0px 10px;  
+	}
+/*去掉a 的样式*/
+.nav-main li a:link{
+    text-shadow:6px 6px 4px #ABE4D5;
+	text-decoration:none;
+	}
+.nav-main li a:hover .section-1 a:hover{
+	display:block;
+	}/**/
+/*制作about下拉菜单*/	
+.link{
+    position:relative;
+}
+.relation{
+    position:absolute;
+    left:-1000px;
+}
+.link:hover .relation{
+    left:auto;
+}
+.relation li a:link{
+
+     display:inline-block;
+	 text-decoration:none;
+     }	
+
+/*图片圆角设计*/	
+.fan{
+	border-radius:230px/130px;
+    }
+
+/*web的title*/
+h1{
+	position: absolute;
+	top: 15px;
+    left: 40%;
+	font-family:"华文彩云";
+	font-size: 72px;
+	color: #2C597C;
+
+	}
+ /*my zone标题*/	
+h2{	font-family:"方正舒体";
+    font-size:40px;
+	box-shadow:6px 6px 4px 4px #66FFFF;
+	}
+	/*h3-my zone的div*/
+.title{
+		background:url(../img/home-wrapper.jpg);
+		/*h4的图片来自Veerle's blog 3.0-header~\(^o^)/~*/
+		max-width:610px;}
+
+	/*图片标题*/	
+h4{
+	display:inline-block;
+   
+	 }
+  /*图片标题链接*/
+  
+h4 a:link{	color: #845B95;
+ text-decoration:none;	}
+h4	a:hover{	color:#EEE;}
+ /*.before 图片盒子*/	
+	
+.before li{
+	max-width:200px;
+    float:left;
+	position:relative;
+	}
+
+    /*副级标题和aside标题设计*/	
+
+h3 {   	font-family:"方正舒体";
+		float:left;
+		background-color:#CCC;
+	border:4px solid  #999;
+    border-radius:0px 0px 0px 10px;   
+	padding-bottom:3px;
+	}
+	/*第二段落弦子简介*/	
+.second{
+	font-size:13px;
+	font-family:"华文细黑";
+	}
+	/*aside -li-a设计*/	
+.links li a:link{
+    color:#464646; 
+	text-decoration:none;;}
+.links li a:hover{	
+    text-decoration:underline;}
+	
+  
+/*每个小div里的底部*/
+	.footer{
+		font-family:"华文琥珀";
+		box-shadow:4px 3px 4px inset #CCFF00 ;
+		text-shadow:6px 6px 4px #999;}
+/*body-div里的底部*/
+footer{
+	padding-bottom:11px;
+	clear:both;
+	font-size:15px;
+	font-weight:bold;
+	}
+	/*网页布局适应*/	
+
+@media only screen and (max-width:960px){
+/*aside盒子（.aside包含第一个mod盒子和第二个after盒子）*/
+.aside{
+   border:6px solid #CCC; 
+   border-top:none;
+   width:900px;
+   max-width:100%;
+   margin:0 auto;
+      }
+.mod{
+	
+	 float:right;
+	 width:330px;
+	 max-width:90%;
+	  margin-right:39px;
+	  }
+.after{
+	 margin-left:26px;
+	 max-width:90%;
+
+	}	
+
+
+}
+@media only screen and (max-width:700px){		
+
+.aside{
+    margin:0 auto;
+	border:none; 
+   width:600px;
+   max-width:100%;
+  
+      }
+.after {
+   float:left;
+   border:none; 
+   margin:25px;
+   }
+.mod {
+   float:left;
+   border:none; 
+   margin:25px;
+   }	
+	
+	}
+/*http://hao.uisdc.com/designer/*/
+

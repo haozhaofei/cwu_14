@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>个人图书馆</title>
+<meta name="description" content="登录注册！" /> 
+<meta name="keywords" content="登录注册" />
+<meta name="author" content="个人图书馆" />
+<meta name="Copyright" content="个人图书馆" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link href="images/logo.png" rel="shortcut icon" />
+
+</head>
+
+<body>
+<body>
+<div class="cotn_principal">
+  <div class="cont_centrar">
+    <div class="cont_login">
+      <div class="cont_info_log_sign_up">
+        <div class="col_md_login">
+          <div class="cont_ba_opcitiy">
+            <h2>登录</h2>
+            <p>已有账号，直接登录！</p>
+            <button class="btn_login" onclick="cambiar_login()">登录</button>
+          </div>
+        </div>
+        <div class="col_md_sign_up">
+          <div class="cont_ba_opcitiy">
+            <h2>注册</h2>
+            <p>还没有账号？免费注册！</p>
+            <button class="btn_sign_up" onclick="cambiar_sign_up()">注册</button>
+          </div>
+        </div>
+      </div>
+      <div class="cont_back_info">
+        <div class="cont_img_back_grey"> <img src="images/po.jpg" alt="" /> </div>
+      </div>
+      <div class="cont_forms" >
+      <div class="cont_img_back_"> <img src="images/po.jpg" alt="" /> </div>
+
+    <div class="cont_form_login"> <a href="#" onclick="ocultar_login_sign_up()" >X</a>
+    <h2>登录</h2>
+    <form name="myform" onsubmit="return doLoad()">
+      <input type="text" placeholder="User" /><br><br>
+      <input type="password" placeholder="Password"/>
+    </form>
+   <a href="2.html"> <button class="btn_login" onclick="cambiar_login()">登录</button></a>
+
+    </div>
+
+    <div class="cont_form_sign_up"> <a href="#" onclick="ocultar_login_sign_up()">X</a>
+    <h2>注册</h2> 
+    <form action="db.php" method="get">
+      <input type="text" placeholder="Username" id="uname" name="uname" value=""/><span id="sid"></span><br><br>
+      <input type="password" placeholder="Password" id="upwd" name="upwd"/>
+    </form>
+    <button type="submit" class="btn_sign_up" id="reg">注册</button>
+    
+          
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+
+</body>
+</html>
+
+<script>
+$("reg").click(function(){
+    //jQuery方式获取表单的值 
+    var name = $("uname").val();
+    var pwd = $("#upwd").val();
+    //alert(input);
+    $.get("db.php?uname="+name+"&upwd"+pwd,function(data){
+      console.log(data);
+       
+    });
+  })
+</script>  

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>榜单</title>
+        <link rel="stylesheet" href="./css/index_3c9d996fd4.css">
+        <link rel="stylesheet" href="./css/rank.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/temp.css">
+        
+        <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+        <style>
+            .pc_temp_main{
+                margin-left:100px;
+                width:100%;
+                height:1300px;
+            }
+            .pc_temp_content{
+                    float:right;
+                    margin-top:-1250px;
+                }
+            .pc_temp_side{
+                    float:left;
+                }
+            .download{
+                margin-top:500px;
+            }
+            #checkall{
+                margin-left:10px;
+            }
+        </style>
+         
+       
+    </head>
+<body>
+    <div id="mainpage">
+        <div class="header">
+                <h1 class="logo">
+                <a href="http://www.kugou.com/"><img src="http://static.kgimg.com/public/root/images/logo.png" alt="" ></a></h1>
+                <div class="search_wrapper top_search">
+                    <div class="search_input"><input type="text" placeholder="凉凉"><div class="search_btn"><i class="search_icon"></i><span>搜索</span></div>
+                    </div>
+                    <div class="search_recommend top_search_recommend">
+                    </div>
+                    <div class="search_histroy top_search_histroy">
+                    </div>
+                </div>
+                <div class="topNav fr">
+                        <ul>
+                            <li><a target="_blank" href="http://www.kugou.com/shop/help/serviceCenter">客服中心</a></li>
+                            <li><a target="_blank" href="http://kugou.hirede.com/">招贤纳士</a></li>
+                            <li><a target="_blank" href="http://vip.kugou.com/">会员中心 </a></li>
+                        </ul>
+                        <div class="login_area">
+                            <div id="login_in" class="clearfix"><a class="login_btn" href="login.html" id="login_btn">登录</a><a target="_blank" href="register.html" class="regin_btn" id="regin_btn">注册</a>
+                            </div>
+                            <div id="login_out" class="clearfix">
+                                <img class="user_img" src="http://www.kugou.com/">
+                                <span class="user_name"></span>
+                            </div>
+                            <div id="user_menu" class="user_menu">
+                                <div class="topArrow1"></div>
+                                <div class="topArrow2"></div>
+                                <ul>
+                                    <li><a target="_blank" href="http://www.kugou.com/newuc/user/uc/"><span class="user_icon1"></span>个人帐号</a></li>
+                                    <li><a href="http://www.kugou.com/newuc/login/outlogin"><span class="user_icon2"></span>退出登录</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+        </div>
+           
+        <div class="pc_temp_wrap pc_temp_2col_critical">
+        <div class="pc_temp_main">
+        <!-- 侧栏 -->
+            <div class="pc_temp_side">
+                    <!-- 热门榜单 -->
+                    <div class="pc_rank_sidebar pc_rank_sidebar_first ">
+                        <h3 data-index="0" onclick="fn(0)" >
+                            <a href="javascript:;"  hidefocus="true" title="热门榜单">
+                                热门榜单 <i class="pc_temp_arrow"></i>
+                            </a>
+                        </h3>
+                        <ul id="uid0">
+                            <li>
+                                <a title="酷狗飙升榜" class="current" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-6666.html?from=rank" onclick="sdnClick(12012)">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807185439172736.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20130807/20130807185439172736.png', sizingMethod='crop');"></span>
+                                酷狗飙升榜
+                                </a>
+                            </li>
+                            <li>
+                                <a title="酷狗TOP500"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-8888.html?from=rank" onclick="sdnClick(12013)">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807185450567609.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20130807/20130807185450567609.png', sizingMethod='crop');"></span>
+                                酷狗TOP500
+                                </a>
+                            </li>                                          
+                            <li>
+                                <a title="网络红歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-23784.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://www2.kugou.com/k8/static/images/wlhg.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www2.kugou.com/k8/static/images/wlhg.png', sizingMethod='crop');"></span>
+                                网络红歌榜
+                                </a>
+                            </li>                                          
+                            <li>
+                                <a title="DJ热歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24971.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160119/20160119110054378246.jpg);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160119/20160119110054378246.jpg', sizingMethod='crop');"></span>
+                                DJ热歌榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="华语新歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-27.html?from=rank" onclick="sdnClick(12014)">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807184914908217.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20130807/20130807184914908217.png', sizingMethod='crop');"></span>
+                                华语新歌榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="欧美新歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28.html?from=rank" onclick="sdnClick(12015)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142404906327.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222142404906327.png', sizingMethod='crop');"></span>
+                                欧美新歌榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="韩国新歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24045.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160412/20160412184815439777.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160412/20160412184815439777.png', sizingMethod='crop');"></span>
+                                韩国新歌榜
+                                </a>
+                            </li>                                         
+                            <li>
+                                <a title="日本新歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24047.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151008/20151008190401233496.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151008/20151008190401233496.png', sizingMethod='crop');"></span>
+                                日本新歌榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="金曲捞榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-30210.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20170418/20170418110751911964.jpg);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20170418/20170418110751911964.jpg', sizingMethod='crop');"></span>
+                                金曲捞榜
+                                </a>
+                            </li>                                          
+                            <li>
+                                <a title="原创音乐榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28653.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160912/20160912141731629726.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160912/20160912141731629726.png', sizingMethod='crop');"></span>
+                                原创音乐榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="粤语新歌榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22050.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20140730/20140730093845344657.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20140730/20140730093845344657.png', sizingMethod='crop');"></span>
+                                粤语新歌榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="酷狗分享榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-21101.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20131025/20131025103853305845.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20131025/20131025103853305845.png', sizingMethod='crop');"></span>
+                                酷狗分享榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="5sing音乐榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22603.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160504/20160504171514518791.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160504/20160504171514518791.png', sizingMethod='crop');"></span>
+                                5sing音乐榜
+                                </a>
+                            </li>                                           
+                            <li>
+                                <a title="繁星音乐榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-21335.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20140109/20140109170934390969.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20140109/20140109170934390969.png', sizingMethod='crop');"></span>
+                                繁星音乐榜
+                                </a>
+                            </li>               
+                        </ul>
+                    </div>
+                    <!-- 特色音乐榜 -->
+                    <div class="pc_rank_sidebar ">
+                        <h3 data-index="1" onclick="fn(1)">
+                            <a href="javascript:;" hidefocus="true" title="特色音乐榜">
+                                特色音乐榜<i class="pc_temp_arrow"></i>
+                            </a>
+                        </h3>
+                        <ul id="uid1">
+                            <li>
+                                <a title="校园歌曲榜" id="28061"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28061.html?from=rank" onclick="sdnClick(40025)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160530/20160530183222163172.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160530/20160530183222163172.png', sizingMethod='crop');"></span>
+                                校园歌曲榜
+                                </a>
+                            </li>
+                            <li>
+                                <a title="中文DJ" id="70"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-70.html?from=rank" onclick="sdnClick(12034)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142859452169.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222142859452169.png', sizingMethod='crop');"></span>
+                                中文DJ
+                                </a>
+                            </li>
+                            <li>
+                                <a title="洗脑神曲" id="24574"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24574.html?from=rank" onclick="sdnClick(36538)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160108/20160108180453655920.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160108/20160108180453655920.png', sizingMethod='crop');"></span>
+                                洗脑神曲
+                                </a>
+                            </li>
+                            <li>
+                                <a title="百大DJ" id="24306"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24306.html?from=rank" onclick="sdnClick(36270)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222143059932587.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222143059932587.png', sizingMethod='crop');"></span>
+                                百大DJ
+                                </a>
+                            </li>
+                            <li>
+                                <a title="伤感网络情歌" id="28542"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28542.html?from=rank" onclick="sdnClick(40506)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160805/20160805174132122112.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160805/20160805174132122112.png', sizingMethod='crop');"></span>
+                                伤感网络情歌
+                                </a>
+                            </li>
+                            <li>
+                                <a title="车载音乐" id="88"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-88.html?from=rank" onclick="sdnClick(12052)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142931437919.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222142931437919.png', sizingMethod='crop');"></span>
+                                车载音乐
+                                </a>
+                            </li>
+                            <li>
+                                <a title="KTV" id="24307"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24307.html?from=rank" onclick="sdnClick(36271)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142813590494.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222142813590494.png', sizingMethod='crop');"></span>
+                                KTV
+                                </a>
+                            </li>
+                            <li>
+                                <a title="影视金曲" id="22096"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22096.html?from=rank" onclick="sdnClick(34060)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222143034989298.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222143034989298.png', sizingMethod='crop');"></span>
+                                影视金曲
+                                </a>
+                            </li>
+                            <li>
+                                <a title="纯音乐" id="28475"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28475.html?from=rank" onclick="sdnClick(40439)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20160728/20160728182722980092.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20160728/20160728182722980092.png', sizingMethod='crop');"></span>
+                                纯音乐
+                                </a>
+                            </li>               
+                        </ul>
+                    </div>
+                    <!-- 全球榜 -->
+                    <div class="pc_rank_sidebar">
+                        <h3 data-index="2" onclick="fn(2)">
+                            <a href="javascript:;" hidefocus="true" title="全球榜">
+                                全球榜 <i class="pc_temp_arrow"></i>
+                            </a>
+                        </h3>
+                        <ul class="clear_fix" id="uid2">                                  
+                            <li>
+                                <a title="美国BillBoard榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4681.html?from=rank" onclick="sdnClick(12022)">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807192258314669.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20130807/20130807192258314669.png', sizingMethod='crop');"></span>
+                                美国BillBoard榜                       
+                                </a>
+                            </li>                                 
+                            <li>
+                                <a title="英国单曲榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4680.html?from=rank" onclick="sdnClick(12023)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20161013/20161013180833243081.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20161013/20161013180833243081.png', sizingMethod='crop');"></span>
+                                英国单曲榜                     
+                                </a>
+                            </li>                                   
+                            <li>
+                                <a title="日本公信榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4673.html?from=rank" onclick="sdnClick(12026)">
+                                <span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142442217161.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/stdmusic/20151222/20151222142442217161.png', sizingMethod='crop');"></span>
+                                日本公信榜                      
+                                </a>
+                            </li>                                   
+                            <li>
+                                <a title="韩国M-net音乐榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4672.html?from=rank" onclick="sdnClick(12027)">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807193303334739.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20130807/20130807193303334739.png', sizingMethod='crop');"></span>
+                                韩国M-net音乐榜                         
+                                </a>
+                            </li>                                   
+                            <li>
+                                <a title="中国TOP排行榜"  hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22163.html?from=rank" onclick="sdnClick()">
+                                <span style="background-image:url(http://imge.kugou.com/temppic/20140827/20140827151250799981.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imge.kugou.com/temppic/20140827/20140827151250799981.png', sizingMethod='crop');"></span>
+                                中国TOP排行榜                       
+                                </a>
+                            </li>               
+                        </ul>
+                    </div>
+            </div>
+            <div class="pc_temp_content">
+                <div class="pc_temp_container">
+                    <div class="pc_rank_title clear_fix">
+                            <div id="pc_temp_title" class="pc_temp_title">
+                                <h3>酷狗飙升榜</h3>
+                                    <span class="rank_update">2017-05-12 更新</span>
+                                    <a href="javascript:;" class="pc_temp_btn_s02 pc_temp_bicon_play" title="播放全部" data-active="play" data-index=""  hidefocus="true"><span><i class="t2"></i>播放全部</span></a>
+                            </div>
+                    </div>
+                    <div id="rankWrap">
+                        <div class="pc_temp_songhead clear_fix">                    
+                               <button >全选</button>
+                        </div>
+                            <div class="pc_temp_songlist  pc_rank_songlist_short">
+                                <ul>
+                                    <li class=" " title="王二妮 - 丫蛋蛋" data-index="0">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                        <strong>1</strong>
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/futy924.html" data-active="playDwn" data-index="0" class="pc_temp_songname" title="王二妮 - 丫蛋蛋" hidefocus="true">王二妮 - 丫蛋蛋</a>
+                                            <span class="pc_temp_tips_r">
+                                                <a href="javascript:;" data-active="play" data-index="0" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                                <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="0" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                                <a href="javascript:;" data-active="share" data-index="0" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                                <span class="pc_temp_time">                                                                        4:23
+                                                </span>
+                                            </span>
+                                    </li>
+                                    <li class=" " title="王二妮 - 又唱走西口" data-index="1">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                        <strong>2</strong>
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/futy78f.html" data-active="playDwn" data-index="1" class="pc_temp_songname" title="王二妮 - 又唱走西口" hidefocus="true">王二妮 - 又唱走西口</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="1" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="1" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="1" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    3:11
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="林采欣 - 追风筝的人【繁星四月插曲】" data-index="2">
+                                       <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                        <strong>3</strong>
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fupvo99.html" data-active="playDwn" data-index="2" class="pc_temp_songname" title="林采欣 - 追风筝的人【繁星四月插曲】" hidefocus="true">林采欣 - 追风筝的人【繁星四月插曲】</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="2" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="2" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="2" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    4:40
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="王二妮 - 丰收中国" data-index="3">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    4
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/futya68.html" data-active="playDwn" data-index="3" class="pc_temp_songname" title="王二妮 - 丰收中国" hidefocus="true">王二妮 - 丰收中国</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="3" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="3" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="3" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    3:42
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="李宇春 - 南方姑娘" data-index="4">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    5
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fv51642.html" data-active="playDwn" data-index="4" class="pc_temp_songname" title="李宇春 - 南方姑娘" hidefocus="true">李宇春 - 南方姑娘</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="4" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="4" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="4" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    4:49
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="刘沁 - You Are Beautiful【寒武纪主题曲】" data-index="5">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    6
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fti0nf1.html" data-active="playDwn" data-index="5" class="pc_temp_songname" title="刘沁 - You Are Beautiful【寒武纪主题曲】" hidefocus="true">刘沁 - You Are Beautiful【寒武纪主题曲】</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="5" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="5" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="5" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    3:11
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="PSY - I LUV IT" data-index="6">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    7
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fv4qn6c.html" data-active="playDwn" data-index="6" class="pc_temp_songname" title="PSY - I LUV IT" hidefocus="true">PSY - I LUV IT</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="6" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="6" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="6" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    3:09
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="PSY、太阳 - LOVE" data-index="7">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    8
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fv4qjb7.html" data-active="playDwn" data-index="7" class="pc_temp_songname" title="PSY、太阳 - LOVE" hidefocus="true">PSY、太阳 - LOVE</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="7" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="7" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="7" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    3:40
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="PSY、G-DRAGON - 팩트폭행" data-index="8">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    9
+                                       </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fv4qg29.html" data-active="playDwn" data-index="8" class="pc_temp_songname" title="PSY、G-DRAGON - 팩트폭행" hidefocus="true">PSY、G-DRAGON - 팩트폭행</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="8" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="8" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="8" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    2:58
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="防弹少年团(BTS) - 血、汗、涙" data-index="9">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    10
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fv0yl9d.html" data-active="playDwn" data-index="9" class="pc_temp_songname" title="防弹少年团(BTS) - 血、汗、涙" hidefocus="true">防弹少年团(BTS) - 血、汗、涙</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="9" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="9" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="9" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    3:35
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="PSY、B.I、Bobby - BOMB" data-index="10">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    11
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fv4qs77.html" data-active="playDwn" data-index="10" class="pc_temp_songname" title="PSY、B.I、Bobby - BOMB" hidefocus="true">PSY、B.I、Bobby - BOMB</a>
+                                        <span class="pc_temp_tips_r">
+                                        <a href="javascript:;" data-active="play" data-index="10" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                        <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="10" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                        <a href="javascript:;" data-active="share" data-index="10" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                        <span class="pc_temp_time">
+                                                                                                                    2:54
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="赵鑫 - 北京南站" data-index="11">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    12
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                        <a href="http://www.kugou.com/song/fgh5tf0.html" data-active="playDwn" data-index="11" class="pc_temp_songname" title="赵鑫 - 北京南站" hidefocus="true">赵鑫 - 北京南站</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="11" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="11" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="11" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    4:48
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="Bishop Briggs - Mercy【极限特工:终极回归插曲】" data-index="12">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    13
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/eu1mdbc.html" data-active="playDwn" data-index="12" class="pc_temp_songname" title="Bishop Briggs - Mercy【极限特工:终极回归插曲】" hidefocus="true">Bishop Briggs - Mercy【极限特工:终极回归插曲】</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="12" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="12" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="12" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    2:49
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="雨宗林 - 不配" data-index="13">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    14
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/f6nhwa1.html" data-active="playDwn" data-index="13" class="pc_temp_songname" title="雨宗林 - 不配" hidefocus="true">雨宗林 - 不配</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="13" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="13" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="13" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    4:12
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="倪尔萍 - 儿行千里妈牵挂" data-index="14">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    15
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/c84pu21.html" data-active="playDwn" data-index="14" class="pc_temp_songname" title="倪尔萍 - 儿行千里妈牵挂" hidefocus="true">倪尔萍 - 儿行千里妈牵挂</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="14" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="14" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="14" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    5:19
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="小S - 小时候" data-index="15">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    16
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/fv2er3f.html" data-active="playDwn" data-index="15" class="pc_temp_songname" title="小S - 小时候" hidefocus="true">小S - 小时候</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="15" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="15" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="15" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    5:04
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="荣忠豪 - 母亲节快乐" data-index="16">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    17
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/d45a71c.html" data-active="playDwn" data-index="16" class="pc_temp_songname" title="荣忠豪 - 母亲节快乐" hidefocus="true">荣忠豪 - 母亲节快乐</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="16" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="16" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="16" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    3:39
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="林妙可、柳博 - 低碳贝贝" data-index="17">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    18
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/5uul39.html" data-active="playDwn" data-index="17" class="pc_temp_songname" title="林妙可、柳博 - 低碳贝贝" hidefocus="true">林妙可、柳博 - 低碳贝贝</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="17" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="17" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="17" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    3:53
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="孙露 - 他们都老了" data-index="18">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    19
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/fuvmg0a.html" data-active="playDwn" data-index="18" class="pc_temp_songname" title="孙露 - 他们都老了" hidefocus="true">孙露 - 他们都老了</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="18" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="18" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="18" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    5:16
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="伊能静、胡可、马雅舒、包文婧 - 妈妈是超人" data-index="19">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    20
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/fcvia20.html" data-active="playDwn" data-index="19" class="pc_temp_songname" title="伊能静、胡可、马雅舒、包文婧 - 妈妈是超人" hidefocus="true">伊能静、胡可、马雅舒、包文婧 - 妈妈是超人</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="19" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="19" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="19" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    2:51
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="侧田 - 拜托,我不寂寞" data-index="20">
+                                        <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    21
+                                        </span>
+                                            <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/fuudia1.html" data-active="playDwn" data-index="20" class="pc_temp_songname" title="侧田 - 拜托,我不寂寞" hidefocus="true">侧田 - 拜托,我不寂寞</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="20" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="20" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="20" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    4:10
+                                            </span>
+                                        </span>
+                                    </li>
+                                    <li class=" " title="六哲、贺敬轩 - 让全世界知道我爱你" data-index="21">
+                                       <input type="checkbox" />
+                                        <span class="pc_temp_coverlayer"></span>
+                                        <span class="pc_temp_num">
+                                                                                                                    22
+                                        </span>
+                                        <span class="pc_temp_tips_l">
+                                            <i class="pc_temp_icon_new" title="新入榜"></i>
+                                        </span>
+                                            <a href="http://www.kugou.com/song/f1rc181.html" data-active="playDwn" data-index="21" class="pc_temp_songname" title="六哲、贺敬轩 - 让全世界知道我爱你" hidefocus="true">六哲、贺敬轩 - 让全世界知道我爱你</a>
+                                        <span class="pc_temp_tips_r">
+                                            <a href="javascript:;" data-active="play" data-index="21" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+                                            <a href="javascript:;" onclick="_hmt.push(['_trackEvent', 'hidedown', 'hidecilick', 'hidepc']);" data-active="download" data-index="21" class="pc_temp_btn_download" title="下载" hidefocus="true">下载</a>
+                                            <a href="javascript:;" data-active="share" data-index="21" class="pc_temp_btn_share" title="分享" hidefocus="true">分享</a>
+                                            <span class="pc_temp_time">
+                                                                                                                    4:20
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                       
+                </div>
+                 <div class="download" id="download">查看更多内容，请下载客户端 <span><a target="_blank"  href="http://download.kugou.com/">立即下载</a></span>
+                </div>
+                <div class="fans_login"></div>
+                <div class="pc_temp_nvg"></div>
+            </div>
+
+       </div>
+       </div>
+        <link rel="stylesheet"  data-embed href="css/footer.css">
+        <div class="footerWrapper">
+            <div class="footer">
+                <div class="links">
+                    <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a> |<a target="_blank" href="http://www.kugou.com/about/privacy.html ">隐私政策</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://kugou.hirede.com" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+                </div>
+                <div class="copyright">
+                   <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+                    <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+                    <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+                    <p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+                    <p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2017 KuGou-Inc.All Rights Reserved
+                        <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a> 
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        
+       </div>
+</body>
+</html>
+<script>
+    var CheckBox=document.getElementsByTagName('input');
+     //var checkall=document.getElementById('checkall');
+       //全选
+     $("button").click(function(){
+            for(i=0;i<CheckBox.length;i++){
+                if(CheckBox[i].type=="checkbox") {
+                    if(CheckBox[i].checked){
+                        CheckBox[i].checked=false;
+                    }else{
+                        CheckBox[i].checked=true;
+                    }
+                } 
+                    
+                
+            }
+        })
+    function fn(x){
+        for(i=0;i<3;i++){
+            if(x==i){
+                 if($("#uid"+i).css("display")=="none"){
+                    $("#uid"+i).css("display","block");
+                }else{
+                    $("#uid"+i).css("display","none");
+
+                }        
+
+            }
+        }
+        
+       
+    }
+        
+      
+        
+   
+</script>

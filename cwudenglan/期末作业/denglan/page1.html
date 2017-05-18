@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗音乐</title>
+	 <link rel="stylesheet" href="./css/index_3c9d996fd4.css">
+	<style>
+        #aid a{
+            position:absolute;
+            width:50px;
+            height:50px;
+            top:0;
+            bottom: 0;
+            margin: auto 0;
+            font-size: 60px;
+            text-decoration: none;
+            color:white;
+            opacity: 0.4;
+            font-weight: bold;
+            line-height: 60px;
+            text-align: center;
+        }
+         #aid a:hover{
+            opacity: 1;
+         }
+          #prev{
+            left:20px;
+
+        }
+        #next{
+            right:20px;
+        }
+        #list{
+			text-align: center;
+			margin: -60px 0 0 ;
+			padding: 0;
+		}
+        #list li{
+			width:8px;
+			height: 8px;
+			border-radius: 50%;
+			list-style: none;
+			background: white;
+			display: inline-block;
+			margin: 0 5px;
+			opacity: 0.8;
+			position: relative;
+		}
+		#list li:hover{
+			width:12px;
+			height:12px;
+			opacity: 1.2;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+</head>
+<body>
+	<div class=class="mainPage">
+	 	<div class="header">
+            <h1 class="logo">
+            <a href="http://www.kugou.com/"><img src="http://static.kgimg.com/public/root/images/logo.png" alt="" ></a></h1>
+			<div class="search_wrapper top_search">
+                <div class="search_input"><input type="text" placeholder="凉凉"><div class="search_btn"><i class="search_icon"></i><span>搜索</span></div>
+                </div>
+                <div class="search_recommend top_search_recommend">
+				</div>
+                <div class="search_histroy top_search_histroy">
+                </div>
+            </div>
+            <div class="topNav fr">
+                    <ul>
+                        <li><a target="_blank" href="http://www.kugou.com/shop/help/serviceCenter">客服中心</a></li>
+                        <li><a target="_blank" href="http://kugou.hirede.com/">招贤纳士</a></li>
+                        <li><a target="_blank" href="http://vip.kugou.com/">会员中心 </a></li>
+                    </ul>
+                    <div class="login_area">
+                        <div id="login_in" class="clearfix"><a class="login_btn" href="login.html" id="login_btn">登录</a><a target="_blank" href="register.html" class="regin_btn" id="regin_btn">注册</a>
+                        </div>
+                        <div id="login_out" class="clearfix">
+                            <img class="user_img" src="http://www.kugou.com/">
+                            <span class="user_name"></span>
+                        </div>
+                        <div id="user_menu" class="user_menu">
+                            <div class="topArrow1"></div>
+                            <div class="topArrow2"></div>
+                            <ul>
+                                <li><a target="_blank" href="http://www.kugou.com/newuc/user/uc/"><span class="user_icon1"></span>个人帐号</a></li>
+                                <li><a href="http://www.kugou.com/newuc/login/outlogin"><span class="user_icon2"></span>退出登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+    	</div>
+            <div class="navWrap">
+                <div class="nav">
+                    <ul class="homeNav">
+                        <li><a class="normal active" href="http://www.kugou.com/">首页</a></li>
+                        <li><a class="normal" href="songs.html">榜单</a></li>
+                        <li><a class="normal" id="productCenter" href="http://download.kugou.com/">下载客户端</a></li>
+                        <li class="more" id="more"><a href="http://www.kugou.com/" class="icon icon-nav6" id="showMore">更多</a>
+                        </li>
+                    </ul>
+                    <ul class="secondMenu" id="secondMenu" style="display: none;">
+                        <li><a href="http://www.kugou.com/fmweb/html/index.html">电台</a></li>
+                        <li><a href="http://www.kugou.com/mvweb/html/">MV</a></li>
+                        <li><a href="http://www.kugou.com/yy/html/special.html">歌单</a></li>
+                        <li><a href="http://www.kugou.com/yy/html/singer.html">歌手</a></li>
+                    </ul>
+                    <ul class="subNav">
+                        <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&amp;id=3" class="icon icon-nav1">音乐直播</a></li>
+                        <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+                        <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+                        <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+                        <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+	           <div id="banner_list">
+                    <a  href="http://download.kugou.com/download/kugou_pc" >
+                    <img  class="sliderItem" id="img"  
+                    src="http://imge.kugou.com/commendpic/20160713/20160713154957678313.jpg" 
+                    style="width:100%; height:400px;no-repeat center top "title="换肤新体验 酷狗英雄主题" alt="" />
+                    </a>
+               </div>
+			
+		<div id="aid">
+            <a href="#" id="prev"><</a>
+            <a href="#" id="next">></a>
+        </div>
+		<ul id="list">
+			<li></li>
+			<li></li>
+			<li></li>
+            <li></li>
+            <li></li>
+		</ul>
+
+        <div class="downloadBlur">
+            <div class="downloadWrapper" id="downloadWrapper"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1349" height="500" id="blurred_qllytipjr" class="bg-blur" viewBox="0 0 1349 500" preserveAspectRatio="none"><filter id="blur_qllytipjr"><fegaussianblur in="SourceGraphic" stdDeviation="20"></fegaussianblur></filter><image x="0" y="0" width="1349" height="500" externalResourcesRequired="true" href="http://imge.kugou.com/commendpic/20170112/20170112174112889575.jpg" style="filter:url(#blur_qllytipjr)" preserveAspectRatio="none"></image></svg></div>
+            <div class="overlayer"></div>
+        </div>
+        <div class="download">
+            <a href="http://download.kugou.com/download/kugou_pc" id="pcDown" onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;software&#39;, &#39;download&#39;, &#39;kugounew&#39;]);">下载PC版</a>
+            <span class="line"></span>
+            <a href="http://download.kugou.com/download/kugou_iphone" id="iphoneDown" onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;software&#39;, &#39;download&#39;, &#39;kugounew&#39;]);">下载iPhone版</a>
+            <span class="line"></span>            
+            <a href="http://download.kugou.com/download/kugou_android" id="androidDown" onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;software&#39;, &#39;download&#39;, &#39;kugounew&#39;]);">下载Android版</a>
+        </div>
+        <div class="itemTitle">
+                        
+        </div>
+        <div class="itemTitle">
+                        
+        </div>
+        <div class="content" id="content">
+            <div class="subContentM" id="secoundContent">
+                <!-- 精选歌单 -->
+		        <div class="itemM selectSongList">
+		            <div class="itemTitle">
+		               	<h3><b>精选</b>歌单</h3>
+		                <a target="_blank" href="http://www.kugou.com/yy/html/special.html" class="more">更多</a>
+		            </div>
+			            <div class="itemContent">
+							<div class="cpt cptBig">
+									<p class="cptT"><span class="icon icon-select_icon"></span><span class="num">74.8万</span></p>
+			                            <img src="http://imge.kugou.com/soft/collection/480/20170426/20170426161319282931.jpg" width="325" height="325" src="./酷狗音乐 - 音乐总有新玩法_files/20170426161319282931.jpg" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+			                                
+			                            <div class="Cover" >
+			                                    <a target="_blank" href="http://www.kugou.com/yy/special/single/123640.html">
+			                                    </a>
+			                                <div class="playBtn icon icon-play_s" data-index="0" data-id="123640" style="display: none;">播放</div>
+			                            </div>
+			                                <p class="cptBg"></p>
+			                                <div class="cptB">
+			                                    <p class="songListName">不输欧美的国内rapper</p>
+			                                    <p class="songListSinger">丫神算子</p>
+			                                </div>
+			                </div>
+			                <div class="cpt cptMid">
+			                    <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">28.1万</span></p>
+			                        <img src="http://imge.kugou.com/soft/collection/150/20170504/20170504172418437794.jpg" width="160" height="160" src="./酷狗音乐 - 音乐总有新玩法_files/20170504172418437794.jpg" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+			                                
+			                            <div class="Cover" >
+			                                <a target="_blank" href="http://www.kugou.com/yy/special/single/123902.html">
+			                                </a>
+			                               	<div class="playBtn icon icon-play_s" data-index="1" data-id="123902" style="display: none;">播放</div>
+			                            </div>
+			                                <p class="cptBg"></p>
+			                                <div class="cptB">
+			                                    <p class="songListName">歌中百味，是否有一首唱中你的心情</p>
+			                                    <p class="songListSinger">祭天</p>
+			                                </div>
+			                </div>
+		                    <div class="cpt cptMid">
+		                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">85.9万</span></p>
+		                            <img src="http://imge.kugou.com/soft/collection/150/20170503/20170503153750258171.jpg" width="160" height="160" src="./酷狗音乐 - 音乐总有新玩法_files/20170503153750258171.jpg" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+		                                <div class="Cover">
+		                                    <a target="_blank" href="http://www.kugou.com/yy/special/single/123872.html">
+		                                     </a>
+		                                        <div class="playBtn icon icon-play_s" data-index="2" data-id="123872">播放</div>
+		                                </div>
+		                                    <p class="cptBg"></p>
+		                                        <div class="cptB">
+		                                            <p class="songListName">早晨阳光带上美妙旋律上路吧！</p>
+		                                            <p class="songListSinger">阿呆</p>
+		                                        </div>
+		                    </div>
+		                    <div class="cpt cptMid">
+		                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">47.0万</span></p>
+		                            <img src="http://imge.kugou.com/soft/collection/150/20170505/20170505162700142361.jpg" width="160" height="160" src="./酷狗音乐 - 音乐总有新玩法_files/20170505162700142361.jpg" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+		                            	<div class="Cover">
+		                                    <a target="_blank" href="http://www.kugou.com/yy/special/single/123938.html">
+		                                    </a>
+		                                    <div class="playBtn icon icon-play_s" data-index="3" data-id="123938">播放</div>
+		                                </div>
+		                                    <p class="cptBg"></p>
+		                                    <div class="cptB">
+		                                        <p class="songListName">摇滚就是要燥</p>
+		                                        <p class="songListSinger">来看看</p>
+		                                    </div>
+		                    </div>
+		                    <div class="cpt cptMid">
+		                        <p class="cptT"><span class="icon icon-select_icon"></span><span class="num">492.8万</span></p>
+		                                          
+		                            <img src="http://imge.kugou.com/soft/collection/150/20170421/20170421230215840014.jpg" width="160" height="160" src="./酷狗音乐 - 音乐总有新玩法_files/20170421230215840014.jpg" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+		                                        
+		                                <div class="Cover" >
+		                                    <a target="_blank" href="http://www.kugou.com/yy/special/single/123560.html">
+		                                    </a>
+		                                    <div class="playBtn icon icon-play_s" data-index="4" data-id="123560" style="display: none;">播放</div>
+		                                </div>
+		                                    <p class="cptBg"></p>
+		                                    <div class="cptB">
+		                                        <p class="songListName">金曲捞 合辑</p>
+		                                        <p class="songListSinger">纳蓝独孤</p>
+		                                    </div>
+		                    </div>   
+		                </div>
+		        </div>
+		        <!-- 精选歌单 -->
+                <!-- 热门歌单 -->
+                <div class="itemM HotSongList">
+                    <div class="itemTitle">
+                        <h3><b>热门</b>榜单</h3><a target="_blank" href="http://www.kugou.com/yy/html/rank.html?from=homepage" class="more">更多</a>
+                    </div>
+                    <div class="itemContent">
+                    	<div class="listItem">
+                            <a href="http://www.kugou.com/yy/rank/home/1-6666.html?from=homepage">
+                                <div class="Cover">
+                                    <div class="playBtn icon icon-play_s" data-id="6666">播放</div>
+                                </div>
+                                    <span class="arrow icon-big_arrow_right"></span>
+                                    <img src="http://imge.kugou.com/v2/rank_cover/T1M4h4BKKj1RCvBVdK.jpg_240x240.jpg" src="./酷狗音乐 - 音乐总有新玩法_files/T1M4h4BKKj1RCvBVdK.jpg_240x240.jpg" width="98" height="98" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+                                    <div class="list">
+                                        <dl>
+                                            <dt>酷狗飙升榜</dt>
+                                            <dd>1 . 好妹妹乐队 - 很高兴认识你</dd>
+                                            <dd>2 . 李宇春 - 流言</dd>
+                                        </dl>
+                                    </div>
+                            </a>
+                       	</div>
+                        <div class="listItem">
+                                <a href="http://www.kugou.com/yy/rank/home/1-8888.html?from=homepage">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-play_s" data-id="8888">播放</div>
+                                    </div>
+                                    <span class="arrow icon-big_arrow_right"></span>
+                                    <img src="http://imge.kugou.com/v2/rank_cover/T1fHd4BXd_1RCvBVdK.jpg_240x240.jpg" src="./酷狗音乐 - 音乐总有新玩法_files/T1fHd4BXd_1RCvBVdK.jpg_240x240.jpg" width="98" height="98" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+                                    <div class="list">
+                                        <dl>
+                                            <dt>酷狗TOP500</dt>
+                                            	<dd>1 . 杨宗纬、张碧晨 - 凉凉</dd>
+                                                <dd>2 . 赵雷 - 成都</dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                        </div>
+                        <div class="listItem">
+                                <a href="http://www.kugou.com/yy/rank/home/1-23784.html?from=homepage">
+                                    <div class="Cover">
+                                        <div class="playBtn icon icon-play_s" data-id="23784">播放</div>
+                                    </div>
+                                    <span class="arrow icon-big_arrow_right"></span>
+                                    <img src="http://imge.kugou.com/v2/rank_cover/T1Fpd4BKbg1RCvBVdK.jpg_240x240.jpg" src="./酷狗音乐 - 音乐总有新玩法_files/T1Fpd4BKbg1RCvBVdK.jpg_240x240.jpg" width="98" height="98" def="http://static.kgimg.com/public/root/images/rankdefalut.jpg" loading="1" class=" ">
+                                    <div class="list">
+                                        <dl>
+                                            <dt>网络红歌榜</dt>
+                                            	<dd>1 . 金南玲 - 逆流成河</dd>
+                                                <dd>2 . 神马乐团 - 爱河</dd>                     
+                                        </dl>
+                                    </div>
+                                </a>
+                        </div>             
+                    </div>
+                <!-- 热门歌单 -->
+                </div>
+                
+            </div>
+            			
+		</div>
+         <link rel="stylesheet"  data-embed href="http://www.kugou.com/common/css/footer.css">
+        <div class="footerWrapper">
+        <div class="footer">
+            <div class="links">
+                <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a> |<a target="_blank" href="http://www.kugou.com/about/privacy.html ">隐私政策</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://kugou.hirede.com" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+            </div>
+            <div class="copyright">
+               <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+                <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+                <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+                <p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+                <p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2017 KuGou-Inc.All Rights Reserved
+                    <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a> 
+                </p>
+
+            </div>
+        </div>
+</div>
+  	</div>
+</body>
+</html>
+<script>
+		var img1=['imgs/20160713154957678313.jpg',
+					'imgs/20170220150607997002.jpg',
+					'imgs/20170112174112889575.jpg',
+                    'imgs/20170515201225368191.jpg',
+                    'imgs/20170517131727809575.jpg'];
+		var title=['换肤新体验 酷狗英雄主题','繁星网 缔造星途神话','酷狗蓝牙耳机，听歌 通话 煲剧10小时','简弘亦预约','5.17 星主播预约'];
+		var num = 0;
+		$("#next").click(function(){
+			num++;
+            if(num >= img1.length){
+                num = 0;
+            }
+            fn(num);
+		})
+		$("#prev").click(function(){
+			num--;
+            if(num < 0){
+                num = img1.length - 1;
+            }
+            fn(num);
+		})
+		function fn(num){
+            $("#img").attr('src',img1[num]);
+            $("#img").attr('title',title[num]);
+        }
+         var len = $("#list > li").length;
+         var index = 0;
+         var adTimer;
+        $("#list li").mouseover(function() {
+        	index = $("#list li").index(this);  //获取鼠标悬浮 li 的index
+        	fn(index);
+           // $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(index).fadeIn(1000);
+			num = index;
+    	}).eq(0).mouseover();
+        
+       	adTimer = setInterval(function() {
+	            fn(index);
+	            index++;
+	            if (index == len) {       //最后一张图片之后，转到第一张
+	                index = 0;
+	            }
+	        }, 3000);
+
+        $("#showMore").mouseover(function(){
+            $("#secondMenu").css("display","block");
+        })
+        $("#showMore").mouseout(function(){
+            $("#secondMenu").css("display","none");
+        })
+</script>
+
+
+ 

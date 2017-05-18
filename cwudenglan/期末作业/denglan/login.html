@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="用户登录-酷狗音乐" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>用户登录-酷狗音乐</title>
+<link rel="stylesheet" href="http://www.kugou.com/reg/static/css/web_reg.css?201511121557" />
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<style>
+    #regBox{
+        height:300px;
+    }
+</style>
+</head>
+<body>
+<div class="wrap">
+    <link rel="stylesheet" href="http://www.kugou.com/common/css/shopmain.css?20150729" type="text/css">
+</div>
+<div class="topBanner">
+    <a href="http://www.kugou.com/shop/product/kugouproduct/index.html" target="_blank"></a>
+</div>
+<div class="public-header-wrapper">
+    <div id="public-header">
+        <a href="http://www.kugou.com/" class="gb_logo"></a>
+        <div class="login public_nav_bd" id="lng">
+            <ul class="nav_m_l_r clear_fix">
+                <li class="nav_r noborder"><a class="regLink" href="register.html" title="新用户注册" hidefocus="true" target="_blank">注册</a></li>
+                <li class="nav_r nav_handle not_login">
+                    <div class="liubai"></div>
+                    <a href="login.html" hidefocus="true" class="t_ico loginbtn">登录</a>
+                    <a href="javascript:;" hidefocus="true" class="t_ico perhome" style="display:none;">登录</a><i class="sum_ico" id="myMsgSum">0</i>
+                    <div class="user_info">
+                        <div class="user_img clear_fix">
+                            <a href="http://www.kugou.com/shop/user/home" target="_blank" hidefocus="true" class="user_img"><img id="userImg" width="71" height="71" src="" alt="歌手头像"><i class="layer"></i></a>
+                            <div class="txt">
+                                <a hidefocus="true" class="nick_name" href="http://www.kugou.com/shop/user/home" target="_blank" id="userName">hi!XXXX</a>
+                                <a hidefocus="true" class="vipIcon vip_false" href="http://vip.kugou.com/" target="_blank" ></a>
+                                <a hidefocus="true" class="vipIcon vip_true" href="http://vip.kugou.com/" target="_blank" ></a>
+                            </div>
+                        </div>
+                        <div class="login_links">
+                            <a class="" href="http://www.kugou.com/shop/user/home" target="_blank" hidefocus="true"><!-- <i class="u_ico ico_1"></i> -->个人中心</a>
+                            <a class="" href="http://www.kugou.com/shop/user/myOrder" target="_blank" hidefocus="true"><!-- <i class="u_ico ico_2"></i> -->我的订单</a>
+                            <a class="" href="http://www.kugou.com/newuc/user/uc/type=edit" target="_blank" hidefocus="true"><!-- <i class="u_ico ico_3"></i> -->账户设置<em id="userMsg"></em></a>
+                            <a class="" href="http://www.kugou.com/shop/help/expressPay/index.html" target="_blank" hidefocus="true">购物指南<em ></em></a>
+                        </div>
+                        <a href="http://www.kugou.com/shop/user/logout" class="out_login" hidefocus="true">退出登录</a>
+                    </div>
+                </li>
+                <li class="nav_r w_space noborder"></li>
+                <li class="nav_r nav_handle"><a  href="http://www.kugou.com/shop/shoppingCart/cartinfo" target="_blank" hidefocus="true" class="g_ico">我的购物车</a><i class="sum_ico" id="myGoodsSum" style="display: none;"></i>
+                    <div class="liubai"></div>
+                    <div class="shop_cart">
+                        <ul class="goods_list" id="cartInfoList"><li class="goods"><a class="goods_img" href="http://www.kugou.com/shop/product/?id=12" hidefocus="true"></a><div class="goods_info"><a href="javascript:;" hidefocus="true" class="goods_name">39.00x4</a><em class="goods_mode">型号:大号 颜色:蓝色 </em></div><a href="javascript:;" hidefocus="true" class="del_g" data-value="12|31"></a></li></ul>
+                        <div class="count_cart clear_fix" style="display: block;">
+                            <span class="goods_sum">共计<i id="goodsNum"></i>件商品</span>
+                            <span class="pay_sum">合计：<i id="totalSum"> </i></span>
+                            <a href="http://www.kugou.com/shop/shoppingCart/cartinfo" target="_blank" hidefocus="true" class="goto_checkout">去购物车结算</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="public-nav-wrapper">
+    <div id="public-nav" class="clear_fix">
+      <h1 class="logo"><a href="http://www.kugou.com/"><img src="http://www.kugou.com/common/images/herder_logo.jpg" width="170" height="40" alt="酷狗音乐"/></a></h1>
+      <ul class="n1" id="ulHeader">
+        <li class='home'><a href="http://www.kugou.com/shop" hidefocus="true" title="酷狗商城" onclick="sdnClick(12224)">酷狗商城</a><span></span></li>
+        <li class='downloadLink' id="downloadLink"><a href="http://download.kugou.com/" hidefocus="true" title="下载客户端" onclick="sdnClick(12224)" target="_blank">下载客户端</a><span></span></li>
+
+        <li><a href="http://fanxing.kugou.com/?action=spreadIndex&id=3" onclick="sdnClick(16804)" hidefocus="true" title="音乐直播" target="_blank">音乐直播</a><span></span></li>
+        <li><a href="http://www.kugou.com/imusic/"  hidefocus="true" title="酷狗音乐人" target="_self">酷狗音乐人</a><span></span></li>
+      </ul>
+      <ul class="n2 n2_new">
+        <li><a href="http://download.kugou.com" target="_blank" hidefocus="true" onclick="sdnClick(12232)" title="酷狗音乐盒2015官方免费下载">产品中心</a><span></span></li>
+        <li><a href="http://vip.kugou.com/" target="_blank" onclick="sdnClick(12230)" hidefocus="true" title="VIP中心">VIP中心</a><span></span></li>
+        <li class='serverhome'><a href="http://www.kugou.com/shop/help/serviceCenter" target="_blank" hidefocus="true" onclick="sdnClick(12231)" title="客服中心">客服中心</a><span></span></li>
+      </ul>
+    </div>
+    <div class="second-wrapper" id="second-wrapper">
+        <div class="second-bg"></div>
+        <div class="second-nav">
+                <div class="download-software" id="downloadSoftware">
+                    <a class="pc" href="http://download.kugou.com/download/kugou_pc">下载电脑版</a>
+                    <a class="android" href="http://download.kugou.com/android.html" target="_blank">下载安卓版</a>
+                    <a class="iphone" href="http://download.kugou.com/iphone.html" target="_blank">下载iPhone版</a>
+                    <a class="ipad" href="http://download.kugou.com/ipad.html" target="_blank">下载iPad版</a>
+                </div>
+                <div class="news" id="news">
+                    <a class="pc" href="http://yule.kugou.com/">首页 </a>
+                    <a class="android" href="http://yule.kugou.com/pic/">明星图库</a>
+                    <a class="iphone" href="http://www.kugou.com/yule/actsub/sub/p=1&type=0">最热专题</a>
+                    <a class="ipad" href="http://www.kugou.com/yule/actsub/act/p=1&type=0">官方活动</a>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+        
+    <style type="text/css">
+        .topBanner{display: none;}
+    </style>
+    
+    <!-- body -->
+       <div class="kg_reg_body_area">
+        <!-- 登录主体 -->
+        <div class="kg_lgn_reg_box" id="regBox">
+            
+            <div class="kg_lgn_reg_ct" id="regCntList">
+               
+                <!-- 手机登录 -->
+                <div class="kg_lgn_reg_ct_item" >
+                    
+                        <table class="kg_lgn_reg_tb" width="100%">
+                            <tr>
+                                <td width="300" align="right" valign="top"><label for="t02Mobile" class="kg_lgn_reg_tb_tl"> 用户名：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_mobile">
+                                        <div class="kg_lgn_textbox"><input id="user-name" maxlength="30"  type="text" class="kg_lgn_textbox_ipt" /></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td align="right" valign="top"><label for="t02Psw" class="kg_lgn_reg_tb_tl"> 密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_password">
+                                        <div class="kg_lgn_textb16"><input id="password" type="password" class="kg_lgn_textbox_ipt" /></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td></td>
+                                <td>
+                                   <button>登录</button>
+                                </td>
+                            </tr>
+                        </table>
+                  
+                </div>
+                <!--/手机号登录 -->
+               
+            </div>
+        </div>
+        <!--/登录主体 -->
+
+        <!-- 状态层 -->
+        <div class="kg_lgn_reg_box kg_lgn_reg_message" id="regMessage" style="display:none;">
+            <div class="kg_lgn_reg_hd">
+                <div class="h_tl"></div>
+            </div>
+            <div class="kg_lgn_reg_ct">
+                <h4 class="kg_lgn_reg_ct_tl" id="regMessageTl"></h4>
+                <div class="kg_lgn_reg_ct_item" id="regMessageCnt"></div>
+            </div>
+        </div>
+        <!--/状态层 -->
+    </div>
+    <!--/body -->
+    <link rel="stylesheet"  data-embed href="http://www.kugou.com/common/css/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="javascript:void(0);" id="report">监督举报</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a> |<a target="_blank" href="http://www.kugou.com/about/privacy.html ">隐私政策</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://kugou.hirede.com" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+           <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+            <p>穗公网监备案证第44010650010167&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证编号（粤）-非经营性-2012-0018</p>
+            <p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2004-2017 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a> 
+            </p>
+
+        </div>
+    </div>
+</div>
+<script>
+    $("button").click(function(){
+        //jQuery方式获取表单的值 
+        var username = $("#user-name").val();
+        var password = $("#password").val();
+        console.log(username);
+        //alert(input);
+        $.post("./login.php",{uname:username,pwd:password}, function(data){
+            alert(data);
+            //alert(data);
+        });
+    })
+</script>
+
+

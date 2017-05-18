@@ -1,0 +1,74 @@
+/* 
+* @Author: anchen
+* @Date:   2017-05-14 21:32:30
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-05-15 21:28:02
+*/
+#regBox{
+  background-color: #fafdec;
+
+}
+legend{
+    margin-left:100px;
+    text-align: center;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: Consolas;
+    font-size: 22px;
+    color:red;
+}
+label{
+    text-align:right
+}
+.form-group{
+    line-height:50px;
+    margin-left:200px;
+    font-size: 18px;
+
+}
+button{
+    margin-right:18px;
+    margin-left:100px;
+    margin-top:20px;
+    color:white;
+    font-size:14px;
+    width:50px;
+    height:30px;
+}
+.form-control{
+    width:300px;
+    height:30px;
+   text-align:left;
+}
+#user-name{
+    margin-left:20px;
+}
+#password{
+    margin-left:33px;
+}
+#repassword{
+   
+    margin-left:3px;
+}
+#nativeplace{
+    margin-left:38px;
+}
+#hobby{
+    margin-left:100px;
+    margin-top:-25px;
+}
+.btn-success{
+    background:red;
+}
+.btn-warning{
+     background:blue;
+}
+.text{
+    width: 500px;
+    height: 100px;
+}
+.col-sm-2 span{
+    color:red;
+}

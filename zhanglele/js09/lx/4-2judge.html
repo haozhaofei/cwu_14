@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:300px;height: 100px;border:1px solid red;}
+	</style>
+</head>
+<body>
+	<form name="myform" onsubmit="return doLoad()">
+		用户:<input type="text" name="m1" onblur="doLoad(this.value)"><span id="sid"></span><br><br>
+		密码:<input type="text" name="m2"><br><br>
+	</form>
+</body>
+</html>
+<script>
+	function doLoad(name){
+		//1.创建AJAX对象
+		var xmlhttp;
+		if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {// code for IE6, IE5
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+
+		//2.回调函数 
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4 && xmlhttp.status==200){
+		  		var str = xmlhttp.responseText;
+		   		if(str == "yes"){
+		   			document.getElementById('sid').innerHTML = "*用户已存在";
+		   			document.getElementById('sid').style.color = "red";
+
+		   		}else{
+		   			document.getElementById('sid').innerHTML = "可以使用该用户";
+		   			document.getElementById('sid').style.color = "green";
+		   		}
+		    }
+	  	}
+		//3.初始化操作  //第1个参数:发送方式 / 第2个参数:发送地址  第3个参数: 同步(false)或是异步(true) //默认是异步
+		xmlhttp.open("GET","4.php?name="+name,true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		//4.发送
+		xmlhttp.send();
+
+		return false;
+	}
+	
+
+</script>

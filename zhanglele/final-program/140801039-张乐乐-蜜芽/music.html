@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="img/icon2.jpg" />
+	<title>早教音乐-蜜芽</title>
+	<style>
+		
+		*{margin: 0px;padding:0px;font-size:13px;font: "微软雅黑";}
+		body{background: white}
+		#wrapper{width:1100px;margin:auto;}
+		
+		#wel{width: 1360px;height: 30px;background: #f2f2f2;}
+		#welcome-bar{margin:0 auto;height: 30px;width: 1100px;background:#f2f2f2;font: "微软雅黑";font-size: 13px;color:#737373;text-align: center;line-height: 2}
+		/*.nihao{}*/
+		#left-welcome{float:left;}
+		#right-welcome{float:right;}
+		#welcome-bar a{text-decoration: none;color:#737373;padding: 0px 8px;font-size: 13px;}
+		#welcome-bar a:hover{color: #FA4B9B}
+		
+	/*_______________logo-搜索框-热词提醒-购物车_______________________________________*/	
+		#logo-bar{margin:0 auto;height: 88px;width: 1100px;padding-top: 20px;padding-bottom: 25px;}
+		#logo-bar img{width: 128px;height: 73px;position: absolute;margin-left: 13px;}
+			/*搜索框和搜索按钮*/
+		.logo-right-pack{width: 640px;height:80px;background: white;float:right;padding: 15px 45px 0px 50px;}
+		#for-search{float:left;}
+		#srch-box{border:2px solid #FA4B9B;width: 383px;height: 18px;padding:6px 0px;margin-right: -2px;float: left;}
+		#srch-btn{width: 90px;height: 34px;background:#FA4B9B;color: white;text-align: center;font-weight: 600;letter-spacing: 3px;cursor: pointer;border:1px solid #FA4B9B;float: left;} 
+			/*搜索热词*/
+		#srch-hot{margin:42px 0px 0px 15px;width: 385px;height: 18px;overflow: hidden;float: right;display: block;position: absolute;}
+		#srch-hot a{float:left;text-decoration: none;padding:0px 10px;margin-left: -2px;padding: 0 12px;
+    		line-height: 1.2;border-left: 1px solid #d7d7d7;font-size: 12px;}
+		#srch-hot a:hover{color: #FA4B9B}
+			/*购物车*/
+		#shop-car-pack{float: right;width: 140px;}
+		#shop-car-pack img{width: 34px;height: 34px;float: left;position: absolute;}
+		#shop-car{float: right;}
+		#shop-car a{display:block;width: 110px;height: 32px;background: white;text-align: center;text-decoration: none;line-height: 2.4;border: 1px solid #E5E5E5;}
+
+	/*_______________页面主导航_______________________________________*/	
+		.nav-wrapper{width: 1360px;height:46px;background:#FA4B9B ;margin-top: -12px;margin-bottom:-3px; }
+		#nav-big{display:block;margin:0 auto;width:1100px;height:46px;background:#FA4B9B ;}
+		.nav-simple li{width: 108px;height:46px;text-decoration: none;float:left; list-style-type: none;font-size: 15px;color:#fff;line-height: 3;font:"微软雅黑";display: inline-block;text-align: center;}
+		.nav-simple a{width: 108px;height:46px;text-decoration: none;float:left; list-style-type: none;font-size: 15px;color:#fff;font:"微软雅黑";}
+		.nav-simple li:hover{background: #EC0971;}
+		 
+		#big-pic img{height: 480px;width: 1360px;margin:0 auto;}
+		
+
+	/*_______________音乐a列表_______________________________________*/
+		.main-music-table{margin: 0 auto;width: 1000px;}
+		.main-music-table h3{display: block;font-size: 16px;font:"微软雅黑";font-weight: 100;padding: 25px 0px 10px 0px ;border-bottom: 2px solid #cccccc;}
+		.music-list a{display: block;width: 975px;text-decoration: none;padding: 12px 15px;border-bottom: 1px dashed #cccccc;font-size: 12px;font:"微软雅黑";color:#555555;font-weight: 100;}
+		.music-list a:hover{display: block;width: 975px;text-decoration: none;padding: 12px 15px;border-bottom: 1px dashed #cccccc;font-size: 12px;font:"微软雅黑";color:#FA4B5B;font-weight: 100;}
+		.music-list .nums{font-size: 10px;font-weight: 100;padding-right: 15px;}
+		.music-list .up-btn{float: right;}
+	/*______________footer横向小图标及蜜芽特色_______________________________________*/
+		#footer{margin:15px 0px;padding:0;width: 100%;height: 510px;background:white;border-top: 1px solid #E5E5E5;margin-top: 40px;}
+		
+		.genuine{margin:0 auto;width: 1100px;height: 140px;border-bottom:1px solid #E5E5E5;}
+		.genuine .tips{width: 153.3px;height: 102px;background: #FFF;text-align: center;float: left;padding:15px 15px;margin-top: 4px;}
+		.genuine .tips a{text-decoration: none;}
+		.genuine .tips img{padding: 0;margin: 0 0 8px 0 }
+		.genuine .tips h5{font-size: 14px;font:"微软雅黑";font-weight: 900;margin: 4px;line-height: 4px;color: #333333;}
+		.genuine .tips .smaller{font-size: 8px;font:"微软雅黑";margin-top: -6px;font-weight: 100;color:#999999; }
+	/*_________________footer左边使用帮助______________________________________*/
+		.about-mia{border-bottom: 1px solid #E5E5E5}
+
+		.Nhelp{width: 1000px;height:168px; background: white;margin: 0 auto;padding: 20px 0px 0px 0px;}
+		.service{width: 805px;height: 161px;position: absolute;}
+		.Nhelp .Nhelp-left{float: left;width: 132px;padding-left: 18px;}
+		.Nhelp .Nhelp-left-last{float: left;width: 200px;}
+		.Nhelp ul li{list-style-type: none;font-size: 12px;line-height: 26px;color: #999999} 
+		.Nhelp ul li:hover{list-style-type: none;font-size: 12px;line-height: 26px;color:#FA4B9B } 
+		.Nhelp ul .strong{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;} 
+		.Nhelp ul .strong:hover{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;} 
+		.Nhelp .Nhelp-left-last ul li:hover{list-style-type: none;font-size: 12px;line-height: 26px;color: #999999}
+		.Nhelp .Nhelp-left-last ul .strong:hover{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;}
+	/*_________________footer右边二维码_____________________________________*/
+		.Rhelp{width: 186px;height: 161px;background: white;margin-left: 815px;display:block;float: left;border-left: 1px solid #E5E5E5;}
+		.Rhelp *{margin-left: 10px;}
+		.mobile-mia{position: absolute;display:inline-block;}
+		.Rhelp .Rhelp-right{margin-left:80px; position: absolute;line-height: 1px;}
+		.Rhelp ul .strong{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;line-height: 26px;} 
+		.Rhelp ul .strong:hover{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;} 
+	/*________________footer导航______________________________*/
+		.footer-nav{margin-left:135px;float: left;padding: 10px 30px;}
+		.footer-nav ul li{list-style-type: none;float: left;display: inline-block;padding: 0px 18px;border-right:1px solid #999999;font-size: 12px;color:#999999;}
+		.footer-nav ul li:hover{list-style-type: none;float: left;display: inline-block;padding: 0px 18px;border-right:1px solid #999999;font-size: 12px;color:#FA4B9B;}
+	/*________________footer法律条款______________________________*/
+		.law-clause{display: inline-block;width: 1000px;height: 70px;margin-left: 65px;padding-bottom:8px;background: white;}
+		.law-clause .words{text-align: center;position: absolute;font-size: 12px;font: "微软雅黑";color: #aaaaaa;line-height: 23px;}
+		.law-clause .words img{width: :;width: 8%;height: 8%;padding: 5px 10px;}
+
+
+	</style>
+</head>
+<body>
+	
+	<!--引导条开始-->
+	<div id="wel">
+		<div id="welcome-bar">
+			<div id="left-welcome"><a href="">手机蜜芽</a></div>
+			<div id="right-welcome">
+				<span id="nihao">你好，欢迎来到蜜芽！</span>
+				<a href="login.html">登录</a>
+				<a href="">免费注册</a>
+				<a href="">帮助中心</a>
+			</div>
+		</div>
+	</div>
+	<!--引导条结束-->
+<body>
+	
+
+	<!--logo+搜索框开始-->
+		<div id="logo-bar">
+			<div id="left-logo">
+				<a href=""><img src="img/logo.png" alt="蜜芽网" width="100%"></a>
+			</div>
+			
+			<div class="logo-right-pack">
+				<div id="for-search">
+					<input type="text" id="srch-box" >
+					<input id="srch-btn" type="button" value="搜 索" class="form-search-btn">
+				</div>
+
+				<div id="srch-hot">
+					<p class="hot">
+						<a href=" " style="border-left:none">尤妮佳</a>
+			            <a href=" " style="color:#FA4B9B">牙胶</a>
+			            <a href=" " style="color:#FA4B9B">收纳柜</a>
+			            <a href=" ">隔尿垫</a>
+			            <a href=" ">加州宝宝</a>
+					</p>
+				</div>
+				
+				<div id="shop-car-pack">
+					<img src="img/shop-car.png" alt="">
+					<div id="shop-car">
+						
+						<a href="" class="shop-car"><span>购物车</span></a>
+							<div class="empty" style="text-decoration:none;display:none;">
+								购物车还没有商品，快去选购吧！
+							</div>
+							
+					</div>	
+				</div>
+
+			</div>
+		</div>
+	<!-- logo+搜索框结束 -->
+
+	<!--主要导航开始-->
+	<div class="nav-wrapper">
+		<div id="nav-big">
+			<ul class="nav-simple">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="">纸尿裤</a></li>
+				<li><a href="">奶粉</a></li>
+				<li><a href="">磨牙饼干</a></li>
+				<li><a href="">童装</a></li>
+				<li><a href="">玩具</a></li>
+				<li><a href="">孕妈用品</a></li>
+				<li><a href="">美妆个护</a></li>
+				<li><a href="">正品保证</a></li>
+				<li><a href="music.html" style="background:#EC0971;">早教音乐</a></li>
+			</ul>
+		</div>
+	</div>
+
+	
+	<!--主要导航结束-->
+
+<div id="wrapper">
+		<!--音乐表格开始-->
+		<div class="main-music-table">
+			<h3>早教音乐</h3>
+			<div class="music-list">
+				<ul>
+					<a href="https://www.mia.com/music/detail/1"><span class="nums">1</span> 贝多芬：D大调小提琴协奏曲，作品61号-（Concerto for Violin and Orchestra in D major, op. 61）- I. Allegro ma non troppo... <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">2</span> 莫扎特：D大调第四小提琴协奏曲 <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">3</span> 贝多芬：第六交响曲田园及序曲（ Symphony No.6 in F major, Op.68 'Pastoral' II） - Andante Molto mosso (Scene by the Brook) <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">4</span> 贝多芬：G大调第四钢琴协奏曲 （Piano Concerto No.4 in G, Op.58 ） - 1. Allegro moderato - Cadenza- Wilhelm Kempff - Ludwig van Beethoven <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">5</span> 莫扎特：D小调第二十钢琴协奏曲（Piano Concero in D Minor, ） K. 466_ II. Romanze- wolfgang amadeus mozart <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">6</span> 莫扎特：C大调第八钢琴协奏，K246.（Piano Concerto No.8 in C, K.246 Lützow） - 2. Andante - Wolfgang Amadeus Mozart <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">7</span> D大调第二交响曲（Symphony No. 2 in D Major, Op. 36）_ I. Adagio molto - Allegro con brio - wolfgang amadeus mozart <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">8</span> 莫扎特：G小调第40号交响曲（Symphony No. 40 in G Minor, K. 550_ III. Menuetto） - wolfgang amadeus mozart <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">9</span> 贝多芬：降E大调第三交响曲英雄交响曲（ Symphony no.3 in E flat, Op.55 'Eroica'）： III. Scherzo (Allegro vivace) <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">10</span> 柴科夫斯基：《天鹅湖》乡村圆舞曲 <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">11</span> 莫扎特：G大调弦乐小夜曲 <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>
+					<a href=""><span class="nums">12</span> 柴可夫斯基：睡美人圆舞曲-Peter Ilyich Tchaikovsky <span class="up-btn"><img src="img/music-up.png" alt=""></span></a>				
+					
+				</ul>
+			</div>
+		</div>
+
+		<!--音乐表格结束-->
+
+
+	<!--footer部分开始-->
+
+		<div id="footer">
+			<div class="genuine">
+				<div class="tips">
+					<a href="">
+						<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+					</a>
+					<h5>可信赖</h5><br>
+					<h5 class="smaller">进口母婴特卖</h5>
+				</div>
+
+				<div class="tips">
+					<a href="">
+						<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+					</a>
+					<h5>可信赖</h5><br>
+					<h5 class="smaller">进口母婴特卖</h5>
+				</div>
+
+				<div class="tips">
+					<a href="">
+						<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+					</a>
+					<h5>可信赖</h5><br>
+					<h5 class="smaller">进口母婴特卖</h5>
+				</div>
+
+				<div class="tips">
+					<a href="">
+						<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+					</a>
+					<h5>可信赖</h5><br>
+					<h5 class="smaller">进口母婴特卖</h5>
+				</div>
+
+				<div class="tips">
+					<a href="">
+						<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+					</a>
+					<h5>可信赖</h5><br>
+					<h5 class="smaller">进口母婴特卖</h5>
+				</div>
+
+				<div class="tips">
+					<a href="">
+						<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+					</a>
+					<h5>可信赖</h5><br>
+					<h5 class="smaller">进口母婴特卖</h5>
+				</div>
+			</div>
+		
+		<div class="about-mia">
+			<div class="Nhelp">
+				<div class="service">
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">使用帮助</li>
+							<li>新手指南</li>
+							<li>蜜粉值体系</li>
+							<li>蜜豆体系</li>
+							<li>正品承诺</li>
+						</ul>
+					</div>
+
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">支配方式</li>
+							<li>新手指南</li>
+							<li>蜜粉值体系</li>
+							<li>蜜豆体系</li>
+						</ul>
+					</div>
+
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">配送方式</li>
+							<li>新手指南</li>
+							<li>蜜粉值体系</li>
+							<li>蜜豆体系</li>
+							<li>正品承诺</li>
+						</ul>
+					</div>
+
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">售后服务</li>
+							<li>退货流程</li>
+							<li>退货政策</li>
+							<li>退货方式</li>
+						</ul>
+					</div>
+					
+					<div class="Nhelp-left-last">
+						<ul>
+							<li class="strong">联系方式</li>
+							<li>总裁邮箱 ceo@mia.com</li>
+							<li>商务合作 bd@mia.com</li>
+							<li>媒体合作 pr@mia.com</li>
+							<li>招商中心 zhaoshang@mia.com</li>
+							<li>企业采购 qiye@mia.com</li>
+						</ul>
+					</div>
+
+
+					<div class="Nhelp-right">
+						
+					</div>
+				</div>
+
+
+				<div class="Rhelp">
+				<ul>
+					<li class="strong">关注蜜芽</li>
+						<img class="mobile-mia" src="img/mobile-mia.jpg" alt="手机蜜芽" >
+						<div class="Rhelp-right">
+							<a href=""><img src="img/mia-wb.jpg" alt="微博分享蜜芽"></a><br>
+							<a href=""><img src="img/mia-wx.jpg" alt="微信分享蜜芽"></a>
+						</div>
+					
+				</ul>			
+			</div>
+			</div>
+		</div>
+
+		<div class="footer-nav">
+			<ul>
+				<li>关于蜜芽</li>
+				<li>加入蜜芽</li>
+				<li>商务合作</li>
+				<li>帮助中心</li>
+				<li>联系我们</li>
+				<li>友情链接</li>
+				<li>触屏版</li>
+				<li>媒体报道</li>
+				<li style="border-right:none;">妈米计划</li>
+			</ul>
+		</div>
+
+		<div class="law-clause">
+			<div class="words">
+				京公网安备：11010502027270 | 营业执照：91110105582599307U | 食品经营许可证：SP1101051410296669 | 出版物经营许可证：新出发京零字第朝160088号 | 京ICP证140430号 <br>
+		京ICP备14006215号 | 员工舞弊举报：jiancha@mia.com 电话：010-56733467<br>
+		通过本网站直接或者间接地推销商品或者服务的商业宣传活动均属“广告”<br>
+		Copyright © 2017 北京花旺在线商贸有限公司 Mia.com 保留一切权利。<br>
+					<img src="img/trust.png" alt="" style="width:10%;height:10%">
+					<img src="img/reliable.png" alt="">
+					<img src="img/alipay.jpg" alt="">
+				</div>
+			</div>
+	</div>
+	<!--footer部分结束-->
+	</div>
+</body>
+</html>

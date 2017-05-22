@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="img/icon2.jpg" />
+	<title>蜜芽-母婴限时特卖商城-进口奶粉,纸尿裤,辅食,童装-100%正品、安全放心!</title>
+	<style>
+
+		*{margin: 0px;padding:0px;font-size:13px;font: "微软雅黑";}
+		body{background: white}
+		#wrapper{width:1100px;margin:auto;}
+		
+		#wel{width: 1360px;height: 30px;background: #f2f2f2;}
+		#welcome-bar{margin:0 auto;height: 30px;width: 1100px;background:#f2f2f2;font: "微软雅黑";font-size: 13px;color:#737373;text-align: center;line-height: 2}
+		/*.nihao{}*/
+		#left-welcome{float:left;}
+		#right-welcome{float:right;}
+		#welcome-bar a{text-decoration: none;color:#737373;padding: 0px 8px;font-size: 13px;}
+		#welcome-bar a:hover{color: #FA4B9B}
+		
+	/*_______________logo-搜索框-热词提醒-购物车_______________________________________*/	
+		#logo-bar{margin:0 auto;height: 88px;width: 1100px;padding-top: 20px;padding-bottom: 25px;}
+		#logo-bar img{width: 128px;height: 73px;position: absolute;margin-left: 13px;}
+			/*搜索框和搜索按钮*/
+		.logo-right-pack{width: 640px;height:80px;background: white;float:right;padding: 15px 45px 0px 50px;}
+		#for-search{float:left;}
+		#srch-box{border:2px solid #FA4B9B;width: 383px;height: 18px;padding:6px 0px;margin-right: -2px;float: left;}
+		#srch-btn{width: 90px;height: 34px;background:#FA4B9B;color: white;text-align: center;font-weight: 600;letter-spacing: 3px;cursor: pointer;border:1px solid #FA4B9B;float: left;} 
+			/*搜索热词*/
+		#srch-hot{margin:42px 0px 0px 15px;width: 385px;height: 18px;overflow: hidden;float: right;display: block;position: absolute;}
+		#srch-hot a{float:left;text-decoration: none;padding:0px 10px;margin-left: -2px;padding: 0 12px;
+    		line-height: 1.2;border-left: 1px solid #d7d7d7;font-size: 12px;}
+		#srch-hot a:hover{color: #FA4B9B}
+			/*购物车*/
+		#shop-car-pack{float: right;width: 140px;}
+		#shop-car-pack img{width: 34px;height: 34px;float: left;position: absolute;}
+		#shop-car{float: right;}
+		#shop-car a{display:block;width: 110px;height: 32px;background: white;text-align: center;text-decoration: none;line-height: 2.4;border: 1px solid #E5E5E5;}
+
+	/*_______________页面主导航_______________________________________*/	
+		.nav-wrapper{width: 1360px;height:46px;background:#FA4B9B ;margin-top: -12px;margin-bottom:-3px; }
+		#nav-big{display:block;margin:0 auto;width:1100px;height:46px;background:#FA4B9B ;}
+		.nav-simple li{width: 108px;height:46px;text-decoration: none;float:left; list-style-type: none;font-size: 15px;color:#fff;line-height: 3;font:"微软雅黑";display: inline-block;text-align: center;}
+		.nav-simple a{width: 108px;height:46px;text-decoration: none;float:left; list-style-type: none;font-size: 15px;color:#fff;font:"微软雅黑";}
+		.nav-simple li:hover{background: #EC0971;}
+		 
+		#big-pic img{height: 480px;width: 1360px;margin:0 auto;}
+	/*______________________________________________________*/
+		#index-brand-wrapper{width: 1360px;height: 85px;margin:0;background: #FFFFFF;padding-top: 10px;}
+		#index-brand{width: 1100px;height: 80px;margin: 0 auto;}
+		#index-brand h3{background:#FFFFFF;display: inline-block;font-size:14px;text-align:center;width:56px;height:73px;line-height:5.5;float:left;padding-right:27px;/*margin-left: 15px;margin-top: 15px;*/}
+		#brands{width: 960px;height: 77px;float：right;/*margin-left: 125px;*/}
+		#brands img{width: 94px;height: 72px;/*margin:0px 12px;margin-top: 15px;*/}
+	/*______________________________________________________*/
+		.ad-goods-h3{font-size: 24px;color: #222;display: inline-block;;width: 1100px;height: 36px;padding:28px 0 20px 0;}
+		.ad-goods-h3 span{margin-left: 18px;vertical-align: -1px;font-weight: 400;font-size: 18px;color: #999;}
+		
+		.rim{display:block;float: left;margin-right: -1px;width: 219px;height:340px;border: 1px solid #e5e5e5;background-color: #fff;margin-top: -1px;}
+		
+		.tit img{width: 100%;}
+		/*.class{width: 182px;height: 18px;}*/
+		.desc{margin-left:15px;font-weight: 700;color:#222;font-size: 12.5px;line-height: 1.5em;height: 3em;display: block;white-space: normal;}
+		/*.price{display: inline-block;width: 140px;}*/
+		.price .new{margin-left:15px;font-size: 20px;color:#fa4b9b;margin-top: 8px;line-height: 1.2;position: relative;}
+		.price .new em{font-size: 20px;color:#fa4b9b;margin-top: 8px;line-height: 1.2;}
+		.price .old{font-size: 12px;color:#999;text-decoration: line-through;position: relative;}
+		.buy{margin-left:15px;font-size: 12px;color: #666;}
+		.btn{border-radius: 15px; display:inline-block;/*position: absolute;*/right: 15px;bottom: 18px;padding: 0 15px;height: 28px;line-height: 28px;background-color: #fa4b9b;font-size: 12px;color: #fff;float: right;margin-right: 10px;}
+		
+	/*______________________________________________________*/
+
+		.layout{border: 1px solid #e5e5e5;background: white;display: block;width: 1100px;height: 380px;margin-bottom: 15px;}
+		.left-block{position: absolute;float: left;padding:10px 10px;}
+		.right-rank{float: right;margin-left: 770px;position: absolute;}
+		.right-rank .rank-item{display: inline-block;width: 300px;height: 100px;border-bottom: 1px dashed #C4C4C4;padding:22px 0 0 15px;}
+		.right-rank img{height: 78px;width: 78px;border:1px solid #E5E5E5;display: inline-block;position: absolute;}
+		.right-rank .r{float: right;position: absolute;margin-left: 90px;width: 200px;}
+		.right-rank .r .tit{margin-bottom: 10px;}
+		.right-rank .r .price{margin-left: -18px;}
+
+	/*______________________________________________________*/
+		#footer{margin:15px 0px;padding:0;width: 100%;height: 510px;background:white;border-top: 1px solid #E5E5E5}
+		
+		.genuine{margin:0 auto;width: 1100px;height: 140px;border-bottom:1px solid #E5E5E5;}
+		.genuine .tips{width: 153.3px;height: 102px;background: #FFF;text-align: center;float: left;padding:15px 15px;margin-top: 4px;}
+		.genuine .tips a{text-decoration: none;}
+		.genuine .tips img{padding: 0;margin: 0 0 8px 0 }
+		.genuine .tips h5{font-size: 14px;font:"微软雅黑";font-weight: 900;margin: 4px;line-height: 4px;color: #333333;}
+		.genuine .tips .smaller{font-size: 8px;font:"微软雅黑";margin-top: -6px;font-weight: 100;color:#999999; }
+	/*______________________________________________________*/
+		.about-mia{border-bottom: 1px solid #E5E5E5}
+
+		.Nhelp{width: 1000px;height:168px; background: white;margin: 0 auto;padding: 20px 0px 0px 0px;}
+		.service{width: 805px;height: 161px;position: absolute;}
+		.Nhelp .Nhelp-left{float: left;width: 132px;padding-left: 18px;}
+		.Nhelp .Nhelp-left-last{float: left;width: 200px;}
+		.Nhelp ul li{list-style-type: none;font-size: 12px;line-height: 26px;color: #999999} 
+		.Nhelp ul li:hover{list-style-type: none;font-size: 12px;line-height: 26px;color:#FA4B9B } 
+		.Nhelp ul .strong{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;} 
+		.Nhelp ul .strong:hover{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;} 
+		.Nhelp .Nhelp-left-last ul li:hover{list-style-type: none;font-size: 12px;line-height: 26px;color: #999999}
+		.Nhelp .Nhelp-left-last ul .strong:hover{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;}
+	/*______________________________________________________*/
+		.Rhelp{width: 186px;height: 161px;background: white;margin-left: 815px;display:block;float: left;border-left: 1px solid #E5E5E5;}
+		.Rhelp *{margin-left: 10px;}
+		.mobile-mia{position: absolute;display:inline-block;}
+		.Rhelp .Rhelp-right{margin-left:80px; position: absolute;line-height: 1px;}
+		.Rhelp ul .strong{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;line-height: 26px;} 
+		.Rhelp ul .strong:hover{list-style-type: none;font-size: 14px;font-weight: 700;padding-bottom: 5px;color: #333333;} 
+	/*______________________________________________________*/
+		.footer-nav{margin-left:135px;float: left;padding: 10px 30px;}
+		.footer-nav ul li{list-style-type: none;float: left;display: inline-block;padding: 0px 18px;border-right:1px solid #999999;font-size: 12px;color:#999999;}
+		.footer-nav ul li:hover{list-style-type: none;float: left;display: inline-block;padding: 0px 18px;border-right:1px solid #999999;font-size: 12px;color:#FA4B9B;}
+	/*______________________________________________________*/
+		.law-clause{display: inline-block;width: 1000px;height: 70px;margin-left: 65px;padding-bottom:8px;background: white;}
+		.law-clause .words{text-align: center;position: absolute;font-size: 12px;font: "微软雅黑";color: #aaaaaa;line-height: 23px;}
+		.law-clause .words img{width: :;width: 8%;height: 8%;padding: 5px 10px;}
+
+	</style>
+</head>
+		<!--引导条开始-->
+		<div id="wel">
+			<div id="welcome-bar">
+				<div id="left-welcome"><a href="">手机蜜芽</a></div>
+				<div id="right-welcome">
+					<span id="nihao">你好，欢迎来到蜜芽！</span>
+					<a href="login.html">登录</a>
+					<a href="">免费注册</a>
+					<a href="">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--引导条结束-->
+<body>
+		
+
+		<!--logo+搜索框开始-->
+			<div id="logo-bar">
+				<div id="left-logo">
+					<a href=""><img src="img/logo.png" alt="蜜芽网" width="100%"></a>
+				</div>
+				
+				<div class="logo-right-pack">
+					<div id="for-search">
+						<input type="text" id="srch-box" >
+						<input id="srch-btn" type="button" value="搜 索" class="form-search-btn">
+					</div>
+
+					<div id="srch-hot">
+						<p class="hot">
+							<a href=" " style="border-left:none">尤妮佳</a>
+				            <a href=" " style="color:#FA4B9B">牙胶</a>
+				            <a href=" " style="color:#FA4B9B">收纳柜</a>
+				            <a href=" ">隔尿垫</a>
+				            <a href=" ">加州宝宝</a>
+						</p>
+					</div>
+					
+					<div id="shop-car-pack">
+						<img src="img/shop-car.png" alt="">
+						<div id="shop-car">
+							
+							<a href="" class="shop-car"><span>购物车</span></a>
+								<div class="empty" style="text-decoration:none;display:none;">
+									购物车还没有商品，快去选购吧！
+								</div>
+								
+						</div>	
+					</div>
+
+				</div>
+			</div>
+		<!-- logo+搜索框结束 -->
+
+		<!--主要导航开始-->
+		<div class="nav-wrapper">
+			<div id="nav-big">
+				<ul class="nav-simple">
+					<li><a href="index.html" style="background:#EC0971;">首页</a></li>
+					<li><a href="">纸尿裤</a></li>
+					<li><a href="">奶粉</a></li>
+					<li><a href="">磨牙饼干</a></li>
+					<li><a href="">童装</a></li>
+					<li><a href="">玩具</a></li>
+					<li><a href="">孕妈用品</a></li>
+					<li><a href="">美妆个护</a></li>
+					<li><a href="">正品保证</a></li>
+					<li><a href="music.html">早教音乐</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="big-pic">
+			<img src="img/big01.jpg" alt="" width="1100px">
+		</div>
+		<!--主要导航结束-->
+	
+	<div id="wrapper">
+	
+
+	<!--主体部分开始-->
+	<div id="main">
+		<div id="index-brand-wrapper">
+			<div id="index-brand">
+				<h3>热卖品牌</h3>
+				<div id="brands">
+				
+					<a href=""><img src="img/brandlogo01.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo02.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo03.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo04.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo05.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo06.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo07.jpg" alt=""></a>
+					<a href=""><img src="img/brandlogo08.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="ad">
+			<img src="img/ad.jpg" alt="" style="margin-top:10px;height:245px;width:1100px">
+		</div>
+
+		<div id="ad-gds">
+			<h3 class="ad-goods-h3">为您推荐<span class="ad-goods-span">千万妈妈 精明之选</span></h3>
+				<!-- <a href="" title="纯棉大尺寸 柔软亲肤 强吸水不掉毛"> -->
+	    			<div class="rim">
+				        <div class="tit"><img src="img/ad-img01.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img02.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img03.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img04.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img05.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img06.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img07.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img08.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img09.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+    				<div class="rim">
+				        <div class="tit"><img src="img/ad-img10.jpg" alt="" ></div>
+				        <p class="desc">纯棉大尺寸 柔软亲肤 强吸水不掉毛</p>
+				        <div class="price">
+				            <span class="new">¥<em>98.00</em></span>
+				            <span class="old">¥<em>168.00</em></span>
+				        </div>
+				        <p class="buy">
+				        51197人已购买</p>
+				        <span class="btn">立即抢</span>
+    				</div>
+
+
+			<h3 class="ad-goods-h3">今日特卖<span class="ad-goods-span">每天10上新</span></h3>
+				
+				<div class="layout">
+					<div class="left-block">
+						<a href="">
+							<img src="img/left-pic01.jpg" alt="">
+						</a>
+					</div>
+
+					<div class="right-rank">
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds01.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds02.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item" style="border-bottom:none;">
+							<div class="right-gds-pic"><img src="img/gds03.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+					</div>
+				</div>
+
+				<div class="layout">
+					<div class="left-block">
+						<a href="">
+							<img src="img/left-pic02.jpg" alt="">
+						</a>
+					</div>
+
+					<div class="right-rank">
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds04.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds05.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item" style="border-bottom:none;">
+							<div class="right-gds-pic"><img src="img/gds06.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+					</div>
+				</div>
+
+				<div class="layout">
+					<div class="left-block">
+						<a href="">
+							<img src="img/left-pic03.jpg" alt="">
+						</a>
+					</div>
+
+					<div class="right-rank">
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds07.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds08.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item" style="border-bottom:none;">
+							<div class="right-gds-pic"><img src="img/gds09.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+					</div>
+				</div>
+
+				<div class="layout">
+					<div class="left-block">
+						<a href="">
+							<img src="img/left-pic04.jpg" alt="">
+						</a>
+					</div>
+
+					<div class="right-rank">
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds10.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds11.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item" style="border-bottom:none;">
+							<div class="right-gds-pic"><img src="img/gds12.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+					</div>
+				</div>
+
+				<div class="layout">
+					<div class="left-block">
+						<a href="">
+							<img src="img/left-pic05.jpg" alt="">
+						</a>
+					</div>
+
+					<div class="right-rank">
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds13.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item">
+							<div class="right-gds-pic"><img src="img/gds14.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+
+						<a href="" class="rank-item" style="border-bottom:none;">
+							<div class="right-gds-pic"><img src="img/gds15.jpg" alt=""></div>
+							<div class="r">
+								<p class="tit">Swisse 【包邮包税】胶原蛋白血橙500Ml*2瓶装</p>
+								<div class="price">
+									<span class="new">￥<em>219.00</em></span>
+									<span class="old">￥<em>300.00</em></span>
+								</div>
+							</div>
+						</a>	
+					</div>
+				</div>
+
+
+				
+		</div>
+	</div>
+	<!--主体部分结束-->
+
+	
+	<!--footer部分开始-->
+
+		<div id="footer">
+		<div class="genuine">
+			<div class="tips">
+				<a href="">
+					<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+				</a>
+				<h5>可信赖</h5><br>
+				<h5 class="smaller">进口母婴特卖</h5>
+			</div>
+
+			<div class="tips">
+				<a href="">
+					<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+				</a>
+				<h5>可信赖</h5><br>
+				<h5 class="smaller">进口母婴特卖</h5>
+			</div>
+
+			<div class="tips">
+				<a href="">
+					<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+				</a>
+				<h5>可信赖</h5><br>
+				<h5 class="smaller">进口母婴特卖</h5>
+			</div>
+
+			<div class="tips">
+				<a href="">
+					<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+				</a>
+				<h5>可信赖</h5><br>
+				<h5 class="smaller">进口母婴特卖</h5>
+			</div>
+
+			<div class="tips">
+				<a href="">
+					<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+				</a>
+				<h5>可信赖</h5><br>
+				<h5 class="smaller">进口母婴特卖</h5>
+			</div>
+
+			<div class="tips">
+				<a href="">
+					<img src="img/tips01.png" alt="" style="width:50px;height:50px">
+				</a>
+				<h5>可信赖</h5><br>
+				<h5 class="smaller">进口母婴特卖</h5>
+			</div>
+		</div>
+		
+		<div class="about-mia">
+			<div class="Nhelp">
+				<div class="service">
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">使用帮助</li>
+							<li>新手指南</li>
+							<li>蜜粉值体系</li>
+							<li>蜜豆体系</li>
+							<li>正品承诺</li>
+						</ul>
+					</div>
+
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">支配方式</li>
+							<li>新手指南</li>
+							<li>蜜粉值体系</li>
+							<li>蜜豆体系</li>
+						</ul>
+					</div>
+
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">配送方式</li>
+							<li>新手指南</li>
+							<li>蜜粉值体系</li>
+							<li>蜜豆体系</li>
+							<li>正品承诺</li>
+						</ul>
+					</div>
+
+					<div class="Nhelp-left">
+						<ul>
+							<li class="strong">售后服务</li>
+							<li>退货流程</li>
+							<li>退货政策</li>
+							<li>退货方式</li>
+						</ul>
+					</div>
+					
+					<div class="Nhelp-left-last">
+						<ul>
+							<li class="strong">联系方式</li>
+							<li>总裁邮箱 ceo@mia.com</li>
+							<li>商务合作 bd@mia.com</li>
+							<li>媒体合作 pr@mia.com</li>
+							<li>招商中心 zhaoshang@mia.com</li>
+							<li>企业采购 qiye@mia.com</li>
+						</ul>
+					</div>
+
+
+					<div class="Nhelp-right">
+						
+					</div>
+				</div>
+
+
+				<div class="Rhelp">
+				<ul>
+					<li class="strong">关注蜜芽</li>
+						<img class="mobile-mia" src="img/mobile-mia.jpg" alt="手机蜜芽" >
+						<div class="Rhelp-right">
+							<a href=""><img src="img/mia-wb.jpg" alt="微博分享蜜芽"></a><br>
+							<a href=""><img src="img/mia-wx.jpg" alt="微信分享蜜芽"></a>
+						</div>
+					
+				</ul>			
+			</div>
+			</div>
+		</div>
+
+		<div class="footer-nav">
+			<ul>
+				<li>关于蜜芽</li>
+				<li>加入蜜芽</li>
+				<li>商务合作</li>
+				<li>帮助中心</li>
+				<li>联系我们</li>
+				<li>友情链接</li>
+				<li>触屏版</li>
+				<li>媒体报道</li>
+				<li style="border-right:none;">妈米计划</li>
+			</ul>
+		</div>
+
+		<div class="law-clause">
+			<div class="words">
+				京公网安备：11010502027270 | 营业执照：91110105582599307U | 食品经营许可证：SP1101051410296669 | 出版物经营许可证：新出发京零字第朝160088号 | 京ICP证140430号 <br>
+	京ICP备14006215号 | 员工舞弊举报：jiancha@mia.com 电话：010-56733467<br>
+	通过本网站直接或者间接地推销商品或者服务的商业宣传活动均属“广告”<br>
+	Copyright © 2017 北京花旺在线商贸有限公司 Mia.com 保留一切权利。<br>
+				<img src="img/trust.png" alt="" style="width:10%;height:10%">
+				<img src="img/reliable.png" alt="">
+				<img src="img/alipay.jpg" alt="">
+			</div>
+		</div>
+
+	</div>
+	<!--footer部分结束-->
+</div>
+</body>
+</html>
+

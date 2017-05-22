@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <ul>
+        <li>blue</li>
+        <li>red</li>
+        <li>#fc0</li>
+    </ul>
+    <ul>
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>梨</li>
+    </ul>
+    </body>
+</html>
+<script>
+    var list=document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+
+    for(i=0;i<list.length;i++){
+        list[i].onclick=function(){
+            this.parentNode.style.color=this.innerHTML;
+        }
+    }
+</script>

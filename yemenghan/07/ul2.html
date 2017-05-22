@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <ul>
+            <li>#f0e</li>
+            <li>#fc0</li>
+            <li>#fee</li>
+            <li>red</li>
+            <li>green</li>
+            <li>pink</li>
+        </ul>
+    </body>
+</html>
+<script>
+    var list2= document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+
+    for(i=0;i<list2.length;i++){
+        list2[i].ondblclick=function(){
+            this.parentNode.style.color=this.innerHTML;
+        }
+    }
+</script>

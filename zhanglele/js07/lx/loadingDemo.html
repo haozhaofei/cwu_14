@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟网速慢加载画面</title>
+</head>
+<body>
+	<img src="images/HLL-11_xuandong.gif" res="images/11.jpg">
+	<img src="images/HLL-11_xuandong.gif" res="images/22.jpg">
+	<img src="images/HLL-11_xuandong.gif" res="images/33.jpg">
+	<img src="images/HLL-11_xuandong.gif" res="images/44.jpg">
+</body>
+</html>
+
+<script>
+setTimeout(function(){
+	var list = document.getElementsByTagName("img");
+	for(var i=0;i<list.length;i++){
+		list[i].src = list[i].getAttribute("res");
+		list[i].width = "300";
+	}},1000);
+</script>

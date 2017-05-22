@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取多选框的值</title>
+</head>
+<body>
+	足球<input type="checkbox" name="list[]" value="足球">
+	篮球<input type="checkbox" name="list[]" value="篮球">
+	网球<input type="checkbox" name="list[]" value="网球">
+	羽毛球<input type="checkbox" name="list[]" value="羽毛球">
+	<button onclick="fun1()">选好了</button>
+</body>
+</html>
+
+<script>
+	function fun1(){
+		var list = document.getElementsByTagName("input");
+		var res = new Array();
+		for(var i=0;i<list.length;i++){
+			if(list[i].type == "checkbox" && list[i].checked){
+				res[res.length]=list[i].value;
+			}
+		}
+		alert(res);
+	}
+</script>

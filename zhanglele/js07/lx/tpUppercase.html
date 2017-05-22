@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取文本框内的文字变成大写</title>
+</head>
+<body>
+	请输入文本：<input type="text" id="t1">
+	<button onclick="Upper()">变成大写</button>
+	<input type="text" id="t2">
+
+</body>
+</html>
+<script>
+	function Upper(){
+		var txt1=document.getElementById("t1");
+		// alert(txt1);
+		var txt2=document.getElementById("t2");
+		txt2.value=txt1.value.toUpperCase();
+	}
+</script>

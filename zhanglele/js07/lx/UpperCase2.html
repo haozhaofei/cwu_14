@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>直接将文本框内的文字转换为大写</title>
+</head>
+<body>
+	转为大写<input type="text" id="t1" value="" onkeydown="upper(this)">
+</body>
+</html>
+
+<script>
+	function upper(obj){
+		//输入什么直接转换
+		obj.value = obj.value.toUpperCase();	
+	}
+</script>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		ul, li{border: 0px;margin: 0px;padding: 0px;
+	 	}
+		ul li{background: #ccc;margin: 5px;height: 50px;list-style: none;
+		}
+		li:hover{background: #f0c}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+	var list = document.getElementsByTagName('li');
+	for (var i = 0; i < list.length; i++) {
+		list[i].ondblclick = function(){
+			this.style.background = "#fc0";
+		}
+		}
+
+</script>

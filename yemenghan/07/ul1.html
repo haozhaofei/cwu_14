@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <ul>
+        <li>blue</li>
+        <li>yellow</li>
+        <li>#fcc</li>
+        <li>#efc</li>
+        <li>#fec</li>
+    </ul>
+    </body>
+</html>
+<script>
+    var list1=document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+
+    for(i=0;i<list1.length;i++){
+        list1[i].onclick=function(){
+            this.parentNode.style.color=this.innerHTML;
+        }
+    }
+</script>

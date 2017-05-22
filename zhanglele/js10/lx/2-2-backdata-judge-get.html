@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX-GET</title>
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+
+</head>
+<body>
+	<div id="did" style="width:200px;height:200px;border:1px solid red"></div>
+	<button >按钮</button>
+</body>
+</html>
+<script>
+
+	$("button").click(function(){
+		$.get("1.php?name=田园&age=22", function(data){
+  			$("div").html(data);
+		});
+	})
+	
+</script>

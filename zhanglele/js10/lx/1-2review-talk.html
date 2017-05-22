@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#did{width:300px;height: 100px;border:1px solid red;}
+	</style>
+</head>
+<body>
+	<div id="did"></div>
+	<button onclick="doLoad()">说话</button>
+</body>
+</html>
+<script>
+	function doLoad(){
+		//1.创建AJAX对象
+		var str = "hello";
+		var xmlhttp;
+		if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+	 		xmlhttp=new XMLHttpRequest();
+	  	}else {// code for IE6, IE5
+	 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  	}
+
+		//2.回调函数 
+		xmlhttp.onreadystatechange=function(){
+		  	if(xmlhttp.readyState==4 && xmlhttp.status==200){
+				//AJAX返回来的数据
+		  		str = xmlhttp.responseText;
+		   		
+		    }
+	  	}
+		//3.初始化操作  //第1个参数:发送方式 / 第2个参数:发送地址  第3个参数: 同步(false)或是异步(true) //默认是异步
+		xmlhttp.open("GET","1.php",false);
+		//4.发送
+		xmlhttp.send();
+		//alert("ok");
+		document.getElementById("did").innerHTML = str;
+	}
+	
+	
+	//异步:大部分情况下用异步 
+	//同步:你需要进行处理AJAX返回的数据,此时用同步
+
+</script>

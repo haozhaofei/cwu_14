@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery入口的在种写法</title> 
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<script>
+		//第一种
+		$(function(){
+			//ul下面所有li节点
+			$("ul li").css("color","blue");
+			//在UL下匹配所有的子元素
+			$("ul >li").css("color","green");
+			//获取UL之后临近的li节点(UL后的第一个LI)
+			$("ul + li").css("color","red");
+			//获取UL之后临近的所有li
+			$("ul ~ li").css("fontSize","30px");
+			$("ul ~ li").css("color","#f0c");
+		})
+
+	</script>
+
+</head>
+<body>
+	<li>aaa</li>
+	<li>bbb</li>
+	<ul>
+		<li>aaa</li>
+		<li>bbb</li>
+		<li>fff</li>
+		<ol>
+			<li>ggg</li>
+			<li>hhh</li>
+			<li>iii</li>
+		</ol>
+	</ul>
+
+	<li>kkkk</li>
+	<li>llll</li>
+	<li>mmm</li>
+	
+</body>
+</html>
